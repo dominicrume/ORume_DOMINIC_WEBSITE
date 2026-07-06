@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Rume Dominic</title>
+  <rect width="64" height="64" fill="#0A0E1A"/>
+  <path d="M17 49V15h16.4c6.9 0 11.5 4.1 11.5 10.4 0 4.6-2.5 8-6.6 9.5L49 49h-8.3l-7.2-13.2H24V49h-7zm7-19.3h7.9c3.2 0 5.2-1.8 5.2-4.8s-2-4.8-5.2-4.8H24v9.6z" fill="#1E90FF"/>
+</svg>

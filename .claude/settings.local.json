@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /Users/user/Downloads/rumedominic-master-ai-site *)"
+    ]
+  }
+}
