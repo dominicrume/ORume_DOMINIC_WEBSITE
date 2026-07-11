@@ -46,10 +46,10 @@ export const site = {
   },
 
   nav: [
+    { label: 'Free book', href: '#free' },
     { label: 'Services', href: '#services' },
     { label: 'Work with me', href: '#work' },
     { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Books', href: '#books' },
     { label: 'About', href: '#about' },
   ],
 

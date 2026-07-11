@@ -16,3 +16,6 @@ media-source/
 
 # Internal commercial strategy — kept private, never pushed to the public repo.
 /docs
+
+# Local Claude Code tooling config
+.claude/

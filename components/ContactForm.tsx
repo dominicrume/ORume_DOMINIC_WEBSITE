@@ -47,7 +47,9 @@ export function ContactForm() {
 
       if (res.ok) {
         setStatus('success');
-        setMessage('Thanks, your message is in. I’ll reply within 1 to 2 business days.');
+        setMessage(
+          'Got it — your request is in. I’ll email you within 1 to 2 business days to set up your call.',
+        );
         track('contact_success');
         form.reset();
       } else {
@@ -141,7 +143,7 @@ export function ContactForm() {
         disabled={status === 'submitting'}
         className="focus-ring inline-flex items-center justify-center rounded-xl bg-gold-metallic px-6 py-3 text-sm font-semibold text-ink shadow-gold transition-all hover:brightness-110 disabled:opacity-60"
       >
-        {status === 'submitting' ? 'Sending…' : 'Send & book my strategy call'}
+        {status === 'submitting' ? 'Sending…' : 'Request my strategy call →'}
       </button>
 
       {message && (

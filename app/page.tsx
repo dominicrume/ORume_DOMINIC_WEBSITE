@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { CredibilityBar } from '@/components/CredibilityBar';
+import { FreeAccess } from '@/components/FreeAccess';
 import { Services } from '@/components/Services';
 import { RumeMethod } from '@/components/RumeMethod';
 import { Portfolio } from '@/components/Portfolio';
@@ -26,6 +27,9 @@ export default function HomePage() {
       <main>
         <Hero />
         <CredibilityBar />
+        <Reveal>
+          <FreeAccess />
+        </Reveal>
         <Reveal>
           <Services />
         </Reveal>

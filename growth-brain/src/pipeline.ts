@@ -14,7 +14,9 @@ import type { BrainEvent } from './events';
 
 function admin() {
   const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  // The brain must READ events, which RLS blocks for the publishable key. Use a
+  // full-access key: Supabase's new secret key, or the legacy service-role key.
+  const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) return null;
   return { url, key };
 }

@@ -1,0 +1,10 @@
+node_modules/
+.env
+data/*.db
+logs/
+exports/
+dist/
+.DS_Store
+memory/agent-state.json
+memory/niche-performance.json
+memory/provider-performance.json

@@ -1,0 +1,57 @@
+{
+  "name": "living-engine",
+  "version": "1.0.0",
+  "description": "24/7 Agentic AI Lead Generation System — Rume Dominic / Vorem Nigeria — £8M Target",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "agent": "node src/agent/agent.js",
+    "agent:once": "node src/agent/agent.js --once",
+    "agent:learn": "node src/agent/agent.js --stage learn",
+    "dev": "concurrently \"npm run api\" \"npm run ui\"",
+    "api": "node --watch src/api/server.js",
+    "ui": "vite src/dashboard --port 5176",
+    "pipeline": "node src/agent/orchestrator.js",
+    "discover": "node src/scrapers/discover.js",
+    "mx": "node src/intel/mxLookup.js",
+    "harvest": "node src/scrapers/harvest.js",
+    "enrich": "node src/enrichment/enrichAll.js",
+    "score": "node src/agent/scorer.js",
+    "outreach": "node src/outreach/sequencer.js",
+    "match": "node src/sales/matcher.js",
+    "convert": "node src/sales/converter.js",
+    "learn": "node src/brain/learner.js",
+    "books": "node src/books/bookFunnel.js",
+    "memory:show": "node scripts/showMemory.js",
+    "memory:reset": "node scripts/resetMemory.js",
+    "export": "node scripts/export.js",
+    "db:init": "node scripts/dbInit.js",
+    "db:stats": "node scripts/dbStats.js",
+    "install:browsers": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.26.0",
+    "axios": "^1.7.2",
+    "better-sqlite3": "^9.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "p-limit": "^5.0.0",
+    "playwright": "^1.44.1",
+    "rate-limiter-flexible": "^5.0.3",
+    "robots-parser": "^3.0.1",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.3.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
