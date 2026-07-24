@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export function VaidaCaptureForm() {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -20,8 +22,11 @@ export function VaidaCaptureForm() {
       
       if (res.ok) {
         setStatus('success');
-        setMessage('You are in. Check your inbox for the blueprint.');
+        setMessage('Redirecting to your gift...');
         setEmail('');
+        setTimeout(() => {
+          router.push('/free');
+        }, 800);
       } else {
         const data = await res.json();
         setStatus('error');
