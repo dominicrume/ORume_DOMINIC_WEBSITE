@@ -11,7 +11,24 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function AccessPage() {
+type Props = {
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
+
+export default function AccessPage({ searchParams }: Props) {
+  const source = searchParams?.source;
+
+  let backLink = '/';
+  let backText = '← Back to rumedominic.com';
+
+  if (source === 'vaida') {
+    backLink = 'https://rumedominic.com/vaida';
+    backText = '← Back to Vaida Stone';
+  } else if (source === 'iconic') {
+    backLink = 'https://www.iconictimesnewspaper.com/';
+    backText = '← Back to Iconic Times';
+  }
+
   return (
     <main className="min-h-screen py-20 sm:py-28">
       <Container className="max-w-3xl">
@@ -71,8 +88,8 @@ export default function AccessPage() {
         </GlassCard>
 
         <p className="mt-10 text-center text-sm">
-          <Link href="/" className="focus-ring text-blue-glow hover:underline">
-            ← Back to rumedominic.com
+          <Link href={backLink} className="focus-ring text-blue-glow hover:underline">
+            {backText}
           </Link>
         </p>
       </Container>

@@ -102,7 +102,7 @@ export function IconicLeadForm() {
               </div>
               
               <Link 
-                href="/#free" 
+                href="/access?source=iconic" 
                 className="inline-block mt-4 bg-gradient-to-r from-[#C9A24B] to-[#E7C877] text-[#1a1406] font-extrabold px-[26px] py-[13px] rounded-md uppercase tracking-[0.5px] text-[13px]"
               >
                 Start Day 1
