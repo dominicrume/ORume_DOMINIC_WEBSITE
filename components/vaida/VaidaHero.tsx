@@ -65,7 +65,9 @@ export function VaidaHero() {
               style={{ animationDelay: '1.15s', animationDuration: '1s' }}
             >
               <Link 
-                href="/vaida" 
+                href="https://calendly.com/vaidastone" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block font-bold text-[1rem] py-[15px] px-[30px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-[#C9738F] text-white shadow-[0_10px_24px_rgba(201,115,143,0.35)] hover:-translate-y-[3px] hover:scale-[1.02] hover:shadow-[0_16px_34px_rgba(201,115,143,0.45)]"
               >
                 Book Vaida to speak

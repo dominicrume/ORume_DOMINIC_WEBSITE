@@ -38,10 +38,15 @@ export function VaidaHeader({ variant = 'home' }: VaidaHeaderProps) {
               bg-[rgba(253,249,245,0.98)] md:bg-transparent 
               p-4 md:p-0 gap-0 md:gap-[30px] list-none
             `}>
-              {['Home', 'About', 'Speaking', 'The Book'].map(item => (
-                <li key={item} className="py-3 md:py-0 border-b border-[#F6DCE5] md:border-0">
-                  <Link href="/vaida" className="text-[#4A3B41] text-[0.94rem] font-medium relative group">
-                    {item}
+              {[
+                { name: 'Home', href: '/vaida' },
+                { name: 'About', href: '/vaida' },
+                { name: 'Speaking', href: 'https://calendly.com/vaidastone' },
+                { name: 'The Book', href: '/vaida' }
+              ].map(item => (
+                <li key={item.name} className="py-3 md:py-0 border-b border-[#F6DCE5] md:border-0">
+                  <Link href={item.href} className="text-[#4A3B41] text-[0.94rem] font-medium relative group">
+                    {item.name}
                     <span className="absolute left-0 bottom-[-4px] w-0 h-[1.5px] bg-[#C9738F] transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
@@ -53,7 +58,7 @@ export function VaidaHeader({ variant = 'home' }: VaidaHeaderProps) {
                 </Link>
               </li>
               <li className="py-3 md:py-0 md:border-0">
-                <Link href="/vaida" className="text-[#4A3B41] text-[0.94rem] font-medium relative group">
+                <Link href="https://calendly.com/vaidastone" className="text-[#4A3B41] text-[0.94rem] font-medium relative group" target="_blank" rel="noopener noreferrer">
                   Contact
                   <span className="absolute left-0 bottom-[-4px] w-0 h-[1.5px] bg-[#C9738F] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
