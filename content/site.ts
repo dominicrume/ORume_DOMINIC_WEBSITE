@@ -12,7 +12,7 @@ export const site = {
   email: 'dominicrume@gmail.com',
   bookingUrl:
     process.env.NEXT_PUBLIC_BOOKING_URL ??
-    'https://calendar.zoho.com/zc/view/slot-booking/zz08011220606d8cd42bc2b098fd534d89069a225fee8a0cc377b2a89fa8c729eb19bbef77::',
+    'https://vorem.zohobookings.com/portal-embed#/customer/vorem',
 
   // The one promise. Must render above the fold.
   promise:
