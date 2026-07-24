@@ -25,7 +25,7 @@ export function VaidaCaptureForm() {
         setMessage('Redirecting to your gift...');
         setEmail('');
         setTimeout(() => {
-          router.push('/free');
+          router.push('/access');
         }, 800);
       } else {
         const data = await res.json();
