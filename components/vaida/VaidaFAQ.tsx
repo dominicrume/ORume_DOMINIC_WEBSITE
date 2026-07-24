@@ -10,8 +10,8 @@ const faqs = [
     a: "No. The entire course uses the free versions of AI tools like ChatGPT. You don't need to spend a dime to start seeing the benefits."
   },
   {
-    q: "Why is Rume Dominic giving this away for free?",
-    a: "Because true empowerment requires access. The AI divide is growing, and we want to ensure the Always ENOUGH community is at the forefront of this shift, not left behind."
+    q: "Why is Vaida offering this for free?",
+    a: "Because true empowerment requires access. Vaida has partnered with Rume Dominic to provide the ultimate AI tools, ensuring the Always ENOUGH community is at the forefront of this shift, not left behind."
   },
   {
     q: "How much time will this take?",
