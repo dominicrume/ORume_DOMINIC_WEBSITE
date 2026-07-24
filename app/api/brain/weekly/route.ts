@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { runWeekly } from '@/growth-brain/src/pipeline';
+import { log } from '@/lib/logger';
 
 // The brain reads Supabase (service role) and calls Claude; give it room to run.
 export const runtime = 'nodejs';
@@ -20,10 +21,20 @@ export async function GET(req: Request) {
     req.headers.get('authorization')?.replace(/^Bearer\s+/i, '') ??
     new URL(req.url).searchParams.get('key');
   if (!secret || provided !== secret) {
+    log.warn('brain weekly run rejected: bad or missing secret', { route: '/api/brain/weekly' });
+    await log.flush();
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
   }
 
   const result = await runWeekly();
+  log.info('brain weekly run finished', {
+    route: '/api/brain/weekly',
+    ok: result.ok,
+    reason: result.reason,
+    period: result.periodLabel,
+    recommendations: result.recommendations.length,
+  });
+  await log.flush();
   // Return the brief so a manual run shows it immediately; it is also archived in Supabase.
   return NextResponse.json(
     {

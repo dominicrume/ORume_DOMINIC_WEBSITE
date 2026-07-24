@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { insertEvent } from '@/lib/supabase';
+import { log } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 
@@ -18,7 +19,7 @@ export async function POST(req: Request) {
   if (!type) return NextResponse.json({ error: 'type required' }, { status: 400 });
 
   // Fire-and-forget from the client's point of view: we accept then store best-effort.
-  await insertEvent({
+  const stored = await insertEvent({
     type,
     source: clip(body.source),
     session_id: clip(body.session_id, 64),
@@ -31,7 +32,10 @@ export async function POST(req: Request) {
       body.props && typeof body.props === 'object'
         ? (body.props as Record<string, unknown>)
         : undefined,
-  }).catch(() => undefined);
+  });
+  if (!stored.ok && stored.reason === 'provider_error') {
+    log.warn('event failed to store', { route: '/api/events', event_type: type });
+  }
 
   return NextResponse.json({ ok: true }, { status: 202 });
 }

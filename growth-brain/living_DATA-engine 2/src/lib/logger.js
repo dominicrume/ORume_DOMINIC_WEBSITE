@@ -1,6 +1,7 @@
 import winston from 'winston'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { ElasticTransport } from './elasticTransport.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export const logger = winston.createLogger({
@@ -10,5 +11,6 @@ export const logger = winston.createLogger({
     new winston.transports.Console({ format: winston.format.combine(winston.format.colorize(), winston.format.printf(({ timestamp, level, message, ...m }) => `${timestamp} [${level}] ${message}${Object.keys(m).length ? ' ' + JSON.stringify(m) : ''}`)) }),
     new winston.transports.File({ filename: path.join(__dirname, '../../logs/pipeline.log'), maxsize: 10_000_000, maxFiles: 5 }),
     new winston.transports.File({ filename: path.join(__dirname, '../../logs/errors.log'), level: 'error' }),
+    new ElasticTransport(),
   ],
 })

@@ -36,6 +36,23 @@ vercel --prod     # production
 The site builds and deploys **without** the Brevo keys — the forms return success
 and simply don't persist until keys are added (so you can launch, then wire leads).
 
+## STEP 2b — Elastic (log shipping, optional)
+Server logs (lead captures, provider failures, brain runs) ship to Elasticsearch
+in ECS format when these are set — locally in `.env.local`, on Vercel in project
+settings, and on Cloud Run via the `ELASTIC_URL` / `ELASTIC_API_KEY` GitHub
+Actions secrets (already wired in `.github/workflows/deploy-gcp.yml`):
+
+| Key | Example | Notes |
+|---|---|---|
+| `ELASTIC_URL` | `https://xyz.es.us-central1.gcp.elastic-cloud.com` | Elasticsearch endpoint (Elastic Cloud → deployment page) |
+| `ELASTIC_API_KEY` | `base64key==` | **secret** — Stack Management → API keys |
+| `ELASTIC_DATASET` | `rumedominic.site` | optional; logs land in `logs-<dataset>-default` |
+
+Unset = shipping disabled; logs still print to the console (Cloud Run/Vercel logs).
+The growth-brain engine ships its Winston logs the same way — set the same keys in
+`growth-brain/living_DATA-engine 2/.env` (dataset `rumedominic.growth-brain`).
+View everything in Kibana → Discover / Observability → Logs.
+
 ## STEP 3 — Brevo (lead capture)
 1. Create a free Brevo account → **Contacts → Lists** → create two lists
    ("Strategy Calls", "Newsletter"). Note their numeric IDs.

@@ -20,7 +20,7 @@ describe('ContactForm', () => {
     await user.type(screen.getByLabelText('Email'), 'not-an-email');
     await user.selectOptions(screen.getByLabelText('Budget range'), '$5k to $25k');
     await user.type(screen.getByLabelText(/What do you want to build/), 'Build an AI agent platform');
-    await user.click(screen.getByRole('button', { name: /send/i }));
+    await user.click(screen.getByRole('button', { name: /request my strategy call/i }));
 
     expect(await screen.findByRole('status')).toHaveTextContent(/valid email/i);
     expect(fetchSpy).not.toHaveBeenCalled();
@@ -40,7 +40,7 @@ describe('ContactForm', () => {
     const honeypot = container.querySelector<HTMLInputElement>('input[name="company_website"]')!;
     honeypot.value = 'http://spam.example';
 
-    await user.click(screen.getByRole('button', { name: /send/i }));
+    await user.click(screen.getByRole('button', { name: /request my strategy call/i }));
 
     await waitFor(() => expect(screen.getByRole('status')).toBeInTheDocument());
     expect(fetchSpy).not.toHaveBeenCalled();
@@ -57,9 +57,9 @@ describe('ContactForm', () => {
     await user.type(screen.getByLabelText('Email'), 'ada@example.com');
     await user.selectOptions(screen.getByLabelText('Budget range'), '$5k to $25k');
     await user.type(screen.getByLabelText(/What do you want to build/), 'Build an AI agent platform');
-    await user.click(screen.getByRole('button', { name: /send/i }));
+    await user.click(screen.getByRole('button', { name: /request my strategy call/i }));
 
     await waitFor(() => expect(fetchSpy).toHaveBeenCalledWith('/api/contact', expect.anything()));
-    expect(await screen.findByRole('status')).toHaveTextContent(/thanks/i);
+    expect(await screen.findByRole('status')).toHaveTextContent(/your request is in/i);
   });
 });

@@ -1,7 +1,7 @@
 import { Section } from './ui/Section';
 import { GlassCard } from './ui/GlassCard';
 import { ContactForm } from './ContactForm';
-import { CalendlyEmbed } from './CalendlyEmbed';
+import { BookingEmbed } from './BookingEmbed';
 import { site } from '@/content/site';
 
 export function Contact() {
@@ -47,7 +47,7 @@ export function Contact() {
             .
           </p>
           <div className="mt-4 flex-1">
-            <CalendlyEmbed url={site.calendlyUrl} />
+            <BookingEmbed url={site.bookingUrl} />
           </div>
         </GlassCard>
       </div>

@@ -4,6 +4,7 @@ import { saveLead } from '@/lib/supabase';
 import { addContact } from '@/lib/brevo';
 import { upsertHubspotContact } from '@/lib/hubspot';
 import { sendFrameworkEmail, sendLeadNotification } from '@/lib/email';
+import { log } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 
@@ -33,11 +34,12 @@ export async function POST(req: Request) {
     source: SOURCE,
   });
   if (!stored.ok && stored.reason === 'provider_error') {
+    log.error('framework lead failed to store', { route: '/api/framework', email });
     return NextResponse.json({ error: 'Please try again in a moment.' }, { status: 502 });
   }
 
   // 2) Best-effort CRM + list sync. None of these block delivery.
-  await Promise.allSettled([
+  const synced = await Promise.allSettled([
     addContact({
       email,
       listId: Number(process.env.BREVO_NEWSLETTER_LIST_ID) || undefined,
@@ -47,6 +49,19 @@ export async function POST(req: Request) {
     sendFrameworkEmail(email, name),
     sendLeadNotification({ kind: 'framework', email, name }),
   ]);
+  const steps = ['brevo', 'hubspot', 'framework_email', 'lead_notification'];
+  synced.forEach((r, i) => {
+    if (r.status === 'rejected') {
+      log.warn('framework sync step failed', {
+        route: '/api/framework',
+        email,
+        step: steps[i],
+        reason: String(r.reason),
+      });
+    }
+  });
 
+  log.info('framework lead captured', { route: '/api/framework', email });
+  await log.flush();
   return NextResponse.json({ ok: true }, { status: 200 });
 }

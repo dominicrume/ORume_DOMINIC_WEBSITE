@@ -3,6 +3,7 @@ import { contactSchema } from '@/lib/validation';
 import { saveLead } from '@/lib/supabase';
 import { addContact } from '@/lib/brevo';
 import { sendLeadNotification, sendContactAck } from '@/lib/email';
+import { log } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 
@@ -38,6 +39,7 @@ export async function POST(req: Request) {
     source: 'rumedominic.com/contact',
   });
   if (!stored.ok && stored.reason === 'provider_error') {
+    log.error('contact lead failed to store', { route: '/api/contact', email });
     return NextResponse.json(
       { error: 'We couldn’t save your message right now. Please retry or email directly.' },
       { status: 502 },
@@ -55,14 +57,23 @@ export async function POST(req: Request) {
       GOAL: goal.slice(0, 500),
       SOURCE: 'rumedominic.com/contact',
     },
-  }).catch(() => undefined);
+  }).catch((err: unknown) =>
+    log.warn('brevo sync failed', { route: '/api/contact', email, reason: String(err) }),
+  );
 
   // 3) Notify Rume immediately so no lead sits unseen, and acknowledge the lead
   //    so they know it landed. Both best-effort; neither blocks the response.
-  await Promise.allSettled([
+  const notified = await Promise.allSettled([
     sendLeadNotification({ kind: 'contact', email, name, org, budget, goal }),
     sendContactAck(name, email),
   ]);
+  for (const r of notified) {
+    if (r.status === 'rejected') {
+      log.warn('lead email failed', { route: '/api/contact', email, reason: String(r.reason) });
+    }
+  }
 
+  log.info('contact lead captured', { route: '/api/contact', email, budget });
+  await log.flush();
   return NextResponse.json({ ok: true }, { status: 200 });
 }

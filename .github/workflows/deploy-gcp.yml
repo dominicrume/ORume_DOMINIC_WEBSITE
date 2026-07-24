@@ -46,4 +46,6 @@ jobs:
           image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}
           env_vars: |
             NEXT_PUBLIC_SITE_URL=https://rumedominic.com
-            NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/rumedominic/strategy-call
+            NEXT_PUBLIC_BOOKING_URL=https://calendar.zoho.com/zc/view/slot-booking/zz08011220606d8cd42bc2b098fd534d89069a225fee8a0cc377b2a89fa8c729eb19bbef77::
+            ELASTIC_URL=${{ secrets.ELASTIC_URL }}
+            ELASTIC_API_KEY=${{ secrets.ELASTIC_API_KEY }}

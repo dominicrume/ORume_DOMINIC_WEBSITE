@@ -10,9 +10,9 @@ export const site = {
   domain: 'rumedominic.com',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://rumedominic.com',
   email: 'dominicrume@gmail.com',
-  calendlyUrl:
-    process.env.NEXT_PUBLIC_CALENDLY_URL ??
-    'https://calendly.com/rumedominic/strategy-call',
+  bookingUrl:
+    process.env.NEXT_PUBLIC_BOOKING_URL ??
+    'https://calendar.zoho.com/zc/view/slot-booking/zz08011220606d8cd42bc2b098fd534d89069a225fee8a0cc377b2a89fa8c729eb19bbef77::',
 
   // The one promise. Must render above the fold.
   promise:
