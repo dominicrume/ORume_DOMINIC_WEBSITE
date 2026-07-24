@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const phrases = [
   "Learn AI in 9 days — free.",
   "Build with AI.",
@@ -107,14 +107,13 @@ export function IconicHero() {
                 Iconic
               </span>
               
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-[14px] text-[#A79F8E] text-center p-5">
-                <div className="w-[96px] h-[96px] rounded-full border border-[#8f7433] grid place-items-center font-serif text-[34px] text-[#C9A24B] tracking-[1px]">
-                  T·L
-                </div>
-                <small className="text-[10.5px] tracking-[1.5px] leading-[1.7] uppercase">
-                  Official portrait of the<br/>President &amp; Founder<br/>to be placed here
-                </small>
-              </div>
+              <Image 
+                src="/AmbDrTemisanOLouis.jpg" 
+                alt="Amb. Dr. Temisan O. Louis" 
+                fill 
+                className="object-cover" 
+                priority
+              />
 
               <div className="relative z-10 w-full p-5 pt-[18px] bg-gradient-to-t from-[rgba(7,7,10,0.95)] via-[rgba(7,7,10,0.6)] to-transparent">
                 <div className="font-serif font-bold text-[19px] text-[#F5F1E8]">Amb. Dr. Temisan O. Louis</div>
