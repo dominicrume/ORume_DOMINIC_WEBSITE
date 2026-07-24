@@ -3,48 +3,48 @@ import React from 'react';
 const curriculum = [
   {
     day: "Day 1",
-    title: "The Shift",
-    desc: "Demystifying AI. Why it's a tool for you, not just tech bros."
+    title: "Prompt Engineering",
+    desc: "How to talk to AI to get anything you want."
   },
   {
     day: "Day 2",
-    title: "Your First Prompt",
-    desc: "How to talk to AI so it actually listens and understands your voice."
+    title: "AI Image Creation",
+    desc: "How to create and edit pictures with AI."
   },
   {
     day: "Day 3",
-    title: "The Time Buyer",
-    desc: "Automating your most tedious weekly tasks (emails, meal prep, scheduling)."
+    title: "AI Presentations",
+    desc: "How to make business slides and presentations."
   },
   {
     day: "Day 4",
-    title: "The Negotiator",
-    desc: "Using AI to script difficult conversations, set boundaries, and ask for more."
+    title: "AI Chatbots",
+    desc: "How to build your own chatbot for your business."
   },
   {
     day: "Day 5",
-    title: "The Side Hustle",
-    desc: "Ideating and outlining a new income stream in 15 minutes."
+    title: "AI Agents & Automation",
+    desc: "How to build AI agents to automate YouTube and social media."
   },
   {
     day: "Day 6",
-    title: "The Editor",
-    desc: "Polishing your resume, bio, or website copy to sound like your highest self."
+    title: "Viral AI Content",
+    desc: "How to write viral content using AI."
   },
   {
     day: "Day 7",
-    title: "The Strategist",
-    desc: "Creating a 90-day execution plan for your biggest current goal."
+    title: "AI Web Development",
+    desc: "How to program & build simple websites with AI."
   },
   {
     day: "Day 8",
-    title: "The Sounding Board",
-    desc: "Using AI to overcome creative blocks and imposter syndrome."
+    title: "Content Repurposing",
+    desc: "How to turn 1 piece of content into many contents."
   },
   {
     day: "Day 9",
-    title: "Always ENOUGH",
-    desc: "Integrating AI into your daily routine without losing your human magic."
+    title: "AI Business",
+    desc: "How to start your own small AI business."
   }
 ];
 
@@ -56,8 +56,11 @@ export function VaidaCurriculum() {
           <h2 className="font-serif font-semibold text-[clamp(2rem,4.5vw,3rem)] text-[#7E3B54] mb-[14px] leading-[1.08]">
             The 9-Day Blueprint
           </h2>
-          <p className="text-[#8A7680] text-[1.05rem] max-w-[52ch] mx-auto">
+          <p className="text-[#8A7680] text-[1.05rem] max-w-[52ch] mx-auto mb-[14px]">
             15 minutes a day. That&apos;s all it takes.
+          </p>
+          <p className="text-[#A64E6E] font-medium text-[1.1rem] max-w-[60ch] mx-auto italic">
+            So yes — videos, editing, trading tools, YouTube automation... Everything is included.
           </p>
         </div>
         
