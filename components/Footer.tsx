@@ -17,7 +17,7 @@ export function Footer() {
               className="h-8 w-auto"
             />
             <p className="mt-3 max-w-xs text-sm text-muted">
-              Building AI &amp; Web3 products 5x cheaper and 7x faster with Africa’s top engineers.
+              Building AI &amp; Web3 products highly capital-efficient and 7x faster with elite engineering.
             </p>
           </div>
 

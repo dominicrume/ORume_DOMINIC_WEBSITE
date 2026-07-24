@@ -16,37 +16,33 @@ export const site = {
 
   // The one promise. Must render above the fold.
   promise:
-    'Build AI and Web3 products 5x cheaper, 7x faster and 10x clearer. Enterprise-grade security comes standard.',
+    'Build AI and Web3 products 5x more capital-efficient, 7x faster and 10x clearer. Enterprise-grade security comes standard.',
   subPromise:
-    'I help institutions and founders ship production-grade AI and blockchain systems that are faster, leaner and secure by design. Based in the UK, operating globally. I’ve spent my career solving difficult problems across borders, and I bring that same rigour to every system I build. No vibe coding. No wasted spend.',
+    'I help institutions and funded founders ship production-grade AI and blockchain systems that are faster, leaner and secure by design. Based in the UK, operating globally. I’ve spent my career solving difficult problems across borders, and I bring that same rigour to every system I build. No vibe coding. No wasted spend.',
 
   seo: {
-    title: 'Rume Dominic | AI and Blockchain Engineer, Web3 Built 5x Cheaper, 7x Faster, 10x Clearer',
+    title: 'Rume Dominic | Principal AI & Blockchain Engineer | Web3 Built Leaner & Faster',
     description:
-      'Rume Dominic (O’Rume Dominic Uririe), Founder of VOREM and certified blockchain architect from Warri, Delta State, Nigeria, helps institutions build enterprise-grade AI and Web3 products 5x cheaper, 7x faster and 10x clearer with Africa’s top engineers.',
+      'Rume Dominic (O’Rume Dominic Uririe), Founder of VOREM, helps institutions build enterprise-grade AI and Web3 products highly capital-efficient, 7x faster and 10x clearer with elite engineering.',
     keywords: [
       'Rume Dominic',
       'O’Rume Dominic Uririe',
-      'AI engineer Africa',
-      'blockchain architect Nigeria',
+      'Enterprise AI engineer',
+      'blockchain architect',
       'Web3 development agency',
-      'AI development company Africa',
-      'smart contract development',
+      'AI development company',
+      'smart contract auditing',
       'DeFi engineering',
       'AI agents for business',
       'blockchain consulting',
       'VOREM',
-      'VOREM Institute of Technology',
-      'crypto expert Nigeria',
-      'AI course for beginners',
-      'blockchain training Africa',
-      'Delta State tech',
+      'production-grade AI systems',
+      'autonomous agents',
     ],
-    ogImageAlt: 'Rume Dominic, AI and Blockchain Engineer',
+    ogImageAlt: 'Rume Dominic, Principal AI and Blockchain Engineer',
   },
 
   nav: [
-    { label: 'Free book', href: '#free' },
     { label: 'Services', href: '#services' },
     { label: 'Work with me', href: '#work' },
     { label: 'Portfolio', href: '#portfolio' },
@@ -55,7 +51,7 @@ export const site = {
 
   cta: {
     primary: { label: 'Book a Strategy Call', href: '#contact', event: 'cta_book_call' },
-    secondary: { label: 'Join VOREM Institute', href: '/master-ai', event: 'cta_join_academy' },
+    secondary: { label: 'Explore Systems Architecture', href: '#portfolio', event: 'cta_view_systems' },
   },
 
   socials: [

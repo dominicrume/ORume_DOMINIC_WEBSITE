@@ -9,11 +9,11 @@ export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
   {
     q: 'Who is Rume Dominic?',
-    a: 'Rume Dominic (O’Rume Dominic Uririe) is an AI and blockchain engineer from Warri, Delta State, Nigeria. He is the Founder of VOREM, a certified blockchain architect, a SIBAN executive, a published author with titles stocked at Waterstones UK, and ranked among the 100 Most Influential Young Deltans. He is completing an MSc in AI and Business Strategy at Aston University in Birmingham.',
+    a: 'Rume Dominic (O’Rume Dominic Uririe) is an AI and blockchain engineer from Warri, Delta State, Nigeria. He is the Founder of VOREM, an elite blockchain architect, a SIBAN executive, a published author with titles stocked at Waterstones UK, and ranked among the 100 Most Influential Young Deltans. He is completing an MSc in AI and Business Strategy at Aston University in Birmingham.',
   },
   {
-    q: 'How can you build AI and Web3 products 5x cheaper, 7x faster and 10x clearer?',
-    a: 'Through senior-architect-led delivery and a spec-first, test-driven process. You skip rework by getting the spec and tests right up front (faster and leaner), and you get plain-English clarity on scope, risk and cost at every step (clearer).',
+    q: 'How can you build AI and Web3 products highly capital-efficient, 7x faster and 10x clearer?',
+    a: 'Because I don’t rely on oversized agencies or bloated corporate timelines. I build with a hand-picked, elite engineering team using bleeding-edge autonomous AI tools and rigorous Web3 standards. Lean teams move faster and burn less cash, delivering production-grade systems without the enterprise bloat.',
   },
   {
     q: 'How much does an AI or blockchain engagement cost?',

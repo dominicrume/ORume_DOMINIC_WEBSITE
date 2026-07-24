@@ -35,7 +35,7 @@ export default function OpengraphImage() {
           }}
         >
           <span style={{ marginRight: 16 }}>Build AI &amp; Web3</span>
-          <span style={{ color: '#D8EAF6', marginRight: 16 }}>5x cheaper</span>
+          <span style={{ color: '#D8EAF6', marginRight: 16 }}>High-leverage</span>
           <span style={{ color: '#6DB8FF', marginRight: 16 }}>7x faster</span>
           <span style={{ color: '#F8FAFC' }}>10x clearer.</span>
         </div>

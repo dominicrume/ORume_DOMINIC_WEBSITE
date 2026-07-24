@@ -6,7 +6,7 @@ export function CredibilityBar() {
     <div className="border-y border-white/5 bg-white/[0.02] py-8">
       <Container>
         <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted">
-          Trusted · Certified · Recognised
+          Trusted · Elite · Recognised
         </p>
         <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
           {credentials.map((c) => {
