@@ -22,18 +22,18 @@ export function VaidaAIHero() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: aiHeroStyles }} />
-      <section className="pt-[70px] pb-[40px] px-[26px] max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-[40px] md:gap-[80px] items-center">
+      <section className="pt-[40px] md:pt-[70px] pb-[40px] px-[20px] md:px-[26px] max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-[30px] md:gap-[80px] items-center overflow-hidden">
         
         {/* Left Side: Text Content */}
         <div className="text-center lg:text-left z-10 relative">
           <p 
-            className="text-[0.82rem] tracking-[0.34em] uppercase text-[#C9738F] font-bold mb-[26px]"
+            className="text-[0.75rem] md:text-[0.82rem] tracking-[0.25em] md:tracking-[0.34em] uppercase text-[#C9738F] font-bold mb-[20px] md:mb-[26px]"
             style={{ animationDelay: '0.2s', opacity: 0, animation: 'vaidaRise 0.9s ease forwards' }}
           >
             Exclusively for the Always ENOUGH™ Community
           </p>
           
-          <h1 className="font-serif font-semibold text-[clamp(2.8rem,6.5vw,5rem)] mb-[22px] leading-[1.08] text-[#7E3B54]">
+          <h1 className="font-serif font-semibold text-[clamp(2.4rem,8vw,5rem)] mb-[16px] md:mb-[22px] leading-[1.05] text-[#7E3B54]">
             <span 
               className="block"
               style={{ animationDelay: '0.35s', animationDuration: '1s', opacity: 0, animation: 'vaidaRise 1s ease forwards' }}
@@ -49,26 +49,26 @@ export function VaidaAIHero() {
           </h1>
           
           <p 
-            className="text-[1.2rem] text-[#8A7680] max-w-[42ch] mx-auto lg:mx-0 mb-[44px]"
+            className="text-[1.05rem] md:text-[1.2rem] text-[#8A7680] max-w-[42ch] mx-auto lg:mx-0 mb-[34px] md:mb-[44px]"
             style={{ animationDelay: '0.75s', animationDuration: '1s', opacity: 0, animation: 'vaidaRise 1s ease forwards' }}
           >
             No coding. No jargon. Just practical skills to boost your career and reclaim your time.
           </p>
           
           <div 
-            className="flex flex-wrap justify-center lg:justify-start gap-[30px] md:gap-[50px]"
+            className="flex flex-wrap justify-center lg:justify-start gap-[20px] md:gap-[50px]"
             style={{ animationDelay: '0.95s', animationDuration: '1s', opacity: 0, animation: 'vaidaRise 1s ease forwards' }}
           >
-            <div className="flex flex-col items-center lg:items-start">
+            <div className="flex flex-col items-center lg:items-start w-[40%] md:w-auto">
               <span className="font-serif font-bold text-[2.2rem] text-[#A64E6E] leading-none mb-[8px]">100%</span>
               <span className="text-[0.85rem] font-bold text-[#8A7680] uppercase tracking-[0.12em]">Beginner Friendly</span>
             </div>
-            <div className="flex flex-col items-center lg:items-start">
-              <span className="font-serif font-bold text-[2.2rem] text-[#A64E6E] leading-none mb-[8px]">9</span>
-              <span className="text-[0.85rem] font-bold text-[#8A7680] uppercase tracking-[0.12em]">Days</span>
+            <div className="flex flex-col items-center lg:items-start w-[40%] md:w-auto">
+              <span className="font-serif font-bold text-[2rem] md:text-[2.2rem] text-[#A64E6E] leading-none mb-[8px]">9</span>
+              <span className="text-[0.75rem] md:text-[0.85rem] font-bold text-[#8A7680] uppercase tracking-[0.12em]">Days</span>
             </div>
-            <div className="flex flex-col items-center lg:items-start">
-              <span className="font-serif font-bold text-[2.2rem] text-[#A64E6E] leading-none mb-[8px]">$0</span>
+            <div className="flex flex-col items-center lg:items-start w-[100%] md:w-auto mt-[10px] md:mt-0">
+              <span className="font-serif font-bold text-[2rem] md:text-[2.2rem] text-[#A64E6E] leading-none mb-[8px]">$0</span>
               <span className="text-[0.85rem] font-bold text-[#8A7680] uppercase tracking-[0.12em]">Free for you</span>
             </div>
           </div>
@@ -77,10 +77,10 @@ export function VaidaAIHero() {
         {/* Right Side: Animated Book Photo */}
         <div 
           style={{ animationDelay: '0.4s', opacity: 0, animation: 'vaidaRise 1.2s ease forwards' }}
-          className="w-full z-10 pt-[20px] lg:pt-0"
+          className="w-full z-10 pt-[10px] md:pt-[20px] lg:pt-0 pb-[20px] md:pb-0"
         >
           <div 
-            className="relative w-full aspect-[4/5] max-w-[400px] mx-auto"
+            className="relative w-full aspect-[4/5] max-w-[280px] sm:max-w-[340px] md:max-w-[400px] mx-auto"
             style={{ animation: 'floatBook 6.5s ease-in-out infinite' }}
           >
             {/* Subtle glow behind the book */}

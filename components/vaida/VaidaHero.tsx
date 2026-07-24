@@ -39,42 +39,42 @@ export function VaidaHero() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: heroStyles }} />
-      <div className="max-w-[1140px] mx-auto px-[26px]">
-        <section className="min-h-[92vh] md:min-h-0 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-[36px] md:gap-[56px] items-center py-[24px] md:py-[40px] mb-[60px] md:mb-0">
+      <div className="max-w-[1140px] mx-auto px-[20px] md:px-[26px]">
+        <section className="min-h-[92vh] md:min-h-0 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-[36px] md:gap-[56px] items-center pt-[40px] md:pt-[40px] pb-[40px] mb-[60px] md:mb-0">
           
-          <div>
+          <div className="text-center md:text-left z-10">
             <p 
-              className="text-[0.82rem] tracking-[0.34em] uppercase text-[#A64E6E] font-bold mb-[26px] vaida-animate-rise"
+              className="text-[0.75rem] md:text-[0.82rem] tracking-[0.25em] md:tracking-[0.34em] uppercase text-[#A64E6E] font-bold mb-[20px] md:mb-[26px] vaida-animate-rise"
               style={{ animationDelay: '0.2s' }}
             >
               Always ENOUGH™ · Mind · Heart · Money
             </p>
-            <h1 className="font-serif font-semibold text-[clamp(2.8rem,6.5vw,5rem)] mb-2 leading-[1.08] text-[#7E3B54]">
+            <h1 className="font-serif font-semibold text-[clamp(2.4rem,8vw,5rem)] mb-[16px] md:mb-[22px] leading-[1.05] text-[#7E3B54]">
               <span className="block vaida-animate-rise" style={{ animationDelay: '0.35s', animationDuration: '1s' }}>You are</span>
               <span className="block vaida-animate-rise" style={{ animationDelay: '0.55s', animationDuration: '1s' }}>already</span>
               <span className="block vaida-animate-rise text-[#A64E6E] italic" style={{ animationDelay: '0.75s', animationDuration: '1s' }}>enough.</span>
             </h1>
             <p 
-              className="text-[1.2rem] color-[#8A7680] text-[#8A7680] mt-[26px] mb-0 max-w-[34ch] vaida-animate-rise"
+              className="text-[1.05rem] md:text-[1.2rem] text-[#8A7680] mt-[26px] mb-0 max-w-[34ch] mx-auto md:mx-0 vaida-animate-rise"
               style={{ animationDelay: '0.95s', animationDuration: '1s' }}
             >
               Rebuild confidence. Reclaim identity. Create financial courage — in the AI era and beyond.
             </p>
             <div 
-              className="mt-[34px] flex gap-[16px] flex-wrap vaida-animate-rise"
+              className="mt-[30px] md:mt-[34px] flex justify-center md:justify-start gap-[16px] flex-wrap vaida-animate-rise"
               style={{ animationDelay: '1.15s', animationDuration: '1s' }}
             >
               <Link 
                 href="https://calendly.com/vaidastone" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block font-bold text-[1rem] py-[15px] px-[30px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-[#C9738F] text-white shadow-[0_10px_24px_rgba(201,115,143,0.35)] hover:-translate-y-[3px] hover:scale-[1.02] hover:shadow-[0_16px_34px_rgba(201,115,143,0.45)]"
+                className="inline-block font-bold text-[0.9rem] md:text-[1rem] py-[15px] px-[24px] md:px-[30px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-[#C9738F] text-white shadow-[0_10px_24px_rgba(201,115,143,0.35)] hover:-translate-y-[3px] hover:scale-[1.02] hover:shadow-[0_16px_34px_rgba(201,115,143,0.45)] w-full sm:w-auto text-center"
               >
                 Book Vaida to speak
               </Link>
               <Link 
                 href="/vaida/ai" 
-                className="inline-block font-bold text-[1rem] py-[15px] px-[30px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-transparent text-[#A64E6E] hover:bg-[#FBEDF1] hover:-translate-y-[3px]"
+                className="inline-block font-bold text-[0.9rem] md:text-[1rem] py-[15px] px-[24px] md:px-[30px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-transparent text-[#A64E6E] hover:bg-[#FBEDF1] hover:-translate-y-[3px] w-full sm:w-auto text-center"
               >
                 Your free AI gift
               </Link>
@@ -82,7 +82,7 @@ export function VaidaHero() {
           </div>
 
           <div 
-            className="relative vaida-animate-rise vaida-morph-ring"
+            className="relative vaida-animate-rise vaida-morph-ring max-w-[280px] sm:max-w-[340px] md:max-w-none mx-auto w-full mt-[20px] md:mt-0"
             style={{ animationDelay: '0.6s', animationDuration: '1.1s' }}
           >
             <div className="relative w-full aspect-[4/5] vaida-portrait-shape overflow-hidden shadow-[0_30px_70px_rgba(126,59,84,0.22)]">

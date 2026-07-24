@@ -57,17 +57,17 @@ export function VaidaAIDemo() {
         }
       `}} />
       
-      <div className="max-w-[800px] mx-auto bg-white/70 backdrop-blur-xl border border-white rounded-[24px] shadow-[0_30px_80px_rgba(126,59,84,0.12)] overflow-hidden">
+      <div className="max-w-[700px] mx-auto bg-white/70 backdrop-blur-xl rounded-[24px] border border-[rgba(255,255,255,0.6)] shadow-[0_20px_50px_rgba(126,59,84,0.08)] overflow-hidden flex flex-col h-[420px] md:h-[500px]">
         
         {/* Fake window header */}
-        <div className="bg-[#FBEDF1] p-[16px_22px] flex items-center gap-[8px] border-b border-[#F6DCE5]">
+        <div className="bg-white/80 p-[16px_24px] md:p-[20px_30px] border-b border-[rgba(246,220,229,0.5)] flex items-center gap-[12px]">
           <div className="w-[12px] h-[12px] rounded-full bg-[#C9738F]"></div>
           <div className="w-[12px] h-[12px] rounded-full bg-[#CBA167]"></div>
           <div className="w-[12px] h-[12px] rounded-full bg-[#8A7680]"></div>
         </div>
         
-        <div className="p-[30px] md:p-[44px]">
-          <p className="text-[#A64E6E] font-bold text-[0.9rem] mb-[16px] uppercase tracking-[0.1em]">
+        <div className="p-[16px_20px] md:p-[20px_30px] bg-white/60 border-t border-[rgba(246,220,229,0.5)] flex-grow overflow-y-auto">
+          <p className="text-[0.75rem] font-bold text-[#A64E6E] tracking-[0.1em] uppercase mb-[8px]">
             Ask the AI:
           </p>
           
