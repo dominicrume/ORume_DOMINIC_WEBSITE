@@ -115,8 +115,73 @@ export function VaidaProgram() {
           </div>
         </div>
 
+        {/* The 6-Week Journey Roadmap */}
+        <div className="mb-[80px]">
+          <div className="text-center mb-[50px]">
+            <span className="inline-block py-[5px] px-[16px] rounded-full bg-[#FBEDF1] text-[#A64E6E] font-bold text-[0.75rem] tracking-[0.22em] uppercase mb-[12px]">
+              Step-By-Step Architecture
+            </span>
+            <h3 className="font-serif font-semibold text-[2rem] md:text-[2.8rem] text-[#7E3B54] mb-[12px]">
+              The Journey: Six Weeks. One Meaningful Shift.
+            </h3>
+            <p className="text-[#8A7680] text-[1.1rem] max-w-[58ch] mx-auto">
+              We do not start with a restrictive budget. We start with you — uniting emotional understanding with practical financial structure.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]">
+            <div className="bg-white p-[30px] rounded-[24px] border border-[#F6DCE5] shadow-[0_10px_30px_rgba(126,59,84,0.05)] hover:border-[#C9738F] transition-all duration-300">
+              <span className="text-[0.8rem] font-bold text-[#A64E6E] bg-[#FBEDF1] px-[12px] py-[4px] rounded-full inline-block mb-[16px]">Week 01</span>
+              <h4 className="font-serif font-bold text-[1.3rem] text-[#7E3B54] mb-[10px]">Your Money Pattern Audit</h4>
+              <p className="text-[#8A7680] text-[0.94rem] leading-relaxed">
+                Before we change anything practical, we uncover what has really been driving your money behaviour. This gives deep clarity without blame or judgment.
+              </p>
+            </div>
+
+            <div className="bg-white p-[30px] rounded-[24px] border border-[#F6DCE5] shadow-[0_10px_30px_rgba(126,59,84,0.05)] hover:border-[#C9738F] transition-all duration-300">
+              <span className="text-[0.8rem] font-bold text-[#A64E6E] bg-[#FBEDF1] px-[12px] py-[4px] rounded-full inline-block mb-[16px]">Week 02</span>
+              <h4 className="font-serif font-bold text-[1.3rem] text-[#7E3B54] mb-[10px]">Your True Numbers</h4>
+              <p className="text-[#8A7680] text-[0.94rem] leading-relaxed">
+                We look at your real financial picture in a calm, honest, supportive way. No shame. No drama. Just truth and foundational clarity.
+              </p>
+            </div>
+
+            <div className="bg-white p-[30px] rounded-[24px] border border-[#F6DCE5] shadow-[0_10px_30px_rgba(126,59,84,0.05)] hover:border-[#C9738F] transition-all duration-300">
+              <span className="text-[0.8rem] font-bold text-[#A64E6E] bg-[#FBEDF1] px-[12px] py-[4px] rounded-full inline-block mb-[16px]">Week 03</span>
+              <h4 className="font-serif font-bold text-[1.3rem] text-[#7E3B54] mb-[10px]">Building Your Personal System</h4>
+              <p className="text-[#8A7680] text-[0.94rem] leading-relaxed">
+                You create your own effortless money routine, spending structure, and automatic savings habit in a way that fits your actual lifestyle and bandwidth.
+              </p>
+            </div>
+
+            <div className="bg-white p-[30px] rounded-[24px] border border-[#F6DCE5] shadow-[0_10px_30px_rgba(126,59,84,0.05)] hover:border-[#C9738F] transition-all duration-300">
+              <span className="text-[0.8rem] font-bold text-[#A64E6E] bg-[#FBEDF1] px-[12px] py-[4px] rounded-full inline-block mb-[16px]">Week 04</span>
+              <h4 className="font-serif font-bold text-[1.3rem] text-[#7E3B54] mb-[10px]">Rewiring the Story</h4>
+              <p className="text-[#8A7680] text-[0.94rem] leading-relaxed">
+                We explore the beliefs, fears, and emotional loops underneath your money habits so your new practical system has stronger, unbreakable roots.
+              </p>
+            </div>
+
+            <div className="bg-white p-[30px] rounded-[24px] border border-[#F6DCE5] shadow-[0_10px_30px_rgba(126,59,84,0.05)] hover:border-[#C9738F] transition-all duration-300">
+              <span className="text-[0.8rem] font-bold text-[#A64E6E] bg-[#FBEDF1] px-[12px] py-[4px] rounded-full inline-block mb-[16px]">Week 05</span>
+              <h4 className="font-serif font-bold text-[1.3rem] text-[#7E3B54] mb-[10px]">Confident Financial Decisions</h4>
+              <p className="text-[#8A7680] text-[0.94rem] leading-relaxed">
+                You learn how to respond to spending choices, unexpected surprises, pressure, and economic uncertainty with quiet steadiness and zero panic.
+              </p>
+            </div>
+
+            <div className="bg-white p-[30px] rounded-[24px] border border-[#F6DCE5] shadow-[0_10px_30px_rgba(126,59,84,0.05)] hover:border-[#C9738F] transition-all duration-300">
+              <span className="text-[0.8rem] font-bold text-[#A64E6E] bg-[#FBEDF1] px-[12px] py-[4px] rounded-full inline-block mb-[16px]">Week 06</span>
+              <h4 className="font-serif font-bold text-[1.3rem] text-[#7E3B54] mb-[10px]">Integration &amp; Next Steps</h4>
+              <p className="text-[#8A7680] text-[0.94rem] leading-relaxed">
+                You bring everything together, review your transformations, and leave with a simple, automated financial architecture for your next 90 days and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Everything Included / Value Stack */}
-        <div className="bg-[#7E3B54] text-white rounded-[36px] p-[40px] md:p-[64px] relative overflow-hidden shadow-[0_30px_80px_rgba(126,59,84,0.28)]">
+        <div className="bg-[#7E3B54] text-white rounded-[36px] p-[40px] md:p-[64px] relative overflow-hidden shadow-[0_30px_80px_rgba(126,59,84,0.28)] mb-[80px]">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(201,115,143,0.35)_0%,transparent_70%)] pointer-events-none"></div>
           
           <div className="max-w-[840px] mx-auto relative z-10">
@@ -224,6 +289,100 @@ export function VaidaProgram() {
             </div>
 
           </div>
+        </div>
+
+        {/* Real Women. Real Shifts. Testimonials */}
+        <div className="mb-[80px]">
+          <div className="text-center mb-[46px]">
+            <h3 className="font-serif font-semibold text-[2rem] md:text-[2.6rem] text-[#7E3B54]">
+              Real Women. Real Shifts. Real Relief.
+            </h3>
+            <p className="text-[#8A7680] text-[1.05rem] mt-[8px]">
+              How capable women are experiencing money after the Always Enough™ Reset.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[26px]">
+            <div className="bg-white p-[32px] rounded-[24px] border border-[#F6DCE5] shadow-[0_15px_40px_rgba(126,59,84,0.06)] flex flex-col justify-between">
+              <p className="text-[#4A3B41] text-[0.98rem] italic leading-relaxed mb-[24px]">
+                &ldquo;Vaida shared her knowledge and expertise on money management in a way that truly made sense. Her Mind Loop process helped me become more aware of what&apos;s really happening when I think about money, and it shifted how I relate to it.&rdquo;
+              </p>
+              <div>
+                <span className="font-bold text-[#7E3B54] block">Lolita Reid</span>
+                <span className="text-[0.85rem] text-[#8A7680]">Business Coach</span>
+              </div>
+            </div>
+
+            <div className="bg-white p-[32px] rounded-[24px] border border-[#F6DCE5] shadow-[0_15px_40px_rgba(126,59,84,0.06)] flex flex-col justify-between">
+              <p className="text-[#4A3B41] text-[0.98rem] italic leading-relaxed mb-[24px]">
+                &ldquo;I thought I needed more money, but what I really needed was a system. This helped me stop guessing and start managing without feeling overwhelmed by spreadsheets.&rdquo;
+              </p>
+              <div>
+                <span className="font-bold text-[#7E3B54] block">L. · Age 52</span>
+                <span className="text-[0.85rem] text-[#8A7680]">NHS Professional</span>
+              </div>
+            </div>
+
+            <div className="bg-white p-[32px] rounded-[24px] border border-[#F6DCE5] shadow-[0_15px_40px_rgba(126,59,84,0.06)] flex flex-col justify-between">
+              <p className="text-[#4A3B41] text-[0.98rem] italic leading-relaxed mb-[24px]">
+                &ldquo;The emotional part changed everything for me. I finally understood why I kept repeating the same pattern, and that understanding gave me space to change it for good.&rdquo;
+              </p>
+              <div>
+                <span className="font-bold text-[#7E3B54] block">M. · Age 44</span>
+                <span className="text-[0.85rem] text-[#8A7680]">Business Owner</span>
+              </div>
+            </div>
+          </div>
+          <p className="text-center text-[#8A7680] text-[0.82rem] mt-[20px] italic">
+            Names and details shared with permission only. Results are individual and may vary.
+          </p>
+        </div>
+
+        {/* The 14-Day Promise & Free Starter Guide */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] max-w-[1000px] mx-auto">
+          
+          {/* Guarantee Box */}
+          <div className="bg-gradient-to-br from-[#FDF9F5] to-white p-[36px] rounded-[28px] border-2 border-[#D9B67C] shadow-lg flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-[12px] mb-[16px]">
+                <div className="w-[48px] h-[48px] rounded-full bg-[#FBEDF1] text-[#A64E6E] flex items-center justify-center text-[1.4rem] font-bold">
+                  ✓
+                </div>
+                <div>
+                  <h4 className="font-serif font-bold text-[1.4rem] text-[#7E3B54]">The 14-Day Promise</h4>
+                  <span className="text-[0.8rem] uppercase tracking-wider text-[#856949] font-bold">Risk-Free Guarantee</span>
+                </div>
+              </div>
+              <p className="text-[#4A3B41] text-[0.96rem] leading-relaxed mb-[16px]">
+                Attend the first two live sessions. Do the reflection work between them. If you genuinely feel this programme is not right for your season of life, email within 14 days of the start date and you will receive a full refund.
+              </p>
+              <p className="text-[#8A7680] text-[0.9rem] font-semibold italic">
+                No awkwardness. No pressure. I believe women need safety as well as support when making a real investment in themselves.
+              </p>
+            </div>
+          </div>
+
+          {/* Lead Magnet Box */}
+          <div className="bg-gradient-to-br from-[#FBEDF1] to-white p-[36px] rounded-[28px] border border-[#F6DCE5] shadow-lg flex flex-col justify-between">
+            <div>
+              <span className="text-[0.78rem] font-bold text-[#A64E6E] uppercase tracking-[0.18em] block mb-[8px]">
+                Not Ready For The Full Program?
+              </span>
+              <h4 className="font-serif font-bold text-[1.4rem] text-[#7E3B54] mb-[12px]">
+                Get the Free Money Clarity Starter Guide for Women 40+
+              </h4>
+              <p className="text-[#4A3B41] text-[0.95rem] leading-relaxed mb-[22px]">
+                Understand where your money stress is really coming from, spot one habit that needs attention, and begin creating foundational clarity without overwhelm.
+              </p>
+            </div>
+            <a
+              href="#capture"
+              className="inline-block font-bold text-[0.95rem] py-[14px] px-[28px] rounded-full transition-all duration-300 border-2 border-[#C9738F] text-[#7E3B54] hover:bg-[#C9738F] hover:text-white text-center"
+            >
+              Download the Free Starter Guide →
+            </a>
+          </div>
+
         </div>
 
       </div>
