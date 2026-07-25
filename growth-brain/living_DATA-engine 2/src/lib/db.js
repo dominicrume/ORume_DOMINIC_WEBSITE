@@ -17,6 +17,9 @@ fs.mkdirSync(process.env.MEMORY_PATH || path.join(__dirname, '../../memory'), { 
 
 const db = new Database(DB_PATH)
 db.pragma('journal_mode = WAL')
+db.pragma('synchronous = NORMAL')
+db.pragma('cache_size = -64000') // 64MB cache size for zero-lag analytics
+db.pragma('busy_timeout = 5000') // 5s timeout to prevent SQLITE_BUSY under heavy concurrency
 db.pragma('foreign_keys = ON')
 
 db.exec(`
@@ -226,6 +229,29 @@ db.exec(`
     sold_at       DATETIME DEFAULT CURRENT_TIMESTAMP
   );
 
+  -- Growth sources & Substack analytics table
+  CREATE TABLE IF NOT EXISTS growth_sources (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    date            TEXT NOT NULL,
+    source          TEXT NOT NULL,
+    category        TEXT NOT NULL,
+    unique_visitors INTEGER DEFAULT 0,
+    new_subscribers INTEGER DEFAULT 0,
+    new_revenue     REAL DEFAULT 0,
+    created_at      DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(date, source, category)
+  );
+
+  -- AI Growth Brain diagnoses & recommendations
+  CREATE TABLE IF NOT EXISTS growth_insights (
+    id                   INTEGER PRIMARY KEY AUTOINCREMENT,
+    cycle_date           DATETIME DEFAULT CURRENT_TIMESTAMP,
+    top_channel          TEXT,
+    bottleneck           TEXT,
+    recommendations_json TEXT,
+    metrics_summary_json TEXT
+  );
+
   CREATE INDEX IF NOT EXISTS idx_leads_status   ON leads(status);
   CREATE INDEX IF NOT EXISTS idx_leads_score    ON leads(score DESC);
   CREATE INDEX IF NOT EXISTS idx_leads_niche    ON leads(niche);
@@ -234,6 +260,8 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_cycles_num     ON agent_cycles(cycle_number DESC);
   CREATE INDEX IF NOT EXISTS idx_match_lead     ON sales_matches(lead_id);
   CREATE INDEX IF NOT EXISTS idx_revenue_sold   ON revenue_ledger(sold_at DESC);
+  CREATE INDEX IF NOT EXISTS idx_growth_date    ON growth_sources(date DESC);
+  CREATE INDEX IF NOT EXISTS idx_growth_cat     ON growth_sources(category);
 `)
 
 export const DB = {
@@ -338,6 +366,19 @@ export const DB = {
     byRung:  db.prepare(`SELECT rung, COUNT(*) AS sales, ROUND(SUM(amount),0) AS revenue FROM revenue_ledger GROUP BY rung ORDER BY rung`),
     recent:  db.prepare(`SELECT * FROM revenue_ledger ORDER BY sold_at DESC LIMIT 50`),
     monthlyRecurring: db.prepare(`SELECT ROUND(SUM(amount),0) AS mrr FROM revenue_ledger WHERE recurring='monthly'`),
+  },
+  growth: {
+    upsert: db.prepare(`INSERT INTO growth_sources (date, source, category, unique_visitors, new_subscribers, new_revenue) VALUES (@date, @source, @category, @unique_visitors, @new_subscribers, @new_revenue) ON CONFLICT(date, source, category) DO UPDATE SET unique_visitors=excluded.unique_visitors, new_subscribers=excluded.new_subscribers, new_revenue=excluded.new_revenue`),
+    all: db.prepare(`SELECT * FROM growth_sources ORDER BY date DESC LIMIT 500`),
+    byCategory: db.prepare(`SELECT category, COUNT(*) as rows, SUM(unique_visitors) as total_visitors, SUM(new_subscribers) as total_subscribers, ROUND(SUM(new_revenue),2) as total_revenue FROM growth_sources GROUP BY category ORDER BY total_subscribers DESC`),
+    bySource: db.prepare(`SELECT source, category, SUM(unique_visitors) as visitors, SUM(new_subscribers) as subscribers, ROUND(SUM(new_revenue),2) as revenue FROM growth_sources GROUP BY source, category ORDER BY subscribers DESC`),
+    timeline: db.prepare(`SELECT date, SUM(unique_visitors) as visitors, SUM(new_subscribers) as subscribers, ROUND(SUM(new_revenue),2) as revenue FROM growth_sources GROUP BY date ORDER BY date DESC LIMIT 30`),
+    stats: db.prepare(`SELECT ROUND(SUM(unique_visitors),0) as visitors, ROUND(SUM(new_subscribers),0) as subscribers, ROUND(SUM(new_revenue),2) as revenue FROM growth_sources`),
+  },
+  insights: {
+    insert: db.prepare(`INSERT INTO growth_insights (top_channel, bottleneck, recommendations_json, metrics_summary_json) VALUES (@top_channel, @bottleneck, @recommendations_json, @metrics_summary_json)`),
+    latest: db.prepare(`SELECT * FROM growth_insights ORDER BY id DESC LIMIT 1`),
+    history: db.prepare(`SELECT * FROM growth_insights ORDER BY id DESC LIMIT 20`),
   },
 }
 

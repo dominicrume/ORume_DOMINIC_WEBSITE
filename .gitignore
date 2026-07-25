@@ -19,3 +19,12 @@ media-source/
 
 # Local Claude Code tooling config
 .claude/
+
+# SQLite databases, WALs, journals, and logs
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.log
+.system_generated/
+

@@ -4,6 +4,7 @@
 // Run once: npm run agent:once
 // Run forever: npm run agent   (starts cron scheduler)
 // ═══════════════════════════════════════════════════════════════
+import '../lib/polyfills.js'
 import 'dotenv/config'
 import cron from 'node-cron'
 import { DB } from '../lib/db.js'

@@ -11,6 +11,8 @@
     "dev": "concurrently \"npm run api\" \"npm run ui\"",
     "api": "node --watch src/api/server.js",
     "ui": "vite src/dashboard --port 5176",
+    "ui:build": "vite build src/dashboard --outDir dist/dashboard",
+    "start": "NODE_ENV=production node src/api/server.js",
     "pipeline": "node src/agent/orchestrator.js",
     "discover": "node src/scrapers/discover.js",
     "mx": "node src/intel/mxLookup.js",
@@ -27,6 +29,10 @@
     "export": "node scripts/export.js",
     "db:init": "node scripts/dbInit.js",
     "db:stats": "node scripts/dbStats.js",
+    "test:growth": "node scripts/testGrowthEngine.js",
+    "growth:morning": "node scripts/morningIngest.js",
+    "growth:overnight": "node scripts/overnightHarvest.js",
+    "growth:import": "node -e \"import('./src/growth/sourceImporter.js').then(m => m.SourceImporter.importFromCSV()).then(console.log)\"",
     "install:browsers": "npx playwright install chromium"
   },
   "dependencies": {

@@ -2,14 +2,34 @@
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import { DB } from '../lib/db.js'
 import { Memory } from '../lib/memory.js'
 import { logger } from '../lib/logger.js'
+import { SourceImporter } from '../growth/sourceImporter.js'
+import { GrowthAdvisor } from '../brain/growthAdvisor.js'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const app  = express()
 const PORT = process.env.PORT || 3001
 app.use(cors())
 app.use(express.json())
+
+// Enterprise Liveness and Readiness Probes
+app.get('/api/health', (_, res) => {
+  try {
+    const dbStatus = DB.domains.count.get() !== undefined ? 'ok' : 'error'
+    res.json({ status: 'ok', db: dbStatus, timestamp: new Date().toISOString() })
+  } catch (err) {
+    res.status(503).json({ status: 'error', error: err.message })
+  }
+})
+
+app.get('/api/ready', (_, res) => {
+  res.json({ ready: true, uptime: process.uptime() })
+})
 
 // Dashboard stats
 app.get('/api/stats', (_, res) => {
@@ -115,6 +135,46 @@ app.get('/unsubscribe/:email', (req, res) => {
   } catch (err) { res.status(500).send('Error') }
 })
 
+// ── Growth Engine & Substack Analytics routes ─────────────────
+app.get('/api/growth/sources', (_, res) => {
+  try { res.json(DB.growth.all.all()) }
+  catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+app.get('/api/growth/stats', (_, res) => {
+  try {
+    res.json({
+      stats: DB.growth.stats.get(),
+      byCategory: DB.growth.byCategory.all(),
+      bySource: DB.growth.bySource.all(),
+      timeline: DB.growth.timeline.all()
+    })
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+app.get('/api/growth/insights', async (_, res) => {
+  try {
+    let row = DB.insights.latest.get()
+    if (!row) {
+      await GrowthAdvisor.analyzeGrowth()
+      row = DB.insights.latest.get()
+    }
+    if (row && row.recommendations_json) {
+      row.recommendations = JSON.parse(row.recommendations_json)
+      row.metrics_summary = JSON.parse(row.metrics_summary_json || '{}')
+    }
+    res.json(row || { bottleneck: 'No insights generated yet.', recommendations: [] })
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+app.post('/api/growth/import', async (req, res) => {
+  try {
+    const importStats = await SourceImporter.importFromCSV()
+    const diagnosis = await GrowthAdvisor.analyzeGrowth()
+    res.json({ ok: true, importStats, diagnosis })
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
 // Trigger single-stage run
 app.post('/api/agent/run', async (req, res) => {
   const { stage } = req.body
@@ -123,5 +183,16 @@ app.post('/api/agent/run', async (req, res) => {
   const { default: { runCycle } } = await import('../agent/agent.js').catch(() => ({}))
   logger.info(`API: stage ${stage} triggered`)
 })
+
+// Production static UI serving
+if (process.env.NODE_ENV === 'production') {
+  const distPath = path.join(__dirname, '../../dist/dashboard')
+  app.use(express.static(distPath))
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(path.join(distPath, 'index.html'))
+    }
+  })
+}
 
 app.listen(PORT, () => logger.info(`API: http://localhost:${PORT}`))

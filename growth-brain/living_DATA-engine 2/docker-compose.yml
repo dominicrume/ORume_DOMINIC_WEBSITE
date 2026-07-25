@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  living-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rume-living-engine-2.0
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - DB_PATH=/app/data/living-engine.db
+      - MEMORY_PATH=/app/memory
+    volumes:
+      # Persistent storage volumes for zero-data-loss upgrades
+      - engine_data:/app/data
+      - engine_logs:/app/logs
+      - engine_memory:/app/memory
+      - engine_exports:/app/exports
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3001/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+volumes:
+  engine_data:
+    name: rume_engine_data
+  engine_logs:
+    name: rume_engine_logs
+  engine_memory:
+    name: rume_engine_memory
+  engine_exports:
+    name: rume_engine_exports
