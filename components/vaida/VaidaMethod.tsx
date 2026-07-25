@@ -90,27 +90,30 @@ export function VaidaMethod() {
         </div>
       </section>
 
-      {/* GIFT */}
-      <section className="mb-[100px] vaida-reveal opacity-0 translate-y-[34px] transition-all duration-[900ms] cubic-bezier(0.22, 1, 0.36, 1)">
-        <div className="bg-gradient-to-br from-[#FBEDF1] to-[#F6DCE5] rounded-[32px] p-[66px_40px] text-center relative overflow-hidden">
-          <div className="absolute text-[14rem] text-[rgba(201,115,143,0.08)] right-[-20px] bottom-[-60px] font-serif leading-none select-none">
+      {/* GIFT / COMMUNITY BONUS */}
+      <section className="mb-[60px] vaida-reveal opacity-0 translate-y-[34px] transition-all duration-[900ms] cubic-bezier(0.22, 1, 0.36, 1)">
+        <div className="bg-gradient-to-br from-[#FBEDF1] to-[#F6DCE5] rounded-[32px] p-[56px_36px] md:p-[66px_48px] text-center relative overflow-hidden border border-[rgba(201,115,143,0.2)]">
+          <div className="absolute text-[14rem] text-[rgba(201,115,143,0.08)] right-[-20px] bottom-[-60px] font-serif leading-none select-none pointer-events-none">
             ✿
           </div>
-          <div className="relative z-10">
-            <p className="text-[0.82rem] tracking-[0.34em] uppercase text-[#C9738F] mb-[14px] font-bold">
-              New · free for this community
-            </p>
-            <h2 className="font-serif font-semibold text-[clamp(2rem,4.5vw,3rem)] text-[#7E3B54] mb-[14px] leading-[1.08]">
-              Your AI courage starts here
+          <div className="relative z-10 max-w-[700px] mx-auto">
+            <span className="inline-block py-[5px] px-[16px] rounded-full bg-white border border-[#F6DCE5] text-[#C9738F] font-extrabold text-[0.75rem] tracking-[0.25em] uppercase mb-[16px]">
+              Special Community Collaboration · Member Bonus
+            </span>
+            <h2 className="font-serif font-semibold text-[clamp(1.8rem,4vw,2.8rem)] text-[#7E3B54] mb-[12px] leading-[1.1]">
+              Digital Courage in the AI Era
             </h2>
-            <p className="text-[#4A3B41] max-w-[44ch] mx-auto mb-[28px] text-[1.1rem]">
-              A complete beginner&apos;s AI course and book — gifted to the Always ENOUGH community. Because this era is yours too.
+            <p className="text-[#A64E6E] font-semibold text-[1.05rem] mb-[18px]">
+              In Partnership with Rume Dominic &amp; Vorem AI
+            </p>
+            <p className="text-[#4A3B41] max-w-[54ch] mx-auto mb-[32px] text-[1.05rem] leading-relaxed">
+              While mastering your practical and emotional financial foundation is our primary mission, thriving in modern leadership also requires technological courage. As a member of the Always ENOUGH™ community, you receive complimentary access to our collaborative beginner&apos;s AI training course and blueprint.
             </p>
             <Link 
               href="/vaida/ai" 
-              className="inline-block font-bold text-[1rem] py-[15px] px-[30px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-[#C9738F] text-white shadow-[0_10px_24px_rgba(201,115,143,0.35)] hover:-translate-y-[3px] hover:scale-[1.02] hover:shadow-[0_16px_34px_rgba(201,115,143,0.45)]"
+              className="inline-block font-bold text-[1rem] py-[16px] px-[34px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-[#C9738F] text-white shadow-[0_10px_24px_rgba(201,115,143,0.35)] hover:-translate-y-[3px] hover:scale-[1.02] hover:shadow-[0_16px_34px_rgba(201,115,143,0.45)]"
             >
-              Get free access
+              Explore Your Free AI Bonus Gift →
             </Link>
           </div>
         </div>
