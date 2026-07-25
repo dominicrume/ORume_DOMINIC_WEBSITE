@@ -12,6 +12,11 @@ const nextConfig = {
       { source: '/master-ai', destination: '/master-ai/index.html' },
     ];
   },
+  async redirects() {
+    return [
+      { source: '/free', destination: '/access', permanent: false },
+    ];
+  },
   async headers() {
     return [
       {
