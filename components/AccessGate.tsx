@@ -20,12 +20,21 @@ function AccessGateContent() {
     const grantedParam = searchParams?.get('granted');
     const sourceParam = searchParams?.get('source');
     const nameParam = searchParams?.get('name');
-    const localGranted = typeof window !== 'undefined' ? localStorage.getItem('rd_access_granted') : null;
+    let localGranted = null;
+    try {
+      localGranted = typeof window !== 'undefined' ? localStorage.getItem('rd_access_granted') : null;
+    } catch {
+      // Ignore storage errors in restricted mobile webviews (e.g. LinkedIn app)
+    }
 
     if (grantedParam === 'true' || sourceParam || nameParam || localGranted === 'true') {
       setIsGranted(true);
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('rd_access_granted', 'true');
+      try {
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('rd_access_granted', 'true');
+        }
+      } catch {
+        // Ignore storage errors in restricted mobile webviews
       }
     }
   }, [searchParams]);
@@ -49,8 +58,12 @@ function AccessGateContent() {
       if (res.ok) {
         setStatus('success');
         setIsGranted(true);
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('rd_access_granted', 'true');
+        try {
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('rd_access_granted', 'true');
+          }
+        } catch {
+          // Ignore storage errors in restricted mobile webviews
         }
         track('access_gate_success');
       } else {

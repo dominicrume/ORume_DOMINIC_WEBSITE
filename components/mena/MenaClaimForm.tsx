@@ -47,8 +47,12 @@ export function MenaClaimForm() {
     // Instant delivery without email verification or waiting
     setStatus('success');
     track('mena_claim_success');
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('rd_mena_scholarship_claimed', 'true');
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('rd_mena_scholarship_claimed', 'true');
+      }
+    } catch {
+      // Ignore storage errors in restricted mobile webviews
     }
   }
 

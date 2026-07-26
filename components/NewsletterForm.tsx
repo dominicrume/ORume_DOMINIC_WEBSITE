@@ -30,8 +30,12 @@ export function NewsletterForm() {
         setMessage('You’re in. Taking you to your free book and course…');
         form.reset();
         // Instant delivery: mark access as granted and hand them the resources right away.
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('rd_access_granted', 'true');
+        try {
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('rd_access_granted', 'true');
+          }
+        } catch {
+          // Ignore storage errors in restricted mobile webviews
         }
         window.location.href = '/access?granted=true';
       } else {
