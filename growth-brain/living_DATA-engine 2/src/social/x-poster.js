@@ -14,8 +14,8 @@ async function callClaude(prompt) {
   console.log('[Claude] Drafting tweet based on persona and memory...');
   
   if (!process.env.ANTHROPIC_API_KEY) {
-    console.warn('⚠️ No ANTHROPIC_API_KEY found. Generating a fallback placeholder draft.');
-    return "Most companies are building AI toys with 'vibe coding'. We build production-grade, auditable AI agents. There is a difference between a demo and an enterprise system. Know Your AgenticAi. #AgenticAI";
+    console.warn('⚠️ No ANTHROPIC_API_KEY found. Generating a fallback placeholder draft in Ruben Hassid style.');
+    return "Vibecoding.\n\nAfter 51,000+ hours of development, I admit most AI advice is wrong:\n\nStop collecting prompts and building toys. Build auditable, production-grade AI agents today.\n\n→ Know Your AgenticAi: https://rumedominic.com";
   }
 
   try {
@@ -37,6 +37,34 @@ async function callClaude(prompt) {
 async function postToX(text) {
   const isLive = process.env.X_API_KEY && process.env.X_API_SECRET && process.env.X_ACCESS_TOKEN && process.env.X_ACCESS_SECRET;
   
+  if (process.env.MAKE_WEBHOOK_URL) {
+    console.log('[Make.com Automation] Pushing generated Ruben Hassid copy to Make.com Webhook...');
+    try {
+      const response = await fetch(process.env.MAKE_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: "Vibecoding vs. Production AI Architecture — Rume Dominic",
+          text,
+          caption: `${text}\n\n👉 Master Agentic AI & Get the Book: https://rumedominic.com\n\n#AgenticAI #Vorem #RumeDominic #Web3 #AI`,
+          image_url: "https://rumedominic.com/rume-portrait.jpg",
+          tags: ["AgenticAI", "Vorem", "RumeDominic", "Web3", "AI"],
+          timestamp: new Date().toISOString(),
+          author: "Rume Dominic x Vorem AI",
+          style: "Ruben Hassid High-Traction",
+          channel_target: "Multi-Channel (Twitter/X, LinkedIn, Facebook, Instagram, Medium, Substack)"
+        })
+      });
+      if (response.ok) {
+        console.log('✅ Successfully triggered Make.com automation scenario!');
+      } else {
+        console.warn('⚠️ Make.com Webhook responded with status:', response.status);
+      }
+    } catch (err) {
+      console.error('❌ Failed to send payload to Make.com Webhook:', err.message);
+    }
+  }
+
   if (isLive) {
     console.log('[X Poster] Live credentials found. Pushing to Twitter timeline...');
     try {
@@ -60,7 +88,7 @@ async function postToX(text) {
     console.log('========================================\n');
   }
   
-  const logEntry = JSON.stringify({ timestamp: new Date().toISOString(), text, status: isLive ? 'live' : 'dry-run' });
+  const logEntry = JSON.stringify({ timestamp: new Date().toISOString(), text, status: isLive ? 'live' : (process.env.MAKE_WEBHOOK_URL ? 'make-webhook' : 'dry-run') });
   if (!fs.existsSync(path.dirname(LOG_PATH))) fs.mkdirSync(path.dirname(LOG_PATH), { recursive: true });
   fs.appendFileSync(LOG_PATH, logEntry + '\n');
   

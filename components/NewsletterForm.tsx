@@ -29,8 +29,11 @@ export function NewsletterForm() {
         setStatus('success');
         setMessage('You’re in. Taking you to your free book and course…');
         form.reset();
-        // Instant delivery: hand them the resources right away.
-        window.location.href = '/access';
+        // Instant delivery: mark access as granted and hand them the resources right away.
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('rd_access_granted', 'true');
+        }
+        window.location.href = '/access?granted=true';
       } else {
         setStatus('error');
         setMessage(json?.error ?? 'Please try again.');

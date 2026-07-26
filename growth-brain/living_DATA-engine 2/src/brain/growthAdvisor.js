@@ -79,7 +79,7 @@ export class GrowthAdvisor {
         id: 'REC-03',
         priority: 'MEDIUM',
         channel: 'Social',
-        action: 'Deploy interactive AI demo widgets (e.g., Vaida AI demo) on landing pages linked in Social bios.',
+        action: 'Deploy interactive AI agent demo widgets (e.g., Vorem AI Agentic Demo) on landing pages linked in Social bios.',
         rationale: 'Social media visitors require immediate interactive value to bridge from passive scrolling to active consciousness.',
         expected_impact: 'Boost dwell time by 40% and generate qualified business leads.',
         target_tier: 'Tier 3 (£1,500/mo Service)'
