@@ -11,7 +11,7 @@ export const MENA_CONFIG = {
 
   BOOK_TITLE: 'From Code to Consciousness',
   BOOK_LINK: 'https://rumedominic.com/access',
-  COURSE_NAME: 'Master AI in 9 Days',
+  COURSE_NAME: 'Master AI in 3 Nights',
   COURSE_LINK: 'https://vorem.co',
   PRODUCT_NAME: '[MISSING: PRODUCT_NAME]',
   PRODUCT_LINK: '[MISSING: PRODUCT_LINK]',

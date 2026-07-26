@@ -127,7 +127,7 @@ export function MenaClaimForm() {
         </div>
 
         <div className="mt-8 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-xs sm:text-sm text-[#F4F1EA]/90 font-sans">
-          ⚠️ <strong>Nobody will ever ask you to pay a fee. That is a scam.</strong> All prizes on the night were paid directly to winners&apos; own accounts, and all education here is 100% free.
+          ⚠️ <strong>Nobody will ever ask you to pay a fee. That is a scam.</strong> All prizes during the 3-night live event were paid directly to winners&apos; own accounts, and all education here is 100% free.
         </div>
       </div>
     );

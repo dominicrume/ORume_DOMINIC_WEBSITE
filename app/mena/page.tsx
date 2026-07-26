@@ -87,7 +87,7 @@ const JSON_LD = {
       '@type': 'Course',
       '@id': `${MENA_CONFIG.DOMAIN}/#course`,
       name: MENA_CONFIG.COURSE_NAME,
-      description: 'Go from total beginner to confident AI builder in nine short, practical days.',
+      description: 'Go from total beginner to confident AI builder in three intensive nights.',
       provider: {
         '@type': 'Organization',
         '@id': 'https://vorem.co/#org',
@@ -103,7 +103,7 @@ const JSON_LD = {
           name: 'What is the "I Am Yours" Empowerment Live?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The "I Am Yours" Empowerment Live is a virtual broadcast event held on 25 July 2026 where artist Mena Obrike and AI engineer Rume Dominic Uririe disbursed direct financial aid and launched a free pan-African tech scholarship. During the event on TikTok, verified participants received cash prizes directly to their bank accounts.',
+            text: 'The "I Am Yours" Empowerment Live is a 3-night virtual broadcast intensive starting 25 July 2026 where artist Mena Obrike and AI engineer Rume Dominic Uririe disbursed direct financial aid and launched a free pan-African tech scholarship. During the event on TikTok, verified participants received cash prizes directly to their bank accounts.',
           },
         },
         {
@@ -119,7 +119,7 @@ const JSON_LD = {
           name: 'Who is Rume Dominic Uririe?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Rume Dominic Uririe is a Nigerian AI engineer, blockchain architect, author of "From Code to Consciousness", and the founder of Vorem. He designed the 9-day AI curriculum and tech scholarship to equip African youth with permanent, high-income engineering skills.',
+            text: 'Rume Dominic Uririe is a Nigerian AI engineer, blockchain architect, author of "From Code to Consciousness", and the founder of Vorem. He designed the 3-night AI curriculum and tech scholarship to equip African youth with permanent, high-income engineering skills.',
           },
         },
         {
@@ -255,10 +255,10 @@ export default function MenaLandingPage() {
 
           <div className="p-2 border-t md:border-t-0 border-l border-white/10 col-span-2 md:col-span-1">
             <div className="font-display text-2xl sm:text-4xl font-black text-[#C9A227] tracking-tight truncate">
-              1 NIGHT
+              3 NIGHTS
             </div>
             <div className="mt-1 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#F4F1EA]/80">
-              JULY 25, 2026
+              LIVE INTENSIVE
             </div>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function MenaLandingPage() {
       {/* The Story - 3 short paragraphs in Rume Dominic's plain declarative voice */}
       <section aria-label="The Story" className="py-16 sm:py-20 px-4 max-w-3xl mx-auto text-lg sm:text-xl font-normal leading-relaxed space-y-6 text-[#F4F1EA]/90">
         <p>
-          On 25 July 2026, real people across Nigeria, Zimbabwe, Rwanda, and Uganda were paid real money during the &ldquo;I Am Yours&rdquo; live broadcast. There was no lottery. There were no special connections required. Cash went directly into verified bank accounts.
+          Over 3 live nights starting 25 July 2026, real people across Nigeria, Zimbabwe, Rwanda, and Uganda were paid real money during the &ldquo;I Am Yours&rdquo; broadcast. There was no lottery. There were no special connections required. Cash went directly into verified bank accounts.
         </p>
 
         <p className="font-bold text-[#C9A227]">
@@ -308,7 +308,7 @@ export default function MenaLandingPage() {
               <div>
                 <h3 className="font-bold text-lg text-[#F4F1EA]">Course: {MENA_CONFIG.COURSE_NAME}</h3>
                 <p className="mt-1 text-xs sm:text-sm text-[#F4F1EA]/70 leading-normal">
-                  Go from total beginner to confident AI automation builder in nine short days.
+                  Go from total beginner to confident AI automation builder in three intensive nights.
                 </p>
               </div>
             </div>
@@ -486,7 +486,7 @@ export default function MenaLandingPage() {
               I missed the live. Can I still get the scholarship?
             </h3>
             <p className="mt-2 text-sm sm:text-base text-[#F4F1EA]/85 leading-relaxed">
-              Yes, you can still claim the full tech scholarship even if you missed the live broadcast on 25 July 2026. While the live cash giveaways have ended, the educational portal remains open for instant registration on this page.
+              Yes, you can still claim the full tech scholarship even if you missed the 3-night live broadcast starting 25 July 2026. While the live cash giveaways have ended, the educational portal remains open for instant registration on this page.
             </p>
           </article>
 
@@ -495,7 +495,7 @@ export default function MenaLandingPage() {
               How do I know this is not a scam?
             </h3>
             <p className="mt-2 text-sm sm:text-base text-[#F4F1EA]/90 leading-relaxed font-semibold">
-              Nobody from Mena Obrike&apos;s team, Rume Dominic&apos;s team, or Vorem will ever ask you to pay a fee, buy a form, or send money to claim this scholarship. All cash prizes during the event were disbursed by Menbriks directly to winners&apos; personal accounts, and all education here is delivered at zero cost.
+              Nobody from Mena Obrike&apos;s team, Rume Dominic&apos;s team, or Vorem will ever ask you to pay a fee, buy a form, or send money to claim this scholarship. All cash prizes during the 3-night event were disbursed by Menbriks directly to winners&apos; personal accounts, and all education here is delivered at zero cost.
             </p>
           </article>
         </div>
