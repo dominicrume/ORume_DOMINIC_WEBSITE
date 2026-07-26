@@ -19,9 +19,12 @@ export const MENA_CONFIG = {
   BUNDLE_VALUE_GBP: '[MISSING: BUNDLE_VALUE_GBP]',
 
   DOMAIN: 'https://rumedominic.com',
-  SPOTIFY_LINK: '[MISSING: SPOTIFY_LINK]',
-  APPLE_LINK: '[MISSING: APPLE_LINK]',
-  YOUTUBE_LINK: '[MISSING: YOUTUBE_LINK]',
+  SPOTIFY_LINK: 'https://open.spotify.com/track/6DPQY6E4y8MvhaHrjNd1Ng?si=RBv4zfAATLixenj66JX9iA&utm_source=whatsapp',
+  APPLE_LINK: 'https://link.deezer.com/s/33W8L9taQPOMPtegmpGmc',
+  DEEZER_LINK: 'https://link.deezer.com/s/33W8L9taQPOMPtegmpGmc',
+  YOUTUBE_LINK: 'https://youtu.be/XX-ndjwgcZM?is=xrUTbXTkCGRNduce',
+  SONG_TITLE: 'I Am Yours',
+  ARTIST_NAME: 'Mena Obrike (Menbriks)',
   MENA_TIKTOK: 'https://tiktok.com/@MENBRIKS',
 
   // Google Form endpoint for scholarship claims.
