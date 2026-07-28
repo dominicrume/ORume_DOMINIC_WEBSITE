@@ -290,7 +290,23 @@ export default function PortfolioPage() {
               Download Full CV
             </a>
           </div>
-          <div className="mt-32 text-xs font-mono text-blue-500 tracking-widest relative z-10">
+          <div className="mt-16 text-blue-300 text-sm space-y-3 relative z-10 font-mono flex flex-col items-center">
+            <p className="flex flex-wrap justify-center gap-3">
+              <a href="mailto:orumedominic@gmail.com" className="hover:text-[#00E5FF] transition-colors">orumedominic@gmail.com</a>
+              <span className="text-blue-800">|</span>
+              <a href="https://linkedin.com/in/dominicrume" target="_blank" rel="noopener noreferrer" className="hover:text-[#00E5FF] transition-colors">linkedin.com/in/dominicrume</a>
+              <span className="text-blue-800">|</span>
+              <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="hover:text-[#00E5FF] transition-colors">github.com/dominicrume (29+ repos)</a>
+            </p>
+            <p className="flex flex-wrap justify-center gap-3 text-blue-400">
+              <a href="https://rumedominic.com" className="hover:text-[#00E5FF] transition-colors">rumedominic.com</a>
+              <span className="text-blue-800">|</span>
+              <span>England, UK</span>
+              <span className="text-blue-800">|</span>
+              <a href="tel:+447402830944" className="hover:text-[#00E5FF] transition-colors">+44 7402 830944</a>
+            </p>
+          </div>
+          <div className="mt-16 text-xs font-mono text-blue-600 tracking-widest relative z-10">
             © {new Date().getFullYear()} RUME DOMINIC. KYA ARCHITECTURE.
           </div>
         </footer>
