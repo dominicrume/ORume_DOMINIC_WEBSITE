@@ -153,7 +153,7 @@ export default function PortfolioPage() {
                 <div>
                   <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">UNIVERSITY OF BIRMINGHAM</div>
                   <h3 className="text-2xl font-display font-bold text-white mb-2">Frontier Tech X</h3>
-                  <p className="text-blue-200">Invited speaker at the prestigious University of Birmingham &quot;Big Ojo&quot; for Frontier Tech X, discussing the horizon of Agentic AI and blockchain verification layers.</p>
+                  <p className="text-blue-200">Invited speaker at the prestigious University of Birmingham &quot;Old Joe&quot; for Frontier Tech X, discussing the horizon of Agentic AI and blockchain verification layers.</p>
                 </div>
               </div>
 
