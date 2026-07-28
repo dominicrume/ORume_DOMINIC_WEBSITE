@@ -171,7 +171,7 @@ export default function PortfolioPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            <div className="group border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
+            <a href="https://auditor-dashboard-rume.fly.dev/" target="_blank" rel="noopener noreferrer" className="group block border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
               <div className="text-xs font-mono text-gray-500 mb-2">Aston University · MSc Research</div>
               <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#eabe7b] transition-colors">AI Code Quality Auditor</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -181,9 +181,9 @@ export default function PortfolioPage() {
                 <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">Python</span>
                 <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">PyPI</span>
               </div>
-            </div>
+            </a>
 
-            <div className="group border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
+            <a href="https://eaglesden.online/" target="_blank" rel="noopener noreferrer" className="group block border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
               <div className="text-xs font-mono text-gray-500 mb-2">Vorem · Google Cloud Run</div>
               <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#eabe7b] transition-colors">Eagles Den Analytics</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -193,21 +193,21 @@ export default function PortfolioPage() {
                 <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">LLM</span>
                 <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">Google Cloud Run</span>
               </div>
-            </div>
+            </a>
 
-            <div className="group border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
-              <div className="text-xs font-mono text-gray-500 mb-2">Google Cloud Run · public repo</div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#eabe7b] transition-colors">Tax & Statement Analyser</h3>
+            <a href="https://github.com/dominicrume/TENANT-HUB" target="_blank" rel="noopener noreferrer" className="group block border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
+              <div className="text-xs font-mono text-gray-500 mb-2">GitHub · Public Repo</div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#eabe7b] transition-colors">Tenant Hub (HMO)</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Developed a RAG and OCR workflow that extracts transactions, classifies tax categories, flags anomalies, and grounds retrieval against regulatory documents.
+                Developed an automated property management and tenancy tracking system tailored for Houses in Multiple Occupation (HMO).
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">RAG</span>
-                <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">OCR</span>
+                <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">PropTech</span>
+                <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">Automation</span>
               </div>
-            </div>
+            </a>
 
-            <div className="group border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
+            <a href="https://www.veritaport.co.uk/" target="_blank" rel="noopener noreferrer" className="group block border border-gray-800 hover:border-[#eabe7b] transition-colors p-8 bg-[#141414]">
               <div className="text-xs font-mono text-gray-500 mb-2">AgenticOS · FastAPI & Next.js</div>
               <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#eabe7b] transition-colors">VeritaPort (Layer-3 Verification)</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -217,7 +217,7 @@ export default function PortfolioPage() {
                 <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">Cryptography</span>
                 <span className="text-xs bg-gray-900 text-gray-300 px-3 py-1 rounded-full border border-gray-800">Next.js</span>
               </div>
-            </div>
+            </a>
 
           </div>
         </section>
