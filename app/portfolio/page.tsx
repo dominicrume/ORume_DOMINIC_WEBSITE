@@ -212,9 +212,9 @@ export default function PortfolioPage() {
               </div>
             </a>
 
-            <a href="https://github.com/dominicrume/TENANT-HUB" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
-              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">GITHUB · PUBLIC REPO</div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">Tenant Hub (HMO)</h3>
+            <a href="https://app.mattysplace.org.uk/" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
+              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">PRODUCTION SAAS · HMO MANAGEMENT</div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">Matty&apos;s Place (Tenant Hub)</h3>
               <p className="text-blue-200 text-sm leading-relaxed mb-6">
                 Developed an automated property management and tenancy tracking system tailored for Houses in Multiple Occupation (HMO).
               </p>
