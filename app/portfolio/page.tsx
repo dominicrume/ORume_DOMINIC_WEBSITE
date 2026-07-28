@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Rume Dominic | Applied AI Engineer & Systems Architect",
-  description: "Portfolio of Rume Dominic, Applied AI Engineer & Systems Architect. Expert in LLM orchestration, Agentic Intelligence, and Verifiable AI.",
-  keywords: ["AI Engineer", "Applied AI", "Systems Architect", "Agentic Systems", "RAG Pipelines", "Verifiable AI", "Rume Dominic"],
+  title: "Rume Dominic | Senior Director of Product Management, Finalization & Finishing",
+  description: "Portfolio of Rume Dominic, Senior Director of Product Management, Finalization, and Finishing. Expert in LLM orchestration, Agentic Intelligence, and Verifiable AI.",
+  keywords: ["AI Engineer", "Senior Director of Product Management", "Product Finalization", "Product Finishing", "Agentic Systems", "RAG Pipelines", "Verifiable AI", "Rume Dominic"],
 };
 
 export default function PortfolioPage() {
@@ -37,14 +37,14 @@ export default function PortfolioPage() {
 
           <div className="mb-6 flex items-center space-x-4 relative z-10">
             <span className="h-[2px] w-16 bg-[#00E5FF] shadow-[0_0_15px_#00E5FF] transition-all hover:w-24"></span>
-            <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]">Hello World</span>
+            <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]">System Architect & Director</span>
           </div>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-white leading-none tracking-tighter mb-8 relative z-10">
             I am Rume <br className="hidden md:block"/> 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-[#00A3FF] to-[#0052FF] hover:opacity-90 transition-opacity">Dominic.</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-blue-200 max-w-3xl font-light leading-relaxed mb-12 relative z-10">
-            <strong className="text-[#00E5FF] font-semibold drop-shadow-[0_0_5px_rgba(0,229,255,0.3)]">Applied AI Engineer & Systems Architect.</strong><br/>
+            <strong className="text-[#00E5FF] font-semibold drop-shadow-[0_0_5px_rgba(0,229,255,0.3)]">Senior Director of Product Management, Product Finalization, and Product Finishing.</strong><br/>
             I build production-grade, verifiable Agentic Intelligence and orchestrate the complete lifecycle of enterprise AI from prototype to undeniable market dominance.
           </h2>
           
@@ -79,7 +79,7 @@ export default function PortfolioPage() {
                   {/* Decorative Elements */}
                   <div className="absolute inset-0 border border-white/10 rounded-xl group-hover:border-[#00E5FF]/30 transition-colors duration-500"></div>
                   <div className="absolute bottom-4 left-4 right-4 bg-[#0A0F1C]/80 backdrop-blur-md p-4 rounded-lg border border-blue-500/30 group-hover:border-[#00E5FF]/60 transition-colors duration-500">
-                    <p className="text-center font-mono text-[#00E5FF] text-xs tracking-[0.2em] font-bold group-hover:animate-pulse">SYSTEM ARCHITECT</p>
+                    <p className="text-center font-mono text-[#00E5FF] text-xs tracking-[0.2em] font-bold group-hover:animate-pulse">DIRECTOR OF ENGINEERING</p>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function PortfolioPage() {
                 <span className="h-[2px] flex-grow bg-blue-900/50 shadow-[0_0_5px_rgba(0,82,255,0.3)]"></span>
               </div>
               <h3 className="text-3xl md:text-4xl font-light text-white leading-snug mb-8">
-                Applied AI Engineer with a demonstrated history of moving AI prototypes into <strong className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#0052FF]">reliable, cloud-hosted dominance</strong> across financial automation, subscriber analytics, and enterprise SaaS.
+                Applied AI Engineer and Executive Director with a demonstrated history of moving AI prototypes into <strong className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#0052FF]">reliable, cloud-hosted dominance</strong> across financial automation, subscriber analytics, and enterprise SaaS.
               </h3>
               <p className="text-blue-200 text-lg leading-relaxed mb-8">
                 I do not just write code; I orchestrate the entire product ecosystem. Expertise in designing, building, and deploying LLM, RAG, and agentic systems that automate document-heavy workflows, accelerate operational decision-making, and convert raw architecture into measurable balance-sheet value.
