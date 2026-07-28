@@ -43,7 +43,10 @@ export default function PortfolioPage() {
             <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,82,255,0.5)]">
               Book a Call
             </a>
-            <a href="#about" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors">
+            <a href="mailto:orumedominic@gmail.com" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors">
+              Email Me
+            </a>
+            <a href="#about" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors hidden sm:inline-block">
               Explore Portfolio
             </a>
           </div>
@@ -88,7 +91,10 @@ export default function PortfolioPage() {
                 <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#00E5FF]/10 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
                   Book a Call
                 </a>
-                <a href="/RUME_DOMINIC_AI_CV.pdf" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all">
+                <a href="mailto:orumedominic@gmail.com" className="px-6 py-3 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF]/10 transition-colors">
+                  Contact Us
+                </a>
+                <a href="/RUME_DOMINIC_AI_CV.pdf" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all hidden sm:inline-block">
                   Download CV
                 </a>
               </div>
@@ -306,7 +312,10 @@ export default function PortfolioPage() {
             <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:scale-105 transition-all">
               Book a Call
             </a>
-            <a href="/RUME_DOMINIC_AI_CV.pdf" download className="inline-block px-10 py-5 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors">
+            <a href="mailto:orumedominic@gmail.com" className="inline-block px-10 py-5 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors">
+              Email Me
+            </a>
+            <a href="/RUME_DOMINIC_AI_CV.pdf" download className="inline-block px-10 py-5 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors hidden sm:inline-block">
               Download Full CV
             </a>
           </div>
