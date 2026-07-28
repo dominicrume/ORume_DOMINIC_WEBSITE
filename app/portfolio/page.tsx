@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Rume Dominic | Senior Director of Product Management, Finalization & Finishing",
-  description: "Portfolio of Rume Dominic, Senior Director of Product Management, Finalization, and Finishing. Expert in LLM orchestration, Agentic Intelligence, and Verifiable AI.",
-  keywords: ["AI Engineer", "Senior Director of Product Management", "Product Finalization", "Product Finishing", "Agentic Systems", "RAG Pipelines", "Verifiable AI", "Rume Dominic"],
+  title: "Rume Dominic | Applied AI Engineer & Systems Architect",
+  description: "Portfolio of Rume Dominic, Applied AI Engineer & Systems Architect. Expert in LLM orchestration, Agentic Intelligence, and Verifiable AI.",
+  keywords: ["AI Engineer", "Applied AI", "Systems Architect", "Agentic Systems", "RAG Pipelines", "Verifiable AI", "Rume Dominic"],
 };
 
 export default function PortfolioPage() {
@@ -44,7 +44,7 @@ export default function PortfolioPage() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-[#00A3FF] to-[#0052FF] hover:opacity-90 transition-opacity">Dominic.</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-blue-200 max-w-3xl font-light leading-relaxed mb-12 relative z-10">
-            <strong className="text-[#00E5FF] font-semibold drop-shadow-[0_0_5px_rgba(0,229,255,0.3)]">Senior Director of Product Management, Product Finalization, and Product Finishing.</strong><br/>
+            <strong className="text-[#00E5FF] font-semibold drop-shadow-[0_0_5px_rgba(0,229,255,0.3)]">Applied AI Engineer & Systems Architect.</strong><br/>
             I build production-grade, verifiable Agentic Intelligence and orchestrate the complete lifecycle of enterprise AI from prototype to undeniable market dominance.
           </h2>
           
