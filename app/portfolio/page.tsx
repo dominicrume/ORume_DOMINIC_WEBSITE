@@ -151,9 +151,9 @@ export default function PortfolioPage() {
                   <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🎙️</span>
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">BIRMINGHAM UNIVERSITY · MARCH</div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">Generative AI Masterclass</h3>
-                  <p className="text-blue-200">Delivered an empowering generative AI masterclass for students, business owners, and professionals.</p>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">MCKI SOLUTION · JUNE 27TH</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">Agentic AI Masterclass</h3>
+                  <p className="text-blue-200">Delivered an empowering Agentic AI masterclass as the lead speaker for students, business owners, and professionals.</p>
                 </div>
               </div>
 
@@ -162,8 +162,8 @@ export default function PortfolioPage() {
                   <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🏛️</span>
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">UNIVERSITY OF BIRMINGHAM</div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#0052FF] transition-colors">Frontier Tech X</h3>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">UNIVERSITY OF BIRMINGHAM · MARCH</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#0052FF] transition-colors">Frontier Tech X: Agentic AI</h3>
                   <p className="text-blue-200">Invited speaker at the prestigious University of Birmingham &quot;Old Joe&quot; for Frontier Tech X, discussing the horizon of Agentic AI and blockchain verification layers.</p>
                 </div>
               </div>
