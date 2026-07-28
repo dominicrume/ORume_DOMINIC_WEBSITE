@@ -40,8 +40,8 @@ export default function PortfolioPage() {
             An Applied AI Engineer & Systems Architect. I build production-grade, verifiable Agentic Intelligence.
           </p>
           <div className="flex gap-6 relative z-10">
-            <a href="mailto:rumedominic@gmail.com" className="inline-block px-8 py-4 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,82,255,0.5)]">
-              Email Me
+            <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,82,255,0.5)]">
+              Book a Call
             </a>
             <a href="#about" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors">
               Explore Portfolio
@@ -85,8 +85,8 @@ export default function PortfolioPage() {
                 Expertise in designing, building, and deploying LLM, RAG, and agentic systems that automate document-heavy workflows, accelerate operational decision-making, and convert business requirements into measurable value.
               </p>
               <div className="flex gap-4">
-                <a href="mailto:rumedominic@gmail.com" className="px-6 py-3 bg-[#00E5FF]/10 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
-                  Contact Me
+                <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#00E5FF]/10 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
+                  Book a Call
                 </a>
                 <a href="/RUME_DOMINIC_AI_CV.pdf" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all">
                   Download CV
@@ -283,8 +283,8 @@ export default function PortfolioPage() {
             Let&apos;s discuss how we can deploy verifiable, scalable Agentic AI systems for your enterprise without compromising governance.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-            <a href="mailto:rumedominic@gmail.com" className="inline-block px-10 py-5 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:scale-105 transition-all">
-              Email rumedominic@gmail.com
+            <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:scale-105 transition-all">
+              Book a Call
             </a>
             <a href="/RUME_DOMINIC_AI_CV.pdf" download className="inline-block px-10 py-5 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 transition-colors">
               Download Full CV
