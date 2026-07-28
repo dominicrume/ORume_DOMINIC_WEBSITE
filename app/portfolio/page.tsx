@@ -72,15 +72,12 @@ export default function PortfolioPage() {
                 <div className="w-full h-full bg-[#0A0F1C] rounded-xl overflow-hidden relative">
                   {/* Actual Photo */}
                   <img 
-                    src="/rume-portrait.jpg" 
+                    src="/rume-headshot.jpg" 
                     alt="Rume Dominic" 
                     className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity mix-blend-luminosity hover:mix-blend-normal duration-700"
                   />
                   {/* Decorative Elements */}
                   <div className="absolute inset-0 border border-white/10 rounded-xl group-hover:border-[#00E5FF]/30 transition-colors duration-500"></div>
-                  <div className="absolute bottom-4 left-4 right-4 bg-[#0A0F1C]/80 backdrop-blur-md p-4 rounded-lg border border-blue-500/30 group-hover:border-[#00E5FF]/60 transition-colors duration-500">
-                    <p className="text-center font-mono text-[#00E5FF] text-xs tracking-[0.2em] font-bold group-hover:animate-pulse">DIRECTOR OF ENGINEERING</p>
-                  </div>
                 </div>
               </div>
             </div>
