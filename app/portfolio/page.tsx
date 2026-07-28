@@ -134,9 +134,9 @@ export default function PortfolioPage() {
                   <span className="text-2xl">🎙️</span>
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">BIRMINGHAM, UK · RECENT</div>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">BIRMINGHAM UNIVERSITY · MARCH</div>
                   <h3 className="text-2xl font-display font-bold text-white mb-2">Generative AI Masterclass</h3>
-                  <p className="text-blue-200">Delivered an empowering training event focused on the practical implementation of Generative AI, providing real-world proofs and actionable strategies for attendees in Birmingham.</p>
+                  <p className="text-blue-200">Delivered an empowering generative AI masterclass for students, business owners, and professionals.</p>
                 </div>
               </div>
 
@@ -145,9 +145,9 @@ export default function PortfolioPage() {
                   <span className="text-2xl">🏛️</span>
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">UNIVERSITY OF BIRMINGHAM · MARCH</div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-2">Frontier Tech X (Old World Green)</h3>
-                  <p className="text-blue-200">Invited speaker at the prestigious University of Birmingham &quot;Big Old Joe&quot; for Frontier Tech X, discussing the horizon of Agentic AI and blockchain verification layers.</p>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">UNIVERSITY OF BIRMINGHAM</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2">Frontier Tech X</h3>
+                  <p className="text-blue-200">Invited speaker at the prestigious University of Birmingham &quot;Big Ojo&quot; for Frontier Tech X, discussing the horizon of Agentic AI and blockchain verification layers.</p>
                 </div>
               </div>
 
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
                   <span className="text-2xl">🌍</span>
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">LONDON, UK</div>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">LONDON, UK · NOVEMBER</div>
                   <h3 className="text-2xl font-display font-bold text-white mb-2">Creator Economy & AI Storytelling</h3>
                   <p className="text-blue-200">Collaborated with Jali and Empower to train creators on integrating artificial intelligence into digital storytelling and media workflows.</p>
                 </div>
@@ -188,27 +188,15 @@ export default function PortfolioPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
             
-            <a href="https://auditor-dashboard-rume.fly.dev/" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
-              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">ASTON UNIVERSITY · MSC RESEARCH</div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">AI Code Quality Auditor</h3>
+            <a href="https://www.veritaport.co.uk/" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
+              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">AGENTICOS · FASTAPI & NEXT.JS</div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">VeritaPort (Layer-3 Verification)</h3>
               <p className="text-blue-200 text-sm leading-relaxed mb-6">
-                Built a Python evaluation instrument measuring where AI coding agents fail across hallucination, code complexity, duplication, and security-density indicators, with 600 controlled measurements.
+                Designed a cryptographic verification layer for tamper-evident document integrity, combining SHA-256 hash-chain verification and product-level tamper detection.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Python</span>
-                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">PyPI</span>
-              </div>
-            </a>
-
-            <a href="https://eaglesden.online/" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
-              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">VOREM · GOOGLE CLOUD RUN</div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">Eagles Den Analytics</h3>
-              <p className="text-blue-200 text-sm leading-relaxed mb-6">
-                Built a five-model LLM analytics workflow for subscriber decision-making, including market-signal generation, Paystack billing, Telegram / WhatsApp delivery, and Cloud Run deployment.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">LLM</span>
-                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Google Cloud Run</span>
+                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Cryptography</span>
+                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Next.js</span>
               </div>
             </a>
 
@@ -224,15 +212,27 @@ export default function PortfolioPage() {
               </div>
             </a>
 
-            <a href="https://www.veritaport.co.uk/" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
-              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">AGENTICOS · FASTAPI & NEXT.JS</div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">VeritaPort (Layer-3 Verification)</h3>
+            <a href="https://eaglesden.online/" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
+              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">VOREM · GOOGLE CLOUD RUN</div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">Eagles Den Analytics</h3>
               <p className="text-blue-200 text-sm leading-relaxed mb-6">
-                Designed a cryptographic verification layer for tamper-evident document integrity, combining SHA-256 hash-chain verification and product-level tamper detection.
+                Built a five-model LLM analytics workflow for subscriber decision-making, including market-signal generation, Paystack billing, Telegram / WhatsApp delivery, and Cloud Run deployment.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Cryptography</span>
-                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Next.js</span>
+                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">LLM</span>
+                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Google Cloud Run</span>
+              </div>
+            </a>
+
+            <a href="https://auditor-dashboard-rume.fly.dev/" target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-blue-900/50 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all p-8 bg-blue-950/10 backdrop-blur-sm">
+              <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold">ASTON UNIVERSITY · MSC RESEARCH</div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#00E5FF] transition-colors">AI Code Quality Auditor</h3>
+              <p className="text-blue-200 text-sm leading-relaxed mb-6">
+                Built a Python evaluation instrument measuring where AI coding agents fail across hallucination, code complexity, duplication, and security-density indicators, with 600 controlled measurements.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">Python</span>
+                <span className="text-xs bg-[#0052FF]/20 text-blue-100 px-3 py-1 rounded-full border border-[#0052FF]/30">PyPI</span>
               </div>
             </a>
 
@@ -250,23 +250,43 @@ export default function PortfolioPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-blue-200 text-sm">
               <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
                 <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
-                <p><strong className="text-white font-bold">UK Patent Application GB2611754.9</strong> (filed 2026, pending), the KYA Framework for verifiable AI accountability.</p>
+                <p><strong className="text-white font-bold">Microsoft Azure</strong> AI Apps & Agents Developer</p>
               </div>
               <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
                 <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
-                <p><strong className="text-white font-bold">Microsoft Azure</strong> AI Apps & Agents Developer.</p>
+                <p><strong className="text-white font-bold">AI Governance</strong> & Responsible AI</p>
               </div>
               <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
                 <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
-                <p><strong className="text-white font-bold">AI Governance</strong> & Responsible AI.</p>
+                <p><strong className="text-white font-bold">Python</strong> (University of Michigan)</p>
               </div>
               <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
                 <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
-                <p><strong className="text-white font-bold">Author of five books</strong> (published on Amazon, Waterstones UK and Ebay).</p>
+                <p><strong className="text-white font-bold">Cisco</strong> CCNA & CCNP</p>
               </div>
               <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
                 <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
-                <p><strong className="text-white font-bold">Enterprise System Architecture</strong> & Workflow Orchestration.</p>
+                <p><strong className="text-white font-bold">Leveraging AI</strong> for Governance, regulation and compliance</p>
+              </div>
+              <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
+                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
+                <p><strong className="text-white font-bold">Certified Blockchain Architect</strong> (Blockchain Council)</p>
+              </div>
+              <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
+                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
+                <p><strong className="text-white font-bold">Certified Metaverse Expert</strong> (Blockchain Council)</p>
+              </div>
+              <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
+                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
+                <p><strong className="text-white font-bold">UK Patent Application GB2611754.9</strong> (filed 2026, pending), the KYA Framework for verifiable AI accountability and provenance.</p>
+              </div>
+              <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
+                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
+                <p><strong className="text-white font-bold">Author of five books</strong> (published on Amazon, Waterstones uk and Ebay)</p>
+              </div>
+              <div className="flex items-start space-x-3 p-4 rounded-lg bg-blue-950/20 border border-blue-900/30">
+                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF]">✦</span>
+                <p><strong className="text-white font-bold">39+ public speaking engagements</strong> as evidence of communication and knowledge-sharing.</p>
               </div>
             </div>
           </div>
