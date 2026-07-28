@@ -15,6 +15,8 @@ export const BOOKS = [
   { id:'b3', title:"The Entrepreneur's AI Playbook",  magnet:'90-Day AI Business Blueprint PDF',      upsell:'Vorem 90-Day Cohort — £497',              url:`${OPTIN}/cohort`     },
   { id:'b4', title:'Decoding Web3 Leadership',        magnet:'Leadership in Digital Age Assessment',  upsell:'Executive Coaching 6 sessions — £2,400', url:`${OPTIN}/coaching`   },
   { id:'b5', title:'The African Digital Revolution',  magnet:'African Digital Economy Report 2025',   upsell:'Keynote Speaking — £5,000+',              url:`${OPTIN}/speaking`   },
+  { id:'b6', title:'From Code to Consciousness',      magnet:'51k-Hour AI Architecture Playbook',     upsell:'Corporate AI Audit — £25,000',            url:`${OPTIN}/audit`      },
+  { id:'b7', title:'Know Your AgenticAi (KYA)',       magnet:'UK Patent-Pending KYA Standard PDF',    upsell:'Enterprise Assurance License — £50,000',  url:`${OPTIN}/license`    },
 ]
 
 const STEP_INTENTS = [
