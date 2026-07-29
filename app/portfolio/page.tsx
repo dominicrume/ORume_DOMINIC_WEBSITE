@@ -133,64 +133,6 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* THOUGHT LEADERSHIP & SPEAKING */}
-        <section id="speaking" className="py-40 bg-[#060A14] border-y border-blue-900/30">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="mb-20 flex items-center space-x-4">
-              <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold">Speaking & Thought Leadership</span>
-              <span className="h-[2px] flex-grow bg-blue-900/50"></span>
-            </div>
-
-            <div className="space-y-8">
-              
-              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#00E5FF]/70 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
-                <div className="w-20 h-20 rounded-full bg-[#00E5FF]/10 flex items-center justify-center shrink-0 border border-[#00E5FF]/30 group-hover:bg-[#00E5FF]/20 group-hover:border-[#00E5FF] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-500">
-                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🎙️</span>
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">MCKI SOLUTION · JUNE 27TH</div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">Agentic AI Masterclass</h3>
-                  <p className="text-blue-200">Delivered an empowering Agentic AI masterclass as the lead speaker for students, business owners, and professionals.</p>
-                </div>
-              </div>
-
-              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#0052FF]/70 hover:shadow-[0_0_30px_rgba(0,82,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
-                <div className="w-20 h-20 rounded-full bg-[#0052FF]/10 flex items-center justify-center shrink-0 border border-[#0052FF]/30 group-hover:bg-[#0052FF]/20 group-hover:border-[#0052FF] group-hover:shadow-[0_0_20px_rgba(0,82,255,0.4)] transition-all duration-500">
-                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🏛️</span>
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">UNIVERSITY OF BIRMINGHAM · MARCH</div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#0052FF] transition-colors">Frontier Tech X: Agentic AI</h3>
-                  <p className="text-blue-200">Invited speaker at the prestigious University of Birmingham &quot;Old Joe&quot; for Frontier Tech X, discussing the horizon of Agentic AI and blockchain verification layers.</p>
-                </div>
-              </div>
-
-              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#00E5FF]/70 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
-                <div className="w-20 h-20 rounded-full bg-[#00E5FF]/10 flex items-center justify-center shrink-0 border border-[#00E5FF]/30 group-hover:bg-[#00E5FF]/20 group-hover:border-[#00E5FF] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-500">
-                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">⚡</span>
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">BIRMINGHAM, UK · FEBRUARY</div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">AI Dominance Event</h3>
-                  <p className="text-blue-200">Hosted and spoke at a massive empowerment event demonstrating how to leverage artificial intelligence for market dominance, with extensive real-life attendance and case studies.</p>
-                </div>
-              </div>
-
-              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#0052FF]/70 hover:shadow-[0_0_30px_rgba(0,82,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
-                <div className="w-20 h-20 rounded-full bg-[#0052FF]/10 flex items-center justify-center shrink-0 border border-[#0052FF]/30 group-hover:bg-[#0052FF]/20 group-hover:border-[#0052FF] group-hover:shadow-[0_0_20px_rgba(0,82,255,0.4)] transition-all duration-500">
-                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🌍</span>
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">LONDON, UK · NOVEMBER</div>
-                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#0052FF] transition-colors">Creator Economy & AI Storytelling</h3>
-                  <p className="text-blue-200">Collaborated with Jali and Empower to train creators on integrating artificial intelligence into digital storytelling and media workflows.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
         {/* WORKS (APPLIED AI SYSTEMS) */}
         <section id="works" className="py-40 max-w-7xl mx-auto px-6 relative">
           <div className="absolute right-0 top-1/2 w-[600px] h-[600px] bg-[#0052FF] rounded-full mix-blend-screen filter blur-[150px] opacity-10 animate-pulse"></div>
@@ -326,6 +268,64 @@ export default function PortfolioPage() {
                 <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
                 <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">39+ public speaking engagements</strong> as evidence of communication and knowledge-sharing.</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* THOUGHT LEADERSHIP & SPEAKING */}
+        <section id="speaking" className="py-40 bg-[#060A14] border-y border-blue-900/30">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="mb-20 flex items-center space-x-4">
+              <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold">Speaking & Thought Leadership</span>
+              <span className="h-[2px] flex-grow bg-blue-900/50"></span>
+            </div>
+
+            <div className="space-y-8">
+              
+              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#00E5FF]/70 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
+                <div className="w-20 h-20 rounded-full bg-[#00E5FF]/10 flex items-center justify-center shrink-0 border border-[#00E5FF]/30 group-hover:bg-[#00E5FF]/20 group-hover:border-[#00E5FF] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-500">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🎙️</span>
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">MCKI SOLUTION · JUNE 27TH</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">Agentic AI Masterclass</h3>
+                  <p className="text-blue-200">Delivered an empowering Agentic AI masterclass as the lead speaker for students, business owners, and professionals.</p>
+                </div>
+              </div>
+
+              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#0052FF]/70 hover:shadow-[0_0_30px_rgba(0,82,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
+                <div className="w-20 h-20 rounded-full bg-[#0052FF]/10 flex items-center justify-center shrink-0 border border-[#0052FF]/30 group-hover:bg-[#0052FF]/20 group-hover:border-[#0052FF] group-hover:shadow-[0_0_20px_rgba(0,82,255,0.4)] transition-all duration-500">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🏛️</span>
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">UNIVERSITY OF BIRMINGHAM · MARCH</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#0052FF] transition-colors">Frontier Tech X: Agentic AI</h3>
+                  <p className="text-blue-200">Invited speaker at the prestigious University of Birmingham &quot;Old Joe&quot; for Frontier Tech X, discussing the horizon of Agentic AI and blockchain verification layers.</p>
+                </div>
+              </div>
+
+              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#00E5FF]/70 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
+                <div className="w-20 h-20 rounded-full bg-[#00E5FF]/10 flex items-center justify-center shrink-0 border border-[#00E5FF]/30 group-hover:bg-[#00E5FF]/20 group-hover:border-[#00E5FF] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-500">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">⚡</span>
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">BIRMINGHAM, UK · FEBRUARY</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">AI Dominance Event</h3>
+                  <p className="text-blue-200">Hosted and spoke at a massive empowerment event demonstrating how to leverage artificial intelligence for market dominance, with extensive real-life attendance and case studies.</p>
+                </div>
+              </div>
+
+              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#0052FF]/70 hover:shadow-[0_0_30px_rgba(0,82,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
+                <div className="w-20 h-20 rounded-full bg-[#0052FF]/10 flex items-center justify-center shrink-0 border border-[#0052FF]/30 group-hover:bg-[#0052FF]/20 group-hover:border-[#0052FF] group-hover:shadow-[0_0_20px_rgba(0,82,255,0.4)] transition-all duration-500">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🌍</span>
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">LONDON, UK · NOVEMBER</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#0052FF] transition-colors">Creator Economy & AI Storytelling</h3>
+                  <p className="text-blue-200">Collaborated with Jali and Empower to train creators on integrating artificial intelligence into digital storytelling and media workflows.</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
