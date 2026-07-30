@@ -101,7 +101,7 @@ export default function PortfolioPage() {
                 <a href="mailto:orumedominic@gmail.com" className="px-6 py-3 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
                   Contact Us
                 </a>
-                <a href="/RUME_DOMINIC_AI_CV.pdf" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all hidden sm:inline-block hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all hidden sm:inline-block hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                   Download CV
                 </a>
               </div>
@@ -341,7 +341,7 @@ export default function PortfolioPage() {
             <a href="mailto:orumedominic@gmail.com" className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
               Email Me
             </a>
-            <a href="/RUME_DOMINIC_AI_CV.pdf" download className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500 hidden sm:inline-block">
+            <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500 hidden sm:inline-block">
               Download Full CV
             </a>
           </div>
