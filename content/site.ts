@@ -16,14 +16,14 @@ export const site = {
 
   // The one promise. Must render above the fold.
   promise:
-    'Build AI and Web3 products 5x more capital-efficient, 7x faster and 10x clearer. Enterprise-grade security comes standard.',
+    'Engineering production-grade AI and Web3 systems with methodical precision and architectural depth.',
   subPromise:
-    'I help institutions and funded founders ship production-grade AI and blockchain systems that are faster, leaner and secure by design. Based in the UK, operating globally. I’ve spent my career solving difficult problems across borders, and I bring that same rigour to every system I build. No vibe coding. No wasted spend.',
+    'I build and deploy autonomous agents, local LLM pipelines, and verifiable blockchain architectures. Based in the UK, I am passionate about tackling hard engineering problems and pushing code that scales securely by design.',
 
   seo: {
     title: 'Rume Dominic | Principal AI & Blockchain Engineer | Web3 Built Leaner & Faster',
     description:
-      'Rume Dominic (O’Rume Dominic Uririe), Founder of VOREM, helps institutions build enterprise-grade AI and Web3 products highly capital-efficient, 7x faster and 10x clearer with elite engineering.',
+      'Rume Dominic (O’Rume Dominic Uririe) is a Principal AI and Blockchain Engineer building production-grade LLM pipelines, autonomous agents, and verifiable systems.',
     keywords: [
       'Rume Dominic',
       'O’Rume Dominic Uririe',
@@ -50,8 +50,8 @@ export const site = {
   ],
 
   cta: {
-    primary: { label: 'Book a Strategy Call', href: '#contact', event: 'cta_book_call' },
-    secondary: { label: 'Explore Systems Architecture', href: '#portfolio', event: 'cta_view_systems' },
+    primary: { label: 'View GitHub Repos', href: '#portfolio', event: 'cta_view_github' },
+    secondary: { label: 'Read My Systems Architecture', href: '#portfolio', event: 'cta_view_systems' },
   },
 
   socials: [

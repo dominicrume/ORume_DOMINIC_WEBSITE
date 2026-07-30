@@ -21,14 +21,14 @@ export const faqs: Faq[] = [
   },
   {
     q: 'What is the VOREM Institute of Technology?',
-    a: 'The VOREM Institute of Technology is an education arm delivering affordable, high-quality blockchain and AI training across Africa. It runs from the free “Master AI in 9 Days” on-ramp all the way to advanced crypto, DeFi and smart-contract mastery tracks for individuals, teams and institutions.',
+    a: 'The VOREM Institute of Technology is an education arm delivering affordable, high-quality blockchain and AI training across Africa. It runs from the free “Master AI in 9 Days” on-ramp all the way to advanced crypto, DeFi and smart-contract mastery tracks for developers.',
   },
   {
-    q: 'Do you work with institutions and founders outside Africa?',
-    a: 'Yes. VOREM connects global institutions and funded founders with Africa’s top developers, delivering production-grade AI agents, smart contracts and Web3 platforms with enterprise-grade security.',
+    q: 'Do you work on global teams or just UK/Africa?',
+    a: 'Both. I have a track record of integrating seamlessly with global engineering teams, delivering production-grade AI agents and scalable Web3 platforms with enterprise-grade security.',
   },
   {
     q: 'How do I get started?',
-    a: 'Book a strategy call or send your project details through the contact form. Serious institutions and founders receive a response within 1 to 2 business days.',
+    a: 'Send me your engineering requirements through the contact form or check out my GitHub. I aim to respond to technical inquiries within 1 to 2 business days.',
   },
 ];

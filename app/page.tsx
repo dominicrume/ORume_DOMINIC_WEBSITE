@@ -2,11 +2,9 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { CredibilityBar } from '@/components/CredibilityBar';
 
-import { Services } from '@/components/Services';
 import { RumeMethod } from '@/components/RumeMethod';
 import { Portfolio } from '@/components/Portfolio';
 import { Books } from '@/components/Books';
-import { Offer } from '@/components/Offer';
 import { Proof } from '@/components/Proof';
 import { Media } from '@/components/Media';
 import { Insights } from '@/components/Insights';
@@ -28,22 +26,16 @@ export default function HomePage() {
         <Hero />
         <CredibilityBar />
         <Reveal>
-          <Services />
+          <Portfolio />
         </Reveal>
         <Reveal>
           <RumeMethod />
-        </Reveal>
-        <Reveal>
-          <Portfolio />
         </Reveal>
         <Reveal>
           <Books />
         </Reveal>
         <Reveal>
           <Proof />
-        </Reveal>
-        <Reveal>
-          <Offer />
         </Reveal>
         <Reveal>
           <Media />

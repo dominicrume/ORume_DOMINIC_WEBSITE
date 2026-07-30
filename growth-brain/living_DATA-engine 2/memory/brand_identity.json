@@ -1,0 +1,46 @@
+{
+  "brand": {
+    "name": "RUME DOMINIC",
+    "title": "The visionary problem Solver with Successful Results",
+    "tagline": "5× Cheaper. 7× Faster. Powered by the Rume Dominic Strategy Framework.",
+    "slogan": "I help global brands Create AI & Web3 products — 5× cheaper and 7× faster — through the Rume Dominic Strategy Framework.",
+    "mission": "To be a channel of blessing.",
+    "vision": "To make money.",
+    "usp": "Serve with passion, Lead with heart, and achieve with purpose."
+  },
+  "voice_and_personality": {
+    "personality": ["funny", "charismatic", "calm", "witty", "informational", "tech savvy", "helpful", "loyal", "charming", "fashionable", "effortlessly innovative", "outgoing"],
+    "voice": "Authoritative in information yet calm. Outspoken yet not argumentative. Effortlessly innovative. Daring.",
+    "messaging_framework": "Authoritative, Informative and daring. We believe in the potential of Global youths to contribute to the fast-changing global economy. It's a noble cause to teach and equip them with relevant tech skills in blockchain, AI, and business."
+  },
+  "audience": "Young Global entrepreneurs, career individuals and established investors.",
+  "history_and_milestones": {
+    "background": "Transitioned from an electrical electronics engineer to a digital tech (AI, blockchain, software development) CEO. Started looking for financial freedom, went through paid jobs and modeling, ending up as a highly successful entrepreneur.",
+    "milestones": "5 books, 5 courses, over 39 public speaking engagements, $13 million in revenue for one business."
+  },
+  "grand_slam_offers": {
+    "books": [
+      {"title": "Wealth of the blockchain", "url": "https://amzn.eu/d/5e9mqxs"},
+      {"title": "An evolution into the metaverse", "url": "https://amzn.eu/d/8JFJLrs"},
+      {"title": "From code to consciousness", "url": "https://amzn.eu/d/c3myaY8"},
+      {"title": "Inside the heart of a global Entrepreneur", "url": "https://amzn.eu/d/7nxwbR3"}
+    ],
+    "courses": [
+      "Mastering AI in 9 days",
+      "Crypto and defi masterclass",
+      "AI and crypto currency essentials 2025",
+      "How to make money with AI",
+      "Turning your crypto and AI knowledge into wealth"
+    ]
+  },
+  "content_checklist": [
+    "Targets specific audience",
+    "Projects unique narrative",
+    "Built on compelling story",
+    "Relevant proofs/screenshots/testimonials",
+    "Aligns with voice and tone",
+    "Logical flow",
+    "Call to action (Power Ask)",
+    "Solves a real problem"
+  ]
+}

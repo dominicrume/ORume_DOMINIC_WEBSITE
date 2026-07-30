@@ -20,7 +20,7 @@ export const about = {
     },
     {
       title: 'Who I build for',
-      body: 'Institutions and founders who need it done right, the first time.',
+      body: 'Engineering teams and tech-driven companies that need it built right, the first time.',
     },
   ],
 };
