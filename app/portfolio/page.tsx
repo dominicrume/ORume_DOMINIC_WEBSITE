@@ -48,14 +48,14 @@ export default function PortfolioPage() {
             I build production-grade, verifiable Agentic Intelligence and orchestrate the complete lifecycle of enterprise AI from prototype to undeniable market dominance.
           </h2>
           
-          <div className="flex gap-6 relative z-10">
+          <div className="flex flex-wrap gap-4 sm:gap-6 relative z-10">
             <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,82,255,0.5)] hover:shadow-[0_0_40px_rgba(0,229,255,0.6)]">
               View GitHub
             </a>
             <a href="mailto:orumedominic@gmail.com" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">
               Email Me
             </a>
-            <a href="#works" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all hidden sm:inline-block">
+            <a href="#works" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">
               Explore Code
             </a>
           </div>
@@ -94,14 +94,14 @@ export default function PortfolioPage() {
               <p className="text-blue-200 text-lg leading-relaxed mb-8">
                 I do not just write code; I orchestrate the entire product ecosystem. Expertise in designing, building, and deploying LLM, RAG, and agentic systems that automate document-heavy workflows, accelerate operational decision-making, and convert raw architecture into measurable balance-sheet value.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-[#00E5FF]/20 to-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
                   View GitHub
                 </a>
                 <a href="mailto:orumedominic@gmail.com" className="px-6 py-3 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
                   Contact Us
                 </a>
-                <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all hidden sm:inline-block hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all inline-block hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                   Download CV
                 </a>
               </div>
@@ -341,7 +341,7 @@ export default function PortfolioPage() {
             <a href="mailto:orumedominic@gmail.com" className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
               Email Me
             </a>
-            <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500 hidden sm:inline-block">
+            <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
               Download Full CV
             </a>
           </div>
