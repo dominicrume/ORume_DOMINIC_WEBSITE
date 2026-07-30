@@ -49,14 +49,14 @@ export default function PortfolioPage() {
           </h2>
           
           <div className="flex gap-6 relative z-10">
-            <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,82,255,0.5)] hover:shadow-[0_0_40px_rgba(0,229,255,0.6)]">
-              Book a Call
+            <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,82,255,0.5)] hover:shadow-[0_0_40px_rgba(0,229,255,0.6)]">
+              View GitHub
             </a>
             <a href="mailto:orumedominic@gmail.com" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">
               Email Me
             </a>
-            <a href="#about" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all hidden sm:inline-block">
-              Explore Portfolio
+            <a href="#works" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all hidden sm:inline-block">
+              Explore Code
             </a>
           </div>
         </section>
@@ -95,8 +95,8 @@ export default function PortfolioPage() {
                 I do not just write code; I orchestrate the entire product ecosystem. Expertise in designing, building, and deploying LLM, RAG, and agentic systems that automate document-heavy workflows, accelerate operational decision-making, and convert raw architecture into measurable balance-sheet value.
               </p>
               <div className="flex gap-4">
-                <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-[#00E5FF]/20 to-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
-                  Book a Call
+                <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-[#00E5FF]/20 to-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
+                  View GitHub
                 </a>
                 <a href="mailto:orumedominic@gmail.com" className="px-6 py-3 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
                   Contact Us
@@ -143,6 +143,24 @@ export default function PortfolioPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10">
+            
+            <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="group block rounded-2xl border border-blue-900/40 hover:border-[#00E5FF]/80 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.3)] p-10 bg-[#060A14]/80 backdrop-blur-md relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/0 to-[#00E5FF]/0 group-hover:from-[#00E5FF]/5 group-hover:to-[#0052FF]/5 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div className="text-xs font-mono text-[#00E5FF] mb-3 font-bold tracking-widest flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
+                  PERSONAL PROJECT · OLLAMA & PYTHON
+                </div>
+                <h3 className="text-3xl font-display font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#00E5FF] transition-all">Local 7B LLM Email Processor</h3>
+                <p className="text-blue-200 text-base leading-relaxed mb-8">
+                  A personal passion project running a local 7B model via Ollama. It automatically processes my inbox, deletes spam, leaves normal messages unread, and flags receipts for Paperless-ngx.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Local LLM</span>
+                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Python</span>
+                </div>
+              </div>
+            </a>
             
             <a href="https://www.veritaport.co.uk/" target="_blank" rel="noopener noreferrer" className="group block rounded-2xl border border-blue-900/40 hover:border-[#00E5FF]/80 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.3)] p-10 bg-[#060A14]/80 backdrop-blur-md relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/0 to-[#00E5FF]/0 group-hover:from-[#00E5FF]/5 group-hover:to-[#0052FF]/5 transition-all duration-500"></div>
@@ -242,31 +260,7 @@ export default function PortfolioPage() {
               </div>
               <div className="group flex items-start space-x-4 p-5 rounded-xl bg-blue-950/20 border border-blue-900/30 hover:bg-[#00E5FF]/5 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-all duration-300 hover:translate-x-1">
                 <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
-                <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">Cisco</strong> CCNA & CCNP</p>
-              </div>
-              <div className="group flex items-start space-x-4 p-5 rounded-xl bg-blue-950/20 border border-blue-900/30 hover:bg-[#00E5FF]/5 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-all duration-300 hover:translate-x-1">
-                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
-                <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">Leveraging AI</strong> for Governance, regulation and compliance</p>
-              </div>
-              <div className="group flex items-start space-x-4 p-5 rounded-xl bg-blue-950/20 border border-blue-900/30 hover:bg-[#00E5FF]/5 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-all duration-300 hover:translate-x-1">
-                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
-                <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">Certified Blockchain Architect</strong> (Blockchain Council)</p>
-              </div>
-              <div className="group flex items-start space-x-4 p-5 rounded-xl bg-blue-950/20 border border-blue-900/30 hover:bg-[#00E5FF]/5 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-all duration-300 hover:translate-x-1">
-                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
-                <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">Certified Metaverse Expert</strong> (Blockchain Council)</p>
-              </div>
-              <div className="group flex items-start space-x-4 p-5 rounded-xl bg-blue-950/20 border border-blue-900/30 hover:bg-[#00E5FF]/5 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-all duration-300 hover:translate-x-1">
-                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
                 <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">UK Patent Application GB2611754.9</strong> (filed 2026, pending), the KYA Framework for verifiable AI accountability and provenance.</p>
-              </div>
-              <div className="group flex items-start space-x-4 p-5 rounded-xl bg-blue-950/20 border border-blue-900/30 hover:bg-[#00E5FF]/5 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-all duration-300 hover:translate-x-1">
-                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
-                <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">Author of five books</strong> (published on Amazon, Waterstones uk and Ebay)</p>
-              </div>
-              <div className="group flex items-start space-x-4 p-5 rounded-xl bg-blue-950/20 border border-blue-900/30 hover:bg-[#00E5FF]/5 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.1)] transition-all duration-300 hover:translate-x-1">
-                <span className="text-[#00E5FF] font-bold text-xl drop-shadow-[0_0_5px_#00E5FF] group-hover:scale-125 transition-transform duration-300">✦</span>
-                <p><strong className="text-white font-bold group-hover:text-[#00E5FF] transition-colors">39+ public speaking engagements</strong> as evidence of communication and knowledge-sharing.</p>
               </div>
             </div>
           </div>
@@ -341,8 +335,8 @@ export default function PortfolioPage() {
             Let&apos;s discuss how we can deploy verifiable, highly-scalable Agentic AI ecosystems for your enterprise without compromising governance or security.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-8 relative z-10">
-            <a href="https://calendly.com/dominicrume/30-mins-strategy-call" target="_blank" rel="noopener noreferrer" className="group inline-block px-12 py-6 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:shadow-[0_0_60px_rgba(0,229,255,0.7)] hover:-translate-y-2 transition-all duration-500">
-              <span className="drop-shadow-md">Book a Call</span>
+            <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="group inline-block px-12 py-6 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:shadow-[0_0_60px_rgba(0,229,255,0.7)] hover:-translate-y-2 transition-all duration-500">
+              <span className="drop-shadow-md">View GitHub</span>
             </a>
             <a href="mailto:orumedominic@gmail.com" className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
               Email Me
