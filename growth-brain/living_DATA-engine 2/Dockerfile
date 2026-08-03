@@ -17,7 +17,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NODE_ENV=production
-RUN npm run ui:build
+RUN npm run ui:build && ls -la /app/dist
 
 # Stage 3: Production Runner (Zero-Lag Execution)
 FROM node:20-alpine AS runner
