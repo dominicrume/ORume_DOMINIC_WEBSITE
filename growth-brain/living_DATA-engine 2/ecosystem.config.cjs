@@ -41,6 +41,19 @@ module.exports = {
       error_file: 'logs/pm2-worker-error.log',
       out_file: 'logs/pm2-worker-out.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+    {
+      name: 'living-engine-social',
+      script: 'src/social/x-poster.js',
+      cron_restart: '0 9,15 * * *', // Autopilot schedule: runs twice a day at 9:00 AM and 3:00 PM
+      instances: 1,
+      exec_mode: 'fork',
+      watch: false,
+      autorestart: false,
+      max_memory_restart: '300M',
+      error_file: 'logs/pm2-social-error.log',
+      out_file: 'logs/pm2-social-out.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     }
   ]
 };

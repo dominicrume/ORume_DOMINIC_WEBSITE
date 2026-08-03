@@ -12,7 +12,8 @@
     "api": "node --watch src/api/server.js",
     "ui": "vite src/dashboard --port 5176",
     "ui:build": "vite build src/dashboard --outDir dist/dashboard",
-    "start": "NODE_ENV=production node src/api/server.js",
+    "build": "npm run ui:build",
+    "start": "npx pm2-runtime start ecosystem.config.cjs",
     "pipeline": "node src/agent/orchestrator.js",
     "discover": "node src/scrapers/discover.js",
     "mx": "node src/intel/mxLookup.js",
@@ -33,7 +34,9 @@
     "growth:morning": "node scripts/morningIngest.js",
     "growth:overnight": "node scripts/overnightHarvest.js",
     "growth:import": "node -e \"import('./src/growth/sourceImporter.js').then(m => m.SourceImporter.importFromCSV()).then(console.log)\"",
-    "install:browsers": "npx playwright install chromium"
+    "install:browsers": "npx playwright install chromium",
+    "kya:attack": "node src/engine/kya-attack.js",
+    "kya:gate": "node src/engine/kya-inspect.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.26.0",

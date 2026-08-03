@@ -252,6 +252,27 @@ db.exec(`
     metrics_summary_json TEXT
   );
 
+  -- ── Human-In-The-Loop (HITL) Queue ──────────────────────────
+  CREATE TABLE IF NOT EXISTS hitl_queue (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    action_type    TEXT NOT NULL, -- 'social_post' or 'outreach_email'
+    payload_json   TEXT NOT NULL, -- The drafted content/data
+    status         TEXT DEFAULT 'pending', -- 'pending', 'approved', 'declined'
+    feedback       TEXT,          -- Reason for decline
+    created_at     DATETIME DEFAULT CURRENT_TIMESTAMP,
+    processed_at   DATETIME
+  );
+
+  -- ── Cryptographic Proofs (KYA Step 4) ──────────────────────────
+  CREATE TABLE IF NOT EXISTS action_proofs (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    hitl_id        INTEGER REFERENCES hitl_queue(id),
+    action_type    TEXT NOT NULL,
+    payload_hash   TEXT NOT NULL,
+    prev_hash      TEXT NOT NULL,
+    sealed_at      DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
   CREATE INDEX IF NOT EXISTS idx_leads_status   ON leads(status);
   CREATE INDEX IF NOT EXISTS idx_leads_score    ON leads(score DESC);
   CREATE INDEX IF NOT EXISTS idx_leads_niche    ON leads(niche);
@@ -262,6 +283,28 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_revenue_sold   ON revenue_ledger(sold_at DESC);
   CREATE INDEX IF NOT EXISTS idx_growth_date    ON growth_sources(date DESC);
   CREATE INDEX IF NOT EXISTS idx_growth_cat     ON growth_sources(category);
+
+  -- ── Lifecycle Management System (LMS) ────────────────────────
+  CREATE TABLE IF NOT EXISTS lifecycle_users (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    email          TEXT UNIQUE NOT NULL,
+    first_name     TEXT,
+    last_name      TEXT,
+    status         TEXT DEFAULT 'active',
+    created_at     DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at     DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE TABLE IF NOT EXISTS lifecycle_events (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id        INTEGER REFERENCES lifecycle_users(id),
+    event_type     TEXT NOT NULL,
+    event_data     TEXT, -- JSON payload for context (e.g. product name)
+    created_at     DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_lifecycle_user ON lifecycle_events(user_id);
+  CREATE INDEX IF NOT EXISTS idx_lifecycle_type ON lifecycle_events(event_type);
 `)
 
 export const DB = {
@@ -380,6 +423,67 @@ export const DB = {
     latest: db.prepare(`SELECT * FROM growth_insights ORDER BY id DESC LIMIT 1`),
     history: db.prepare(`SELECT * FROM growth_insights ORDER BY id DESC LIMIT 20`),
   },
+  hitl: {
+    insert: db.prepare(`INSERT INTO hitl_queue (action_type, payload_json) VALUES (@action_type, @payload_json)`),
+    pending: db.prepare(`SELECT * FROM hitl_queue WHERE status='pending' ORDER BY created_at DESC`),
+    approve: db.prepare(`UPDATE hitl_queue SET status='approved', processed_at=CURRENT_TIMESTAMP, payload_json=@payload_json WHERE id=@id`),
+    decline: db.prepare(`UPDATE hitl_queue SET status='declined', processed_at=CURRENT_TIMESTAMP, feedback=@feedback WHERE id=@id`),
+    all: db.prepare(`SELECT * FROM hitl_queue ORDER BY created_at DESC LIMIT 100`),
+    byId: db.prepare(`SELECT * FROM hitl_queue WHERE id=@id`)
+  },
+  proofs: {
+    insert: db.prepare(`INSERT INTO action_proofs (hitl_id, action_type, payload_hash, prev_hash) VALUES (@hitl_id, @action_type, @payload_hash, @prev_hash)`),
+    latest: db.prepare(`SELECT * FROM action_proofs ORDER BY id DESC LIMIT 1`),
+    all: db.prepare(`SELECT * FROM action_proofs ORDER BY id DESC LIMIT 100`)
+  },
+  lifecycle: {
+    upsertUser: db.prepare(`
+      INSERT INTO lifecycle_users (email, first_name, last_name) 
+      VALUES (@email, @first_name, @last_name)
+      ON CONFLICT(email) DO UPDATE SET 
+        first_name = COALESCE(excluded.first_name, first_name),
+        last_name = COALESCE(excluded.last_name, last_name),
+        updated_at = CURRENT_TIMESTAMP
+    `),
+    getUserByEmail: db.prepare(`SELECT * FROM lifecycle_users WHERE email = ?`),
+    logEvent: db.prepare(`INSERT INTO lifecycle_events (user_id, event_type, event_data) VALUES (@user_id, @event_type, @event_data)`),
+    
+    // Finds users who initiated a booking but haven't completed it in the last X hours
+    getAbandonedBookings: db.prepare(`
+      SELECT u.id as user_id, u.email, u.first_name, e.created_at as initiated_at, e.event_data
+      FROM lifecycle_events e
+      JOIN lifecycle_users u ON e.user_id = u.id
+      WHERE e.event_type = 'booking_initiated'
+      AND e.created_at <= datetime('now', '-1 hour')
+      AND NOT EXISTS (
+        SELECT 1 FROM lifecycle_events e2 
+        WHERE e2.user_id = e.user_id AND e2.event_type = 'booking_completed' 
+        AND e2.created_at > e.created_at
+      )
+      AND NOT EXISTS (
+        SELECT 1 FROM hitl_queue h
+        WHERE h.action_type = 'lifecycle_booking_recovery' AND h.payload_json LIKE '%' || u.email || '%'
+      )
+    `),
+    
+    // Finds users who initiated checkout but haven't completed it in the last X hours
+    getAbandonedCheckouts: db.prepare(`
+      SELECT u.id as user_id, u.email, u.first_name, e.created_at as initiated_at, e.event_data
+      FROM lifecycle_events e
+      JOIN lifecycle_users u ON e.user_id = u.id
+      WHERE e.event_type = 'checkout_initiated'
+      AND e.created_at <= datetime('now', '-2 hour')
+      AND NOT EXISTS (
+        SELECT 1 FROM lifecycle_events e2 
+        WHERE e2.user_id = e.user_id AND e2.event_type = 'checkout_completed' 
+        AND e2.created_at > e.created_at
+      )
+      AND NOT EXISTS (
+        SELECT 1 FROM hitl_queue h
+        WHERE h.action_type = 'lifecycle_checkout_recovery' AND h.payload_json LIKE '%' || u.email || '%'
+      )
+    `)
+  }
 }
 
 export default db

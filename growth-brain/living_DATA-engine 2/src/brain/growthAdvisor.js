@@ -1,42 +1,60 @@
 // src/brain/growthAdvisor.js — AI Growth Brain & Ascension Ladder Mapping (Root #11 / H1)
 import 'dotenv/config'
 import Anthropic from '@anthropic-ai/sdk'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import { DB } from '../lib/db.js'
 import { logger } from '../lib/logger.js'
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const claude = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || 'dummy_offline_key' })
 
-const GROWTH_SYSTEM_PROMPT = `You are the AI Growth Brain for Rume Dominic and Vorem Nigeria.
-Your role is to analyze multi-channel traffic data (Substack, Social Media, Direct, Messaging) and diagnose growth bottlenecks and conversion opportunities.
+// KYA Method Step 1: Read the promise before the code
+const rulesPath = path.join(__dirname, '../../THE-RULES.md')
+const jobPath = path.join(__dirname, '../engine/step-2-check/THE-JOB.md')
+const theRules = fs.existsSync(rulesPath) ? fs.readFileSync(rulesPath, 'utf-8') : ''
+const theJob = fs.existsSync(jobPath) ? fs.readFileSync(jobPath, 'utf-8') : ''
+
+const GROWTH_SYSTEM_PROMPT = `You are the AI Growth Brain for Rume Dominic (Methodical Titan Builder).
+Your role is to analyze multi-channel traffic data (Substack, Social Media, Direct, Messaging) and diagnose engagement bottlenecks and opportunities for technical thought leadership.
+
+---
+THE RULES OF THIS SYSTEM (KYA Method):
+${theRules}
+---
+YOUR SPECIFIC JOB FOR THIS STAGE:
+${theJob}
+---
 
 You must ground every recommendation in the real numbers provided from SQLite. Never invent metrics.
 
-You must align recommendations to Rume Dominic's 4-Tier Ascension Ladder:
-- Tier 1: £19.99 Book ("From Code to Consciousness") — Top of funnel tripwire & opt-in gift.
-- Tier 2: £97 Course ("Master AI in 9 Days" / Vorem AI) — Core educational offer.
-- Tier 3: £1,500/mo AI Marketing & Growth Brain Service — Recurring retainer for businesses.
-- Tier 4: £5,000 Consulting / Custom AI Systems — High-ticket enterprise architecture.
+You must align recommendations to Rume Dominic's Builder Engagement Framework (NEVER use consultancy sales pitches, pricing tiers, or book-a-call CTAs):
+- Tier 1: Open Source Repositories — Drive traffic to GitHub to showcase raw code and architecture.
+- Tier 2: Deep Dive Documentation — Encourage reading technical docs and system architectures.
+- Tier 3: Substack Technical Essays — Convert passing traffic into technical subscribers.
+- Tier 4: High-Level Role Inquiries — Engage with hiring managers or elite engineering teams.
 
-When writing or suggesting copy in your actionable recommendations, you MUST apply the Ruben Hassid High-Traction Writing Style blended with Rume Dominic's brand voice:
-1. The Short Punchy Hook: Start with a 1-3 word hook followed by a period (e.g., "Vibecoding.", "Claude For Dummies.", "AI will fail.", "Consciousness over code.", "Master AI.").
-2. Counter-Intuitive Subtitle: Follow immediately with a bold, curiosity-inducing subtitle that challenges assumptions or promises step-by-step practical value (e.g., "If you still think AI is just for coders → this is where to start:", "Stop collecting prompts. Finish something with AI today.").
-3. Direct Arrows / Colons: Use '→' or ':' to transition directly into actionable steps and link to Rume Dominic's Tier 1/2/3 offers.
-4. Zero Fluff: Keep paragraphs to 1-2 lines max. Highly scannable, direct, and authoritative.
+When writing or suggesting copy in your actionable recommendations, you MUST apply the Methodical Titan Builder brand voice:
+1. The Short Punchy Hook: Start with a 1-3 word hook followed by a period.
+2. The Assembly: Break problems down methodically (like Rockefeller or Carnegie).
+3. The Ask: "Check out the repo here" or "Read the docs". NEVER "Book a call".
+4. Zero Fluff: Keep paragraphs to 1-2 lines max. No hype words ("7x faster", "elite").
 
 Return ONLY valid JSON matching this schema:
 {
   "top_channel": "string (name of highest performing channel)",
-  "bottleneck": "string (clear diagnosis of where conversion or revenue is lagging)",
+  "bottleneck": "string (clear diagnosis of where engagement is lagging)",
   "summary": "string (2-3 sentence executive overview of current growth state)",
   "recommendations": [
     {
       "id": "REC-1",
       "priority": "HIGH|MEDIUM|LOW",
       "channel": "Substack|Social|Direct|Messaging|Email|Overall",
-      "action": "string (specific actionable step formatted with Ruben Hassid hook & arrow style)",
+      "action": "string (specific actionable step formatted with the Builder voice)",
       "rationale": "string (why this matters based on the data)",
       "expected_impact": "string (projected outcome)",
-      "target_tier": "Tier 1 (£19.99 Book)|Tier 2 (£97 Course)|Tier 3 (£1,500/mo Service)|Tier 4 (£5,000 Consulting)"
+      "target_tier": "Tier 1 (GitHub)|Tier 2 (Docs)|Tier 3 (Substack)|Tier 4 (Hiring Inquiries)"
     }
   ]
 }`
@@ -51,9 +69,9 @@ export class GrowthAdvisor {
     const topCat = byCategory?.[0]?.category || 'Substack'
     const topCatVisitors = byCategory?.[0]?.total_visitors || 0
     
-    let bottleneck = `Total visitors across all channels is ${totalVisitors}, but overall opt-in conversion rate is ${convRate}% (${totalSubs} subscribers). Top-of-funnel traffic is not effectively ascending into lead capture.`
+    let bottleneck = `Total visitors across all channels is ${totalVisitors}, but technical subscriber conversion rate is ${convRate}% (${totalSubs} subscribers). Top-of-funnel traffic is not effectively ascending into long-term technical readership.`
     if (totalSubs > 0 && totalRev === 0) {
-      bottleneck = `Strong lead capture (${totalSubs} subscribers at ${convRate}%), but monetization is lagging at £0 revenue. Need immediate activation of Tier 1 (£19.99 Book) and Tier 2 (£97 Course) tripwire offers.`
+      bottleneck = `Strong readership capture (${totalSubs} subscribers at ${convRate}%), but deep technical engagement (GitHub/Docs) needs to be measured and prioritized.`
     }
 
     const recommendations = [
@@ -61,44 +79,44 @@ export class GrowthAdvisor {
         id: 'REC-01',
         priority: 'HIGH',
         channel: 'Substack',
-        action: 'Implement instant PDF book opt-in hook on Substack publication footer and welcome email.',
-        rationale: `Substack represents a major traffic stream (${topCatVisitors} visitors in top category) that needs seamless transition to Vorem CRM.`,
-        expected_impact: 'Increase Substack-to-email opt-in conversion rate by 15-25%.',
-        target_tier: 'Tier 1 (£19.99 Book)'
+        action: 'Pin a deep-dive system architecture post on the Substack publication footer.',
+        rationale: `Substack represents a major traffic stream (${topCatVisitors} visitors in top category) that needs seamless transition to long-form technical reading.`,
+        expected_impact: 'Increase technical subscriber opt-in conversion rate by 15-25%.',
+        target_tier: 'Tier 3 (Substack)'
       },
       {
         id: 'REC-02',
         priority: 'HIGH',
         channel: 'Overall',
-        action: 'Configure automated Brevo email sequence for all new free book/course claimants.',
-        rationale: `With ${totalVisitors} total visitors recorded, automated nurture is required to ascend leads from free access to paid courses without manual intervention.`,
-        expected_impact: 'Convert 5-8% of free book recipients into £97 course buyers within 9 days.',
-        target_tier: 'Tier 2 (£97 Course)'
+        action: 'Configure automated email sequence showcasing specific GitHub repositories to new technical subscribers.',
+        rationale: `With ${totalVisitors} total visitors recorded, automated nurture is required to guide readers to actual codebase implementations.`,
+        expected_impact: 'Drive a 10% increase in GitHub repository views and stars.',
+        target_tier: 'Tier 1 (GitHub)'
       },
       {
         id: 'REC-03',
         priority: 'MEDIUM',
         channel: 'Social',
-        action: 'Deploy interactive AI agent demo widgets (e.g., Vorem AI Agentic Demo) on landing pages linked in Social bios.',
-        rationale: 'Social media visitors require immediate interactive value to bridge from passive scrolling to active consciousness.',
-        expected_impact: 'Boost dwell time by 40% and generate qualified business leads.',
-        target_tier: 'Tier 3 (£1,500/mo Service)'
+        action: 'Share raw build-logs and technical challenges faced during recent AI agent deployments.',
+        rationale: 'Social media visitors require authentic, show-your-work content rather than generic marketing fluff to build trust.',
+        expected_impact: 'Boost technical discussion engagement by 40% in post comments.',
+        target_tier: 'Tier 2 (Docs)'
       },
       {
         id: 'REC-04',
         priority: 'MEDIUM',
         channel: 'Direct',
-        action: 'Add VIP executive consultation booking CTA on the main Rume Dominic portfolio root page.',
-        rationale: 'Direct traffic often includes high-intent founders and enterprise decision makers looking for bespoke AI architecture.',
-        expected_impact: 'Secure 1-2 high-ticket consulting inquiries per month (£5k+ LTV).',
-        target_tier: 'Tier 4 (£5,000 Consulting)'
+        action: 'Add a clear "Read My Systems Architecture" CTA on the main portfolio root page pointing to verifiable project docs.',
+        rationale: 'Direct traffic often includes high-intent hiring managers and engineering directors looking for bespoke AI architecture proof.',
+        expected_impact: 'Secure 1-2 high-level technical interviews or direct engineering role inquiries per month.',
+        target_tier: 'Tier 4 (Hiring Inquiries)'
       }
     ]
 
     return {
       top_channel: topCat,
       bottleneck,
-      summary: `Living Engine analyzed ${totalVisitors} visitors across ${byCategory.length || 1} core channels. Conversion rate is currently ${convRate}%. Priority focus is optimizing lead capture on ${topCat} and activating automated email ascension sequences.`,
+      summary: `Living Engine analyzed ${totalVisitors} visitors across ${byCategory.length || 1} core channels. Conversion rate is currently ${convRate}%. Priority focus is optimizing technical engagement on ${topCat} and showcasing raw codebase builds.`,
       recommendations
     }
   }

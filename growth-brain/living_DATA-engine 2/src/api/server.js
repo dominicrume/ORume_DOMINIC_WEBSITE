@@ -9,6 +9,8 @@ import { Memory } from '../lib/memory.js'
 import { logger } from '../lib/logger.js'
 import { SourceImporter } from '../growth/sourceImporter.js'
 import { GrowthAdvisor } from '../brain/growthAdvisor.js'
+import { lifecycleRouter } from './lifecycleRoutes.js'
+import crypto from 'crypto'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -16,6 +18,9 @@ const app  = express()
 const PORT = process.env.PORT || 3001
 app.use(cors())
 app.use(express.json())
+
+// Mount routes
+app.use('/api/lifecycle', lifecycleRouter)
 
 // Enterprise Liveness and Readiness Probes
 app.get('/api/health', (_, res) => {
@@ -172,6 +177,95 @@ app.post('/api/growth/import', async (req, res) => {
     const importStats = await SourceImporter.importFromCSV()
     const diagnosis = await GrowthAdvisor.analyzeGrowth()
     res.json({ ok: true, importStats, diagnosis })
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+// ── Human-In-The-Loop (HITL) Queue routes ─────────────────────
+app.get('/api/queue', (_, res) => {
+  try {
+    const queue = DB.hitl.pending.all()
+    res.json(queue)
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+// KYA Audits - Cryptographic Seals
+app.get('/api/proofs', (_, res) => {
+  try {
+    const proofs = DB.proofs.all.all() || []
+    res.json(proofs)
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+app.post('/api/queue/:id/approve', async (req, res) => {
+  try {
+    const { id } = req.params
+    const { payload_json } = req.body
+    
+    // 1. Update status in DB
+    DB.hitl.approve.run({ id, payload_json })
+    
+    const record = DB.hitl.byId.get({ id })
+    
+    // KYA Step 4: Prove (Cryptographic Sealing)
+    const latestProof = DB.proofs.latest.get()
+    const prevHash = latestProof ? latestProof.payload_hash : 'GENESIS_BLOCK'
+    const dataToHash = JSON.stringify({
+      hitl_id: id,
+      action_type: record.action_type,
+      payload: payload_json,
+      prev_hash: prevHash,
+      timestamp: new Date().toISOString()
+    })
+    const payloadHash = crypto.createHash('sha256').update(dataToHash).digest('hex')
+    
+    DB.proofs.insert.run({
+      hitl_id: id,
+      action_type: record.action_type,
+      payload_hash: payloadHash,
+      prev_hash: prevHash
+    })
+    
+    logger.info(`KYA Step 4: Action ${id} sealed mathematically. Hash: ${payloadHash.substring(0, 8)}...`)
+    
+    // 2. Execute the action based on type
+    if (record.action_type === 'social_post') {
+      const payloadObj = JSON.parse(payload_json)
+      logger.info(`HITL: Firing approved social post to Make.com`, { id })
+      
+      const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL
+      if (MAKE_WEBHOOK_URL) {
+        await fetch(MAKE_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: "Warm Engine Omni-Channel Blast (HITL Approved)",
+            twitter_copy: payloadObj.twitter_copy,
+            linkedin_personal_copy: payloadObj.linkedin_personal_copy,
+            linkedin_company_copy: payloadObj.linkedin_company_copy,
+            youtube_copy: payloadObj.youtube_copy,
+            gmb_copy: payloadObj.gmb_copy,
+            text: payloadObj.linkedin_personal_copy || payloadObj.twitter_copy || "Warm Engine Omni-Channel Update",
+            image_url: "https://rumedominic.com/kya-logo.png",
+            timestamp: new Date().toISOString()
+          })
+        })
+      }
+    }
+    
+    res.json({ ok: true })
+  } catch (err) {
+    logger.error(`HITL Approve Error: ${err.message}`)
+    res.status(500).json({ error: err.message })
+  }
+})
+
+app.post('/api/queue/:id/decline', (req, res) => {
+  try {
+    const { id } = req.params
+    const { feedback } = req.body
+    DB.hitl.decline.run({ id, feedback })
+    logger.info(`HITL: Declined action ${id} with feedback: ${feedback}`)
+    res.json({ ok: true })
   } catch (err) { res.status(500).json({ error: err.message }) }
 })
 

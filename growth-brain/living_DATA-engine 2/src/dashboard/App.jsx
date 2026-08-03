@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('growth') // 'growth' | 'pipeline'
+  const [activeTab, setActiveTab] = useState('hitl') // 'hitl' | 'growth' | 'pipeline'
   const [stats, setStats] = useState(null)
   const [salesStats, setSalesStats] = useState(null)
   const [leads, setLeads] = useState([])
   const [learnings, setLearnings] = useState([])
+  
+  // HITL State
+  const [hitlQueue, setHitlQueue] = useState([])
+  const [selectedAction, setSelectedAction] = useState(null)
+  const [declineFeedback, setDeclineFeedback] = useState('')
+  const [proofs, setProofs] = useState([])
   
   // Growth State
   const [growthStats, setGrowthStats] = useState(null)
@@ -18,14 +24,16 @@ export default function App() {
 
   const fetchData = async () => {
     try {
-      const [statsRes, salesRes, leadsRes, learningsRes, gStatsRes, gSourcesRes, gInsightsRes] = await Promise.all([
+      const [statsRes, salesRes, leadsRes, learningsRes, gStatsRes, gSourcesRes, gInsightsRes, queueRes, proofsRes] = await Promise.all([
         fetch('http://localhost:3001/api/stats').catch(() => ({ json: () => null })),
         fetch('http://localhost:3001/api/sales/stats').catch(() => ({ json: () => null })),
         fetch('http://localhost:3001/api/leads').catch(() => ({ json: () => [] })),
         fetch('http://localhost:3001/api/learnings').catch(() => ({ json: () => ({ decisions: [] }) })),
         fetch('http://localhost:3001/api/growth/stats').catch(() => ({ json: () => null })),
         fetch('http://localhost:3001/api/growth/sources').catch(() => ({ json: () => [] })),
-        fetch('http://localhost:3001/api/growth/insights').catch(() => ({ json: () => null }))
+        fetch('http://localhost:3001/api/growth/insights').catch(() => ({ json: () => null })),
+        fetch('http://localhost:3001/api/queue').catch(() => ({ json: () => [] })),
+        fetch('http://localhost:3001/api/proofs').catch(() => ({ json: () => [] }))
       ])
       
       const statsData = await statsRes.json()
@@ -48,6 +56,20 @@ export default function App() {
 
       const gInsightsData = await gInsightsRes.json()
       if (gInsightsData) setGrowthInsights(gInsightsData)
+
+      const queueData = await queueRes.json()
+      if (Array.isArray(queueData)) {
+        setHitlQueue(queueData)
+        // Auto-select first item if none selected and queue is populated
+        if (!selectedAction && queueData.length > 0) {
+          setSelectedAction(queueData[0])
+        } else if (selectedAction && !queueData.find(q => q.id === selectedAction.id)) {
+          setSelectedAction(null)
+        }
+      }
+
+      const proofsData = await proofsRes.json()
+      if (Array.isArray(proofsData)) setProofs(proofsData)
 
     } catch (err) {
       console.error('Failed to fetch data:', err)
@@ -119,6 +141,18 @@ export default function App() {
       {/* NAVIGATION TABS */}
       <div className="tabs-bar">
         <button 
+          className={`tab-btn ${activeTab === 'hitl' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('hitl')}
+        >
+          ⚡ Control Room (HITL)
+        </button>
+        <button 
+          className={`tab-btn ${activeTab === 'audits' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('audits')}
+        >
+          🔒 KYA Audits
+        </button>
+        <button 
           className={`tab-btn ${activeTab === 'growth' ? 'active' : ''}`} 
           onClick={() => setActiveTab('growth')}
         >
@@ -128,11 +162,188 @@ export default function App() {
           className={`tab-btn ${activeTab === 'pipeline' ? 'active' : ''}`} 
           onClick={() => setActiveTab('pipeline')}
         >
-          ⚡ Pipeline & Leads (ICM Layer 0)
+          ⚙️ Pipeline & Leads
         </button>
       </div>
 
-      {activeTab === 'growth' ? (
+      {activeTab === 'hitl' && (
+        <div className="tab-content hitl-container">
+          <div className="panel" style={{ display: 'flex', gap: '20px', minHeight: '600px' }}>
+            {/* LEFT: Queue List */}
+            <div style={{ width: '30%', borderRight: '1px solid var(--border-color)', paddingRight: '20px' }}>
+              <div className="panel-header">Pending Approval ({hitlQueue.length})</div>
+              <div className="queue-list" style={{ marginTop: '15px' }}>
+                {hitlQueue.length === 0 ? (
+                  <p style={{ color: 'var(--text-secondary)' }}>No actions pending review.</p>
+                ) : (
+                  hitlQueue.map(item => (
+                    <div 
+                      key={item.id} 
+                      onClick={() => setSelectedAction(item)}
+                      style={{ 
+                        padding: '12px', 
+                        marginBottom: '10px', 
+                        background: selectedAction?.id === item.id ? 'rgba(0, 255, 255, 0.1)' : 'var(--bg-darker)',
+                        border: selectedAction?.id === item.id ? '1px solid var(--accent-cyan)' : '1px solid transparent',
+                        borderRadius: '6px',
+                        cursor: 'pointer'
+                      }}>
+                      <div style={{ fontWeight: 'bold' }}>{item.action_type === 'social_post' ? 'Omni-Channel Social Post' : item.action_type}</div>
+                      <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '4px' }}>
+                        {new Date(item.created_at).toLocaleString()}
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+
+            {/* RIGHT: Action Details */}
+            <div style={{ width: '70%', paddingLeft: '10px' }}>
+              {selectedAction ? (
+                <div>
+                  <div className="panel-header" style={{ marginBottom: '20px', color: 'var(--accent-cyan)' }}>
+                    Reviewing: {selectedAction.action_type === 'social_post' ? 'Omni-Channel Social Post' : selectedAction.action_type}
+                  </div>
+                  
+                  <div className="payload-preview" style={{ background: 'var(--bg-darker)', padding: '20px', borderRadius: '8px', marginBottom: '20px', maxHeight: '500px', overflowY: 'auto' }}>
+                    {selectedAction.action_type === 'social_post' && (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                        {Object.entries(JSON.parse(selectedAction.payload_json)).map(([key, value]) => (
+                          <div key={key}>
+                            <div style={{ fontSize: '12px', textTransform: 'uppercase', color: 'var(--accent-purple)', marginBottom: '8px', fontWeight: 'bold', letterSpacing: '0.5px' }}>
+                              {key.replace('_', ' ')}
+                            </div>
+                            <textarea 
+                              style={{ 
+                                width: '100%', 
+                                minHeight: '100px', 
+                                background: '#111', 
+                                color: '#e0e0e0', 
+                                border: '1px solid #333', 
+                                padding: '12px', 
+                                borderRadius: '6px',
+                                fontFamily: 'monospace',
+                                fontSize: '13px',
+                                lineHeight: '1.5'
+                              }}
+                              defaultValue={value}
+                              id={`edit-${key}`}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="hitl-actions" style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                    <button className="action-btn" style={{ background: 'var(--accent-green)', borderColor: 'var(--accent-green)', padding: '10px 20px', fontWeight: 'bold' }} onClick={async () => {
+                      let updatedPayload = {}
+                      if (selectedAction.action_type === 'social_post') {
+                        Object.keys(JSON.parse(selectedAction.payload_json)).forEach(k => {
+                          updatedPayload[k] = document.getElementById(`edit-${k}`).value
+                        })
+                      } else {
+                        updatedPayload = JSON.parse(selectedAction.payload_json)
+                      }
+                      
+                      setImporting(true)
+                      try {
+                        const res = await fetch(`http://localhost:3001/api/queue/${selectedAction.id}/approve`, {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({ payload_json: JSON.stringify(updatedPayload) })
+                        })
+                        if(res.ok) {
+                           setNotification('✅ Approved and fired to Make.com!')
+                           setSelectedAction(null)
+                           fetchData()
+                        }
+                      } catch (err) {
+                        setNotification('❌ Failed to approve')
+                      }
+                      setImporting(false)
+                    }}>
+                      ✅ Approve & Fire
+                    </button>
+                    
+                    <div style={{ display: 'flex', gap: '10px', marginLeft: 'auto' }}>
+                      <input 
+                        type="text" 
+                        placeholder="Reason for decline..." 
+                        value={declineFeedback}
+                        onChange={e => setDeclineFeedback(e.target.value)}
+                        style={{ padding: '8px 12px', background: '#111', border: '1px solid #444', color: '#fff', borderRadius: '4px', width: '250px' }}
+                      />
+                      <button className="action-btn" style={{ background: '#ff4444', borderColor: '#cc0000', color: 'white' }} onClick={async () => {
+                        if (!declineFeedback) return alert('Provide feedback for declining.')
+                        setImporting(true)
+                        try {
+                          await fetch(`http://localhost:3001/api/queue/${selectedAction.id}/decline`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ feedback: declineFeedback })
+                          })
+                          setNotification('❌ Declined and feedback logged')
+                          setSelectedAction(null)
+                          setDeclineFeedback('')
+                          fetchData()
+                        } catch(e){}
+                        setImporting(false)
+                      }}>
+                        ❌ Decline & Teach
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'var(--text-secondary)' }}>
+                  Select an item from the queue to review.
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === 'audits' && (
+        <div className="tab-content">
+          <div className="panel leads-panel">
+            <div className="panel-header-row">
+              <span className="panel-header" style={{ color: 'var(--accent-purple)' }}>🔒 KYA Audits: Cryptographic Proofs</span>
+              <span className="badge-info">Unbroken Chain of Accountability</span>
+            </div>
+            {proofs.length > 0 ? (
+              <table style={{ marginTop: '20px' }}>
+                <thead>
+                  <tr>
+                    <th>Action Type</th>
+                    <th>Cryptographic Seal (SHA-256)</th>
+                    <th>Previous Seal Link</th>
+                    <th>Timestamp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {proofs.map((proof, i) => (
+                    <tr key={proof.id} style={{ fontFamily: 'monospace', fontSize: '13px' }}>
+                      <td style={{ color: 'var(--accent-cyan)' }}>{proof.action_type}</td>
+                      <td style={{ color: 'var(--accent-green)', letterSpacing: '0.5px' }}>{proof.payload_hash}</td>
+                      <td style={{ color: 'var(--text-secondary)' }}>{proof.prev_hash === 'GENESIS_BLOCK' ? 'GENESIS_BLOCK' : proof.prev_hash.substring(0, 16) + '...'}</td>
+                      <td>{new Date(proof.sealed_at).toLocaleString()}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '14px' }}>
+                No cryptographic proofs generated yet. Approve an action in the Control Room.
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {activeTab === 'growth' && (
         /* ── SUBSTACK & GROWTH INTELLIGENCE TAB ── */
         <div className="tab-content">
           <div className="stats-grid">
@@ -259,7 +470,9 @@ export default function App() {
             </div>
           </div>
         </div>
-      ) : (
+      )}
+
+      {activeTab === 'pipeline' && (
         /* ── PIPELINE & LEADS TAB ── */
         <div className="tab-content">
           <div className="stats-grid">
