@@ -1,0 +1,8 @@
+node_modules
+dist
+data
+logs
+exports
+memory
+.env
+.DS_Store
