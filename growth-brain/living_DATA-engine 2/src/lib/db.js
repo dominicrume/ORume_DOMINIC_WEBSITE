@@ -273,6 +273,36 @@ db.exec(`
     sealed_at      DATETIME DEFAULT CURRENT_TIMESTAMP
   );
 
+  -- ── Social Media Analytics (ML Feedback Loop) ────────────────────
+  -- Stores raw engagement metrics pulled back from Buffer/Make.com for each post
+  CREATE TABLE IF NOT EXISTS social_analytics (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    post_hash       TEXT,                -- KYA hash of the original post (links to action_proofs)
+    platform        TEXT NOT NULL,       -- twitter | linkedin_personal | linkedin_company | facebook | threads
+    post_copy       TEXT,                -- The actual copy that was posted
+    impressions     INTEGER DEFAULT 0,
+    engagements     INTEGER DEFAULT 0,
+    link_clicks     INTEGER DEFAULT 0,
+    likes           INTEGER DEFAULT 0,
+    shares          INTEGER DEFAULT 0,
+    comments        INTEGER DEFAULT 0,
+    recorded_at     DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
+  -- ── Social Learning Memory (ML Brain Output) ─────────────────────
+  -- Stores each learning cycle: what worked, what failed, what rules were updated
+  CREATE TABLE IF NOT EXISTS social_learnings (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    cycle_date      DATETIME DEFAULT CURRENT_TIMESTAMP,
+    top_performer   TEXT,                -- JSON: the best-performing post (hash + platform + copy)
+    worst_performer TEXT,                -- JSON: the worst-performing post
+    rules_updated   TEXT,                -- The new rules injected into x-learning.json
+    ai_diagnosis    TEXT                 -- Full AI critique from the LLM
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_social_platform ON social_analytics(platform);
+  CREATE INDEX IF NOT EXISTS idx_social_hash     ON social_analytics(post_hash);
+
   CREATE INDEX IF NOT EXISTS idx_leads_status   ON leads(status);
   CREATE INDEX IF NOT EXISTS idx_leads_score    ON leads(score DESC);
   CREATE INDEX IF NOT EXISTS idx_leads_niche    ON leads(niche);
@@ -436,6 +466,48 @@ export const DB = {
     latest: db.prepare(`SELECT * FROM action_proofs ORDER BY id DESC LIMIT 1`),
     all: db.prepare(`SELECT * FROM action_proofs ORDER BY id DESC LIMIT 100`)
   },
+
+  // ── Social ML Feedback Loop ───────────────────────────────────
+  socialAnalytics: {
+    insert: db.prepare(`
+      INSERT INTO social_analytics (post_hash, platform, post_copy, impressions, engagements, link_clicks, likes, shares, comments)
+      VALUES (@post_hash, @platform, @post_copy, @impressions, @engagements, @link_clicks, @likes, @shares, @comments)
+    `),
+    // Get last 30 posts ordered by engagement so the ML brain can compare
+    topPerformers: db.prepare(`
+      SELECT * FROM social_analytics
+      WHERE link_clicks > 0 OR engagements > 0
+      ORDER BY link_clicks DESC, engagements DESC
+      LIMIT 5
+    `),
+    worstPerformers: db.prepare(`
+      SELECT * FROM social_analytics
+      ORDER BY link_clicks ASC, engagements ASC
+      LIMIT 5
+    `),
+    recent: db.prepare(`SELECT * FROM social_analytics ORDER BY recorded_at DESC LIMIT 50`),
+    stats: db.prepare(`
+      SELECT 
+        platform,
+        COUNT(*) as total_posts,
+        SUM(impressions) as total_impressions,
+        SUM(engagements) as total_engagements,
+        SUM(link_clicks) as total_clicks,
+        ROUND(AVG(link_clicks), 2) as avg_clicks_per_post
+      FROM social_analytics
+      GROUP BY platform
+      ORDER BY total_clicks DESC
+    `)
+  },
+  socialLearnings: {
+    insert: db.prepare(`
+      INSERT INTO social_learnings (top_performer, worst_performer, rules_updated, ai_diagnosis)
+      VALUES (@top_performer, @worst_performer, @rules_updated, @ai_diagnosis)
+    `),
+    latest: db.prepare(`SELECT * FROM social_learnings ORDER BY id DESC LIMIT 1`),
+    history: db.prepare(`SELECT * FROM social_learnings ORDER BY id DESC LIMIT 10`)
+  },
+
   lifecycle: {
     upsertUser: db.prepare(`
       INSERT INTO lifecycle_users (email, first_name, last_name) 

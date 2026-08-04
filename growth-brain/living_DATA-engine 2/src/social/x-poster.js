@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { formatPrompt } from './x-persona.js';
 import { DB } from '../lib/db.js';
 import { ImageAgent } from './imageAgent.js';
+import { runLearningCycle, loadMemory } from '../brain/socialLearning.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -187,17 +188,41 @@ async function fireAndSeal(payloadObj) {
 export async function runPosterCycle() {
   console.log('Starting X Poster Cycle...');
   
-  let memory = { currentStrategy: 'Focus on high-signal tech truths', lessonsLearned: [] };
-  if (fs.existsSync(MEMORY_PATH)) {
-    memory = JSON.parse(fs.readFileSync(MEMORY_PATH, 'utf-8'));
-  }
-  
-  const memoryInsights = `
-  Current Strategy: ${memory.currentStrategy}
-  Lessons Learned: ${memory.lessonsLearned.join(' | ')}
-  `;
+  // ── STEP 1: Run the ML Learning Brain FIRST ───────────────────
+  // The brain pulls the latest analytics, critiques the past posts,
+  // and rewrites the rules in memory/x-learning.json BEFORE we write anything new.
+  console.log('[ML-BRAIN] Running social learning cycle to update rules...');
+  await runLearningCycle();
 
-  const prompt = formatPrompt(memoryInsights, "None currently available in local log.");
+  // ── STEP 2: Load the live, AI-updated memory rules ────────────
+  const memory = loadMemory();
+  
+  const hardRulesBlock = memory.hardRules && memory.hardRules.length > 0
+    ? `\n\nCRITICAL HARD RULES (AI-LEARNED — DO NOT VIOLATE):\n${memory.hardRules.map((r, i) => `${i + 1}. ${r}`).join('\n')}`
+    : '';
+
+  const bannedBlock = memory.bannedPatterns && memory.bannedPatterns.length > 0
+    ? `\n\nSTRICTLY BANNED PATTERNS (failed in real analytics — never use again):\n${memory.bannedPatterns.map(p => `- ${p}`).join('\n')}`
+    : '';
+
+  const winningBlock = memory.winningPatterns && memory.winningPatterns.length > 0
+    ? `\n\nWINNING PATTERNS (proven by real data — replicate these):\n${memory.winningPatterns.map(p => `+ ${p}`).join('\n')}`
+    : '';
+
+  const lessonsBlock = memory.lessonsLearned && memory.lessonsLearned.length > 0
+    ? `\n\nRECENT AI LEARNINGS:\n${memory.lessonsLearned.slice(0, 3).map(l => `- ${l.lesson}`).join('\n')}`
+    : '';
+
+  const memoryInsights = `
+Current Strategy: ${memory.currentStrategy}
+${hardRulesBlock}
+${bannedBlock}
+${winningBlock}
+${lessonsBlock}
+  `.trim();
+
+  // ── STEP 3: Generate content with the injected live rules ──────
+  const prompt = formatPrompt(memoryInsights, 'Checked. Anti-repetition enforced via live memory.');
   const draftObj = await callLLM(prompt);
 
   if (draftObj) {

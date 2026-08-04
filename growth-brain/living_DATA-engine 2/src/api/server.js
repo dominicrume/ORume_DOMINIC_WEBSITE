@@ -9,6 +9,7 @@ import { Memory } from '../lib/memory.js'
 import { logger } from '../lib/logger.js'
 import { SourceImporter } from '../growth/sourceImporter.js'
 import { GrowthAdvisor } from '../brain/growthAdvisor.js'
+import { runLearningCycle } from '../brain/socialLearning.js'
 import { lifecycleRouter } from './lifecycleRoutes.js'
 import crypto from 'crypto'
 
@@ -178,6 +179,69 @@ app.post('/api/growth/import', async (req, res) => {
     const diagnosis = await GrowthAdvisor.analyzeGrowth()
     res.json({ ok: true, importStats, diagnosis })
   } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+// ── Social ML Feedback Loop Endpoints ─────────────────────────────
+
+// POST /api/social/metrics — Called by Make.com every 24h with platform analytics
+// Make.com sends: { platform, post_copy, post_hash, impressions, engagements, link_clicks, likes, shares, comments }
+app.post('/api/social/metrics', (req, res) => {
+  try {
+    const { platform, post_copy, post_hash, impressions = 0, engagements = 0, link_clicks = 0, likes = 0, shares = 0, comments = 0 } = req.body
+    if (!platform) return res.status(400).json({ error: 'platform is required' })
+
+    DB.socialAnalytics.insert.run({
+      post_hash: post_hash || null,
+      platform,
+      post_copy: post_copy || null,
+      impressions,
+      engagements,
+      link_clicks,
+      likes,
+      shares,
+      comments
+    })
+
+    logger.info(`[SOCIAL-ANALYTICS] Metrics ingested for platform: ${platform}`, { link_clicks, engagements })
+    res.json({ ok: true, message: `Analytics recorded for ${platform}` })
+  } catch (err) {
+    logger.error('[SOCIAL-ANALYTICS] Failed to ingest metrics', { error: err.message })
+    res.status(500).json({ error: err.message })
+  }
+})
+
+// GET /api/social/analytics — Dashboard: view all ingested analytics
+app.get('/api/social/analytics', (_, res) => {
+  try {
+    res.json({
+      stats: DB.socialAnalytics.stats.all(),
+      recent: DB.socialAnalytics.recent.all(),
+      topPerformers: DB.socialAnalytics.topPerformers.all(),
+      worstPerformers: DB.socialAnalytics.worstPerformers.all()
+    })
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+// GET /api/social/learnings — Dashboard: view all learning cycles
+app.get('/api/social/learnings', (_, res) => {
+  try {
+    res.json({
+      history: DB.socialLearnings.history.all(),
+      latest: DB.socialLearnings.latest.get()
+    })
+  } catch (err) { res.status(500).json({ error: err.message }) }
+})
+
+// POST /api/social/learn — Manually trigger a learning cycle
+app.post('/api/social/learn', async (_, res) => {
+  try {
+    logger.info('[SOCIAL-LEARNING] Manual learning cycle triggered via API...')
+    const result = await runLearningCycle()
+    res.json({ ok: true, result })
+  } catch (err) {
+    logger.error('[SOCIAL-LEARNING] Manual learning cycle failed', { error: err.message })
+    res.status(500).json({ error: err.message })
+  }
 })
 
 // ── Human-In-The-Loop (HITL) Queue routes ─────────────────────
