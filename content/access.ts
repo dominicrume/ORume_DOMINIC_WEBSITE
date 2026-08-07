@@ -34,7 +34,9 @@ export const access = {
     ],
   },
   nextStep: {
-    title: 'Want to go further, faster?',
-    body: 'Book a free 30-minute strategy call and leave with a clear, actionable plan for your AI or Web3 goal.',
+    title: 'Want to go further?',
+    body: 'Join the free community. Ask questions, share what you\'re building, and learn alongside other engineers and founders doing the same.',
+    href: 'https://chat.whatsapp.com/HcGq0rILga2LUEIfBEaLn7?mode=gi_t',
+    cta: 'Join the free community',
   },
 } as const;
