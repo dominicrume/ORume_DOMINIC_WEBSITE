@@ -178,7 +178,7 @@ function AccessGateContent() {
         <p className="mx-auto mt-2 max-w-lg text-sm text-muted">{access.nextStep.body}</p>
         <div className="mt-5 flex justify-center">
           <CTAButton href="/#contact" event="access_book_call">
-            Book the $99 strategy call
+            Book your free strategy call
           </CTAButton>
         </div>
       </GlassCard>

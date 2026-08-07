@@ -35,6 +35,6 @@ export const access = {
   },
   nextStep: {
     title: 'Want to go further, faster?',
-    body: 'Book a strategy call and leave with a clear, actionable plan for your AI or Web3 goal.',
+    body: 'Book a free 30-minute strategy call and leave with a clear, actionable plan for your AI or Web3 goal.',
   },
 } as const;
