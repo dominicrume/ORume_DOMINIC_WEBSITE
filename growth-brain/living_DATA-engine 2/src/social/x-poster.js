@@ -73,10 +73,10 @@ ${theJob}
 Your goal is to demonstrate raw engineering capability, technical passion, and architectural depth while strictly isolating the Rume Dominic Personal Brand from the VOREM Institute Company Brand.
 
 You must return a strictly formatted JSON object with exactly these keys:
-- "twitter_copy": Short, punchy, <280 chars. 1-3 word hook. Link to rumedominic.com/free if applicable.
-- "linkedin_personal_copy": Deeply technical thought leadership for Rume. Use "Show Your Work" & PPSPP framework. Focus on builder-mentality, origin stories, 51k hours, etc. CTA: rumedominic.com
+- "twitter_copy": Short, punchy, <280 chars. 1-3 word hook. Link to rumedominic.com/free if applicable. STRICT DOUBLE NEWLINE SPACING AFTER EVERY SENTENCE.
+- "linkedin_personal_copy": Deeply technical thought leadership. Use the Ruben Hasid spacing (double newlines after every sentence/point). Focus strictly on the assigned Engineering Topic. CTA: rumedominic.com
 - "linkedin_company_copy": Institutional, professional B2B insights for Vorem Institute of Technology. Focus on enterprise AI architecture. CRITICAL: Never mention Rume's personal 51k hours or patents here. CTA MUST be https://vorem.co
-- "facebook_copy": Engaging, technical community post for Facebook text.
+- "facebook_copy": Engaging, technical community post for Facebook text. STRICT DOUBLE NEWLINE SPACING.
 - "threads_copy": Short update on a recent technical release or architecture build.`
         },
         { role: 'user', content: prompt + memoryContext }
@@ -155,9 +155,12 @@ async function fireAndSeal(payloadObj) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          title: "Warm Engine Omni-Channel Blast (HITL Approved)",
           twitter_copy: payloadObj.twitter_copy || payloadObj.linkedin_personal_copy || "System update.",
           linkedin_personal_copy: payloadObj.linkedin_personal_copy || payloadObj.twitter_copy || "System update.",
           linkedin_company_copy: payloadObj.linkedin_company_copy || payloadObj.linkedin_personal_copy || payloadObj.twitter_copy || "System update.",
+          youtube_copy: payloadObj.youtube_copy || "",
+          gmb_copy: payloadObj.gmb_copy || "",
           facebook_copy: payloadObj.facebook_copy || payloadObj.twitter_copy || "System update.",
           threads_copy: payloadObj.threads_copy || payloadObj.twitter_copy || "System update.",
           text: payloadObj.linkedin_personal_copy || payloadObj.twitter_copy || "System update.",
@@ -166,6 +169,7 @@ async function fireAndSeal(payloadObj) {
           linkedin_company_image_url: payloadObj.linkedin_company_image_url || "",
           facebook_image_url: payloadObj.facebook_image_url || "",
           threads_image_url: payloadObj.threads_image_url || "",
+          image_url: payloadObj.linkedin_personal_image_url || payloadObj.twitter_image_url || "",
           timestamp: new Date().toISOString()
         })
       });

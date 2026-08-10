@@ -26,6 +26,25 @@ export function RumeMethod() {
           </GlassCard>
         ))}
       </div>
+      
+      <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href="/The_KYA_Method_Detailed_Edition.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus-ring inline-flex items-center justify-center gap-2 rounded-xl bg-blue/10 border border-blue/20 px-6 py-3.5 text-sm font-bold text-blue-glow transition-all hover:bg-blue/20"
+        >
+          Read the Original Publication (PDF) →
+        </a>
+        <a
+          href="/THE_KYA_METHOD_ARCHITECTURE.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus-ring inline-flex items-center justify-center gap-2 rounded-xl bg-gold-metallic px-6 py-3.5 text-sm font-bold text-ink shadow-gold transition-all hover:brightness-110"
+        >
+          Download Engineering Architecture (PDF) →
+        </a>
+      </div>
     </Section>
   );
 }

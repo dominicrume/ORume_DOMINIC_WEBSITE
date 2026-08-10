@@ -15,8 +15,8 @@ export function Contact() {
       {/* Clear offers up front - removes pricing friction, a key churn-killer. */}
       <div className="mx-auto mb-10 grid max-w-3xl gap-4 sm:grid-cols-2">
         <div className="glass glass-gold rounded-2xl p-5 text-center">
-          <p className="font-display text-3xl font-bold text-gold-shine">Intro call</p>
-          <p className="mt-1 text-sm font-semibold text-paper">Scope your project</p>
+          <p className="font-display text-3xl font-bold text-gold-shine">Free</p>
+          <p className="mt-1 text-sm font-semibold text-paper">30-minute strategy call</p>
           <p className="mt-1 text-xs text-muted">
             Bring your AI or Web3 problem. Leave with a clear, actionable plan.
           </p>

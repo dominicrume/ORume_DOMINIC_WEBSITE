@@ -12,12 +12,12 @@ export const faqs: Faq[] = [
     a: 'Rume Dominic (O’Rume Dominic Uririe) is an AI and blockchain engineer from Warri, Delta State, Nigeria. He is the Founder of VOREM, an elite blockchain architect, a SIBAN executive, a published author with titles stocked at Waterstones UK, and ranked among the 100 Most Influential Young Deltans. He is completing an MSc in AI and Business Strategy at Aston University in Birmingham.',
   },
   {
-    q: 'How can you build AI and Web3 products highly capital-efficient, 7x faster and 10x clearer?',
-    a: 'Because I don’t rely on oversized agencies or bloated corporate timelines. I build with a hand-picked, elite engineering team using bleeding-edge autonomous AI tools and rigorous Web3 standards. Lean teams move faster and burn less cash, delivering production-grade systems without the enterprise bloat.',
+    q: 'How do you build AI and Web3 products so efficiently?',
+    a: 'I don’t rely on oversized agencies or bloated corporate timelines. I build methodically with focused engineering, utilizing autonomous AI tools and rigorous Web3 standards. Lean architecture moves faster and burns less cash, delivering production-grade systems without the enterprise bloat.',
   },
   {
-    q: 'How much does an AI or blockchain engagement cost?',
-    a: 'Start with a strategy call to scope your goal and get an actionable plan. Full build and advisory engagements start at $5,000 and scale to $50,000+ depending on scope, timeline and security requirements.',
+    q: 'Are you available for freelance architecture or consulting?',
+    a: 'I take on a limited number of high-impact engineering projects. Reach out via email with your technical requirements, and if the architecture aligns with my current focus, we can discuss collaboration.',
   },
   {
     q: 'What is the VOREM Institute of Technology?',

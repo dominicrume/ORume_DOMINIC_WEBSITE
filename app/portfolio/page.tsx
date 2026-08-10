@@ -52,7 +52,7 @@ export default function PortfolioPage() {
             <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,82,255,0.5)] hover:shadow-[0_0_40px_rgba(0,229,255,0.6)]">
               View GitHub
             </a>
-            <a href="mailto:orumedominic@gmail.com" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">
+            <a href="mailto:dominicrume@gmail.com" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">
               Email Me
             </a>
             <a href="#works" className="inline-block px-8 py-4 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">
@@ -98,10 +98,10 @@ export default function PortfolioPage() {
                 <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-[#00E5FF]/20 to-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
                   View GitHub
                 </a>
-                <a href="mailto:orumedominic@gmail.com" className="px-6 py-3 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
+                <a href="mailto:dominicrume@gmail.com" className="px-6 py-3 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
                   Contact Us
                 </a>
-                <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all inline-block hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                <a href="/RUME_DOMINIC_AI_CV.pdf" download className="px-6 py-3 border border-blue-800 text-blue-200 font-bold tracking-wider uppercase text-xs rounded hover:border-white hover:text-white transition-all inline-block hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                   Download CV
                 </a>
               </div>
@@ -338,21 +338,21 @@ export default function PortfolioPage() {
             <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="group inline-block px-12 py-6 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:shadow-[0_0_60px_rgba(0,229,255,0.7)] hover:-translate-y-2 transition-all duration-500">
               <span className="drop-shadow-md">View GitHub</span>
             </a>
-            <a href="mailto:orumedominic@gmail.com" className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
+            <a href="mailto:dominicrume@gmail.com" className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
               Email Me
             </a>
-            <a href="/7B_ORUME_DOMINIC_AI_CV.docx" download className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
+            <a href="/RUME_DOMINIC_AI_CV.pdf" download className="inline-block px-12 py-6 border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase text-sm rounded hover:bg-[#00E5FF]/10 hover:shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:-translate-y-2 transition-all duration-500">
               Download Full CV
             </a>
           </div>
           
           <div className="mt-24 p-8 rounded-2xl bg-[#060A14]/80 backdrop-blur-md border border-blue-900/40 text-blue-300 text-sm space-y-4 relative z-10 font-mono flex flex-col items-center hover:border-[#00E5FF]/30 transition-colors duration-500">
             <p className="flex flex-wrap justify-center gap-4">
-              <a href="mailto:orumedominic@gmail.com" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_5px_#00E5FF] transition-all">orumedominic@gmail.com</a>
+              <a href="mailto:dominicrume@gmail.com" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_5px_#00E5FF] transition-all">dominicrume@gmail.com</a>
               <span className="text-blue-800">|</span>
               <a href="https://linkedin.com/in/dominicrume" target="_blank" rel="noopener noreferrer" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_5px_#00E5FF] transition-all">linkedin.com/in/dominicrume</a>
               <span className="text-blue-800">|</span>
-              <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_5px_#00E5FF] transition-all">github.com/dominicrume (29+ repos)</a>
+              <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_5px_#00E5FF] transition-all">github.com/dominicrume (25+ repos)</a>
             </p>
             <p className="flex flex-wrap justify-center gap-4 text-blue-400">
               <a href="https://rumedominic.com" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_5px_#00E5FF] transition-all">rumedominic.com</a>

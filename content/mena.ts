@@ -4,19 +4,14 @@
  */
 
 export const MENA_CONFIG = {
-  CONFIRMED_PAID_COUNT: '[MISSING: CONFIRMED_PAID_COUNT]',
-  TOTAL_DISBURSED_NGN: '[MISSING: TOTAL_DISBURSED_NGN]',
   EVENT_DATE: '25 July 2026',
   COUNTRIES: 'Nigeria, Zimbabwe, Rwanda, Uganda',
 
   BOOK_TITLE: 'From Code to Consciousness',
   BOOK_LINK: 'https://rumedominic.com/access',
-  COURSE_NAME: 'Master AI in 3 Nights',
+  COURSE_NAME: 'Master AI in 9 Days',
   COURSE_LINK: 'https://vorem.co',
-  PRODUCT_NAME: '[MISSING: PRODUCT_NAME]',
-  PRODUCT_LINK: '[MISSING: PRODUCT_LINK]',
   WHATSAPP_LINK: 'https://chat.whatsapp.com/JuNtR5IbXuD0YVP04zg3lY?mode=gi_t',
-  BUNDLE_VALUE_GBP: '[MISSING: BUNDLE_VALUE_GBP]',
 
   DOMAIN: 'https://rumedominic.com',
   SPOTIFY_LINK: 'https://open.spotify.com/track/6DPQY6E4y8MvhaHrjNd1Ng?si=RBv4zfAATLixenj66JX9iA&utm_source=whatsapp',

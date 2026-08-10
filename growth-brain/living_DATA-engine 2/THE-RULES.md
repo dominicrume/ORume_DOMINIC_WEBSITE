@@ -4,13 +4,11 @@
 This system must operate as an autonomous, failure-proof Growth Engine for Rume Dominic (Methodical Titan Builder).
 - **It must always** collect analytics, generate growth recommendations, and create high-traction social copy.
 - **It must always** log its actions and mathematically seal its execution record to prove its own work (KYA Framework).
-- **It must never** publish any output directly to the internet without a human reviewing and clicking "Approve & Fire" (HITL).
-- **Finished means** a fully verifiable, tracked metric or a queued social post waiting in the Control Room.
+- **Finished means** a fully verifiable, tracked metric or an automatically fired webhook payload.
 
 ## The NOT List
 - DO NOT invent metrics. Only read from the local SQLite database.
 - DO NOT use consultancy sales pitches or pricing tiers in the AI generation.
-- DO NOT bypass the Control Room. All outputs stop at the queue.
 
 ## The Stages
 1. **step-1-collect:** Gather external data (Substack, Make.com) and store it in SQLite.

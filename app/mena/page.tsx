@@ -5,13 +5,13 @@ import { MenaClaimForm } from '@/components/mena/MenaClaimForm';
 
 export const metadata: Metadata = {
   title: 'Mena Obrike × Rume Dominic — "I Am Yours" Empowerment Live | Free IT Scholarship Nigeria, Zimbabwe, Rwanda, Uganda',
-  description: `${MENA_CONFIG.CONFIRMED_PAID_COUNT} paid live! Claim your 100% free IT & AI tech scholarship in Nigeria, Zimbabwe, Rwanda, & Uganda. Instant access, zero fees.`,
+  description: 'Claim your 100% free IT & AI tech scholarship in Nigeria, Zimbabwe, Rwanda, & Uganda. Instant access, zero fees.',
   alternates: {
     canonical: `${MENA_CONFIG.DOMAIN}/mena`,
   },
   openGraph: {
     title: 'Mena Obrike × Rume Dominic — "I Am Yours" Empowerment Live',
-    description: 'Real people got paid live. Now get the permanent engineering skills. Free tech scholarship for Nigeria, Zimbabwe, Rwanda, and Uganda.',
+    description: 'Get the permanent engineering skills. Free tech scholarship for Nigeria, Zimbabwe, Rwanda, and Uganda.',
     url: `${MENA_CONFIG.DOMAIN}/mena`,
     siteName: 'Rume Dominic',
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mena Obrike × Rume Dominic — Free Tech Scholarship',
-    description: 'Real people got paid live. Now get the permanent engineering skills. Free tech scholarship for Nigeria, Zimbabwe, Rwanda, and Uganda.',
+    description: 'Get the permanent engineering skills. Free tech scholarship for Nigeria, Zimbabwe, Rwanda, and Uganda.',
     images: [`${MENA_CONFIG.DOMAIN}/opengraph-image`],
   },
   other: {
@@ -228,7 +228,7 @@ export default function MenaLandingPage() {
         </div>
 
         <p className="mt-6 text-2xl sm:text-4xl font-black uppercase tracking-tight text-[#C9A227] leading-tight max-w-3xl mx-auto">
-          {MENA_CONFIG.CONFIRMED_PAID_COUNT} people were paid live. Now own the skills forever.
+          Own the skills forever.
         </p>
 
         {/* Above the fold 3-question instant clarity block */}
@@ -269,28 +269,10 @@ export default function MenaLandingPage() {
         </div>
       </section>
 
-      {/* Proof Bar - 4 Stat Blocks, Big Numbers, Music & Tech Icons */}
+      {/* Proof Bar - 2 Stat Blocks, Big Numbers, Music & Tech Icons */}
       <section aria-label="Live Event Proof" className="border-y border-[#C9A227]/40 bg-black/60 backdrop-blur-lg py-8 px-4 shadow-2xl">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-6 text-center">
           <div className="p-2">
-            <div className="font-display text-2xl sm:text-4xl font-black text-[#C9A227] tracking-tight truncate flex items-center justify-center gap-2">
-              <span>🎙️</span> {MENA_CONFIG.CONFIRMED_PAID_COUNT}
-            </div>
-            <div className="mt-1 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#F4F1EA]/80">
-              PAID LIVE
-            </div>
-          </div>
-
-          <div className="p-2 border-l border-white/15">
-            <div className="font-display text-2xl sm:text-4xl font-black text-[#C9A227] tracking-tight truncate flex items-center justify-center gap-1.5">
-              <span>💰</span> &ne;{MENA_CONFIG.TOTAL_DISBURSED_NGN}
-            </div>
-            <div className="mt-1 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#F4F1EA]/80">
-              DISBURSED
-            </div>
-          </div>
-
-          <div className="p-2 border-t md:border-t-0 md:border-l border-white/15 col-span-2 md:col-span-1">
             <div className="font-display text-2xl sm:text-4xl font-black text-[#C9A227] tracking-tight truncate flex items-center justify-center gap-2">
               <span>🌍</span> 4 COUNTRIES
             </div>
@@ -299,7 +281,7 @@ export default function MenaLandingPage() {
             </div>
           </div>
 
-          <div className="p-2 border-t md:border-t-0 border-l border-white/15 col-span-2 md:col-span-1">
+          <div className="p-2 border-l border-white/15">
             <div className="font-display text-2xl sm:text-4xl font-black text-[#C9A227] tracking-tight truncate flex items-center justify-center gap-2">
               <span>🎧</span> 3 NIGHTS
             </div>
@@ -366,24 +348,19 @@ export default function MenaLandingPage() {
                 </p>
               </div>
 
-              {/* Simulated Waveform Bar */}
-              <div className="rounded-xl border border-white/15 bg-black/50 p-3 sm:p-4 flex items-center justify-between gap-4 shadow-inner">
-                <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-[#FFD700]">
-                  <span>▶️</span>
-                  <span>0:00 / 3:45</span>
-                </div>
-                <div className="flex items-end justify-center gap-1 flex-1 h-6 px-2 overflow-hidden" aria-hidden="true">
-                  {[22, 10, 18, 24, 8, 14, 26, 12, 20, 6, 24, 16, 22, 10, 18, 26, 14, 8, 22, 16].map((h, idx) => (
-                    <span
-                      key={idx}
-                      className="w-1 sm:w-1.5 bg-gradient-to-t from-[#7B1FA2] to-[#C9A227] rounded-full transition-all duration-300"
-                      style={{ height: `${h}px`, animation: `eq${(idx % 4) + 1} ${0.5 + (idx % 3) * 0.2}s ease-in-out infinite` }}
-                    />
-                  ))}
-                </div>
-                <div className="text-xs font-bold text-[#F4F1EA]/70 uppercase tracking-wider">
-                  HIGH DEF 🎧
-                </div>
+              {/* Embedded Spotify Player */}
+              <div className="rounded-xl overflow-hidden shadow-[0_0_25px_rgba(201,162,39,0.3)] mt-6">
+                <iframe 
+                  style={{ borderRadius: '12px', background: 'transparent' }} 
+                  src="https://open.spotify.com/embed/track/6DPQY6E4y8MvhaHrjNd1Ng?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="152" 
+                  frameBorder="0" 
+                  allowFullScreen={true} 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                  title="Spotify Player - I Am Yours"
+                />
               </div>
 
               {/* 4 Massive Glowing Streaming Buttons */}
@@ -498,21 +475,10 @@ export default function MenaLandingPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/20 bg-white/5 hover:bg-white/10 p-5 flex items-start gap-4 transition-all duration-300 hover:border-[#C9A227]/60">
-              <span className="text-3xl shrink-0" aria-hidden="true">🛠️</span>
-              <div>
-                <div className="text-[10px] font-black uppercase tracking-wider text-[#FFD700] mb-0.5">TIER 3 TOOLS</div>
-                <h3 className="font-bold text-lg text-white">Product: {MENA_CONFIG.PRODUCT_NAME}</h3>
-                <p className="mt-1 text-xs sm:text-sm text-[#F4F1EA]/70 leading-normal">
-                  Production-ready tools and engineering templates to accelerate your digital output.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-[#C9A227]/50 bg-gradient-to-r from-[#C9A227]/15 to-transparent p-5 flex items-start gap-4 transition-all duration-300 hover:border-[#C9A227]">
+            <div className="rounded-2xl border-[#C9A227]/50 bg-gradient-to-r from-[#C9A227]/15 to-transparent p-5 flex items-start gap-4 transition-all duration-300 hover:border-[#C9A227] sm:col-span-2 md:col-span-1 border">
               <span className="text-3xl shrink-0 animate-bounce" aria-hidden="true">💬</span>
               <div>
-                <div className="text-[10px] font-black uppercase tracking-wider text-[#FFD700] mb-0.5">LIVE COMMUNITY</div>
+                <div className="text-[10px] font-black uppercase tracking-wider text-[#FFD700] mb-0.5">TIER 3 LIVE COMMUNITY</div>
                 <h3 className="font-bold text-lg text-white">The Room: WhatsApp Mentorship</h3>
                 <p className="mt-1 text-xs sm:text-sm text-[#F4F1EA]/80 leading-normal font-semibold">
                   Direct peer accountability and live 3-night intensive updates with Rume &amp; Mena.

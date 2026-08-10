@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Iconic',
     title: "Learn AI in 9 Days — Free, for Africa's next generation",
-    description: "Free AI book + 9-day course for beginners. Try live AI right now — no coding, no payment. 12,000+ young Africans already trained. AI na our own.",
+    description: "Free AI book + 9-day course for beginners. Try live AI right now — no coding, no payment. 2,900+ registered learners and 12,000+ reached. AI na our own.",
     url: 'https://rumedominic.com/iconic',
   },
   twitter: {
@@ -68,16 +68,16 @@ export default function IconicPage() {
                 <div className="text-[10.5px] tracking-[1.5px] uppercase text-[#A79F8E] mt-2">African nations</div>
               </div>
               <div className="text-center px-2 md:border-r border-[#2C2A33]">
-                <div className="font-serif font-extrabold text-2xl md:text-3xl text-[#C9A24B]">9 Days</div>
-                <div className="text-[10.5px] tracking-[1.5px] uppercase text-[#A79F8E] mt-2">Beginner to capable</div>
+                <div className="font-serif font-extrabold text-2xl md:text-3xl text-[#C9A24B]">2,900+</div>
+                <div className="text-[10.5px] tracking-[1.5px] uppercase text-[#A79F8E] mt-2">Registered learners</div>
               </div>
               <div className="text-center px-2 md:border-r border-[#2C2A33]">
                 <div className="font-serif font-extrabold text-2xl md:text-3xl text-[#C9A24B]">12,000+</div>
-                <div className="text-[10.5px] tracking-[1.5px] uppercase text-[#A79F8E] mt-2">Youth trained in AI</div>
+                <div className="text-[10.5px] tracking-[1.5px] uppercase text-[#A79F8E] mt-2">Individuals reached</div>
               </div>
               <div className="text-center px-2">
                 <div className="font-serif font-extrabold text-2xl md:text-3xl text-[#C9A24B]">Free</div>
-                <div className="text-[10.5px] tracking-[1.5px] uppercase text-[#A79F8E] mt-2">To begin, for all</div>
+                <div className="text-[10.5px] tracking-[1.5px] uppercase text-[#A79F8E] mt-2">9-Day Course</div>
               </div>
             </div>
           </div>
