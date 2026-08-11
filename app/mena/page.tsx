@@ -459,7 +459,7 @@ export default function MenaLandingPage() {
                 <div className="text-[10px] font-black uppercase tracking-wider text-[#FFD700] mb-0.5">TIER 1 ASSET</div>
                 <h3 className="font-bold text-lg text-white">Book: {MENA_CONFIG.BOOK_TITLE}</h3>
                 <p className="mt-1 text-xs sm:text-sm text-[#F4F1EA]/70 leading-normal">
-                  Bridging AI and human logic with 51,000+ hours of development engineering insights.
+                  Bridging AI and human logic with over a decade of deep experience across management and technology.
                 </p>
               </div>
             </div>

@@ -27,7 +27,7 @@ export const books: Book[] = [
   },
   {
     title: 'From Code to Consciousness',
-    blurb: 'Bridging the gap between AI and humans, with insights from 51,000+ hours of development.',
+    blurb: 'Bridging the gap between AI and humans, with insights spanning over a decade of systems architecture and management.',
     href: 'https://www.amazon.com/Code-Consciousness-Bridging-between-Powerful/dp/B0CTXD9SVS',
     cover: '/books/from-code-to-consciousness.jpg',
     waterstones:

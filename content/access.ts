@@ -11,7 +11,7 @@ export const access = {
     {
       tag: 'Free book',
       title: 'From Code to Consciousness',
-      desc: 'Bridging the gap between AI and humans, with insights from 51,000+ hours of development.',
+      desc: 'Bridging the gap between AI and humans, with insights spanning over a decade of systems architecture and management.',
       cta: 'Download the book (PDF)',
       // `||` so an empty env value falls back to the hosted PDF, not a broken link.
       href: process.env.NEXT_PUBLIC_BOOK_URL || '/from-code-to-consciousness.pdf',
