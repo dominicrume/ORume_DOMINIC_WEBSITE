@@ -75,7 +75,7 @@ Your goal is to demonstrate raw engineering capability, technical passion, and a
 You must return a strictly formatted JSON object with exactly these keys:
 - "twitter_copy": Short, punchy, <280 chars. 1-3 word hook. Link to rumedominic.com/free if applicable. STRICT DOUBLE NEWLINE SPACING AFTER EVERY SENTENCE.
 - "linkedin_personal_copy": Deeply technical thought leadership. Use the Ruben Hasid spacing (double newlines after every sentence/point). Focus strictly on the assigned Engineering Topic. CTA: rumedominic.com
-- "linkedin_company_copy": Institutional, professional B2B insights for Vorem Institute of Technology. Focus on enterprise AI architecture. CRITICAL: Never mention Rume's personal 51k hours or patents here. CTA MUST be https://vorem.co
+- "linkedin_company_copy": Institutional, professional B2B insights for Vorem Institute of Technology. Focus on enterprise AI architecture. CRITICAL: Never mention Rume's personal decade of experience or patents here. CTA MUST be https://vorem.co
 - "facebook_copy": Engaging, technical community post for Facebook text. STRICT DOUBLE NEWLINE SPACING.
 - "threads_copy": Short update on a recent technical release or architecture build.`
         },

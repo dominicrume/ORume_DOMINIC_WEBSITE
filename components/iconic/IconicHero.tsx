@@ -82,7 +82,7 @@ export function IconicHero() {
               <span>{displayText}</span><span className="text-[#C9A24B] not-italic animate-pulse">▌</span>
             </div>
             <p className="text-[#EDE7D8] opacity-86 text-[15px] lg:text-[17px] mt-5 max-w-[530px]">
-              You've watched the world talk about artificial intelligence like it belongs to someone else. It doesn't. Get the free book <b className="text-[#F5F1E8]">“From Code to Consciousness”</b> and the <b className="text-[#F5F1E8]">“Master AI in Nine Days”</b> course — no coding, no payment, on your phone. An initiative of <b className="text-[#F5F1E8]">Iconic</b>, Africa's premier recognition platform. <b className="text-[#F5F1E8]">12,000+ young Africans</b> already trained.
+              You've watched the world talk about artificial intelligence like it belongs to someone else. It doesn't. Get the free book <b className="text-[#F5F1E8]">“From Code to Consciousness”</b> and the <b className="text-[#F5F1E8]">“Master AI in Nine Days”</b> course — no coding, no payment, on your phone. An initiative of <b className="text-[#F5F1E8]">Iconic</b>, Africa's premier recognition platform. <b className="text-[#F5F1E8]">12,000+ young Africans</b> already reached.
             </p>
             <div className="flex flex-wrap gap-[14px] items-center mt-[26px]">
               <Link 

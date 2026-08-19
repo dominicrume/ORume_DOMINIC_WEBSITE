@@ -58,7 +58,7 @@ export function IconicFooter() {
               },
               {
                 q: "Who is behind this?",
-                a: "An initiative of Iconic — Africa's premier recognition platform, led by Amb. Dr. Temisan O. Louis — powered by VOREM Institute of Technology, founded by AI educator Rume Dominic, who has trained over 12,000 young Africans."
+                a: "An initiative of Iconic — Africa's premier recognition platform, led by Amb. Dr. Temisan O. Louis — powered by VOREM Institute of Technology, founded by AI educator Rume Dominic, whose programmes have 2,900+ registered learners and have reached over 12,000 young Africans."
               },
               {
                 q: "Do I get a certificate?",

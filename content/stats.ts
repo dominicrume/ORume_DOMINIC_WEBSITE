@@ -12,7 +12,7 @@ export type Stat = {
 };
 
 export const stats: Stat[] = [
-  { value: 51000, suffix: '+', label: 'Hours in AI, blockchain & metaverse mastery' },
+  { value: 2900, suffix: '+', label: 'Registered learners · VOREM Institute of Technology' },
   { value: 100, label: 'Most Influential Young Deltans (ranked)' },
   { value: 0, label: 'MSc AI · Aston University', static: true },
   { value: 0, label: 'UK Patent Filed · IPO', static: true },
