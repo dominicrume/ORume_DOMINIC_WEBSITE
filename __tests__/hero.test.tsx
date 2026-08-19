@@ -9,9 +9,9 @@ describe('Hero', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(site.promise);
   });
 
-  it('secondary CTA routes to the Vorem Academy funnel (/master-ai)', () => {
+  it('secondary CTA routes to the systems architecture page (/framework)', () => {
     render(<Hero />);
     const academy = screen.getByRole('link', { name: site.cta.secondary.label });
-    expect(academy).toHaveAttribute('href', '/master-ai');
+    expect(academy).toHaveAttribute('href', site.cta.secondary.href);
   });
 });
