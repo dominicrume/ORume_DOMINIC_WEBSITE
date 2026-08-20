@@ -11,6 +11,8 @@ export const MENA_CONFIG = {
   BOOK_LINK: 'https://rumedominic.com/access',
   COURSE_NAME: 'Master AI in 9 Days',
   COURSE_LINK: 'https://vorem.co',
+  PRODUCT_NAME: 'The KYA Method Stack',
+  PRODUCT_LINK: 'https://rumedominic.com/kya',
   WHATSAPP_LINK: 'https://chat.whatsapp.com/JuNtR5IbXuD0YVP04zg3lY?mode=gi_t',
 
   DOMAIN: 'https://rumedominic.com',
