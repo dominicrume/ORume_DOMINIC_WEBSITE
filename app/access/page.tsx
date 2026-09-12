@@ -10,11 +10,12 @@ export const metadata: Metadata = {
 };
 
 type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined };
+  // Next 15+ resolves request data asynchronously.
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default function AccessPage({ searchParams }: Props) {
-  const source = searchParams?.source;
+export default async function AccessPage({ searchParams }: Props) {
+  const source = (await searchParams)?.source;
 
   let backLink = '/';
   let backText = '← Back to rumedominic.com';
