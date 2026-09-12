@@ -36,3 +36,12 @@ export const frameworkSchema = z.object({
 });
 
 export type FrameworkInput = z.infer<typeof frameworkSchema>;
+
+// KYA Method Stack waitlist (/kya). First name personalises the launch email.
+export const waitlistSchema = z.object({
+  first_name: z.string().trim().min(1, 'Please enter your first name').max(120),
+  email: z.string().trim().email('Enter a valid email').max(200),
+  company_website: z.string().max(0).optional().default(''),
+});
+
+export type WaitlistInput = z.infer<typeof waitlistSchema>;
