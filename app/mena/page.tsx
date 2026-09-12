@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: `${MENA_CONFIG.DOMAIN}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: 'Mena Obrike x Rume Dominic Uririe — Empowerment Live & Tech Scholarship',
+        alt: 'Mena Obrike x O\'Rume Dominic Uririe — Empowerment Live & Tech Scholarship',
       },
     ],
     locale: 'en_NG',
@@ -42,7 +42,7 @@ const JSON_LD = {
     {
       '@type': 'Person',
       '@id': `${MENA_CONFIG.DOMAIN}/#rume`,
-      name: 'Rume Dominic Uririe',
+      name: 'O\'Rume Dominic Uririe',
       url: MENA_CONFIG.DOMAIN,
       jobTitle: 'AI Engineer & Blockchain Architect',
       worksFor: {
@@ -104,7 +104,7 @@ const JSON_LD = {
           name: 'What is the "I Am Yours" Empowerment Live?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The "I Am Yours" Empowerment Live is a 3-night virtual broadcast intensive starting 25 July 2026 where artist Mena Obrike and AI engineer Rume Dominic Uririe disbursed direct financial aid and launched a free pan-African tech scholarship. During the event on TikTok, verified participants received cash prizes directly to their bank accounts.',
+            text: 'The "I Am Yours" Empowerment Live is a 3-night virtual broadcast intensive starting 25 July 2026 where artist Mena Obrike and AI engineer O\'Rume Dominic Uririe disbursed direct financial aid and launched a free pan-African tech scholarship. During the event on TikTok, verified participants received cash prizes directly to their bank accounts.',
           },
         },
         {
@@ -117,10 +117,10 @@ const JSON_LD = {
         },
         {
           '@type': 'Question',
-          name: 'Who is Rume Dominic Uririe?',
+          name: 'Who is O\'Rume Dominic Uririe?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Rume Dominic Uririe is a Nigerian AI engineer, blockchain architect, author of "From Code to Consciousness", and the founder of Vorem. He designed the 3-night AI curriculum and tech scholarship to equip African youth with permanent, high-income engineering skills.',
+            text: 'O\'Rume Dominic Uririe is a Nigerian AI engineer, blockchain architect, author of "From Code to Consciousness", and the founder of Vorem. He designed the 3-night AI curriculum and tech scholarship to equip African youth with permanent, high-income engineering skills.',
           },
         },
         {
@@ -526,7 +526,7 @@ export default function MenaLandingPage() {
               <span>❓</span> What is the &ldquo;I Am Yours&rdquo; Empowerment Live?
             </h3>
             <p className="mt-2 text-sm sm:text-base text-[#F4F1EA]/85 leading-relaxed pl-7">
-              The &ldquo;I Am Yours&rdquo; Empowerment Live is a 3-night virtual broadcast intensive starting 25 July 2026 where artist Mena Obrike and AI engineer Rume Dominic Uririe disbursed direct financial aid and launched a free pan-African tech scholarship. During the event on TikTok, verified participants received cash prizes directly to their bank accounts.
+              The &ldquo;I Am Yours&rdquo; Empowerment Live is a 3-night virtual broadcast intensive starting 25 July 2026 where artist Mena Obrike and AI engineer O&rsquo;Rume Dominic Uririe disbursed direct financial aid and launched a free pan-African tech scholarship. During the event on TikTok, verified participants received cash prizes directly to their bank accounts.
             </p>
           </article>
 
@@ -541,10 +541,10 @@ export default function MenaLandingPage() {
 
           <article className="rounded-2xl border border-white/15 bg-black/50 p-6 backdrop-blur-sm transition-all hover:border-white/30">
             <h3 className="font-display text-lg sm:text-xl font-bold uppercase text-[#FFD700] flex items-center gap-2">
-              <span>⚡</span> Who is Rume Dominic Uririe?
+              <span>⚡</span> Who is O&rsquo;Rume Dominic Uririe?
             </h3>
             <p className="mt-2 text-sm sm:text-base text-[#F4F1EA]/85 leading-relaxed pl-7">
-              Rume Dominic Uririe is a Nigerian AI engineer, blockchain architect, author of &ldquo;From Code to Consciousness&rdquo;, and the founder of Vorem. He designed the 3-night AI curriculum and tech scholarship to equip African youth with permanent, high-income engineering skills.
+              O&rsquo;Rume Dominic Uririe is a Nigerian AI engineer, blockchain architect, author of &ldquo;From Code to Consciousness&rdquo;, and the founder of Vorem. He designed the 3-night AI curriculum and tech scholarship to equip African youth with permanent, high-income engineering skills.
             </p>
           </article>
 
@@ -601,7 +601,7 @@ export default function MenaLandingPage() {
           Training delivered by Vorem, a Rume Dominic company.
         </p>
         <p>
-          &copy; {new Date().getFullYear()} Mena Obrike &times; Rume Dominic Uririe. All rights reserved.
+          &copy; {new Date().getFullYear()} Mena Obrike &times; O&rsquo;Rume Dominic Uririe. All rights reserved.
         </p>
         <div className="flex flex-wrap justify-center gap-6 pt-2">
           <Link href="/" className="hover:text-[#FFD700] transition-colors min-h-[44px] flex items-center font-bold">
