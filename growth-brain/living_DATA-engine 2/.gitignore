@@ -8,3 +8,4 @@ dist/
 memory/agent-state.json
 memory/niche-performance.json
 memory/provider-performance.json
+*.sqlite
