@@ -52,3 +52,14 @@ describe('parseRss', () => {
     expect(parseRss('<<< totally broken')).toEqual([]);
   });
 });
+
+describe('parseRss DOCTYPE hardening', () => {
+  it('ignores DOCTYPE-declared entities instead of expanding them', () => {
+    const hostile = `<?xml version="1.0"?><!DOCTYPE rss [<!ENTITY a "AAAA"><!ENTITY b "&a;&a;&a;&a;">]>
+<rss><channel><item><title>&b; hello</title><link>https://x.com/p</link><pubDate>Mon, 01 Sep 2026 00:00:00 GMT</pubDate></item></channel></rss>`;
+    const posts = parseRss(hostile);
+    // Parse must survive and never expand the declared entities.
+    expect(posts.length).toBeLessThanOrEqual(1);
+    if (posts.length) expect(posts[0].title).not.toContain('AAAA');
+  });
+});

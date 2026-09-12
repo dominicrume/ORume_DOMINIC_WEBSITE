@@ -39,7 +39,10 @@ export function parseRss(xml: string, limit = 4): Post[] {
   if (!xml || typeof xml !== 'string') return [];
   let doc: unknown;
   try {
-    doc = parser.parse(xml);
+    // RSS never needs a DOCTYPE; stripping it up front closes the parser's
+    // custom-entity attack surface (entity-expansion DoS, encoding bypass)
+    // for feeds we do not control.
+    doc = parser.parse(xml.replace(/<!DOCTYPE[^[>]*(\[[\s\S]*?\])?\s*>/gi, ''));
   } catch {
     return [];
   }
