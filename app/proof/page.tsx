@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Every claim on this site, with a link you can check yourself: the validated measurement instrument, the inter-rater agreement figures, the open-source packages, and what is deliberately not claimed.',
   alternates: { canonical: `${site.url}/proof` },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'article',
     url: `${site.url}/proof`,
     title: 'Proof — the evidence behind the work',

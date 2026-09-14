@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     'A free field guide: the 5 questions every leader must answer before letting an AI agent act on their behalf. Make your agents provable, auditable and accountable. By Rume Dominic.',
   alternates: { canonical: `${site.url}/framework` },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'article',
     url: `${site.url}/framework`,
     title: 'The Know Your AgenticAi Framework (free field guide)',

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "The KYA Method Stack — Rume Dominic",
   description: "The production agent stack, already built. One price, once. Waitlist open.",
   openGraph: {
+    images: ['/opengraph-image'],
     title: "The KYA Method Stack — Rume Dominic",
     description: "The production agent stack, already built. One price, once. Waitlist open.",
     type: "website",

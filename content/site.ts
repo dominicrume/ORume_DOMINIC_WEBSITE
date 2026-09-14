@@ -44,8 +44,11 @@ export const site = {
 
   nav: [
     { label: 'Services', href: '#services' },
-    { label: 'Work with me', href: '#work' },
     { label: 'Portfolio', href: '#portfolio' },
+    // Real pages, not anchors: without these the evidence page and the product
+    // page are reachable only by typing the URL.
+    { label: 'Proof', href: '/proof' },
+    { label: 'Method Stack', href: '/kya' },
     { label: 'About', href: '#about' },
   ],
 

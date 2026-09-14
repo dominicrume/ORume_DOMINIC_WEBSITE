@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Section } from './ui/Section';
 import { GlassCard } from './ui/GlassCard';
 import { quotes, award, feature, video } from '@/content/proof';
@@ -65,6 +66,17 @@ export function Proof() {
             </footer>
           </GlassCard>
         ))}
+      </div>
+
+      {/* The evidence page was reachable only by typing the URL. Anyone who has
+          just read the testimonials is exactly the person who wants the receipts. */}
+      <div className="mt-12 text-center">
+        <Link
+          href="/proof"
+          className="focus-ring inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold text-paper transition-all hover:border-white/30"
+        >
+          See the evidence behind every claim →
+        </Link>
       </div>
     </Section>
   );
