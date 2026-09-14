@@ -9,6 +9,7 @@ export type LeadRow = {
   type: 'contact' | 'newsletter';
   email: string;
   name?: string;
+  phone?: string;
   org?: string;
   budget?: string;
   goal?: string;
@@ -24,8 +25,8 @@ export async function saveLead(row: LeadRow): Promise<LeadResult> {
   const key = process.env.SUPABASE_KEY;
   if (!url || !key) return { ok: false, reason: 'not_configured' };
 
-  try {
-    const res = await fetch(`${url}/rest/v1/leads`, {
+  const post = (body: LeadRow) =>
+    fetch(`${url}/rest/v1/leads`, {
       method: 'POST',
       headers: {
         apikey: key,
@@ -33,9 +34,21 @@ export async function saveLead(row: LeadRow): Promise<LeadResult> {
         'content-type': 'application/json',
         prefer: 'return=minimal',
       },
-      body: JSON.stringify(row),
+      body: JSON.stringify(body),
     });
+
+  try {
+    const res = await post(row);
     if (res.ok) return { ok: true };
+
+    // The leads table may predate the phone column. Losing a lead because of a
+    // schema gap is worse than losing the phone number, so retry without it and
+    // let the webhook carry the full record.
+    if (row.phone) {
+      const { phone, ...withoutPhone } = row;
+      const retry = await post(withoutPhone);
+      if (retry.ok) return { ok: true };
+    }
     return { ok: false, reason: 'provider_error' };
   } catch {
     return { ok: false, reason: 'provider_error' };

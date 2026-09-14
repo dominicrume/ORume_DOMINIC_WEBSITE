@@ -13,6 +13,7 @@ export function WaitlistForm() {
     const data = {
       first_name: formData.get("first_name"),
       email: formData.get("email"),
+      phone: formData.get("phone"),
       company_website: formData.get("company_website") ?? ""
     };
 
@@ -78,6 +79,21 @@ export function WaitlistForm() {
         type="email" 
         placeholder="you@company.com" 
         autoComplete="email" 
+        required 
+        disabled={status === "loading"}
+        className="w-full bg-[#0B0E13] border border-[#28313F] rounded-lg text-[#EDF1F6] p-[14px_15px] text-[17px] font-inherit mb-[16px] focus:outline-none focus:border-[#E8B44A] disabled:opacity-50"
+      />
+      
+      <label htmlFor="p" className="block text-[13px] font-bold tracking-[0.04em] uppercase text-[#93A0B1] mb-[7px]">
+        Phone
+      </label>
+      <input 
+        id="p" 
+        name="phone" 
+        type="tel" 
+        inputMode="tel"
+        placeholder="+44 7700 900000" 
+        autoComplete="tel" 
         required 
         disabled={status === "loading"}
         className="w-full bg-[#0B0E13] border border-[#28313F] rounded-lg text-[#EDF1F6] p-[14px_15px] text-[17px] font-inherit mb-[16px] focus:outline-none focus:border-[#E8B44A] disabled:opacity-50"

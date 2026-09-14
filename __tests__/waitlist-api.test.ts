@@ -9,7 +9,9 @@ function reqWith(body: unknown) {
   });
 }
 
-const valid = { first_name: 'Ada', email: 'ada@company.com' };
+// Phone is a required field on this route: the KYA leads are followed up by
+// call, not only by email. See lib/validation.ts.
+const valid = { first_name: 'Ada', email: 'ada@company.com', phone: '+44 7700 900123' };
 
 describe('POST /api/waitlist', () => {
   afterEach(() => {
@@ -22,6 +24,12 @@ describe('POST /api/waitlist', () => {
   it('returns 200 for valid input when no store is configured', async () => {
     const res = await POST(reqWith(valid));
     expect(res.status).toBe(200);
+  });
+
+  it('returns 400 when the phone number is missing', async () => {
+    const { phone, ...noPhone } = valid;
+    const res = await POST(reqWith(noPhone));
+    expect(res.status).toBe(400);
   });
 
   it('returns 400 for an invalid email', async () => {

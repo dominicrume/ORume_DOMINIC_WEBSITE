@@ -37,10 +37,23 @@ export const frameworkSchema = z.object({
 
 export type FrameworkInput = z.infer<typeof frameworkSchema>;
 
-// KYA Method Stack waitlist (/kya). First name personalises the launch email.
+// KYA Method Stack waitlist and the gated KYA Method downloads (/kya, homepage).
+// Phone is required because these leads are followed up by call, not only email.
+// To soften the gate later, change `phone` to `.optional().default('')` — that is
+// the whole change; the API, storage and webhook already treat it as optional.
 export const waitlistSchema = z.object({
   first_name: z.string().trim().min(1, 'Please enter your first name').max(120),
   email: z.string().trim().email('Enter a valid email').max(200),
+  // Deliberately permissive: international numbers vary wildly and a strict
+  // pattern rejects real people. Require enough digits to be a real number.
+  phone: z
+    .string()
+    .trim()
+    .min(7, 'Enter a phone number we can reach you on')
+    .max(32)
+    .refine((v) => (v.replace(/\D/g, '').length >= 7), 'Enter a valid phone number'),
+  // Which gated asset the visitor asked for, when the form is a download gate.
+  doc: z.enum(['kya-method', 'kya-architecture']).optional(),
   company_website: z.string().max(0).optional().default(''),
 });
 

@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  // The gated PDFs live outside public/ so they have no crawlable URL. They must
+  // still be bundled with the function that serves them, or /api/download finds
+  // nothing in production while working perfectly on a developer's machine.
+  outputFileTracingIncludes: {
+    '/api/download': ['./private-assets/**'],
+  },
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
@@ -14,6 +20,10 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // These PDFs used to sit in public/ and were directly downloadable. They
+      // are gated now, so send any shared link to the form instead of a 404.
+      { source: '/The_KYA_Method_Detailed_Edition.pdf', destination: '/#method', permanent: false },
+      { source: '/THE_KYA_METHOD_ARCHITECTURE.pdf', destination: '/#method', permanent: false },
       { source: '/free', destination: '/access', permanent: false },
       { source: '/Free', destination: '/access', permanent: false },
       { source: '/FREE', destination: '/access', permanent: false },
