@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { waitlistSchema } from '@/lib/validation';
 import { saveLead } from '@/lib/supabase';
-import { issueToken } from '@/lib/download-token';
+import { GATED_DOCS, issueToken } from '@/lib/download-token';
+import { sendGatedDownloadEmail } from '@/lib/email';
 import { log } from '@/lib/logger';
 
 export const runtime = 'nodejs';
@@ -64,9 +65,12 @@ export async function POST(req: Request) {
     );
   }
 
-  // 3) If they asked for a document, hand back a signed, expiring link. The file
-  //    is not on a public URL, so this is the only way to reach it.
+  // 3) If they asked for a document, hand back a signed, expiring link and email
+  //    the same link. The on-screen copy is convenient; the email is the copy of
+  //    record, because closing the tab should not cost someone the thing they
+  //    just gave us a phone number for.
   let download: string | undefined;
+  let emailed = false;
   if (doc) {
     try {
       download = `/api/download?t=${encodeURIComponent(issueToken(email, doc))}`;
@@ -79,9 +83,34 @@ export async function POST(req: Request) {
         reason: String(err),
       });
     }
+
+    if (download) {
+      const absolute = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://rumedominic.com'}${download}`;
+      // Never let a mail failure cost the response: the visitor already has the
+      // link on screen, and the lead is stored either way.
+      const sent = await sendGatedDownloadEmail(email, first_name, GATED_DOCS[doc].label, absolute)
+        .catch((err: unknown) => ({ ok: false as const, reason: String(err) }));
+      emailed = sent.ok;
+      if (!sent.ok) {
+        log.warn('gated download email not sent', {
+          route: '/api/waitlist',
+          email,
+          doc,
+          reason: 'reason' in sent ? String(sent.reason) : 'unknown',
+        });
+      }
+    }
   }
 
-  log.info('kya lead captured', { route: '/api/waitlist', email, doc, has_phone: Boolean(phone) });
+  log.info('kya lead captured', {
+    route: '/api/waitlist',
+    email,
+    doc,
+    has_phone: Boolean(phone),
+    emailed,
+  });
   await log.flush();
-  return NextResponse.json({ success: true, download }, { status: 200 });
+  // `emailed` lets the form tell the truth: "check your inbox" when we sent it,
+  // "save this link" when we could not.
+  return NextResponse.json({ success: true, download, emailed }, { status: 200 });
 }

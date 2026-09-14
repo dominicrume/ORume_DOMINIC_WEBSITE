@@ -135,3 +135,76 @@ describe('POST /api/waitlist with the gate', () => {
     expect((await res.json()).error).toBe('Rejected.');
   });
 });
+
+describe('delivery and failure paths', () => {
+  beforeEach(() => {
+    process.env.DOWNLOAD_SECRET = 'test-secret-value';
+  });
+  afterEach(() => {
+    delete process.env.DOWNLOAD_SECRET;
+    delete process.env.BREVO_API_KEY;
+    delete process.env.SUPABASE_URL;
+    delete process.env.SUPABASE_KEY;
+    vi.restoreAllMocks();
+  });
+
+  const post = async (body: unknown) => {
+    const { POST } = await import('@/app/api/waitlist/route');
+    return POST(
+      new Request('http://localhost/api/waitlist', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body),
+      }),
+    );
+  };
+  const lead = {
+    first_name: 'Ada',
+    email: 'ada@company.com',
+    phone: '+44 7700 900123',
+    doc: 'kya-method',
+  };
+
+  it('emails the link when mail is configured, and says so', async () => {
+    process.env.BREVO_API_KEY = 'test-key';
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response('{}', { status: 201 }));
+    const res = await post(lead);
+    const body = await res.json();
+    expect(res.status).toBe(200);
+    expect(body.emailed).toBe(true);
+    expect(body.download).toBeTruthy();
+    const sentToBrevo = fetchSpy.mock.calls.some((c) => String(c[0]).includes('brevo'));
+    expect(sentToBrevo).toBe(true);
+  });
+
+  it('still returns the on-screen link when the email provider fails', async () => {
+    process.env.BREVO_API_KEY = 'test-key';
+    vi.spyOn(global, 'fetch').mockResolvedValue(new Response('nope', { status: 500 }));
+    const res = await post(lead);
+    const body = await res.json();
+    // The lead is captured and the visitor still gets their download.
+    expect(res.status).toBe(200);
+    expect(body.emailed).toBe(false);
+    expect(body.download).toBeTruthy();
+  });
+
+  it('survives the email client throwing outright', async () => {
+    process.env.BREVO_API_KEY = 'test-key';
+    vi.spyOn(global, 'fetch').mockRejectedValue(new Error('network down'));
+    const res = await post(lead);
+    expect(res.status).toBe(200);
+    expect((await res.json()).emailed).toBe(false);
+  });
+
+  it('captures the lead but issues no link when no signing secret exists', async () => {
+    delete process.env.DOWNLOAD_SECRET;
+    delete process.env.BRAIN_WEEKLY_SECRET;
+    const res = await post(lead);
+    const body = await res.json();
+    expect(res.status).toBe(200);
+    expect(body.success).toBe(true);
+    expect(body.download).toBeUndefined();
+  });
+});

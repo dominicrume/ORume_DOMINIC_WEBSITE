@@ -195,3 +195,35 @@ export async function sendLeadNotification(lead: LeadNotice): Promise<EmailResul
     htmlContent: emailShell(inner, `New ${lead.kind} lead from ${lead.name || lead.email}`),
   });
 }
+
+/**
+ * Delivers a gated asset by email.
+ *
+ * The on-screen link is convenient but fragile: close the tab and a lead who
+ * just handed over a phone number has nothing. This is the copy of record, and
+ * it carries the same signed, expiring URL.
+ */
+export async function sendGatedDownloadEmail(
+  to: string,
+  name: string,
+  docLabel: string,
+  absoluteUrl: string,
+): Promise<EmailResult> {
+  const first = (name || '').trim().split(' ')[0] || 'there';
+  const inner = `
+    <h1 style="font-size:23px;font-weight:800;margin:0 0 6px;color:#0A0E1A">Here it is, ${first}.</h1>
+    <p style="font-size:15px;line-height:1.7;margin:0 0 20px;color:#33405a">Your copy of <strong>${docLabel}</strong> is ready. The link below is personal to you and works for 48 hours.</p>
+    <div style="border:1px solid #e3e8f0;border-radius:14px;padding:18px 20px;margin:0 0 20px">
+      <div style="font-size:11px;font-weight:800;color:#1D4ED8;text-transform:uppercase;letter-spacing:.6px">Your download</div>
+      <div style="font-size:17px;font-weight:800;margin:4px 0 10px">${docLabel}</div>
+      <a href="${absoluteUrl}" style="${btnPrimary}">Download the PDF</a>
+    </div>
+    <p style="font-size:14px;line-height:1.7;margin:0 0 16px;color:#33405a">If the link has expired by the time you click it, just reply to this email and I will send a fresh one.</p>
+    <p style="font-size:14px;line-height:1.7;margin:0 0 16px;color:#33405a">The evidence behind the method, including what I deliberately do not claim, is at <a href="${SITE}/proof" style="color:#1D4ED8">rumedominic.com/proof</a>.</p>`;
+  return send({
+    sender: fromSender(),
+    to: [{ email: to }],
+    subject: `Your copy of ${docLabel}`,
+    htmlContent: emailShell(inner, `${docLabel} — your download link inside.`),
+  });
+}

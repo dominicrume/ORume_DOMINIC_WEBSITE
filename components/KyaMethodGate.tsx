@@ -25,6 +25,7 @@ export function KyaMethodGate() {
   const [message, setMessage] = useState('');
   const [fields, setFields] = useState<Record<string, string[]>>({});
   const [href, setHref] = useState('');
+  const [emailed, setEmailed] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -49,6 +50,7 @@ export function KyaMethodGate() {
       });
       const data = (await res.json().catch(() => ({}))) as {
         download?: string;
+        emailed?: boolean;
         error?: string;
         fields?: Record<string, string[]>;
       };
@@ -68,6 +70,7 @@ export function KyaMethodGate() {
         return;
       }
       setHref(data.download);
+      setEmailed(Boolean(data.emailed));
       setStatus('done');
     } catch {
       setStatus('error');
@@ -116,7 +119,10 @@ export function KyaMethodGate() {
               </div>
               <h3 className="text-lg font-bold text-paper">Here it is.</h3>
               <p className="mt-1 text-sm text-muted">
-                Your copy of {doc?.label}. The link is personal and expires in 48 hours.
+                Your copy of {doc?.label}.{' '}
+                {emailed
+                  ? 'A copy of this link is in your inbox too, so you will not lose it.'
+                  : 'Save this link now — it is personal to you and expires in 48 hours.'}
               </p>
               <a
                 href={href}

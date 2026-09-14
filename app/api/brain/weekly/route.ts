@@ -26,7 +26,24 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
   }
 
-  const result = await runWeekly();
+  // runWeekly calls Supabase and Claude. Either can fail, and an unguarded throw
+  // here surfaces as an opaque 500 to a cron that will simply try again next week
+  // with no record of what broke.
+  let result: Awaited<ReturnType<typeof runWeekly>>;
+  try {
+    result = await runWeekly();
+  } catch (err) {
+    log.error('brain weekly run threw', {
+      route: '/api/brain/weekly',
+      reason: err instanceof Error ? err.message : String(err),
+    });
+    await log.flush();
+    return NextResponse.json(
+      { ok: false, reason: 'run_failed' },
+      { status: 500 },
+    );
+  }
+
   log.info('brain weekly run finished', {
     route: '/api/brain/weekly',
     ok: result.ok,
