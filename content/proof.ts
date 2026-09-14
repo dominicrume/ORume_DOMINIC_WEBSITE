@@ -23,7 +23,11 @@ export const quotes: Quote[] = [
   },
   {
     text: 'Everything’s solid. Code is finally merged to main branch.',
-    author: 'Matthew Aston',
+    // Corrected 14 Sep 2026: this is Matthew Brian, who is at Aston. The previous
+    // attribution ("Matthew Aston") folded the institution into the surname —
+    // a real person's name, published, and wrong. Confirm the title with him
+    // before this is cited as evidence anywhere.
+    author: 'Matthew Brian',
     title: 'Engineering client',
   },
   {

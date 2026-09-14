@@ -47,8 +47,9 @@ export const site = {
     { label: 'Portfolio', href: '#portfolio' },
     // Real pages, not anchors: without these the evidence page and the product
     // page are reachable only by typing the URL.
+    { label: 'Instrument', href: '/instrument' },
+    { label: 'Research', href: '/research' },
     { label: 'Proof', href: '/proof' },
-    { label: 'Method Stack', href: '/kya' },
     { label: 'About', href: '#about' },
   ],
 

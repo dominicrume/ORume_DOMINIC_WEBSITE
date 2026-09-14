@@ -24,6 +24,11 @@ export const GATED_DOCS = {
     filename: 'The KYA Method — Engineering Architecture.pdf',
     label: 'The KYA Method, Engineering Architecture',
   },
+  dissertation: {
+    file: 'Dissertation_FINAL_Uririe_Orume_Dominic.pdf',
+    filename: 'Measuring the Unmeasured — Uririe, Orume Dominic (Aston, 2026).pdf',
+    label: 'Measuring the Unmeasured (MSc dissertation)',
+  },
 } as const;
 
 export type GatedDocId = keyof typeof GATED_DOCS;

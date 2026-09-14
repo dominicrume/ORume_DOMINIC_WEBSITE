@@ -53,7 +53,7 @@ export const waitlistSchema = z.object({
     .max(32)
     .refine((v) => (v.replace(/\D/g, '').length >= 7), 'Enter a valid phone number'),
   // Which gated asset the visitor asked for, when the form is a download gate.
-  doc: z.enum(['kya-method', 'kya-architecture']).optional(),
+  doc: z.enum(['kya-method', 'kya-architecture', 'dissertation']).optional(),
   company_website: z.string().max(0).optional().default(''),
 });
 
