@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { WaitlistForm } from '@/components/kya/WaitlistForm';
 
 export const metadata: Metadata = {
-  title: "The KYA Method Stack — Rume Dominic",
+  title: "The KYA Method Stack",
   description: "The production agent stack, already built. One price, once. Waitlist open.",
   openGraph: {
     images: ['/opengraph-image'],

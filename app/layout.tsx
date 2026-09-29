@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: site.seo.title,
     description: site.seo.description,
     siteName: site.name,
-    locale: 'en_US',
+    locale: 'en_GB',
   },
   twitter: {
     card: 'summary_large_image',

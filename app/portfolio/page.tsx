@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Rume Dominic | Applied AI Engineer & Systems Architect",
+  title: "Applied AI Engineer & Systems Architect",
   description: "Portfolio of Rume Dominic, Applied AI Engineer & Systems Architect. Expert in LLM orchestration, Agentic Intelligence, and Verifiable AI.",
   keywords: ["AI Engineer", "Applied AI", "Systems Architect", "Agentic Systems", "RAG Pipelines", "Verifiable AI", "Rume Dominic"],
 };
