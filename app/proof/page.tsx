@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer';
 import { site } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'Proof — the evidence behind the work',
+  title: 'Proof: the evidence behind the work',
   description:
     'Every claim on this site, with a link you can check yourself: the validated measurement instrument, the inter-rater agreement figures, the open-source packages, and what is deliberately not claimed.',
   alternates: { canonical: `${site.url}/proof` },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     images: ['/opengraph-image'],
     type: 'article',
     url: `${site.url}/proof`,
-    title: 'Proof — the evidence behind the work',
+    title: 'Proof: the evidence behind the work',
     description:
       'A validated instrument for auditing AI-generated code, and the receipts for every claim made about it.',
   },
@@ -68,7 +68,7 @@ const notClaimed: { heading: string; body: string }[] = [
   },
   {
     heading: 'Not a perfect agreement score',
-    body: 'Repairing a defect the raters exposed lifts agreement with the instrument to κ = 1.000. That figure is circular — the defect was found by the raters and the repair then measured against the same labels — so the published figure remains the weaker 0.853.',
+    body: 'Repairing a defect the raters exposed lifts agreement with the instrument to κ = 1.000. That figure is circular (the defect was found by the raters and the repair then measured against the same labels), so the published figure remains the weaker 0.853.',
   },
   {
     heading: 'Not adopted by Canton',
@@ -146,7 +146,7 @@ export default function ProofPage() {
               <p className="text-muted">
                 The agent ships something else entirely. Asked for a command-line tool, it
                 builds a scheduled data pipeline. It added nothing, so a scope-creep count
-                reports zero — the same score as the tools that got it right. Measured
+                reports zero, the same score as the tools that got it right. Measured
                 behaviour, not a hypothetical.
               </p>
             </GlassCard>
@@ -189,8 +189,8 @@ export default function ProofPage() {
                 its route detector could not see a whole class of web framework, so it had
                 scored a case zero by construction rather than by judgement. That defect
                 is published as an erratum, the repair is in the code with a regression
-                test, and the claim it overturned — one the study had advanced as its
-                cleanest result — was withdrawn in the text rather than quietly softened.
+                test, and the claim it overturned (one the study had advanced as its
+                cleanest result) was withdrawn in the text rather than quietly softened.
               </p>
             </GlassCard>
           </div>

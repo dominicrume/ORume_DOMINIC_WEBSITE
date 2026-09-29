@@ -42,7 +42,7 @@ export function CTAButton({
     <Link
       href={href}
       onClick={handleClick}
-      // /master-ai is a static-file rewrite with no RSC payload — prefetch would 404.
+      // /master-ai is a static-file rewrite with no RSC payload; prefetch would 404.
       prefetch={false}
       className={`${base} ${styles} ${className}`}
     >

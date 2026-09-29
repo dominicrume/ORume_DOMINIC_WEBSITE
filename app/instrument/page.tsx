@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer';
 import { site } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'The AI Code Quality Auditor — measure what your agents actually shipped',
+  title: 'The AI Code Quality Auditor: measure what your agents actually shipped',
   description:
     'An open-source instrument that scores AI-generated code on security, complexity, duplication and specification fidelity. Validated against two independent human raters. Install in one command.',
   alternates: { canonical: `${site.url}/instrument` },
@@ -36,7 +36,7 @@ const metrics = [
   {
     name: 'Cyclomatic complexity',
     detail:
-      'Structural density per function. Read alongside duplication rather than alone — low complexity bought by scattering logic across copied scaffolding is not a win.',
+      'Structural density per function. Read alongside duplication rather than alone. Low complexity bought by scattering logic across copied scaffolding is not a win.',
   },
   {
     name: 'Code duplication',
@@ -93,7 +93,7 @@ export default function InstrumentPage() {
                 code you asked for.
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted">
-                The AI Code Quality Auditor scores what an agent actually shipped — its
+                The AI Code Quality Auditor scores what an agent actually shipped: its
                 security exposure, its structure, and above all whether it stayed inside
                 the specification it was given. It is free, it runs on your machine, and
                 it publishes its findings about itself.
@@ -161,7 +161,7 @@ export default function InstrumentPage() {
                 humans was <strong className="text-paper">κ = 0.870</strong>. Between each
                 human and the instrument,{' '}
                 <strong className="text-paper">κ = 0.853</strong> and{' '}
-                <strong className="text-paper">κ = 0.727</strong> — all three clearing the
+                <strong className="text-paper">κ = 0.727</strong>, all three clearing the
                 threshold conventionally read as substantial agreement.
               </p>
               <p className="mt-4 text-muted">
@@ -197,7 +197,7 @@ export default function InstrumentPage() {
           </div>
           <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted">
             The measurement layer is free and always will be. What is worth paying for is
-            the assurance built on top of it — an audit of your agents against the full
+            the assurance built on top of it: an audit of your agents against the full
             standard, and the governance that follows.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">

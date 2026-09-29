@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "The production agent stack, already built. One price, once. Waitlist open.",
   openGraph: {
     images: ['/opengraph-image'],
-    title: "The KYA Method Stack — Rume Dominic",
+    title: "The KYA Method Stack | Rume Dominic",
     description: "The production agent stack, already built. One price, once. Waitlist open.",
     type: "website",
     url: "https://rumedominic.com/kya"
@@ -39,7 +39,7 @@ export default function KyaProductPage() {
             Retries. Traces. Key handling. The eval loop. Rate limits. The deploy that works on your machine and nowhere else. Prompt injection you remember to think about on day nine.
           </p>
           <p className="mb-[18px]">
-            You are not stuck because the work is hard. You are stuck because it is <em className="italic text-[#EDF1F6]">repetitive</em>. The interesting part comes after the plumbing — and you rarely get there, because the plumbing eats the month.
+            You are not stuck because the work is hard. You are stuck because it is <em className="italic text-[#EDF1F6]">repetitive</em>. The interesting part comes after the plumbing, and you rarely get there, because the plumbing eats the month.
           </p>
           <p className="mb-[18px]">Then the model changes, and you do it again.</p>
         </section>
@@ -67,7 +67,7 @@ export default function KyaProductPage() {
             <div>
               <h3 className="text-[19px] tracking-[-0.2px] font-bold mb-[6px]">The scaffold</h3>
               <p className="m-0 text-[#93A0B1] text-[16px] leading-[1.55]">
-                Production agent architecture, wired end to end. Orchestration, tool calling, retries, structured output, streaming. Not a demo — the version that survives a bad Tuesday.
+                Production agent architecture, wired end to end. Orchestration, tool calling, retries, structured output, streaming. Not a demo: the version that survives a bad Tuesday.
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function KyaProductPage() {
             <div>
               <h3 className="text-[19px] tracking-[-0.2px] font-bold mb-[6px]">The eval harness</h3>
               <p className="m-0 text-[#93A0B1] text-[16px] leading-[1.55]">
-                Wired in from the first commit, because evals bolted on later never get written. You will know when a model update breaks you — before your users tell you.
+                Wired in from the first commit, because evals bolted on later never get written. You will know when a model update breaks you, before your users tell you.
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function KyaProductPage() {
             <div>
               <h3 className="text-[19px] tracking-[-0.2px] font-bold mb-[6px]">The build log</h3>
               <p className="m-0 text-[#93A0B1] text-[16px] leading-[1.55]">
-                Short written breakdowns of the decisions behind the code. Not documentation. The reasoning — so you can disagree with me on purpose instead of by accident.
+                Short written breakdowns of the decisions behind the code. Not documentation. The reasoning, so you can disagree with me on purpose instead of by accident.
               </p>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function KyaProductPage() {
             You are not buying the code. You are buying the six months.
           </p>
           <p className="mb-[18px]">
-            A model will write you a boilerplate in four minutes. What it will not hand you is the list of decisions <em className="italic text-[#EDF1F6]">not to relitigate</em> — the ones that cost me over a decade of engineering and UK patent filings to learn and cost you nothing to inherit.
+            A model will write you a boilerplate in four minutes. What it will not hand you is the list of decisions <em className="italic text-[#EDF1F6]">not to relitigate</em>, the ones that cost me over a decade of engineering and UK patent filings to learn and cost you nothing to inherit.
           </p>
           <p className="mb-[18px]">
             Anyone can learn to cut their own hair. The question is what the first six haircuts look like, and who has to see them.
@@ -178,7 +178,7 @@ export default function KyaProductPage() {
                 <strong className="font-bold text-[#EDF1F6]">Updates</strong> as models change
               </li>
               <li className="pl-[26px] relative mb-[10px] text-[#93A0B1] text-[16px] before:content-['✓'] before:absolute before:left-0 before:text-[#5BC08A] before:font-bold">
-                <strong className="font-bold text-[#EDF1F6]">Commercial use</strong> — ship client work with it
+                <strong className="font-bold text-[#EDF1F6]">Commercial use</strong>, ship client work with it
               </li>
               <li className="pl-[26px] relative mb-[10px] text-[#93A0B1] text-[16px] before:content-['✓'] before:absolute before:left-0 before:text-[#5BC08A] before:font-bold">
                 <strong className="font-bold text-[#EDF1F6]">30-day refund</strong>, no explanation required
@@ -187,7 +187,7 @@ export default function KyaProductPage() {
           </div>
 
           <p className="text-[#93A0B1] mb-[18px]">
-            Compare it honestly: three weeks of your own evenings, at whatever your hour is worth. If that number is under $199, do not buy this — build it, and you will learn more.
+            Compare it honestly: three weeks of your own evenings, at whatever your hour is worth. If that number is under $199, do not buy this; build it, and you will learn more.
           </p>
         </section>
 
@@ -238,7 +238,7 @@ export default function KyaProductPage() {
               Is this a course?
             </summary>
             <p className="mt-[14px] text-[#93A0B1] text-[16px] m-0">
-              No. It is a working codebase you clone and run. The written breakdowns exist to explain the decisions, not to teach you to code — you can already do that.
+              No. It is a working codebase you clone and run. The written breakdowns exist to explain the decisions, not to teach you to code. You can already do that.
             </p>
           </details>
 

@@ -16,7 +16,7 @@ type EcsDoc = Fields & {
 };
 
 // Flush when the buffer reaches this size, or FLUSH_MS after the first
-// buffered line — whichever comes first. Errors flush immediately so they
+// buffered line, whichever comes first. Errors flush immediately so they
 // survive a serverless instance being frozen right after the response.
 const MAX_BUFFER = 20;
 const FLUSH_MS = 1000;

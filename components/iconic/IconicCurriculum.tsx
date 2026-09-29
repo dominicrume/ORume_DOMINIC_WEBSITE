@@ -3,8 +3,8 @@ import React from 'react';
 
 export function IconicCurriculum() {
   const days = [
-    { day: "Day 1", title: "Talk to AI like a pro", desc: "Prompt engineering — get anything you want out of AI." },
-    { day: "Day 2", title: "Create & edit images", desc: "Make and edit pictures with AI — no design skills needed." },
+    { day: "Day 1", title: "Talk to AI like a pro", desc: "Prompt engineering: get anything you want out of AI." },
+    { day: "Day 2", title: "Create & edit images", desc: "Make and edit pictures with AI, no design skills needed." },
     { day: "Day 3", title: "Slides & presentations", desc: "Build business slides and presentations in minutes." },
     { day: "Day 4", title: "Build your own chatbot", desc: "Create a chatbot for your business or brand." },
     { day: "Day 5", title: "AI agents & automation", desc: "Build AI agents that automate YouTube & social media." },
@@ -23,7 +23,7 @@ export function IconicCurriculum() {
             Exactly what you'll learn
           </h2>
           <p className="text-[#EDE7D8] opacity-82 text-[16px]">
-            No fluff — real skills. From prompt engineering to chatbots, AI agents, websites and your own AI business. Images, videos, editing and YouTube automation, all included.
+            No fluff: real skills. From prompt engineering to chatbots, AI agents, websites and your own AI business. Images, videos, editing and YouTube automation, all included.
           </p>
         </div>
 

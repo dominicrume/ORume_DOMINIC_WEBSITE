@@ -15,7 +15,7 @@ export const engagements: Engagement[] = [
   {
     title: 'FrontierTechX Birmingham 2026',
     role: 'Panellist',
-    // The link was the bare event homepage, which does not mention him — the one
+    // The link was the bare event homepage, which does not mention him, the one
     // item in this file that did not survive its own click. It now points at the
     // organiser's own post carrying the panel card. Four panellists, 25 minutes:
     // say panellist, not speaker.
@@ -24,7 +24,7 @@ export const engagements: Engagement[] = [
     href: 'https://www.linkedin.com/posts/welcome-its-frontiertechx-day-and-we-are-ugcPost-7443143306097876992-b3uh/',
   },
   {
-    title: 'Agentic AI Birmingham — LIVE LAB',
+    title: 'Agentic AI Birmingham: LIVE LAB',
     role: 'Host',
     detail: 'Building AI agents that automate a business, demonstrated live.',
     href: 'https://www.youtube.com/watch?v=7_Op8--kQIA',

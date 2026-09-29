@@ -64,7 +64,7 @@ export function VaidaHero() {
               className="text-[0.95rem] text-[#8A7680] mb-0 max-w-[42ch] mx-auto md:mx-0 vaida-animate-rise"
               style={{ animationDelay: '1.0s', animationDuration: '1s' }}
             >
-              Rebuild confidence. Reclaim identity. Create financial courage — in the AI era and beyond.
+              Rebuild confidence. Reclaim identity. Create financial courage, in the AI era and beyond.
             </p>
             <div 
               className="mt-[28px] md:mt-[34px] flex flex-col sm:flex-row justify-center md:justify-start gap-[14px] vaida-animate-rise"

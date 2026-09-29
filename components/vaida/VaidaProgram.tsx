@@ -17,7 +17,7 @@ export function VaidaProgram() {
             Always ENOUGH™ <span className="italic font-normal block sm:inline">6-Week Financial Reset</span>
           </h2>
           <p className="text-[#8A7680] text-[1.15rem] md:text-[1.25rem] max-w-[62ch] mx-auto leading-relaxed">
-            Stop avoiding your bank account. Start owning your money with calm, clarity, and a personal system that fits your real life — without shame or overwhelm.
+            Stop avoiding your bank account. Start owning your money with calm, clarity, and a personal system that fits your real life, without shame or overwhelm.
           </p>
         </div>
 
@@ -25,10 +25,10 @@ export function VaidaProgram() {
         <div className="bg-white rounded-[32px] p-[36px] md:p-[56px] shadow-[0_20px_60px_rgba(126,59,84,0.08)] border border-[#F6DCE5] mb-[70px] relative">
           <div className="max-w-[800px] mx-auto text-center mb-[40px]">
             <h3 className="font-serif font-semibold text-[1.8rem] md:text-[2.2rem] text-[#7E3B54] mb-[12px]">
-              Designed for the woman who is not &apos;bad with money&apos; — just tired of carrying it alone.
+              Designed for the woman who is not &apos;bad with money&apos;, just tired of carrying it alone.
             </h3>
             <p className="text-[#8A7680] text-[1.05rem]">
-              You earn, manage life, pay bills, and show up for everyone else — yet quietly feel that your money is not fully under control. You look capable from the outside, but inside, money still creates emotional tension.
+              You earn, manage life, pay bills, and show up for everyone else, yet quietly feel that your money is not fully under control. You look capable from the outside, but inside, money still creates emotional tension.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export function VaidaProgram() {
               Three Concrete Outcomes You Can Rely On
             </h3>
             <p className="text-[#8A7680] text-[1.05rem] mt-[8px]">
-              Not just motivation or encouragement — tangible shifts that remain after the six weeks end.
+              Not just motivation or encouragement: tangible shifts that remain after the six weeks end.
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export function VaidaProgram() {
               The Journey: Six Weeks. One Meaningful Shift.
             </h3>
             <p className="text-[#8A7680] text-[1.1rem] max-w-[58ch] mx-auto">
-              We do not start with a restrictive budget. We start with you — uniting emotional understanding with practical financial structure.
+              We do not start with a restrictive budget. We start with you, uniting emotional understanding with practical financial structure.
             </p>
           </div>
 
@@ -271,7 +271,7 @@ export function VaidaProgram() {
                   rel="noopener noreferrer"
                   className="inline-block font-bold text-[1.1rem] py-[18px] px-[40px] rounded-full transition-all duration-300 border-2 border-[#C9738F] bg-[#C9738F] text-white shadow-[0_12px_30px_rgba(201,115,143,0.4)] hover:-translate-y-[3px] hover:scale-[1.02] hover:shadow-[0_18px_40px_rgba(201,115,143,0.5)] text-center"
                 >
-                  Reserve My Seat Now — £777 →
+                  Reserve My Seat Now: £777 →
                 </Link>
                 <Link
                   href="https://calendly.com/vaidastone"

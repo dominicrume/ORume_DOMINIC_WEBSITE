@@ -1,5 +1,5 @@
 /**
- * Media & Press — TV appearances and features. Rendered as click-to-play
+ * Media & Press: TV appearances and features. Rendered as click-to-play
  * facades (thumbnail first, player loads only on click) to keep the page fast.
  */
 

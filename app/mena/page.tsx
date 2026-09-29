@@ -4,13 +4,13 @@ import { MENA_CONFIG } from '@/content/mena';
 import { MenaClaimForm } from '@/components/mena/MenaClaimForm';
 
 export const metadata: Metadata = {
-  title: 'Mena Obrike × Rume Dominic — "I Am Yours" Empowerment Live | Free IT Scholarship Nigeria, Zimbabwe, Rwanda, Uganda',
+  title: 'Mena Obrike × Rume Dominic: "I Am Yours" Empowerment Live | Free IT Scholarship Nigeria, Zimbabwe, Rwanda, Uganda',
   description: 'Claim your 100% free IT & AI tech scholarship in Nigeria, Zimbabwe, Rwanda, & Uganda. Instant access, zero fees.',
   alternates: {
     canonical: `${MENA_CONFIG.DOMAIN}/mena`,
   },
   openGraph: {
-    title: 'Mena Obrike × Rume Dominic — "I Am Yours" Empowerment Live',
+    title: 'Mena Obrike × Rume Dominic: "I Am Yours" Empowerment Live',
     description: 'Get the permanent engineering skills. Free tech scholarship for Nigeria, Zimbabwe, Rwanda, and Uganda.',
     url: `${MENA_CONFIG.DOMAIN}/mena`,
     siteName: 'Rume Dominic',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: `${MENA_CONFIG.DOMAIN}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: 'Mena Obrike x O\'Rume Dominic Uririe — Empowerment Live & Tech Scholarship',
+        alt: 'Mena Obrike x O\'Rume Dominic Uririe: Empowerment Live & Tech Scholarship',
       },
     ],
     locale: 'en_NG',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mena Obrike × Rume Dominic — Free Tech Scholarship',
+    title: 'Mena Obrike × Rume Dominic: Free Tech Scholarship',
     description: 'Get the permanent engineering skills. Free tech scholarship for Nigeria, Zimbabwe, Rwanda, and Uganda.',
     images: [`${MENA_CONFIG.DOMAIN}/opengraph-image`],
   },
@@ -133,7 +133,7 @@ const JSON_LD = {
         },
         {
           '@type': 'Question',
-          name: 'Who can claim it — which countries?',
+          name: 'Who can claim it (which countries)?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'The free tech scholarship can be claimed by anyone residing in Nigeria, Zimbabwe, Rwanda, Uganda, or other African nations. It was specifically built for young adults and music fans seeking practical digital skills without financial barriers.',
@@ -252,7 +252,7 @@ export default function MenaLandingPage() {
             href="#claim-section"
             className="w-full sm:w-auto rounded-2xl bg-gradient-to-r from-[#C9A227] via-[#FFD700] to-[#C9A227] px-8 py-4 text-base sm:text-lg font-black uppercase tracking-wider text-black shadow-[0_0_35px_rgba(201,162,39,0.5)] transition-all active:scale-[0.98] hover:scale-[1.02] hover:brightness-110 min-h-[56px] flex items-center justify-center gap-2"
           >
-            <span>⚡ CLAIM MY SCHOLARSHIP — FREE &darr;</span>
+            <span>⚡ CLAIM MY SCHOLARSHIP, FREE &darr;</span>
           </a>
 
           <a
@@ -559,7 +559,7 @@ export default function MenaLandingPage() {
 
           <article className="rounded-2xl border border-white/15 bg-black/50 p-6 backdrop-blur-sm transition-all hover:border-white/30">
             <h3 className="font-display text-lg sm:text-xl font-bold uppercase text-[#FFD700] flex items-center gap-2">
-              <span>🌍</span> Who can claim it &mdash; which countries?
+              <span>🌍</span> Who can claim it (which countries)?
             </h3>
             <p className="mt-2 text-sm sm:text-base text-[#F4F1EA]/85 leading-relaxed pl-7">
               The free tech scholarship can be claimed by anyone residing in Nigeria, Zimbabwe, Rwanda, Uganda, or other African nations. It was specifically built for young adults and music fans seeking practical digital skills without financial barriers.

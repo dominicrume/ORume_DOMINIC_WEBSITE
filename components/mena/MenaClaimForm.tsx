@@ -251,7 +251,7 @@ export function MenaClaimForm() {
         disabled={status === 'submitting'}
         className="mt-2 w-full rounded-xl bg-[#C9A227] px-8 py-4 text-base sm:text-lg font-black uppercase tracking-wider text-black shadow-[0_0_25px_rgba(201,162,39,0.3)] transition-all active:scale-[0.99] hover:brightness-110 disabled:opacity-60 min-h-[54px]"
       >
-        {status === 'submitting' ? 'CLAIMING INSTANT ACCESS...' : 'CLAIM MY SCHOLARSHIP — FREE'}
+        {status === 'submitting' ? 'CLAIMING INSTANT ACCESS...' : 'CLAIM MY SCHOLARSHIP, FREE'}
       </button>
 
       <p className="text-center text-xs text-[#F4F1EA]/60">

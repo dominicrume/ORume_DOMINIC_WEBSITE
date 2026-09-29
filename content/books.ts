@@ -42,7 +42,7 @@ export const books: Book[] = [
       'https://www.waterstones.com/book/inside-the-heart-of-a-global-entrepreneur/rume-dominic/mahaveer-jain/9798309621316',
   },
   {
-    title: 'MORE — Unleashing the Leader Within',
+    title: 'MORE: Unleashing the Leader Within',
     blurb: 'Co-authored with Farzam Kamalabadi, Paul Rubio and Lerena Holloway. “Courage is the ultimate capital, surpassing gold or code.”',
     cover: '/books/more.jpg',
     coverFit: 'contain',

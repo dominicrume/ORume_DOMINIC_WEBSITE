@@ -74,7 +74,7 @@ export function DissertationGate() {
         <p className="mt-1 text-sm text-muted">
           {emailed
             ? 'A copy of this link is in your inbox too, so you will not lose it.'
-            : 'Save this link now — it is personal to you and expires in 48 hours.'}
+            : 'Save this link now. It is personal to you and expires in 48 hours.'}
         </p>
         <a
           href={href}

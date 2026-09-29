@@ -33,7 +33,7 @@ export async function POST(req: Request) {
   const { first_name, email, phone, doc } = parsed.data;
 
   // 1) Authoritative store: Supabase, same tolerance rules as the other lead
-  //    routes — a real provider error blocks success, "not configured" doesn't.
+  //    routes: a real provider error blocks success, "not configured" doesn't.
   const stored = await saveLead({
     type: 'newsletter',
     email,

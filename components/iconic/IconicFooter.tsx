@@ -7,7 +7,7 @@ import Link from 'next/link';
 export function IconicFooter() {
   const currentYear = new Date().getFullYear();
   const shareUrl = "https://rumedominic.com/iconic";
-  const shareMsg = encodeURIComponent("🎓 They said AI is not for us. Na lie. Get a FREE AI book + 9-day beginner course (no payment, no coding) — and try live AI now. AI na our own 🌍 " + shareUrl);
+  const shareMsg = encodeURIComponent("🎓 They said AI is not for us. Na lie. Get a FREE AI book + 9-day beginner course (no payment, no coding), and try live AI now. AI na our own 🌍 " + shareUrl);
 
   const [linkCopied, setLinkCopied] = useState(false);
 
@@ -38,7 +38,7 @@ export function IconicFooter() {
             {[
               {
                 q: "Is the AI course really free?",
-                a: "Yes — 100% free. The book “From Code to Consciousness” and the “Master AI in Nine Days” course cost nothing. No payment, no hidden charges. You only enter your name and email for instant access."
+                a: "Yes, 100% free. The book “From Code to Consciousness” and the “Master AI in Nine Days” course cost nothing. No payment, no hidden charges. You only enter your name and email for instant access."
               },
               {
                 q: "Do I need a laptop or coding experience?",
@@ -46,19 +46,19 @@ export function IconicFooter() {
               },
               {
                 q: "What will I actually learn?",
-                a: "Nine practical days: (1) prompt engineering — get anything from AI, (2) create & edit images, (3) build slides & presentations, (4) build your own chatbot, (5) build AI agents that automate YouTube & social media, (6) write viral content, (7) build simple websites with AI, (8) turn one content into many, (9) start your own small AI business. Videos, editing and automation tools included."
+                a: "Nine practical days: (1) prompt engineering (get anything from AI), (2) create & edit images, (3) build slides & presentations, (4) build your own chatbot, (5) build AI agents that automate YouTube & social media, (6) write viral content, (7) build simple websites with AI, (8) turn one content into many, (9) start your own small AI business. Videos, editing and automation tools included."
               },
               {
                 q: "Can I try AI before signing up?",
-                a: "Yes — scroll up to the live AI demo and run it right in your browser, including real Python, before you enrol."
+                a: "Yes, scroll up to the live AI demo and run it right in your browser, including real Python, before you enrol."
               },
               {
                 q: "How long does it take?",
-                a: "Nine days. Each day is one short lesson of about 20–30 minutes — beginner to genuinely capable."
+                a: "Nine days. Each day is one short lesson of about 20–30 minutes, beginner to genuinely capable."
               },
               {
                 q: "Who is behind this?",
-                a: "An initiative of Iconic — Africa's premier recognition platform, led by Amb. Dr. Temisan O. Louis — powered by VOREM Institute of Technology, founded by AI educator Rume Dominic, whose programmes have 2,900+ registered learners and have reached over 12,000 young Africans."
+                a: "An initiative of Iconic (Africa's premier recognition platform, led by Amb. Dr. Temisan O. Louis), powered by VOREM Institute of Technology, founded by AI educator Rume Dominic, whose programmes have 2,900+ registered learners and have reached over 12,000 young Africans."
               },
               {
                 q: "Do I get a certificate?",

@@ -48,7 +48,7 @@ export function ContactForm() {
       if (res.ok) {
         setStatus('success');
         setMessage(
-          'Got it — your request is in. I’ll email you within 1 to 2 business days to set up your call.',
+          'Got it. Your request is in. I’ll email you within 1 to 2 business days to set up your call.',
         );
         track('contact_success');
         form.reset();

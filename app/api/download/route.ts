@@ -55,13 +55,21 @@ export async function GET(req: Request) {
   });
   await log.flush();
 
-  // HTTP header values are Latin-1. The pretty filename contains an em-dash, so
-  // send an ASCII fallback plus the RFC 5987 encoded form for clients that read
-  // it. Sending only the pretty one throws before a byte reaches the browser.
+  // HTTP header values are Latin-1, so a filename with any character outside
+  // that range throws before a byte reaches the browser. Send an ASCII fallback
+  // plus the RFC 5987 encoded form for clients that read it.
+  //
+  // encodeURIComponent leaves ' ( ) and * alone, and in filename*=UTF-8''value
+  // the apostrophe is the delimiter: a name like "O'Rume Dominic Uririe" would
+  // produce a header the client cannot parse. RFC 5987 requires those escaped,
+  // so escape them.
   const asciiName = meta.filename.replace(/[^\x20-\x7E]/g, '-').replace(/"/g, '');
+  const encodedName = encodeURIComponent(meta.filename).replace(
+    /['()*]/g,
+    (c) => '%' + c.charCodeAt(0).toString(16).toUpperCase(),
+  );
   const disposition =
-    `attachment; filename="${asciiName}"; ` +
-    `filename*=UTF-8''${encodeURIComponent(meta.filename)}`;
+    `attachment; filename="${asciiName}"; ` + `filename*=UTF-8''${encodedName}`;
 
   return new NextResponse(new Uint8Array(file), {
     headers: {

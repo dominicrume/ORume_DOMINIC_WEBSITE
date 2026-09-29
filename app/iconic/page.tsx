@@ -8,7 +8,7 @@ import { IconicLeadForm } from '@/components/iconic/IconicLeadForm';
 import { IconicFooter } from '@/components/iconic/IconicFooter';
 
 export const metadata: Metadata = {
-  title: "Learn AI in 9 Days — Free | Iconic × VOREM",
+  title: "Learn AI in 9 Days, Free | Iconic × VOREM",
   description: "They said AI is not for us. Na lie. Try live AI now + get a free 9-day course. AI na our own.",
   keywords: [
     "free AI course", "learn AI", "artificial intelligence for beginners", 
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Iconic',
-    title: "Learn AI in 9 Days — Free, for Africa's next generation",
-    description: "Free AI book + 9-day course for beginners. Try live AI right now — no coding, no payment. 2,900+ registered learners and 12,000+ reached. AI na our own.",
+    title: "Learn AI in 9 Days. Free, for Africa's next generation",
+    description: "Free AI book + 9-day course for beginners. Try live AI right now: no coding, no payment. 2,900+ registered learners and 12,000+ reached. AI na our own.",
     url: 'https://rumedominic.com/iconic',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Learn AI in 9 Days — Free | Iconic × VOREM",
+    title: "Learn AI in 9 Days, Free | Iconic × VOREM",
     description: "They said AI is not for us. Na lie. Try live AI now + get a free 9-day course. AI na our own. 🌍",
   }
 };
@@ -54,7 +54,7 @@ export default function IconicPage() {
               “We are not just giving awards; we are building an <span className="text-[#C9A24B]">ecosystem of accountability and excellence.</span>”
             </p>
             <div className="mt-5 text-[11px] tracking-[2.5px] uppercase text-[#A79F8E]">
-              — Amb. Dr. Temisan O. Louis · <b className="text-[#C9A24B] font-semibold">President &amp; Founder, Iconic International Holdings</b>
+              Amb. Dr. Temisan O. Louis · <b className="text-[#C9A24B] font-semibold">President &amp; Founder, Iconic International Holdings</b>
             </div>
           </div>
         </div>

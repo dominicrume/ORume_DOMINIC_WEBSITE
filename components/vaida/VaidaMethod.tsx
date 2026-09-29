@@ -36,7 +36,7 @@ export function VaidaMethod() {
           If no one has told you today
         </p>
         <h2 className="font-serif font-semibold text-[clamp(2rem,5vw,3.4rem)] max-w-[20ch] mx-auto italic text-[#7E3B54] leading-[1.08]">
-          You have carried more than anyone knows — and you are still standing.
+          You have carried more than anyone knows, and you are still standing.
         </h2>
       </section>
 
@@ -47,7 +47,7 @@ export function VaidaMethod() {
             The Always ENOUGH™ Method
           </h2>
           <p className="text-[#8A7680] max-w-[52ch] mx-auto mt-[14px] text-[1.05rem]">
-            Everyone in finance starts with money and wonders why nothing changes. We start with you — and let the money follow the woman.
+            Everyone in finance starts with money and wonders why nothing changes. We start with you, and let the money follow the woman.
           </p>
         </div>
         
@@ -59,7 +59,7 @@ export function VaidaMethod() {
               🕊️
             </div>
             <h3 className="font-serif font-semibold text-[1.9rem] text-[#7E3B54] mb-[12px]">Mind</h3>
-            <p className="text-[#8A7680] text-[1rem]">Clarity and confidence that come from within — not from anyone&apos;s permission.</p>
+            <p className="text-[#8A7680] text-[1rem]">Clarity and confidence that come from within, not from anyone&apos;s permission.</p>
           </div>
           
           {/* Card 2 */}
@@ -85,7 +85,7 @@ export function VaidaMethod() {
               🌿
             </div>
             <h3 className="font-serif font-semibold text-[1.9rem] text-[#7E3B54] mb-[12px]">Money</h3>
-            <p className="text-[#8A7680] text-[1rem]">Financial courage that creates real, lasting freedom — on your own terms.</p>
+            <p className="text-[#8A7680] text-[1rem]">Financial courage that creates real, lasting freedom, on your own terms.</p>
           </div>
         </div>
       </section>

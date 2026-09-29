@@ -1,7 +1,7 @@
 /**
  * Transactional email via Brevo (server-side only). Every email is wrapped in a
  * single branded shell (logo header + corporate footer) so the whole system
- * looks like one enterprise brand. Never throws — returns a typed result.
+ * looks like one enterprise brand. Never throws; returns a typed result.
  *
  * Sender MUST be a verified Brevo sender or the send fails. Default is
  * dominicrume@gmail.com; set BREVO_SENDER_EMAIL to swap to hello@rumedominic.com
@@ -224,6 +224,6 @@ export async function sendGatedDownloadEmail(
     sender: fromSender(),
     to: [{ email: to }],
     subject: `Your copy of ${docLabel}`,
-    htmlContent: emailShell(inner, `${docLabel} — your download link inside.`),
+    htmlContent: emailShell(inner, `${docLabel}: your download link inside.`),
   });
 }

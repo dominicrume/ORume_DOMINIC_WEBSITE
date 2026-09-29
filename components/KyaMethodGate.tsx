@@ -7,12 +7,12 @@ type Doc = 'kya-method' | 'kya-architecture';
 const DOCS: { id: Doc; label: string; blurb: string }[] = [
   {
     id: 'kya-method',
-    label: 'The KYA Method — Detailed Edition',
+    label: 'The KYA Method: Detailed Edition',
     blurb: 'The original publication: the method, end to end.',
   },
   {
     id: 'kya-architecture',
-    label: 'The KYA Method — Engineering Architecture',
+    label: 'The KYA Method: Engineering Architecture',
     blurb: 'How it is built: the architecture behind the method.',
   },
 ];
@@ -122,7 +122,7 @@ export function KyaMethodGate() {
                 Your copy of {doc?.label}.{' '}
                 {emailed
                   ? 'A copy of this link is in your inbox too, so you will not lose it.'
-                  : 'Save this link now — it is personal to you and expires in 48 hours.'}
+                  : 'Save this link now. It is personal to you and expires in 48 hours.'}
               </p>
               <a
                 href={href}

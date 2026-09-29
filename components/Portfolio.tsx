@@ -8,7 +8,7 @@ export function Portfolio() {
       id="portfolio"
       eyebrow="Built in public"
       title="Engineering portfolio"
-      intro="Real, open-source systems you can inspect line by line. Not slides, not theory — production code on GitHub."
+      intro="Real, open-source systems you can inspect line by line. Not slides, not theory: production code on GitHub."
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (

@@ -44,7 +44,7 @@ export function IconicLeadForm() {
           {status !== 'success' && (
             <div className="animate-in fade-in duration-300">
               <div className="font-serif font-bold text-[23px] text-center mb-1.5 text-[#F5F1E8]">
-                Claim your place — free
+                Claim your place, free
               </div>
               <div className="text-center text-[#A79F8E] text-[13.5px] mb-[22px]">
                 Instant access. No payment, ever. Begin today.

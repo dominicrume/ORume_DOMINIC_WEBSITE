@@ -1,4 +1,4 @@
-/** About / origin story — the "why" behind the work. Verifiable throughout. */
+/** About / origin story: the "why" behind the work. Verifiable throughout. */
 
 export const about = {
   heading: 'It started with one question',

@@ -39,7 +39,7 @@ export type FrameworkInput = z.infer<typeof frameworkSchema>;
 
 // KYA Method Stack waitlist and the gated KYA Method downloads (/kya, homepage).
 // Phone is required because these leads are followed up by call, not only email.
-// To soften the gate later, change `phone` to `.optional().default('')` — that is
+// To soften the gate later, change `phone` to `.optional().default('')`, which is
 // the whole change; the API, storage and webhook already treat it as optional.
 export const waitlistSchema = z.object({
   first_name: z.string().trim().min(1, 'Please enter your first name').max(120),

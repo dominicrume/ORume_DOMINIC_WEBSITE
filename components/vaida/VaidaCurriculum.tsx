@@ -60,7 +60,7 @@ export function VaidaCurriculum() {
             15 minutes a day. That&apos;s all it takes.
           </p>
           <p className="text-[#A64E6E] font-medium text-[1.1rem] max-w-[60ch] mx-auto italic">
-            So yes — videos, editing, trading tools, YouTube automation... Everything is included.
+            So yes: videos, editing, trading tools, YouTube automation... Everything is included.
           </p>
         </div>
         

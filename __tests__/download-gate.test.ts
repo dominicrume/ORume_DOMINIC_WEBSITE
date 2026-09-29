@@ -208,3 +208,38 @@ describe('delivery and failure paths', () => {
     expect(body.download).toBeUndefined();
   });
 });
+
+// ---------------------------------------------------------------- filenames
+
+describe('download filenames survive an HTTP header', () => {
+  const rfc5987 = (name: string) =>
+    encodeURIComponent(name).replace(
+      /['()*]/g,
+      (c) => '%' + c.charCodeAt(0).toString(16).toUpperCase(),
+    );
+
+  it('escapes the apostrophe, which is the RFC 5987 delimiter', () => {
+    // filename*=UTF-8''<value> uses ' as its delimiter, and
+    // encodeURIComponent does not touch it. An unescaped apostrophe in
+    // "O'Rume Dominic Uririe" makes the header ambiguous to the client.
+    const encoded = rfc5987("Measuring the Unmeasured, O’Rume Dominic Uririe (Aston, 2026).pdf");
+    expect(encoded).not.toContain("'");
+    expect(encoded).toContain('%28');   // (
+    expect(encoded).toContain('%29');   // )
+  });
+
+  it('every gated filename is Latin-1 safe once stripped to ASCII', () => {
+    for (const doc of Object.values(GATED_DOCS)) {
+      const ascii = doc.filename.replace(/[^\x20-\x7E]/g, '-').replace(/"/g, '');
+      expect(() => new Headers({ 'content-disposition': `attachment; filename="${ascii}"` }))
+        .not.toThrow();
+      expect(ascii).not.toContain('--');   // no character was silently mangled
+    }
+  });
+
+  it('carries no em-dash, which is a hard rule and also broke the header once', () => {
+    for (const doc of Object.values(GATED_DOCS)) {
+      expect(doc.filename).not.toContain('—');
+    }
+  });
+});

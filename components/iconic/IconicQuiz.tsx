@@ -38,17 +38,17 @@ export function IconicQuiz() {
     hustler: {
       emoji: "💰",
       title: "The AI Hustler",
-      desc: "You'll turn AI into real income — fast. Day 9 helps you launch your own small AI business."
+      desc: "You'll turn AI into real income, fast. Day 9 helps you launch your own small AI business."
     },
     builder: {
       emoji: "🛠️",
       title: "The AI Builder",
-      desc: "You'll build with AI — a chatbot on Day 4, your first website on Day 7."
+      desc: "You'll build with AI: a chatbot on Day 4, your first website on Day 7."
     },
     analyst: {
       emoji: "📊",
       title: "The AI Analyst",
-      desc: "You'll automate the busywork and see what others miss — Day 5's AI agents are your edge."
+      desc: "You'll automate the busywork and see what others miss. Day 5's AI agents are your edge."
     }
   };
 
@@ -61,7 +61,7 @@ export function IconicQuiz() {
             What's your AI superpower?
           </h2>
           <p className="text-[#EDE7D8] opacity-82 text-[16px]">
-            Answer three quick questions and discover the AI path that fits you — then start it free.
+            Answer three quick questions and discover the AI path that fits you, then start it free.
           </p>
         </div>
 

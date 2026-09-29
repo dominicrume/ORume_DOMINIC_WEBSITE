@@ -22,7 +22,7 @@ export function VaidaSpeaker() {
               An esteemed Educator, Author of <em className="text-[#A64E6E] font-serif">&ldquo;You Are Already Enough&rdquo;</em>, Former Financial Protection Adviser, and International Keynote Speaker dedicated to women 40+.
             </p>
             <p className="text-[#8A7680] text-[1rem] leading-relaxed mb-[24px]">
-              For over two and a half decades, Vaida has guided women through the practical and emotional intersections of money, identity, and life transitions. She knows firsthand that money carries a quiet emotional weight — and that true financial security begins when structure meets empathy.
+              For over two and a half decades, Vaida has guided women through the practical and emotional intersections of money, identity, and life transitions. She knows firsthand that money carries a quiet emotional weight, and that true financial security begins when structure meets empathy.
             </p>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-[16px] py-[20px] border-y border-[#F6DCE5] mb-[28px]">
@@ -96,14 +96,14 @@ export function VaidaSpeaker() {
                   The Psychology of Wealth: When Practical Structure Meets Emotional Peace
                 </h4>
                 <p className="text-[0.88rem] text-[#8A7680]">
-                  Why spreadsheets alone never work — and how uniting financial protection principles with emotional self-awareness creates true, generational financial courage.
+                  Why spreadsheets alone never work, and how uniting financial protection principles with emotional self-awareness creates true, generational financial courage.
                 </p>
               </div>
             </div>
 
             <div className="mt-[28px] pt-[20px] border-t border-[#F6DCE5] flex items-center justify-between flex-wrap gap-4">
               <span className="text-[0.88rem] font-medium text-[#7E3B54] italic">
-                &ldquo;We start with you — and let the money follow the woman.&rdquo;
+                &ldquo;We start with you, and let the money follow the woman.&rdquo;
               </span>
               <Link
                 href="https://calendly.com/vaidastone"

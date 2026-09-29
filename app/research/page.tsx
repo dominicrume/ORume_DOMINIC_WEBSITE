@@ -8,7 +8,7 @@ import { DissertationGate } from '@/components/DissertationGate';
 import { site } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'Measuring the Unmeasured — MSc dissertation on auditing agentic AI coding tools',
+  title: 'Measuring the Unmeasured: MSc dissertation on auditing agentic AI coding tools',
   description:
     'A pre-registered, blinded instrument for auditing the code quality and governance behaviour of agentic AI coding workflows. Aston University, 2026. Read the abstract and download the full dissertation.',
   alternates: { canonical: `${site.url}/research` },
@@ -86,14 +86,14 @@ export default function ResearchPage() {
               developer infrastructure in under three years. Enterprise adoption is
               outpacing the evidence needed to govern it: procurement decisions rest on
               vendor benchmarks that measure whether generated code passes tests, while
-              staying silent on the properties that determine what it costs to own —
+              staying silent on the properties that determine what it costs to own:
               security exposure, structural complexity, redundancy, and above all
               fidelity to the specification that was actually requested.
             </p>
             <p>
               This dissertation designs, builds and applies an instrument that quantifies
-              five metrics across five workflow conditions — a hand-coded human baseline
-              and four commercial agentic tools — against three fixed specifications
+              five metrics across five workflow conditions (a hand-coded human baseline
+              and four commercial agentic tools) against three fixed specifications
               spanning distinct task domains. The design is pre-registered, and the
               analysis is blinded by construction: one capture contract forces every
               condition, human keystrokes and agent tool-calls alike, into a single

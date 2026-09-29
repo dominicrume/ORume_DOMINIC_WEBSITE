@@ -107,10 +107,10 @@ vibe_check("${escapedText}")
         <div className="text-center max-w-[720px] mx-auto">
           <div className="text-[11px] tracking-[3px] uppercase text-[#C9A24B] font-semibold">Try it now · no signup</div>
           <h2 className="font-serif font-extrabold text-[27px] md:text-[42px] leading-[1.12] tracking-[-0.3px] my-3">
-            Your first AI move — live, right here.
+            Your first AI move: live, right here.
           </h2>
           <p className="text-[#EDE7D8] opacity-82 text-[16px]">
-            Don't take our word for it. Type any message and let a real AI read its vibe — then peek at the actual Python behind it, and run that Python live in your browser. This is Day 0.
+            Don't take our word for it. Type any message and let a real AI read its vibe, then peek at the actual Python behind it, and run that Python live in your browser. This is Day 0.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ vibe_check("${escapedText}")
           </div>
 
           <div className="p-[22px]">
-            <div className="text-[12px] text-[#A79F8E] mb-2">Type a message — a tweet, a caption, anything:</div>
+            <div className="text-[12px] text-[#A79F8E] mb-2">Type a message (a tweet, a caption, anything):</div>
             <textarea 
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
@@ -190,7 +190,7 @@ vibe_check("${escapedText}")
                   {isDetailsOpen && (
                     <div className="mt-3 animate-in fade-in duration-200">
                       <pre className="bg-[#07070b] border border-[#2C2A33] rounded-[9px] p-4 overflow-auto font-mono text-[12.5px] leading-[1.7] text-[#cdd6e6]">
-<span className="text-[#6b7280]"># A tiny AI that reads emotion — real Python</span>
+<span className="text-[#6b7280]"># A tiny AI that reads emotion, real Python</span>
 <br/><span className="text-[#e7c877]">def</span> <span className="text-[#39C6D6]">vibe_check</span>(text):
 <br/>    positive = {"{"}<span className="text-[#7ec699]">"love","great","win","excited","change",
 <br/>                "free","future","hope","best","grow","happy"</span>{"}"}
@@ -216,7 +216,7 @@ vibe_check("${escapedText}")
                           <span className="text-[11.5px] text-[#3FBF7F] font-semibold">✓ Executed with real Python in your browser</span>
                         )}
                         {result.type === 'js' && !isPyLoading && result.label !== '' && (
-                          <span className="text-[11.5px] text-[#A79F8E]">(Ran locally — Python engine skipped/unavailable)</span>
+                          <span className="text-[11.5px] text-[#A79F8E]">(Ran locally: Python engine skipped/unavailable)</span>
                         )}
                       </div>
                     </div>
@@ -233,7 +233,7 @@ vibe_check("${escapedText}")
             href="#claim" 
             className="inline-block bg-gradient-to-r from-[#C9A24B] to-[#E7C877] text-[#1a1406] font-extrabold text-[15px] rounded-md px-[28px] py-[15px] tracking-[0.4px] uppercase transition-all duration-150 hover:-translate-y-[1px] shadow-[0_16px_34px_-14px_rgba(201,162,75,0.6)]"
           >
-            That was Day 0 — get all 9 free
+            That was Day 0. Get all 9 free
           </Link>
         </div>
       </div>

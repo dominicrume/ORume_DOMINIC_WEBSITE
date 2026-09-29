@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-ink/70 backdrop-blur-lg">
       <Container className="flex h-16 items-center justify-between">
-        <a href="#top" className="focus-ring flex items-center" aria-label="Rume Dominic — home">
+        <a href="#top" className="focus-ring flex items-center" aria-label="Rume Dominic, home">
           <Image
             src="/rume-logo.png"
             alt="Rume Dominic"

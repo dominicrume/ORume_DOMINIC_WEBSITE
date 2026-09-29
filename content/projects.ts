@@ -1,6 +1,6 @@
 /**
- * Engineering portfolio. Every project is a real, public GitHub repository —
- * assessors and clients can inspect the code. Descriptions are drawn from each
+ * Engineering portfolio. Every project is a real, public GitHub repository.
+ * Assessors and clients can inspect the code. Descriptions are drawn from each
  * repo's own README. github.com/dominicrume (25+ public repos).
  */
 

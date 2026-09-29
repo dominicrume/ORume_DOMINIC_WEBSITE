@@ -1,6 +1,6 @@
 /**
  * Configuration and constants for the MENA OBRIKE × RUME DOMINIC URIRIE landing page.
- * Prompts mandate: Where a value is missing, render a visible [MISSING: field_name] placeholder — never a plausible-looking guess.
+ * Prompts mandate: Where a value is missing, render a visible [MISSING: field_name] placeholder, never a plausible-looking guess.
  */
 
 export const MENA_CONFIG = {

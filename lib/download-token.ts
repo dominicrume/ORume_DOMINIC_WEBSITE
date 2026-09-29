@@ -8,7 +8,7 @@
  *
  * Threat model, stated honestly: this stops casual link-sharing and makes the
  * gate mean something. It is not DRM. Someone who fills the form can still
- * forward the PDF, and that is fine — we got the lead.
+ * forward the PDF, and that is fine: we got the lead.
  */
 import { createHmac, timingSafeEqual } from 'node:crypto';
 
@@ -16,17 +16,17 @@ import { createHmac, timingSafeEqual } from 'node:crypto';
 export const GATED_DOCS = {
   'kya-method': {
     file: 'The_KYA_Method_Detailed_Edition.pdf',
-    filename: 'The KYA Method — Detailed Edition.pdf',
+    filename: 'The KYA Method, Detailed Edition.pdf',
     label: 'The KYA Method, Detailed Edition',
   },
   'kya-architecture': {
     file: 'THE_KYA_METHOD_ARCHITECTURE.pdf',
-    filename: 'The KYA Method — Engineering Architecture.pdf',
+    filename: 'The KYA Method, Engineering Architecture.pdf',
     label: 'The KYA Method, Engineering Architecture',
   },
   dissertation: {
     file: 'Dissertation_FINAL_Uririe_Orume_Dominic.pdf',
-    filename: 'Measuring the Unmeasured — Uririe, Orume Dominic (Aston, 2026).pdf',
+    filename: 'Measuring the Unmeasured, O\u2019Rume Dominic Uririe (Aston, 2026).pdf',
     label: 'Measuring the Unmeasured (MSc dissertation)',
   },
 } as const;
@@ -65,7 +65,7 @@ export type TokenResult =
   | { ok: true; doc: GatedDocId; email: string }
   | { ok: false; reason: 'malformed' | 'bad_signature' | 'expired' | 'unknown_doc' };
 
-/** Verify a token. Never throws on bad input — callers get a typed reason. */
+/** Verify a token. Never throws on bad input; callers get a typed reason. */
 export function verifyToken(token: string | null, now = Date.now()): TokenResult {
   if (!token || !token.includes('.')) return { ok: false, reason: 'malformed' };
   const [payload, sig] = token.split('.', 2);

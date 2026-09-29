@@ -14,7 +14,7 @@ export function IconicOffer() {
                 The future of work speaks one new language. We'll teach you to speak it.
               </h2>
               <p className="text-[#EDE7D8] opacity-82 text-[16px] mt-[14px]">
-                Three in four young Africans have never had access to real AI skills — while nearly a quarter-billion jobs across the continent will demand them by 2030. This is the gap between being left behind and leading. You're on the right side of it now.
+                Three in four young Africans have never had access to real AI skills, while nearly a quarter-billion jobs across the continent will demand them by 2030. This is the gap between being left behind and leading. You're on the right side of it now.
               </p>
               <ul className="grid gap-[14px] mt-[22px]">
                 <li className="flex gap-[12px] text-[15.5px] text-[#EDE7D8]">
@@ -27,7 +27,7 @@ export function IconicOffer() {
                 </li>
                 <li className="flex gap-[12px] text-[15.5px] text-[#EDE7D8]">
                   <span className="text-[#C9A24B] flex-none font-black">✦</span>
-                  Anyone with a smartphone and zero coding background — total beginners are the point.
+                  Anyone with a smartphone and zero coding background. Total beginners are the point.
                 </li>
                 <li className="flex gap-[12px] text-[15.5px] text-[#EDE7D8]">
                   <span className="text-[#C9A24B] flex-none font-black">✦</span>
@@ -41,7 +41,7 @@ export function IconicOffer() {
                 “I'm not a tech person. Where do I even <span className="text-[#C9A24B]">start</span> with AI?”
               </div>
               <p className="text-[#A79F8E] text-[14px] mt-[14px]">
-                Right here. No jargon, no laptop required, no fee. Just nine short days that turn that question into confidence — and a skill the whole world now pays for.
+                Right here. No jargon, no laptop required, no fee. Just nine short days that turn that question into confidence, and a skill the whole world now pays for.
               </p>
             </div>
           </div>
@@ -52,12 +52,12 @@ export function IconicOffer() {
       <section className="relative z-10 pt-0 pb-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-[720px] mx-auto">
-            <div className="text-[11px] tracking-[3px] uppercase text-[#C9A24B] font-semibold">What you get — free</div>
+            <div className="text-[11px] tracking-[3px] uppercase text-[#C9A24B] font-semibold">What you get: free</div>
             <h2 className="font-serif font-extrabold text-[27px] md:text-[42px] leading-[1.12] tracking-[-0.3px] my-[14px]">
               Recognition, meet capability.
             </h2>
             <p className="text-[#EDE7D8] opacity-82 text-[16px]">
-              Iconic has always celebrated African excellence. Now it helps create it — three gifts, all free, to make you AI-capable and seen for it.
+              Iconic has always celebrated African excellence. Now it helps create it: three gifts, all free, to make you AI-capable and seen for it.
             </p>
           </div>
           
@@ -66,7 +66,7 @@ export function IconicOffer() {
               <div className="font-serif text-[14px] text-[#C9A24B] tracking-[2px]">I.</div>
               <h3 className="font-serif font-bold text-[19px] my-3">The Book</h3>
               <p className="text-[#A79F8E] text-[14.5px]">
-                “From Code to Consciousness” — a clear, practical guide to bridging AI and human potential. Yours to keep, free.
+                “From Code to Consciousness”, a clear, practical guide to bridging AI and human potential. Yours to keep, free.
               </p>
               <span className="inline-block mt-4 text-[10px] tracking-[2px] font-bold text-[#3FBF7F] border border-[rgba(63,191,127,0.4)] px-[11px] py-[4px] rounded-sm uppercase">Free</span>
             </div>
@@ -75,7 +75,7 @@ export function IconicOffer() {
               <div className="font-serif text-[14px] text-[#C9A24B] tracking-[2px]">II.</div>
               <h3 className="font-serif font-bold text-[19px] my-3">The 9-Day Course</h3>
               <p className="text-[#A79F8E] text-[14.5px]">
-                “Master AI in Nine Days.” From prompt engineering to chatbots, AI agents, websites and your own AI business — one lesson a day, on your phone.
+                “Master AI in Nine Days.” From prompt engineering to chatbots, AI agents, websites and your own AI business: one lesson a day, on your phone.
               </p>
               <span className="inline-block mt-4 text-[10px] tracking-[2px] font-bold text-[#3FBF7F] border border-[rgba(63,191,127,0.4)] px-[11px] py-[4px] rounded-sm uppercase">Free</span>
             </div>
@@ -84,7 +84,7 @@ export function IconicOffer() {
               <div className="font-serif text-[14px] text-[#C9A24B] tracking-[2px]">III.</div>
               <h3 className="font-serif font-bold text-[19px] my-3">The Recognition</h3>
               <p className="text-[#A79F8E] text-[14.5px]">
-                Finish, earn your certificate, and standout graduates are celebrated on the Iconic platform — visibility you can't buy.
+                Finish, earn your certificate, and standout graduates are celebrated on the Iconic platform, visibility you can't buy.
               </p>
               <span className="inline-block mt-4 text-[10px] tracking-[2px] font-bold text-[#3FBF7F] border border-[rgba(63,191,127,0.4)] px-[11px] py-[4px] rounded-sm uppercase">Free</span>
             </div>
