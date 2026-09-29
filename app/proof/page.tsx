@@ -171,7 +171,7 @@ export default function ProofPage() {
               <p className="text-muted">
                 Two people labelled the same sample independently, without seeing the
                 instrument&apos;s answers. Agreement between them was κ = 0.870; between
-                each of them and the instrument, κ = 0.853 and κ = 0.727. All three clear
+                each of them and the instrument, κ = 0.852 and κ = 0.727. All three clear
                 the threshold conventionally read as substantial agreement, which is what
                 moves a measure from exploratory to usable.
               </p>
