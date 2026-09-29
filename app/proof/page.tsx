@@ -39,9 +39,15 @@ const receipts: { claim: string; where: string; href: string }[] = [
     href: 'https://pepy.tech/projects/ai-code-quality-auditor',
   },
   {
-    claim: 'KYA Rails is in the official Canton Developer Hub catalogue',
-    where: 'merged pull request #156, canton-network-devs',
+    claim:
+      'Know Your AgenticAI is in the official Canton Developer Hub catalogue (listed as “KYA Rails” when first merged)',
+    where: 'merged pull requests #156, #160 and #168, canton-network-devs',
     href: 'https://github.com/canton-network-devs/Canton-Developer-Hub/pull/156',
+  },
+  {
+    claim: 'The live catalogue entry is readable without running the page',
+    where: 'tools.json, the file the hub fetches at runtime',
+    href: 'https://raw.githubusercontent.com/canton-network-devs/Canton-Developer-Hub/refs/heads/main/Github%20Page/tools.json',
   },
   {
     claim: 'The mandate-and-receipts engine is published',
@@ -66,7 +72,7 @@ const notClaimed: { heading: string; body: string }[] = [
   },
   {
     heading: 'Not adopted by Canton',
-    body: 'KYA Rails is catalogued as a partner tool in the Canton Network developer hub repository. That is a listing, not an endorsement, a contract, or a statement about the Foundation.',
+    body: 'Know Your AgenticAI is catalogued as a partner tool in the Canton Network developer hub repository, across three pull requests merged by the Foundation’s developer-relations team. That is a listing, not an endorsement, a contract, or a statement about the Foundation. A fourth pull request, correcting the name on the entry, was closed without merging.',
   },
   {
     heading: 'Not a whole-project security score',
