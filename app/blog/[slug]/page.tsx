@@ -171,13 +171,35 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                 <Blocks body={post.body} />
               </div>
 
-              <p className="mt-12 border-t border-white/10 pt-6 text-sm text-muted">
+              <aside className="mt-14 rounded-xl border border-gold/30 bg-gold/[0.04] p-6">
+                <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+                  If this is your problem
+                </p>
+                <p className="mt-3 text-paper">
+                  The instrument in this piece is free and open source. When the finding has
+                  to be signed, dated and defensible to a regulator, that is the assurance
+                  engagement: one agent or workflow assessed against the standard, with a
+                  verdict and a plan to close every gap.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link
+                    href="/#work"
+                    className="focus-ring inline-flex items-center justify-center rounded-xl bg-gold-metallic px-5 py-2.5 text-sm font-bold text-ink shadow-gold transition-transform hover:-translate-y-0.5"
+                  >
+                    See the engagement
+                  </Link>
+                  <Link
+                    href="/proof"
+                    className="focus-ring inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-2.5 text-sm font-semibold text-paper transition-all hover:border-white/30"
+                  >
+                    Check every claim first
+                  </Link>
+                </div>
+              </aside>
+              <p className="mt-8 border-t border-white/10 pt-6 text-sm text-muted">
                 {site.legalName} builds verification infrastructure for AI and blockchain
                 systems. The measurement instrument is open source and the receipts library
-                has no dependencies.{' '}
-                <Link href="/proof" className="text-gold hover:underline">
-                  Every claim here is checkable.
-                </Link>
+                has no dependencies.
               </p>
             </article>
           </Container>

@@ -51,6 +51,7 @@ export const site = {
     { label: 'Research', href: '/research' },
     { label: 'Proof', href: '/proof' },
     { label: 'Writing', href: '/blog' },
+    { label: 'Work with me', href: '/#work' },
     { label: 'About', href: '#about' },
   ],
 

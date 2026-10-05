@@ -4,6 +4,7 @@ import { CredibilityBar } from '@/components/CredibilityBar';
 
 import { RumeMethod } from '@/components/RumeMethod';
 import { Portfolio } from '@/components/Portfolio';
+import { Offer } from '@/components/Offer';
 import { Books } from '@/components/Books';
 import { Proof } from '@/components/Proof';
 import { Media } from '@/components/Media';
@@ -36,6 +37,11 @@ export default function HomePage() {
         </Reveal>
         <Reveal>
           <Proof />
+        </Reveal>
+        {/* The paid offer. It sits directly after Proof on purpose: the
+            evidence is the argument for the price. */}
+        <Reveal>
+          <Offer />
         </Reveal>
         <Reveal>
           <Media />
