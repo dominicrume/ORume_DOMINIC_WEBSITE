@@ -183,7 +183,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <Link
-                    href="/#work"
+                    href="/assurance"
                     className="focus-ring inline-flex items-center justify-center rounded-xl bg-gold-metallic px-5 py-2.5 text-sm font-bold text-ink shadow-gold transition-transform hover:-translate-y-0.5"
                   >
                     See the engagement

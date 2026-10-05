@@ -65,6 +65,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${site.url}/assurance`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
+    {
       url: `${site.url}/blog`,
       lastModified: now,
       changeFrequency: 'weekly',
