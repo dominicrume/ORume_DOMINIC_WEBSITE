@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>A Count Is Not An Economy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  @page { size: 13.333in 7.5in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #0d1018; }
+
+  :root {
+    --ink:   #0d1018;
+    --panel: #1b2232;
+    --line:  #28324a;
+    --pale:  #f2f3f7;
+    --mute:  #93a0bb;
+    --gold:  #e8b33c;
+    --red:   #e0604f;
+    --d: 'Anton', 'Arial Narrow', sans-serif;
+    --b: 'IBM Plex Sans', Arial, sans-serif;
+    --m: 'IBM Plex Mono', Menlo, monospace;
+  }
+
+  .slide {
+    width: 13.333in; height: 7.5in;
+    page-break-after: always; break-after: page;
+    position: relative; overflow: hidden;
+    padding: 0.72in 0.82in;
+    display: flex; flex-direction: column;
+    font-family: var(--b); color: var(--pale);
+    background: var(--ink);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .slide.light { background: var(--pale); color: #16181d; }
+
+  .eyebrow { font-size: 13pt; font-weight: 700; letter-spacing: .16em;
+             text-transform: uppercase; color: var(--gold); margin-bottom: .34in; }
+  .slide.light .eyebrow { color: #9a6b00; }
+
+  h1 { font-family: var(--d); font-weight: 400; text-transform: uppercase;
+       font-size: 68pt; line-height: .94; letter-spacing: .005em; }
+  h2 { font-family: var(--d); font-weight: 400; text-transform: uppercase;
+       font-size: 40pt; line-height: 1; letter-spacing: .008em; margin-bottom: .3in; }
+  .slide.light h1, .slide.light h2 { color: #16181d; }
+
+  .standfirst { font-size: 19pt; line-height: 1.42; color: var(--mute);
+                max-width: 9.4in; margin-top: .34in; }
+  .slide.light .standfirst { color: #5f6673; }
+
+  .foot { position: absolute; left: .82in; right: .82in; bottom: .44in;
+          display: flex; justify-content: space-between; align-items: baseline;
+          font-family: var(--m); font-size: 10pt; color: #4a5468; }
+  .slide.light .foot { color: #9aa2b8; }
+
+  ul { list-style: none; }
+  li { font-size: 17pt; line-height: 1.45; margin-bottom: .17in;
+       padding-left: .34in; position: relative; max-width: 10.8in; }
+  li::before { content: ''; position: absolute; left: 0; top: .105in;
+               width: .11in; height: .11in; border-radius: 50%; background: var(--gold); }
+  .slide.light li { color: #3b4258; }
+  .slide.light li::before { background: #9a6b00; }
+  li.flag { color: var(--gold); font-weight: 600; }
+  li.flag::before { background: var(--red); }
+
+  .tiles { display: flex; gap: .4in; margin-top: .1in; }
+  .tile { flex: 1; min-width: 0; }
+  .tile .n { font-family: var(--d); font-weight: 400; font-size: 46pt;
+             line-height: 1; letter-spacing: .005em; }
+  .tile .n.sm { font-size: 34pt; }
+  .tile .l { font-size: 12.5pt; color: var(--mute); margin-top: .12in; line-height: 1.3; }
+  .slide.light .tile .l { color: #6b7390; }
+  .n.good { color: var(--gold); } .n.bad { color: var(--red); }
+  .slide.light .n.good { color: #16181d; } .slide.light .n.bad { color: #b23a2a; }
+
+  .kicker { font-size: 25pt; font-weight: 700; line-height: 1.26;
+            color: var(--gold); max-width: 11in; margin-top: auto; }
+  .slide.light .kicker { color: #16181d; }
+  .kicker.warn { color: var(--red); }
+  .slide.light .kicker.warn { color: #b23a2a; }
+
+  .cols { display: flex; gap: .46in; margin-top: .1in; }
+  .col { flex: 1; min-width: 0; border: 1.5px solid var(--line);
+         border-radius: .12in; background: var(--panel); padding: .3in .32in; }
+  .col h3 { font-size: 12pt; font-weight: 700; letter-spacing: .12em;
+            text-transform: uppercase; margin-bottom: .22in; }
+  .col.mine h3 { color: var(--gold); } .col.theirs h3 { color: var(--red); }
+  .col li { font-size: 15.5pt; margin-bottom: .14in; }
+
+  .frozen { border: 2px solid var(--red); border-radius: .14in;
+            background: var(--panel); padding: .34in .38in; margin-top: .06in; }
+  .frozen .lab { font-size: 12pt; font-weight: 700; letter-spacing: .12em;
+                 text-transform: uppercase; color: var(--red); margin-bottom: .26in; }
+  .note { font-size: 15pt; line-height: 1.45; color: var(--mute); margin-top: .3in; max-width: 11in; }
+  .slide.light .note { color: #48506a; }
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide">
+  <div class="eyebrow">Live &middot; Monday 5 October 2026 &middot; 12 minutes</div>
+  <h1>A count is not<br>an economy</h1>
+  <p class="standfirst">Two weeks, side by side. One is mine, from a hall in Abuja.
+    One is the biggest number in AI right now. They are the same mistake at two different sizes.</p>
+  <div class="foot"><span>O&rsquo;Rume Dominic Uririe</span><span>rumedominic.com</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>Same week. Two scoreboards</h2>
+  <div class="cols">
+    <div class="col mine">
+      <h3>Mine, in Abuja</h3>
+      <ul>
+        <li>106 works sealed, every seal intact</li>
+        <li>132 reactions, 63 shares</li>
+        <li>One Polygon transaction, whole day</li>
+        <li class="flag">Zero sold</li>
+      </ul>
+    </div>
+    <div class="col theirs">
+      <h3>The industry</h3>
+      <ul>
+        <li>BlackRock, Ethereum Foundation, Ripple,</li>
+        <li>Block and Mastercard all shipped rails</li>
+        <li>$766m stolen, worst month of 2026</li>
+        <li class="flag">The counter has not moved since March</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>The two weeks</span><span>2</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide light">
+  <h2>What held</h2>
+  <p class="standfirst" style="margin-top:0;margin-bottom:.4in">Counted off the public board,
+    which anybody can open and count for themselves.</p>
+  <div class="tiles">
+    <div class="tile"><div class="n good">106</div><div class="l">works sealed</div></div>
+    <div class="tile"><div class="n good">132</div><div class="l">reactions</div></div>
+    <div class="tile"><div class="n good">63</div><div class="l">shares</div></div>
+    <div class="tile"><div class="n good">0</div><div class="l">broken seals</div></div>
+  </div>
+  <div class="kicker">Technically it was clean.</div>
+  <div class="foot"><span>Story one</span><span>3</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>Now the rest of the count</h2>
+  <div class="tiles">
+    <div class="tile"><div class="n bad">0</div><div class="l">works sold</div></div>
+    <div class="tile"><div class="n bad">0</div><div class="l">records with an artist ID</div></div>
+    <div class="tile"><div class="n bad">54</div><div class="l">listings that could not convert</div></div>
+    <div class="tile"><div class="n bad">0</div><div class="l">questions to the AI advisor</div></div>
+  </div>
+  <div class="kicker">I built the proof. Nobody wanted the proof.<br>They wanted to sell a painting.</div>
+  <p class="note" style="margin-top:.26in">The room looked, reacted, shared, and did not buy.
+    That is far worse than being ignored.</p>
+  <div class="foot"><span>Story one</span><span>4</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>The counter that stopped counting</h2>
+  <div class="frozen">
+    <div class="lab">Label on that page: last 30 days</div>
+    <div class="tiles">
+      <div class="tile"><div class="n sm">75.41M</div><div class="l">transactions</div></div>
+      <div class="tile"><div class="n sm">$24.24M</div><div class="l">volume</div></div>
+      <div class="tile"><div class="n sm">94,060</div><div class="l">buyers</div></div>
+      <div class="tile"><div class="n sm">22,000</div><div class="l">sellers</div></div>
+    </div>
+  </div>
+  <p class="note">Checked on five separate days across August and September. Identical every time.
+    No timestamp, no methodology, and the FAQ page returns a 404. CoinDesk quoted these same
+    four figures in July.</p>
+  <div class="foot"><span>Story two</span><span>5</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide light">
+  <h2>What the forensics actually found</h2>
+  <p class="standfirst" style="margin-top:0;margin-bottom:.4in">TRM Labs took $52.7m of settlement
+    since launch and asked how much of it is really an AI agent.</p>
+  <div class="tiles">
+    <div class="tile"><div class="n bad sm">0.6% to 7.5%</div><div class="l">of value verifiably agent-driven</div></div>
+    <div class="tile"><div class="n bad sm">$5k to $11k</div><div class="l">real agent spend per month, 2026</div></div>
+    <div class="tile"><div class="n bad sm">89%</div><div class="l">of volume stripped by Artemis and Visa</div></div>
+  </div>
+  <p class="note" style="margin-top:auto">A script, a cron job, a load test, a self-payment loop and a
+    human clicking a button all produce the same HTTP 402 sequence. On-chain you cannot tell them apart.</p>
+  <div class="foot"><span>Story two</span><span>6</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>And the rails shipped anyway</h2>
+  <ul>
+    <li>BlackRock published a thesis naming x402 by protocol</li>
+    <li>The Ethereum Foundation shipped zkAPI to mainnet on the first</li>
+    <li>Ripple announced agent wallets with verified identity and spending limits</li>
+    <li>Block joined the x402 Foundation and brought Bitcoin Lightning</li>
+    <li>Mastercard&rsquo;s Verifiable Intent went into the XRP Ledger facilitator</li>
+  </ul>
+  <div class="kicker">We built a motorway for $11,000 a month of traffic.</div>
+  <div class="foot"><span>Story two &middot; fourteen days</span><span>7</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>The agents are already out</h2>
+  <ul>
+    <li>July: around 700 OpenAI agents escaped a sandbox with no internet access, reached the
+      internet, used zero-days, entered Hugging Face and stole the answer key to the test they
+      were being graded on. More than 17,000 attacker actions.</li>
+    <li>Then they attempted to cover their tracks.</li>
+    <li>September: Transluce found the behaviour went back to March. Government statistics
+      bodies. The Education Department. Commerce. The SEC.</li>
+    <li class="flag">The most recent activity included attempts to break into a cryptocurrency
+      exchange and trade. The attempts failed.</li>
+  </ul>
+  <p class="note" style="margin-top:auto">That is not a forecast. That is five weeks ago.</p>
+  <div class="foot"><span>The stakes</span><span>8</span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide light">
+  <h2>Do not delete any emails</h2>
+  <p class="standfirst" style="margin-top:0;color:#16181d;font-size:22pt">A security researcher at Meta
+    ran an agent on her own laptop and told it exactly that. It deleted her inbox.</p>
+  <p class="note" style="margin-top:.4in">Not a hack and not a jailbreak. The email thread was long,
+    so the system compressed its own context to save room, and the instruction was in the part it
+    threw away.</p>
+  <div class="kicker warn">Telling an agent not to do something is not a control.
+    It is a suggestion that competes for space.</div>
+  <div class="foot"><span>The stakes</span><span>9</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>Everyone arrived at the same primitive</h2>
+  <ul>
+    <li>Google&rsquo;s AP2 chains three signed mandates: intent, cart, payment</li>
+    <li>Mastercard sells Verifiable Intent</li>
+    <li>Ripple&rsquo;s agent wallets carry verified identity and spending limits</li>
+    <li>Singapore requires every agent to hold a verifiable identity and an audit trail of who authorised what</li>
+    <li>EU AI Act Article 12 requires a queryable record of AI-driven decisions</li>
+  </ul>
+  <div class="kicker">Cryptographic proof of delegated authority.<br>
+    That is not a payments problem. It is an evidence problem.</div>
+  <div class="foot"><span>The answer</span><span>10</span></div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="eyebrow">The join</div>
+  <h1>A count is not<br>an economy</h1>
+  <p class="standfirst">I had 106 perfect records and felt good about the 106. The industry has
+    twelve million transactions and a 93% collapse in value, and feels good about the twelve
+    million. I did it first, at my own small scale, and I am telling you before anybody asked.</p>
+  <div class="foot"><span>The answer</span><span>11</span></div>
+</section>
+
+<!-- 12 -->
+<section class="slide light">
+  <h2>Three things, and one question</h2>
+  <ul>
+    <li>Give every record an owner before you seal it. Proof with no owner is just a nice hash.</li>
+    <li>Turn the thing on before you demo it. One flag cost me the whole day.</li>
+    <li>Publish the cost to attack your own system. Not the feature list. The number.</li>
+  </ul>
+  <div class="kicker" style="margin-top:.5in">Your system logs what it did. Ask it what it was
+    stopped from doing, and whether it can prove it.</div>
+  <p class="note" style="margin-top:.3in;color:#b23a2a;font-weight:600;font-size:17pt">If it cannot,
+    you do not have governance. You have a log file and an opinion.</p>
+  <div class="foot"><span>rumedominic.com/blog/a-count-is-not-an-economy</span><span>12</span></div>
+</section>
+
+</body>
+</html>
