@@ -1,8 +1,19 @@
 import type { MetadataRoute } from 'next';
 import { site } from '@/content/site';
+import { sortedPosts } from '@/content/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+
+  // Posts generate their own entries. A hardcoded list silently stops being
+  // the sitemap the moment anything is published.
+  const postEntries: MetadataRoute.Sitemap = sortedPosts().map((p) => ({
+    url: `${site.url}/blog/${p.slug}`,
+    lastModified: new Date(p.updated ?? p.published),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
   return [
     { url: site.url, lastModified: now, changeFrequency: 'weekly', priority: 1 },
     {
@@ -53,5 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${site.url}/blog`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    ...postEntries,
   ];
 }

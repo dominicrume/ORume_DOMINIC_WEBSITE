@@ -50,6 +50,7 @@ export const site = {
     { label: 'Instrument', href: '/instrument' },
     { label: 'Research', href: '/research' },
     { label: 'Proof', href: '/proof' },
+    { label: 'Writing', href: '/blog' },
     { label: 'About', href: '#about' },
   ],
 
