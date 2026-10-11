@@ -48,29 +48,14 @@ function Blocks({ body }: { body: Block[] }) {
       {body.map((b, i) => {
         switch (b.kind) {
           case 'lead':
-            return (
-              <p key={i} className="mb-6 text-xl leading-relaxed text-paper">
-                {b.text}
-              </p>
-            );
+            return <p key={i} className="lead">{b.text}</p>;
           case 'h2':
-            return (
-              <h2 key={i} className="mt-12 mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
-                {b.text}
-              </h2>
-            );
+            return <h2 key={i}>{b.text}</h2>;
           case 'quote':
-            return (
-              <blockquote
-                key={i}
-                className="my-8 border-l-2 border-gold pl-5 text-xl font-semibold leading-snug text-gold"
-              >
-                {b.text}
-              </blockquote>
-            );
+            return <blockquote key={i}>{b.text}</blockquote>;
           case 'list':
             return (
-              <ul key={i} className="mb-6 list-disc space-y-2 pl-5 text-muted">
+              <ul key={i}>
                 {b.items.map((it, j) => (
                   <li key={j}>{it}</li>
                 ))}
@@ -78,32 +63,20 @@ function Blocks({ body }: { body: Block[] }) {
             );
           case 'figures':
             return (
-              <figure key={i} className="my-8 overflow-hidden rounded-xl border border-white/10">
-                <figcaption className="border-b border-white/10 bg-white/[0.03] px-4 py-3 text-xs font-semibold uppercase tracking-wider text-muted">
-                  {b.caption}
-                </figcaption>
-                <dl className="divide-y divide-white/5">
+              <figure key={i} className="figures">
+                <figcaption>{b.caption}</figcaption>
+                <dl>
                   {b.rows.map((r, j) => (
-                    <div key={j} className="flex items-baseline justify-between gap-4 px-4 py-3">
-                      <dt className="text-sm text-muted">{r.label}</dt>
-                      <dd
-                        className={`font-mono text-base font-semibold tabular-nums ${
-                          r.tone === 'bad' ? 'text-[#e0604f]' : 'text-gold'
-                        }`}
-                      >
-                        {r.value}
-                      </dd>
+                    <div key={j} className="row">
+                      <dt className="k">{r.label}</dt>
+                      <dd className={`v ${r.tone === 'bad' ? 'bad' : 'good'}`}>{r.value}</dd>
                     </div>
                   ))}
                 </dl>
               </figure>
             );
           default:
-            return (
-              <p key={i} className="mb-5 leading-relaxed text-muted">
-                {b.text}
-              </p>
-            );
+            return <p key={i}>{b.text}</p>;
         }
       })}
     </>
@@ -140,14 +113,16 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main id="top">
-        <div className="border-b border-white/5">
+      <main id="top" className="reading">
+        <div className="border-b" style={{ borderColor: 'var(--r-rule)' }}>
           <Container>
             <div className="flex h-16 items-center justify-between">
-              <Link href="/blog" className="focus-ring rounded-lg text-sm text-muted hover:text-paper">
+              <Link href="/blog" className="focus-ring rounded-lg text-sm hover:underline"
+                style={{ color: 'var(--r-muted)' }}>
                 ← All writing
               </Link>
-              <Link href="/proof" className="focus-ring rounded-lg text-sm text-muted hover:text-paper">
+              <Link href="/proof" className="focus-ring rounded-lg text-sm hover:underline"
+                style={{ color: 'var(--r-muted)' }}>
                 The evidence →
               </Link>
             </div>
@@ -156,26 +131,28 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
         <section className="py-16 sm:py-24">
           <Container>
-            <article className="mx-auto max-w-3xl">
-              <p className="text-sm text-muted">
+            <article className="mx-auto max-w-[34rem]">
+              <p className="text-sm" style={{ color: 'var(--r-muted)' }}>
                 <time dateTime={post.published}>{fmt(post.published)}</time>
                 <span aria-hidden="true"> · </span>
                 {post.readingMinutes} min read
               </p>
-              <h1 className="mt-3 text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.1] tracking-tight text-balance">
+              <h1 className="mt-3 font-display text-[clamp(2.1rem,5.4vw,3.4rem)] font-bold leading-[1.08] tracking-tight text-balance">
                 {post.title}
               </h1>
-              <p className="mt-4 text-lg text-muted">{post.description}</p>
+              <p className="mt-5 max-w-[46ch] text-lg" style={{ color: 'var(--r-muted)' }}>{post.description}</p>
 
-              <div className="mt-12">
+              <div className="prose mt-12 max-w-[34rem]">
                 <Blocks body={post.body} />
               </div>
 
-              <aside className="mt-14 rounded-xl border border-gold/30 bg-gold/[0.04] p-6">
-                <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+              <aside className="mt-14 rounded-xl border p-6"
+                style={{ borderColor: 'var(--r-accent)', background: 'color-mix(in srgb, var(--r-accent) 6%, transparent)' }}>
+                <p className="text-sm font-semibold uppercase tracking-wider"
+                  style={{ color: 'var(--r-accent)' }}>
                   If this is your problem
                 </p>
-                <p className="mt-3 text-paper">
+                <p className="mt-3">
                   The instrument in this piece is free and open source. When the finding has
                   to be signed, dated and defensible to a regulator, that is the assurance
                   engagement: one agent or workflow assessed against the standard, with a
@@ -184,19 +161,22 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                 <div className="mt-5 flex flex-wrap gap-3">
                   <Link
                     href="/assurance"
-                    className="focus-ring inline-flex items-center justify-center rounded-xl bg-gold-metallic px-5 py-2.5 text-sm font-bold text-ink shadow-gold transition-transform hover:-translate-y-0.5"
+                    className="focus-ring inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
+                    style={{ background: 'var(--r-accent)' }}
                   >
                     See the engagement
                   </Link>
                   <Link
                     href="/proof"
-                    className="focus-ring inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-2.5 text-sm font-semibold text-paper transition-all hover:border-white/30"
+                    className="focus-ring inline-flex items-center justify-center rounded-xl border px-5 py-2.5 text-sm font-semibold transition-all"
+                    style={{ borderColor: 'var(--r-rule)' }}
                   >
                     Check every claim first
                   </Link>
                 </div>
               </aside>
-              <p className="mt-8 border-t border-white/10 pt-6 text-sm text-muted">
+              <p className="mt-10 border-t pt-6 text-sm"
+                style={{ borderColor: 'var(--r-rule)', color: 'var(--r-muted)' }}>
                 {site.legalName} builds verification infrastructure for AI and blockchain
                 systems. The measurement instrument is open source and the receipts library
                 has no dependencies.

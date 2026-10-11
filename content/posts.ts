@@ -32,6 +32,123 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: 'a-funnel-with-no-exit',
+    title: 'I had 4,500 installs and no way for anyone to pay me',
+    description:
+      'A catalogued listing in an institutional directory, two published packages, a priced offer written months ago, and the page carrying that offer had never been on the website. The audit of my own distribution, with the numbers.',
+    published: '2026-10-10',
+    readingMinutes: 7,
+    tags: ['distribution', 'pricing', 'open source', 'AI governance', 'go to market'],
+    image: '/media/04-worked-perfectly.png',
+    body: [
+      {
+        kind: 'lead',
+        text: 'Last week I wrote that I sealed 106 artworks in Abuja and sold nothing. A reader asked a fair question: fine, but what are you selling, and where. I went to look. The answer was worse than the Abuja one.',
+      },
+      {
+        kind: 'p',
+        text: 'I have a productised offer. Three tiers, written months ago, priced, with a guarantee attached. The component that renders it on the website is called Offer.tsx. It is finished. It was imported by nothing.',
+      },
+      {
+        kind: 'p',
+        text: 'Not a broken link. Not a bad call to action. The page a buyer would land on had never existed. I had been publishing, speaking and shipping for months into a website with no door.',
+      },
+
+      { kind: 'h2', text: 'What the audit found' },
+      {
+        kind: 'p',
+        text: 'I traced every asset I own and asked one question of each: if somebody is convinced by this, what do they do next?',
+      },
+      {
+        kind: 'figures',
+        caption: 'Where each asset sent a convinced reader, before this week',
+        rows: [
+          { label: 'Catalogue listing in an institutional developer hub', value: 'a code repository', tone: 'bad' },
+          { label: 'Package installs across two published libraries', value: 'a command line', tone: 'bad' },
+          { label: 'Project README, after the case study', value: 'nowhere', tone: 'bad' },
+          { label: 'Last week\u2019s essay, 2,000 words', value: 'another page of claims', tone: 'bad' },
+          { label: 'Pages where the offer appeared', value: '0', tone: 'bad' },
+        ],
+      },
+      {
+        kind: 'p',
+        text: 'Five surfaces. Five dead ends. The catalogue entry offered five links and every one of them pointed at source code, because the only thing I had ever thought to publish was the work.',
+      },
+
+      { kind: 'h2', text: 'The mistake is the same one' },
+      {
+        kind: 'p',
+        text: 'In Abuja I built a tamper-evident record for an artwork and nobody bought anything, because an artist does not want a seal. They want to sell a painting.',
+      },
+      {
+        kind: 'p',
+        text: 'Here I built a measurement instrument, gave it away, and watched the installs climb. An engineer does not want a measurement either. They want to stop being the reason the release is late.',
+      },
+      {
+        kind: 'quote',
+        text: 'Nobody buys proof. They buy what proof makes possible.',
+      },
+      {
+        kind: 'p',
+        text: 'My own offer had the disease in its copy. The tiers were called Audit, Retainer and Licensing. The summaries promised an assessment, a report, an auditability score, a dashboard. Every one of those words describes proof. Not one of them describes a thing a buyer wanted to be able to do on Monday.',
+      },
+
+      { kind: 'h2', text: 'What changed' },
+      {
+        kind: 'p',
+        text: 'The tiers are now named after the outcome rather than the artefact.',
+      },
+      {
+        kind: 'list',
+        items: [
+          'Ship the agent. The agent is built, risk will not sign it off, and nobody can say precisely what would change their mind. Three weeks later you have the verdict, the gaps and the owner of each one.',
+          'Keep shipping. For teams releasing continuously, so sign-off stops being the thing that holds a release.',
+          'Sell it as your own. For consultancies that want their own name on the verdict.',
+        ],
+      },
+      {
+        kind: 'p',
+        text: 'The deliverables did not disappear. They moved down into the detail, where they belong, as evidence the outcome will actually arrive rather than as the thing being bought.',
+      },
+      {
+        kind: 'p',
+        text: 'Then every dead end got an exit, and each one sits in the same place: immediately after the thing admits its own limit. The browser verifier already said that a chain which verifies proves nothing was edited, and that a wholly forged chain verifies just as green. That is the honest moment to say the rest, which is that a chain cannot tell a risk function whether this agent should hold a wallet, or who answers when it spends wrongly.',
+      },
+      {
+        kind: 'p',
+        text: 'The command line now prints one line after a scan, and only when the scan found something. A clean result says nothing, because a team with nothing to fix is not a buyer and interrupting them is noise.',
+      },
+
+      { kind: 'h2', text: 'What it stays free' },
+      {
+        kind: 'p',
+        text: 'The instrument, the format, the verifier and the library are open source and stay that way. That is not generosity. A measurement you have to pay for is a measurement you cannot check, and the entire argument of this work is that a claim nobody can verify is worth nothing.',
+      },
+      {
+        kind: 'p',
+        text: 'So the commercial line has to sit underneath that sentence rather than on top of it. Run the thing on your own code first. If it tells you nothing you did not already know, you do not need me.',
+      },
+
+      { kind: 'h2', text: 'The part worth stealing' },
+      {
+        kind: 'p',
+        text: 'Open every asset you own. The repository, the package page, the directory listing, the last thing you published. Ask one question of each: if a reader is convinced right here, what do they do next?',
+      },
+      {
+        kind: 'p',
+        text: 'Count the ones where the honest answer is nothing. I had five. Five surfaces built over months, each one working exactly as designed, and collectively a funnel with no exit.',
+      },
+      {
+        kind: 'quote',
+        text: 'A reader you convinced and then abandoned is more expensive than one you never reached.',
+      },
+      {
+        kind: 'p',
+        text: 'Last week I said a count is not an economy. This week the same thing in a different register: distribution is not demand, and installing something is not buying it. I spent months confusing the two, and the only reason I know the exact number is that I went and counted.',
+      },
+    ],
+  },
+  {
     slug: 'a-count-is-not-an-economy',
     title: 'A count is not an economy',
     description:

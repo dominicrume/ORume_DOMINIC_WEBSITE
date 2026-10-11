@@ -33,6 +33,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         display: ['var(--font-display)', 'Georgia', 'serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'Times New Roman', 'serif'],
       },
       boxShadow: {
         glass: '0 8px 40px -12px rgba(30, 144, 255, 0.38)',

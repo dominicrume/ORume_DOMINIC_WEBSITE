@@ -78,3 +78,106 @@ body {
     @apply outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
   }
 }
+
+/* ---------------------------------------------------------------- reading
+   The blog is a different surface from the rest of the site. The marketing
+   pages are near-black because they are a showroom; an essay is not, and
+   reading 2,000 words of body copy on #0A0E1A is work.
+
+   The ground is a cool off-white carrying the brand's azure rather than the
+   usual warm cream, so it reads as documentation rather than as a lifestyle
+   blog, and it still belongs to this site. Dark mode is honoured for anyone
+   who has asked for it at the OS level. */
+.reading {
+  --r-bg:     #f6f8fc;
+  --r-surface:#ffffff;
+  --r-fg:     #151a28;
+  --r-muted:  #5a6480;
+  --r-rule:   #dce3ef;
+  --r-accent: #1466c4;
+  --r-mark:   #0f4f96;
+  background: var(--r-bg);
+  color: var(--r-fg);
+  /* Deliberately single-surface. The marketing pages are near-black; the
+     reading surface is paper, in every theme, so the two are never confused
+     and a long essay is never set on a showroom background. */
+  color-scheme: light;
+}
+.reading ::selection { background: color-mix(in srgb, var(--r-accent) 22%, transparent); }
+
+.reading .prose {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--r-fg);
+}
+@media (min-width: 640px) { .reading .prose { font-size: 1.25rem; line-height: 1.72; } }
+.reading .prose p { margin-bottom: 1.35em; }
+.reading .prose p.lead {
+  font-size: 1.3em;
+  line-height: 1.5;
+  color: var(--r-fg);
+  margin-bottom: 1.1em;
+}
+.reading .prose h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.55rem;
+  line-height: 1.22;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 2.4em 0 .7em;
+  color: var(--r-fg);
+}
+@media (min-width: 640px) { .reading .prose h2 { font-size: 1.9rem; } }
+.reading .prose blockquote {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.3em;
+  line-height: 1.34;
+  font-weight: 600;
+  color: var(--r-mark);
+  border-left: 3px solid var(--r-accent);
+  padding-left: 1.1rem;
+  margin: 1.9em 0;
+}
+.reading .prose ul { margin: 0 0 1.35em 0; padding-left: 1.3em; list-style: disc; }
+.reading .prose li { margin-bottom: .5em; }
+.reading .prose li::marker { color: var(--r-accent); }
+.reading .prose a { color: var(--r-accent); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Figures stay sans and tabular: they are data, not prose. */
+.reading .figures {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background: var(--r-surface);
+  border: 1px solid var(--r-rule);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 2em 0;
+}
+.reading .figures figcaption {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--r-muted);
+  padding: .8rem 1rem;
+  border-bottom: 1px solid var(--r-rule);
+  background: color-mix(in srgb, var(--r-accent) 5%, transparent);
+}
+.reading .figures .row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; padding: .7rem 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--r-rule) 60%, transparent);
+}
+.reading .figures .row:first-of-type { border-top: 0; }
+.reading .figures .k { font-size: .95rem; color: var(--r-muted); min-width: 0; }
+.reading .figures .v {
+  font-weight: 700; font-variant-numeric: tabular-nums;
+  flex: none; text-align: right; max-width: 48%;
+}
+.reading .figures .v.good { color: var(--r-mark); }
+.reading .figures .v.bad  { color: #b4442f; }
+
+
+/* Border that follows the reading surface, for components that take only a
+   className (Section does not accept a style prop). */
+.reading .r-rule { border-color: var(--r-rule); }

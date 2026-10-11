@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Sora } from 'next/font/google';
+import { Inter, Sora, Source_Serif_4 } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import { site } from '@/content/site';
@@ -8,6 +8,15 @@ import { GrowthBeacon } from '@/components/GrowthBeacon';
 
 const sans = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 const display = Sora({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
+// Reading face, used only on the blog. The marketing pages stay on Inter: a
+// long essay and a landing page are not the same job and should not look alike.
+const serif = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -45,7 +54,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
+    <html lang="en" className={`${sans.variable} ${display.variable} ${serif.variable}`}>
       <body>
         {/* Land at the top on every load/reload (a landing page, not an app).
             Runs before paint so the browser never restores to the bottom. */}

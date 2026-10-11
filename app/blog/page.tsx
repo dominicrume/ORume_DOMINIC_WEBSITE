@@ -28,16 +28,18 @@ export default function BlogIndex() {
 
   return (
     <>
-      <main id="top">
-        <div className="border-b border-white/5">
+      <main id="top" className="reading">
+        <div className="border-b" style={{ borderColor: 'var(--r-rule)' }}>
           <Container>
             <div className="flex h-16 items-center justify-between">
-              <Link href="/" className="focus-ring rounded-lg text-sm text-muted hover:text-paper">
+              <Link href="/" className="focus-ring rounded-lg text-sm hover:underline"
+                style={{ color: 'var(--r-muted)' }}>
                 ← rumedominic.com
               </Link>
               <a
                 href="/feed.xml"
-                className="focus-ring rounded-lg text-sm text-muted hover:text-paper"
+                className="focus-ring rounded-lg text-sm hover:underline"
+                style={{ color: 'var(--r-muted)' }}
               >
                 RSS
               </a>
@@ -48,13 +50,14 @@ export default function BlogIndex() {
         <section className="py-20 sm:py-28">
           <Container>
             <div className="mx-auto max-w-3xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em]"
+                style={{ color: 'var(--r-accent)' }}>
                 Writing
               </p>
-              <h1 className="text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.1] tracking-tight text-balance">
+              <h1 className="font-display text-[clamp(2.1rem,5.4vw,3.4rem)] font-bold leading-[1.08] tracking-tight text-balance">
                 Notes from building the part that proves it
               </h1>
-              <p className="mt-4 text-lg text-muted">
+              <p className="mt-5 max-w-[46ch] text-lg" style={{ color: 'var(--r-muted)' }}>
                 Published here rather than on a platform, so the work and the link belong to
                 the same place.
               </p>
@@ -62,30 +65,31 @@ export default function BlogIndex() {
           </Container>
         </section>
 
-        <Section className="border-t border-white/5">
+        <Section className="border-t r-rule">
           <div className="mx-auto max-w-3xl">
             {all.length === 0 ? (
-              <p className="text-muted">Nothing published yet.</p>
+              <p style={{ color: 'var(--r-muted)' }}>Nothing published yet.</p>
             ) : (
-              <ul className="space-y-10">
+              <ul className="space-y-12">
                 {all.map((p) => (
                   <li key={p.slug}>
                     <article>
-                      <p className="text-sm text-muted">
+                      <p className="text-sm" style={{ color: 'var(--r-muted)' }}>
                         <time dateTime={p.published}>{fmt(p.published)}</time>
                         <span aria-hidden="true"> · </span>
                         {p.readingMinutes} min read
                       </p>
-                      <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+                      <h2 className="mt-2 font-display text-2xl font-bold tracking-tight sm:text-[1.7rem]">
                         <Link
                           href={`/blog/${p.slug}`}
-                          className="focus-ring rounded-lg hover:text-gold"
+                          className="focus-ring rounded-lg hover:underline"
                         >
                           {p.title}
                         </Link>
                       </h2>
-                      <p className="mt-3 text-muted">{p.description}</p>
-                      <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs uppercase tracking-wider text-muted/80">
+                      <p className="mt-3 max-w-[52ch]" style={{ color: 'var(--r-muted)' }}>{p.description}</p>
+                      <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs uppercase tracking-wider"
+                        style={{ color: 'var(--r-muted)' }}>
                         {p.tags.map((t) => (
                           <span key={t}>{t}</span>
                         ))}
