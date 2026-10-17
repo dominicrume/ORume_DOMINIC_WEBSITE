@@ -25,7 +25,7 @@ export default function KyaProductPage() {
     <div className="bg-[#0B0E13] text-[#EDF1F6] font-sans antialiased min-h-screen">
       <header className="max-w-[660px] mx-auto px-[22px] pt-[64px] pb-[8px]">
         <div className="text-[12px] tracking-[0.16em] uppercase text-[#E8B44A] font-bold mb-[18px]">
-          Founding price · $199
+          Founding price · ₦300,000
         </div>
         <h1 className="text-[clamp(34px,7vw,52px)] leading-[1.08] tracking-[-1.4px] font-[800] mb-[18px]">
           You have built the same agent six times.
@@ -170,11 +170,10 @@ export default function KyaProductPage() {
 
           <div className="bg-[#141922] border border-[#4A3A11] rounded-2xl p-[30px_26px] my-[26px]">
             <div className="flex items-baseline gap-[14px] flex-wrap mb-[6px]">
-              <div className="text-[52px] font-extrabold tracking-[-2px] leading-none">$199</div>
-              <div className="text-[20px] text-[#93A0B1] line-through">$349</div>
+              <div className="text-[52px] font-extrabold tracking-[-2px] leading-none">₦300,000</div>
             </div>
             <p className="text-[#93A0B1] text-[15px] m-0">
-              Founding price. It rises to $349 soon and stays there.
+              Founding price. It rises soon and stays there.
             </p>
             <ul className="list-none p-0 mt-[22px]">
               <li className="pl-[26px] relative mb-[10px] text-[#93A0B1] text-[16px] before:content-['✓'] before:absolute before:left-0 before:text-[#5BC08A] before:font-bold">
@@ -197,10 +196,10 @@ export default function KyaProductPage() {
                   href={PAYSTACK_URL}
                   className="mt-[26px] block w-full rounded-xl bg-[#E8B44A] px-[24px] py-[17px] text-center text-[18px] font-bold text-[#0B0E13] no-underline transition-transform hover:-translate-y-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8B44A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#141922]"
                 >
-                  Get it now · $199 →
+                  Get it now · ₦300,000 →
                 </a>
                 <p className="mt-[12px] text-center text-[13px] text-[#93A0B1]">
-                  Secure checkout by Paystack. Card, bank transfer or Apple Pay.
+                  Secure checkout by Paystack. Card, bank transfer or USSD.
                 </p>
               </>
             ) : (
@@ -208,13 +207,13 @@ export default function KyaProductPage() {
                 href="#join"
                 className="mt-[26px] block w-full rounded-xl bg-[#E8B44A] px-[24px] py-[17px] text-center text-[18px] font-bold text-[#0B0E13] no-underline transition-transform hover:-translate-y-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8B44A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#141922]"
               >
-                Join the list for the $199 link →
+                Join the list for the ₦300,000 link →
               </a>
             )}
           </div>
 
           <p className="text-[#93A0B1] mb-[18px]">
-            Compare it honestly: three weeks of your own evenings, at whatever your hour is worth. If that number is under $199, do not buy this; build it, and you will learn more.
+            Compare it honestly: three weeks of your own evenings, at whatever your hour is worth. If that number is under ₦300,000, do not buy this; build it, and you will learn more.
           </p>
         </section>
 
@@ -244,7 +243,7 @@ export default function KyaProductPage() {
             Prefer to buy later?
           </h2>
           <p className="mb-[18px]">
-            Leave your email and I will send you the link, and one note before the price rises to $349. One click to leave, any time.
+            Leave your email and I will send you the link, and one note before the price rises. One click to leave, any time.
           </p>
 
           <div className="bg-[#141922] border border-[#28313F] rounded-2xl p-[28px_24px]">
@@ -329,7 +328,7 @@ export default function KyaProductPage() {
             You already know how to build this.
           </p>
           <p className="mb-[18px]">
-            That is exactly why it is worth $199 to never build it again.
+            That is exactly why it is worth ₦300,000 to never build it again.
           </p>
           <p className="mb-[18px]">
             <a href="#join" className="text-[#E8B44A] font-bold no-underline">
