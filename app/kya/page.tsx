@@ -4,22 +4,28 @@ import { WaitlistForm } from '@/components/kya/WaitlistForm';
 
 export const metadata: Metadata = {
   title: "The KYA Method Stack",
-  description: "The production agent stack, already built. One price, once. Waitlist open.",
+  description: "The production agent stack, already built. One price, once.",
   openGraph: {
     images: ['/opengraph-image'],
     title: "The KYA Method Stack | Rume Dominic",
-    description: "The production agent stack, already built. One price, once. Waitlist open.",
+    description: "The production agent stack, already built. One price, once.",
     type: "website",
     url: "https://rumedominic.com/kya"
   }
 };
+
+// The checkout target. A Paystack Payment Page / Payment Link URL is public, not a
+// secret, so it follows the same NEXT_PUBLIC_ pattern as the booking and course URLs.
+// If it is unset, the price card sends people to the waitlist instead of a dead link,
+// so the page is never broken between shipping this and pasting the real URL in.
+const PAYSTACK_URL = process.env.NEXT_PUBLIC_PAYSTACK_URL?.trim();
 
 export default function KyaProductPage() {
   return (
     <div className="bg-[#0B0E13] text-[#EDF1F6] font-sans antialiased min-h-screen">
       <header className="max-w-[660px] mx-auto px-[22px] pt-[64px] pb-[8px]">
         <div className="text-[12px] tracking-[0.16em] uppercase text-[#E8B44A] font-bold mb-[18px]">
-          Waitlist open · Founding price
+          Founding price · $199
         </div>
         <h1 className="text-[clamp(34px,7vw,52px)] leading-[1.08] tracking-[-1.4px] font-[800] mb-[18px]">
           You have built the same agent six times.
@@ -168,7 +174,7 @@ export default function KyaProductPage() {
               <div className="text-[20px] text-[#93A0B1] line-through">$349</div>
             </div>
             <p className="text-[#93A0B1] text-[15px] m-0">
-              Founding price, for the waitlist only. Rises to $349 on launch day and stays there.
+              Founding price. It rises to $349 soon and stays there.
             </p>
             <ul className="list-none p-0 mt-[22px]">
               <li className="pl-[26px] relative mb-[10px] text-[#93A0B1] text-[16px] before:content-['✓'] before:absolute before:left-0 before:text-[#5BC08A] before:font-bold">
@@ -184,6 +190,27 @@ export default function KyaProductPage() {
                 <strong className="font-bold text-[#EDF1F6]">30-day refund</strong>, no explanation required
               </li>
             </ul>
+
+            {PAYSTACK_URL ? (
+              <>
+                <a
+                  href={PAYSTACK_URL}
+                  className="mt-[26px] block w-full rounded-xl bg-[#E8B44A] px-[24px] py-[17px] text-center text-[18px] font-bold text-[#0B0E13] no-underline transition-transform hover:-translate-y-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8B44A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#141922]"
+                >
+                  Get it now · $199 →
+                </a>
+                <p className="mt-[12px] text-center text-[13px] text-[#93A0B1]">
+                  Secure checkout by Paystack. Card, bank transfer or Apple Pay.
+                </p>
+              </>
+            ) : (
+              <a
+                href="#join"
+                className="mt-[26px] block w-full rounded-xl bg-[#E8B44A] px-[24px] py-[17px] text-center text-[18px] font-bold text-[#0B0E13] no-underline transition-transform hover:-translate-y-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8B44A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#141922]"
+              >
+                Join the list for the $199 link →
+              </a>
+            )}
           </div>
 
           <p className="text-[#93A0B1] mb-[18px]">
@@ -214,10 +241,10 @@ export default function KyaProductPage() {
             Join the waitlist
           </div>
           <h2 className="text-[clamp(24px,4.5vw,31px)] leading-[1.2] tracking-[-0.7px] font-[750] mb-[18px]">
-            Founding price goes to this list first.
+            Prefer to buy later?
           </h2>
           <p className="mb-[18px]">
-            No payment now. You get one email when it opens, at $199, before anyone else. If it is not for you, one click and you are out.
+            Leave your email and I will send you the link, and one note before the price rises to $349. One click to leave, any time.
           </p>
 
           <div className="bg-[#141922] border border-[#28313F] rounded-2xl p-[28px_24px]">
