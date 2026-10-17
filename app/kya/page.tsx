@@ -226,7 +226,7 @@ export default function KyaProductPage() {
             Two guarantees, and I will honour both.
           </h2>
           <p className="mb-[18px]">
-            <strong className="font-bold text-[#EDF1F6]">If I do not ship by October 1st, you get every cent back automatically.</strong> You should not carry the risk of my deadline.
+            <strong className="font-bold text-[#EDF1F6]">It is built and shipping now, not a dated promise.</strong> You are buying something that already exists, not a place in a queue.
           </p>
           <p className="mb-[18px]">
             <strong className="font-bold text-[#EDF1F6]">If you buy it and it does not save you the three weeks, tell me within 30 days and I refund you.</strong> No form. No explanation. Reply to the receipt.
@@ -319,7 +319,7 @@ export default function KyaProductPage() {
               When does it ship?
             </summary>
             <p className="mt-[14px] text-[#93A0B1] text-[16px] m-0">
-              October 1st.
+              It has shipped. You get it as soon as you buy.
             </p>
           </details>
         </section>
