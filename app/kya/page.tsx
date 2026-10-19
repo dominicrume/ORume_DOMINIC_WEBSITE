@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { WaitlistForm } from '@/components/kya/WaitlistForm';
+import { StickyBuyBar } from '@/components/kya/StickyBuyBar';
 
 export const metadata: Metadata = {
   title: "The KYA Method Stack",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
 // so the page is never broken between shipping this and pasting the real URL in.
 const PAYSTACK_URL = process.env.NEXT_PUBLIC_PAYSTACK_URL?.trim();
 
+// One source of truth for where "buy" goes and what it says, reused by the hero,
+// the price card and the sticky bar so they can never drift apart.
+const BUY_HREF = PAYSTACK_URL ?? "#join";
+const BUY_CTA = PAYSTACK_URL ? "Get it now" : "Join the list";
+
 export default function KyaProductPage() {
   return (
     <div className="bg-[#0B0E13] text-[#EDF1F6] font-sans antialiased min-h-screen">
@@ -31,7 +37,25 @@ export default function KyaProductPage() {
           You have built the same agent six times.
         </h1>
         <p className="text-[clamp(19px,3.2vw,22px)] leading-[1.5] text-[#93A0B1] mb-[28px]">
-          This is the seventh. Already built. Already hardened. Yours on Monday.
+          This is the seventh. Already built. Already hardened. Yours today.
+        </p>
+
+        <div className="flex flex-col gap-[12px] sm:flex-row sm:items-center">
+          <a
+            href={BUY_HREF}
+            className="focus-ring inline-flex items-center justify-center rounded-xl bg-[#E8B44A] px-[26px] py-[15px] text-[17px] font-bold text-[#0B0E13] no-underline transition-transform hover:-translate-y-[1px]"
+          >
+            {BUY_CTA} &middot; &#8358;300,000
+          </a>
+          <a
+            href="#whats-inside"
+            className="focus-ring inline-flex items-center justify-center rounded-xl border border-[#28313F] px-[26px] py-[15px] text-[17px] font-semibold text-[#EDF1F6] no-underline transition-colors hover:border-[#4A3A11]"
+          >
+            See what is inside &rarr;
+          </a>
+        </div>
+        <p className="mt-[14px] text-[13px] text-[#93A0B1]">
+          One payment, once. 30-day refund, no questions asked.
         </p>
       </header>
 
@@ -60,7 +84,7 @@ export default function KyaProductPage() {
           <p className="mb-[18px]">You clone it. You add your idea. You ship.</p>
         </section>
 
-        <section className="py-[52px] border-b border-[#28313F]">
+        <section id="whats-inside" className="scroll-mt-[20px] py-[52px] border-b border-[#28313F]">
           <div className="text-[12px] tracking-[0.16em] uppercase text-[#E8B44A] font-bold mb-[18px]">
             What&apos;s in the box
           </div>
@@ -338,9 +362,11 @@ export default function KyaProductPage() {
         </section>
       </div>
 
-      <footer className="max-w-[660px] mx-auto px-[22px] py-[40px] pb-[60px] text-[#93A0B1] text-[14px] text-center">
+      <footer className="max-w-[660px] mx-auto px-[22px] py-[40px] pb-[96px] text-[#93A0B1] text-[14px] text-center">
         Rume Dominic · VOREM Institute · hi@rumedominic.com
       </footer>
+
+      <StickyBuyBar href={BUY_HREF} cta={BUY_CTA} />
     </div>
   );
 }
