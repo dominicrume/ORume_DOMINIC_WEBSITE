@@ -32,6 +32,139 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    "slug": "third-at-the-canton-hackathon",
+    "title": "We came third at the biggest Canton hackathon. The judges are why it matters.",
+    "description": "Vorem placed third at Cantor8's Build on Canton hackathon in London, judged by a panel that included the Canton Foundation's founding chairman. The ranking is the least interesting part. This is the idea that placed, and what happened in the six weeks after.",
+    "published": "2026-10-22",
+    "readingMinutes": 6,
+    "tags": [
+      "Canton",
+      "Daml",
+      "hackathon",
+      "AI agents",
+      "auditability",
+      "blockchain"
+    ],
+    "image": "/media/cantor8-3rd-place.jpg",
+    "body": [
+      {
+        "kind": "lead",
+        "text": "On Saturday 29 August I arrived late to a hackathon in Shoreditch and left with a third-place cheque made out to Vorem. The placing is not why I am writing this. The panel that awarded it is."
+      },
+      {
+        "kind": "p",
+        "text": "Cantor8's Build on Canton was the largest in-person Canton Network hackathon of the year: nearly a hundred builders at 83 Rivington Street, more than twenty teams, with people flown in from Oxford, Cambridge, Imperial and well beyond the UK. Three tracks. We took the hardest one, the Daml track: a wallet built for AI agents, with real limits on what they are allowed to spend."
+      },
+      {
+        "kind": "h2",
+        "text": "What we built"
+      },
+      {
+        "kind": "p",
+        "text": "The idea was simple to say and awkward to do properly. A spending mandate should be enforced on the ledger itself, inside the Daml choice body, so the control cannot be bypassed by whatever service is calling it. Cap, per-period limit, allow-list, expiry, revocation, all living where the money moves rather than in the application that asks."
+      },
+      {
+        "kind": "p",
+        "text": "The part I cared about most was the refusal. When the agent is told no, that no becomes a fact on the ledger: a receipt you can hand an auditor, not a line in a log file you have to take on trust. Most systems can tell you what they did. Almost none can prove what they were stopped from doing."
+      },
+      {
+        "kind": "quote",
+        "text": "A refused action should be evidence, not an absence."
+      },
+      {
+        "kind": "p",
+        "text": "The judges' note on our entry was that it was awarded a podium position for its emphasis on security and the smart application of restrictions and checks. That sentence is the whole thesis, and it is the reason the placing is worth writing about at all."
+      },
+      {
+        "kind": "h2",
+        "text": "Who judged it"
+      },
+      {
+        "kind": "p",
+        "text": "A hackathon ranking means whatever the room means. This room meant something, because of who was in it. The panel included Dr Jorgen Ouaknine, the Canton Foundation's founding chairman, alongside a managing director from 7RIDGE, an engineering lead from Alchemy, a technology lead from C7, a security lead from Dedge Security, and Cantor8's own founder and senior engineers. These are the people building the institutional rails Canton exists to carry."
+      },
+      {
+        "kind": "p",
+        "text": "I will be honest about the result, because the whole point of what I build is that claims should survive a check. We came third, of more than twenty teams. First place went to a different team, Team Mandate; second went to Lattice Scan. I did not win. I placed, on the hardest track, in front of a panel that knows exactly what it is looking at."
+      },
+      {
+        "kind": "figures",
+        "caption": "The podium, Build on Canton, London, 29 August 2026",
+        "rows": [
+          {
+            "label": "First place, Team Mandate",
+            "value": "not us",
+            "tone": "bad"
+          },
+          {
+            "label": "Second place, Lattice Scan",
+            "value": "not us",
+            "tone": "bad"
+          },
+          {
+            "label": "Third place, Vorem",
+            "value": "us",
+            "tone": "good"
+          }
+        ]
+      },
+      {
+        "kind": "h2",
+        "text": "The six weeks after, which is the real signal"
+      },
+      {
+        "kind": "p",
+        "text": "A weekend result is a weekend. What you do with it afterwards is the thing worth trusting. So here is what happened between that Saturday and now, all of it public and checkable."
+      },
+      {
+        "kind": "figures",
+        "caption": "After the cheque",
+        "rows": [
+          {
+            "label": "Pull requests merged into the official Canton Developer Hub",
+            "value": "three",
+            "tone": "good"
+          },
+          {
+            "label": "Status of the tool in that catalogue",
+            "value": "listed partner tool, AI Tools",
+            "tone": "good"
+          },
+          {
+            "label": "The refusal format, with conformance vectors",
+            "value": "spec plus three agreeing implementations",
+            "tone": "good"
+          },
+          {
+            "label": "Developer Fund proposal on refused-action records",
+            "value": "open",
+            "tone": "good"
+          }
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "The hackathon did not make the work real. It pointed at a direction, in front of people whose opinion of that direction is worth having, and then I kept walking in it. The merges and the listing are the part that matters, because anyone can clone the repository and watch the tests refuse to pass when a control is quietly removed."
+      },
+      {
+        "kind": "h2",
+        "text": "Why refusals, still"
+      },
+      {
+        "kind": "p",
+        "text": "Agents are about to move real value on networks built for institutions. When one of them is stopped, by a spending cap, a counterparty rule, a compliance check, the stopping has to be provable to someone who was not in the room. If the only record of a refusal is the silence where an action did not happen, you do not have governance. You have a log file and an opinion."
+      },
+      {
+        "kind": "p",
+        "text": "That is the work. Building the controls that decide whether value is allowed to move, and the record that proves what was refused. A panel of people building the institutional internet of finance looked at that idea and put it on the podium. I intend to make them right."
+      },
+      {
+        "kind": "p",
+        "text": "If you are building agents that move value and you need to prove what they were stopped from doing, that is exactly what I do. The instrument is open and the proof is public; the signed and dated version is the work you can hire."
+      }
+    ]
+  },
+  {
     slug: 'a-funnel-with-no-exit',
     title: 'I had 4,500 installs and no way for anyone to pay me',
     description:
