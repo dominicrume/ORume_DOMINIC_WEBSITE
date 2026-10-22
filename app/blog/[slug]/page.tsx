@@ -142,6 +142,16 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </h1>
               <p className="mt-5 max-w-[46ch] text-lg" style={{ color: 'var(--r-muted)' }}>{post.description}</p>
 
+              {post.image ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="mt-10 w-full rounded-xl border"
+                  style={{ borderColor: 'var(--r-rule)' }}
+                />
+              ) : null}
+
               <div className="prose mt-12 max-w-[34rem]">
                 <Blocks body={post.body} />
               </div>

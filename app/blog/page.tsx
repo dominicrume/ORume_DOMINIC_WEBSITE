@@ -74,6 +74,14 @@ export default function BlogIndex() {
                 {all.map((p) => (
                   <li key={p.slug}>
                     <article>
+                      {p.image ? (
+                        <Link href={`/blog/${p.slug}`} className="focus-ring mb-5 block overflow-hidden rounded-xl border"
+                          style={{ borderColor: 'var(--r-rule)' }}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={p.image} alt={p.title}
+                            className="aspect-[16/9] w-full object-cover transition-transform duration-500 hover:scale-[1.03]" />
+                        </Link>
+                      ) : null}
                       <p className="text-sm" style={{ color: 'var(--r-muted)' }}>
                         <time dateTime={p.published}>{fmt(p.published)}</time>
                         <span aria-hidden="true"> · </span>
