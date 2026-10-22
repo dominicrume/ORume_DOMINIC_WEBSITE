@@ -48,7 +48,7 @@ export const posts: Post[] = [
     "body": [
       {
         "kind": "lead",
-        "text": "This is a room of people who, a few hours before the photo, were strangers and competitors. By the time it was taken we were holding cheques and arguing happily about ledgers. I am the one in the Cantor8 shirt holding the one that says Vorem. It says third place. I want to tell you why the third place is the least interesting thing in the picture."
+        "text": "This is a room of people who, a few hours before the photo, were strangers and competitors. By the time it was taken we were holding cheques and arguing happily about how money should move. I am the one in the Cantor8 shirt holding the one that says Vorem. It says third place. I want to tell you why the third place is the least interesting thing in the picture."
       },
       {
         "kind": "p",
@@ -76,7 +76,7 @@ export const posts: Post[] = [
       },
       {
         "kind": "p",
-        "text": "The thing we built turns the silence into a fact. The spending mandate lives inside the ledger itself, so the control cannot be bypassed by whatever service is calling it, and every attempt, including the refusals, becomes a receipt an auditor can verify in a browser. The judges' note on our entry was that it earned its place for its emphasis on security and the smart application of restrictions and checks. That sentence is the whole point of the work."
+        "text": "The thing we built turns that silence into a fact. The spending limits sit inside the part that actually moves the money, not in the app on top, so nobody can quietly switch them off. And every time the agent tries to spend, including every time it is stopped, it leaves a signed record anyone can check in a browser. The judges' note on our entry was that it earned its place for its emphasis on security and the smart application of restrictions and checks. That sentence is the whole point of the work."
       },
       {
         "kind": "h2",
@@ -88,7 +88,7 @@ export const posts: Post[] = [
       },
       {
         "kind": "p",
-        "text": "And the money is already moving onto those rails. This month the DTCC, the plumbing behind most of the world's securities settlement, is launching a tokenisation service on Canton. The London Stock Exchange Group was appointed a validator on the network in September. This is not a future conference slide. It is happening now, with institutions whose names you know."
+        "text": "And the money is already moving onto those rails. This month the DTCC, the plumbing behind most of the world's share trading, is launching a service that moves real financial assets onto Canton. The London Stock Exchange Group joined in September to help run the network. This is not a future conference slide. It is happening now, with institutions whose names you know."
       },
       {
         "kind": "p",
