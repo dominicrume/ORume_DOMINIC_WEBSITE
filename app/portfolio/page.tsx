@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Applied AI Engineer & Systems Architect",
-  description: "Portfolio of Rume Dominic, Applied AI Engineer & Systems Architect. Expert in LLM orchestration, Agentic Intelligence, and Verifiable AI.",
-  keywords: ["AI Engineer", "Applied AI", "Systems Architect", "Agentic Systems", "RAG Pipelines", "Verifiable AI", "Rume Dominic"],
+  description: "Portfolio of Rume Dominic, Applied AI Engineer & Systems Architect. Expert in LLM orchestration, Agentic Intelligence, Verifiable AI, and Canton / Daml ledger engineering. Third place at the 2026 Build on Canton hackathon.",
+  keywords: ["AI Engineer", "Applied AI", "Systems Architect", "Agentic Systems", "RAG Pipelines", "Verifiable AI", "Canton Network", "Daml", "Rume Dominic"],
 };
 
 export default function PortfolioPage() {
@@ -22,7 +22,7 @@ export default function PortfolioPage() {
             <a href="#intro" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)] hover:-translate-y-0.5 transition-all">Intro</a>
             <a href="#about" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)] hover:-translate-y-0.5 transition-all">About</a>
             <a href="#expertise" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)] hover:-translate-y-0.5 transition-all">Expertise</a>
-            <a href="#speaking" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)] hover:-translate-y-0.5 transition-all">Speaking</a>
+            <a href="#speaking" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)] hover:-translate-y-0.5 transition-all">Recognition</a>
             <a href="#works" className="hover:text-[#00E5FF] hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)] hover:-translate-y-0.5 transition-all">Works</a>
           </nav>
         </div>
@@ -94,6 +94,9 @@ export default function PortfolioPage() {
               <p className="text-blue-200 text-lg leading-relaxed mb-8">
                 I do not just write code; I orchestrate the entire product ecosystem. Expertise in designing, building, and deploying LLM, RAG, and agentic systems that automate document-heavy workflows, accelerate operational decision-making, and convert raw architecture into measurable balance-sheet value.
               </p>
+              <p className="text-blue-200 text-lg leading-relaxed mb-8">
+                My work on verifiable agent accountability placed <strong className="text-white font-semibold">third at the 2026 Build on Canton hackathon</strong> in London, judged by a panel that included the Canton Foundation&apos;s founding chairman, and the tool is listed as a <strong className="text-white font-semibold">partner tool in the Canton Foundation Developer Hub</strong>.
+              </p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-[#00E5FF]/20 to-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
                   View GitHub
@@ -143,7 +146,26 @@ export default function PortfolioPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10">
-            
+
+            <a href="https://github.com/dominicrume/cantor8_kya_rails" target="_blank" rel="noopener noreferrer" className="group block rounded-2xl border border-[#00E5FF]/50 hover:border-[#00E5FF] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)] p-10 bg-[#060A14]/80 backdrop-blur-md relative overflow-hidden lg:col-span-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/5 to-[#0052FF]/5 group-hover:from-[#00E5FF]/10 group-hover:to-[#0052FF]/10 transition-all duration-500"></div>
+              <div className="relative z-10">
+                <div className="text-xs font-mono text-[#00E5FF] mb-3 font-bold tracking-widest flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
+                  CANTON NETWORK · DAML · PARTNER TOOL
+                </div>
+                <h3 className="text-3xl font-display font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#00E5FF] transition-all">Know Your AgenticAI</h3>
+                <p className="text-blue-200 text-base leading-relaxed mb-8">
+                  Spending mandates enforced inside a Daml choice body on Canton, so the control cannot be bypassed by the service calling it, and every attempt, refusals included, becomes a hash-chained receipt an auditor can verify. Listed as a partner tool in the Canton Foundation Developer Hub, with three pull requests merged into the hub, and third place at the 2026 Build on Canton hackathon.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Canton / Daml</span>
+                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Partner Tool</span>
+                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Auditable Refusals</span>
+                </div>
+              </div>
+            </a>
+
             <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="group block rounded-2xl border border-blue-900/40 hover:border-[#00E5FF]/80 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.3)] p-10 bg-[#060A14]/80 backdrop-blur-md relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/0 to-[#00E5FF]/0 group-hover:from-[#00E5FF]/5 group-hover:to-[#0052FF]/5 transition-all duration-500"></div>
               <div className="relative z-10">
@@ -270,12 +292,23 @@ export default function PortfolioPage() {
         <section id="speaking" className="py-40 bg-[#060A14] border-y border-blue-900/30">
           <div className="max-w-7xl mx-auto px-6">
             <div className="mb-20 flex items-center space-x-4">
-              <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold">Speaking & Thought Leadership</span>
+              <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold">Recognition & Speaking</span>
               <span className="h-[2px] flex-grow bg-blue-900/50"></span>
             </div>
 
             <div className="space-y-8">
-              
+
+              <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-[#00E5FF]/40 hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.2)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <div className="w-20 h-20 rounded-full bg-[#00E5FF]/10 flex items-center justify-center shrink-0 border border-[#00E5FF]/30 group-hover:bg-[#00E5FF]/20 group-hover:border-[#00E5FF] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-500">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🏆</span>
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">CANTOR8 BUILD ON CANTON · LONDON · AUGUST 2026</div>
+                  <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">Third Place, Build on Canton Hackathon</h3>
+                  <p className="text-blue-200">Placed third, as Vorem, at the largest in-person Canton Network hackathon of the year, nearly 100 participants across more than 20 teams, judged by a panel that included the Canton Foundation&apos;s founding chairman. <a href="https://cantor8.io/official-blog/cantor8-canton-network-hackathon-2026" target="_blank" rel="noopener noreferrer" className="text-[#00E5FF] hover:underline">Published in Cantor8&apos;s official recap.</a></p>
+                </div>
+              </div>
+
               <div className="group p-8 rounded-xl bg-blue-950/20 backdrop-blur-sm border border-blue-900/50 hover:border-[#00E5FF]/70 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-500 hover:-translate-x-2 flex flex-col md:flex-row gap-8 items-start md:items-center cursor-default">
                 <div className="w-20 h-20 rounded-full bg-[#00E5FF]/10 flex items-center justify-center shrink-0 border border-[#00E5FF]/30 group-hover:bg-[#00E5FF]/20 group-hover:border-[#00E5FF] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-500">
                   <span className="text-3xl group-hover:scale-110 transition-transform duration-500">🎙️</span>
