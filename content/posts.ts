@@ -32,6 +32,83 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    "slug": "can-an-agent-prove-it-was-told-no",
+    "title": "The question in the room: can an AI agent prove it was told no?",
+    "description": "In a London hackathon judged by a panel that included the Canton Foundation's founding chairman, the real contest was not about features. It was about accountability. As institutions move real money onto these rails, that question is about to matter to everyone.",
+    "published": "2026-10-22",
+    "readingMinutes": 5,
+    "tags": [
+      "Canton",
+      "AI agents",
+      "auditability",
+      "institutional finance",
+      "agentic AI"
+    ],
+    "image": "/media/cantor8-winners-group.jpg",
+    "body": [
+      {
+        "kind": "lead",
+        "text": "This is a room of people who, a few hours before the photo, were strangers and competitors. By the time it was taken we were holding cheques and arguing happily about ledgers. I am the one in the Cantor8 shirt holding the one that says Vorem. It says third place. I want to tell you why the third place is the least interesting thing in the picture."
+      },
+      {
+        "kind": "p",
+        "text": "On 29 August, Cantor8 ran the largest in-person Canton Network hackathon of the year in London. Nearly a hundred builders, more than twenty teams, people flown in from Oxford, Cambridge, Imperial and a lot further. Three tracks. We took the hardest one: a wallet for AI agents, with real limits on what they are allowed to spend."
+      },
+      {
+        "kind": "p",
+        "text": "I will be honest in the way the good journalists are honest, which is to tell you the part that is not flattering first. I arrived late. We were a small team. We came third, not first. First went to a team called Mandate, second to Lattice Scan. I did not win the room."
+      },
+      {
+        "kind": "h2",
+        "text": "What the room was actually arguing about"
+      },
+      {
+        "kind": "p",
+        "text": "Strip away the tracks and the scoreboard and every serious team was circling the same question. When you hand an AI agent a wallet, and it decides not to spend, where does that decision go? Most systems can tell you what an agent did. Almost none can prove what it was stopped from doing."
+      },
+      {
+        "kind": "p",
+        "text": "That gap sounds academic until you put real money behind it. An agent that is blocked by a spending cap, a counterparty rule, a compliance check, leaves behind a silence. And you cannot audit a silence. You cannot hand a regulator the absence of a transaction and call it governance."
+      },
+      {
+        "kind": "quote",
+        "text": "You cannot audit a silence."
+      },
+      {
+        "kind": "p",
+        "text": "The thing we built turns the silence into a fact. The spending mandate lives inside the ledger itself, so the control cannot be bypassed by whatever service is calling it, and every attempt, including the refusals, becomes a receipt an auditor can verify in a browser. The judges' note on our entry was that it earned its place for its emphasis on security and the smart application of restrictions and checks. That sentence is the whole point of the work."
+      },
+      {
+        "kind": "h2",
+        "text": "Why this is news and not just my weekend"
+      },
+      {
+        "kind": "p",
+        "text": "Here is the part that should interest you even if you have never heard of Canton. The people judging that room were not students. The panel included the founding chairman of the Canton Foundation, alongside engineering and security leads from firms building the institutional internet of finance. These are the people laying the rails."
+      },
+      {
+        "kind": "p",
+        "text": "And the money is already moving onto those rails. This month the DTCC, the plumbing behind most of the world's securities settlement, is launching a tokenisation service on Canton. The London Stock Exchange Group was appointed a validator on the network in September. This is not a future conference slide. It is happening now, with institutions whose names you know."
+      },
+      {
+        "kind": "p",
+        "text": "So put the two things together. Real money, run increasingly by agents, is landing on a network built for institutions. And a room of the people building it spent a day deciding whose work best answered one question: when the agent is told no, can you prove it. That is the story. The podium is just where I happened to be standing when it became obvious."
+      },
+      {
+        "kind": "h2",
+        "text": "What I am doing about it"
+      },
+      {
+        "kind": "p",
+        "text": "A weekend result is a weekend. What you do after is the only part worth trusting. In the weeks since, three of my pull requests have been merged into the official Canton Developer Hub, the tool is listed there as a partner tool, and the refusal-record format has hardened into a written spec with independent implementations that agree with each other. All of it is public, and all of it is meant to be checked rather than believed."
+      },
+      {
+        "kind": "p",
+        "text": "I build the controls that decide whether value is allowed to move, and the record that proves what was refused. If you are putting agents anywhere near real money, you are going to need both, and you are going to need to prove the second one to someone who was not in the room. That is the work. If it is your problem too, I would like to hear how it shows up for you."
+      }
+    ]
+  },
+  {
     "slug": "third-at-the-canton-hackathon",
     "title": "We came third at the biggest Canton hackathon. The judges are why it matters.",
     "description": "Vorem placed third at Cantor8's Build on Canton hackathon in London, judged by a panel that included the Canton Foundation's founding chairman. The ranking is the least interesting part. This is the idea that placed, and what happened in the six weeks after.",
