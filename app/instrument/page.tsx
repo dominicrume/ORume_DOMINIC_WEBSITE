@@ -50,6 +50,26 @@ const metrics = [
   },
 ];
 
+// A real reading, taken by pointing the instrument at its own source on 23 Oct 2026.
+// Plain English, one line each, so anyone can read it. Shown warts and all, including
+// the warnings, because an instrument that flatters its own code is worth nothing.
+const reading = [
+  { name: 'Security', value: '3.66', unit: 'per 1,000 lines', status: 'OK',
+    line: 'How many risky patterns it found, for every thousand lines of code. Lower is safer.' },
+  { name: 'Complexity', value: '4.44', unit: 'average', status: 'WARN',
+    line: 'How tangled the code is on average. Higher means harder to test and change.' },
+  { name: 'Duplication', value: '3.37%', unit: 'of the code', status: 'OK',
+    line: 'How much of the code is copied and pasted. Lower is cleaner.' },
+  { name: 'Scope drift', value: '49', unit: 'count', status: 'RISK',
+    line: 'How far the code wandered from what it was actually asked to build.' },
+];
+
+const statusColor: Record<string, string> = {
+  OK: 'text-emerald-400 border-emerald-400/30',
+  WARN: 'text-amber-400 border-amber-400/30',
+  RISK: 'text-red-400 border-red-400/30',
+};
+
 const useCases = [
   {
     who: 'Engineering leaders',
@@ -127,6 +147,60 @@ export default function InstrumentPage() {
                 >
                   View on PyPI
                 </a>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* A reading, taken today */}
+        <section className="border-t border-white/10 py-16 sm:py-20">
+          <Container>
+            <div className="mx-auto max-w-3xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                A reading, taken today
+              </p>
+              <h2 className="text-[clamp(1.6rem,4vw,2.4rem)] font-bold leading-tight tracking-tight text-balance">
+                Here is the instrument measuring its own code.
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-muted">
+                We pointed it at its own source and let it report, warnings and all. These are real
+                numbers from a scan on 23 October 2026, not a brochure. A measuring instrument that
+                flattered the thing holding it would be worth nothing.
+              </p>
+
+              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {reading.map((r) => (
+                  <div key={r.name} className="rounded-xl border border-white/10 bg-black/40 p-5">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-sm font-semibold uppercase tracking-wider text-muted">{r.name}</span>
+                      <span className={`rounded-full border px-2.5 py-0.5 text-[11px] font-bold ${statusColor[r.status]}`}>
+                        {r.status}
+                      </span>
+                    </div>
+                    <div className="mt-2 flex items-baseline gap-2">
+                      <span className="text-4xl font-extrabold tracking-tight text-paper">{r.value}</span>
+                      <span className="text-sm text-muted">{r.unit}</span>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-muted">{r.line}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="https://auditor-dashboard-rume.fly.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-ring inline-flex items-center justify-center rounded-xl bg-gold-metallic px-6 py-3 text-sm font-semibold text-ink shadow-gold transition-all hover:brightness-110"
+                >
+                  See it run live →
+                </a>
+                <Link
+                  href="/blog/a-measuring-instrument-for-ai"
+                  className="focus-ring inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold text-paper transition-all hover:border-white/30"
+                >
+                  Why a measuring instrument
+                </Link>
               </div>
             </div>
           </Container>
