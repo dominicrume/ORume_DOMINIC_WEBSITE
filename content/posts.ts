@@ -31,7 +31,72 @@ export type Post = {
 };
 
 export const posts: Post[] = [
-    {
+  {
+    "slug": "a-room-in-birmingham-and-agentic-ai",
+    "title": "A room in Birmingham, and why I teach agentic AI",
+    "description": "On a Saturday in June, a room of people in Birmingham gave up their weekend to learn how AI agents really work. I led the session. This is why I keep doing it, and why the teaching matters as much as the building.",
+    "published": "2026-10-24",
+    "readingMinutes": 4,
+    "tags": [
+      "agentic AI",
+      "AI literacy",
+      "AI education",
+      "Birmingham",
+      "AI governance",
+      "community"
+    ],
+    "image": "/media/agentic-ai-birmingham.png",
+    "body": [
+      {
+        "kind": "lead",
+        "text": "On a Saturday in June, a room of people in Birmingham gave up their weekend to learn how AI agents really work. I led the session. This is why I keep doing it."
+      },
+      {
+        "kind": "p",
+        "text": "The people in that photo did not all come from tech. Students, builders, business owners, a few who had never written a line of code. What they had in common was a feeling I hear everywhere now: that AI is moving fast, everyone keeps shouting about it, and almost nobody will sit down and show you, in plain words, what it actually does and where it still falls short."
+      },
+      {
+        "kind": "h2",
+        "text": "The hype is loud. The teaching is quiet."
+      },
+      {
+        "kind": "p",
+        "text": "That gap is the problem. When a powerful tool arrives and only a small group understands it, that group pulls ahead and everyone else is left guessing. I did not want that for the people around me, so I ran a masterclass: agentic AI explained without the jargon, hands on, honest about the limits as well as the magic."
+      },
+      {
+        "kind": "p",
+        "text": "We kept it simple. What an AI agent is. What it can be trusted to do on its own, and what it cannot. How to give it a job and check its work. The whole day came back to one idea: you should never hand a tool real responsibility until you understand what it does when nobody is watching."
+      },
+      {
+        "kind": "quote",
+        "text": "When only a few people understand a powerful tool, the few pull ahead and the rest are left guessing."
+      },
+      {
+        "kind": "h2",
+        "text": "Why the teaching matters as much as the building"
+      },
+      {
+        "kind": "p",
+        "text": "My day job is building the parts that hold AI to account: tools that measure how it performs and prove what it was allowed to do. But building the safeguards is only half the work. If people cannot understand the technology, they cannot ask it the right questions, and they cannot tell when it has let them down."
+      },
+      {
+        "kind": "p",
+        "text": "So I treat the teaching as the same job as the building. One makes AI trustworthy. The other makes sure people can actually use that trust. Both are about the same thing: making a powerful technology serve people instead of leaving them behind."
+      },
+      {
+        "kind": "h2",
+        "text": "A small room, a bigger reason"
+      },
+      {
+        "kind": "p",
+        "text": "The session was held in Birmingham with MCKI Solutions, and it was a small room by any measure. But driving humanity forward does not always start big. It starts with one person who understands something today that they did not understand yesterday, and who walks out able to use it."
+      },
+      {
+        "kind": "p",
+        "text": "That is the whole reason. Not a product, not a pitch. Service. If you want to learn this, or you want a session like it for your community or your team, reach out. I would rather teach ten people to use AI well than let a hundred be left behind by it."
+      }
+    ]
+  },    {
     "slug": "a-measuring-instrument-for-ai",
     "title": "A measuring instrument for AI",
     "description": "People, companies and governments are all circling the same fear: that AI cannot be trusted. So we built a way to hold it accountable. Think of it as a measuring instrument for AI agents.",
