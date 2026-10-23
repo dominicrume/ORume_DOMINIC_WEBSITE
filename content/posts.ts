@@ -32,6 +32,73 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    "slug": "a-black-box-for-ai",
+    "title": "A black box for AI",
+    "description": "People, companies and governments are all circling the same fear: that AI cannot be trusted. So we built a way to hold it accountable. Think of it as a black box flight recorder for AI agents.",
+    "published": "2026-10-23",
+    "readingMinutes": 4,
+    "tags": [
+      "agentic AI",
+      "code generation",
+      "large language models",
+      "software quality metrics",
+      "specification fidelity",
+      "AI governance",
+      "empirical software engineering"
+    ],
+    "image": "/media/ai-black-box.png",
+    "body": [
+      {
+        "kind": "lead",
+        "text": "People, companies and governments are all circling the same fear: that AI cannot be trusted. So we built a way to hold it accountable."
+      },
+      {
+        "kind": "p",
+        "text": "Here is the problem, plainly. When an AI agent does something wrong, most of the time nobody can see why. It made a choice, something went bad, and the trail is gone. You are left with a shrug and an apology. As these agents start making real decisions, that is not good enough."
+      },
+      {
+        "kind": "h2",
+        "text": "Think of a flight recorder"
+      },
+      {
+        "kind": "p",
+        "text": "When something goes wrong on an aeroplane, investigators do not guess. They open the black box flight recorder and read exactly what happened, second by second. The truth is sitting there, and it cannot be argued with. That is the thing that has been missing for AI."
+      },
+      {
+        "kind": "p",
+        "text": "So that is what we built. Our system records what an AI agent did, and, the part everyone forgets, what it was stopped from doing. If an agent tries to spend money it should not, or break a rule it was given, that attempt is written down as evidence anyone can check later. Nothing quietly disappears."
+      },
+      {
+        "kind": "quote",
+        "text": "A black box does not make a plane safer by being there. It makes everyone honest, because the truth can always be read back."
+      },
+      {
+        "kind": "h2",
+        "text": "Why this matters now"
+      },
+      {
+        "kind": "p",
+        "text": "AI agents are starting to make choices with real consequences. Money moves. Documents get signed. People are affected. When one of them gets it wrong, trust us is not an answer that a regulator, a board or a customer will accept. They will want to look back and see exactly what happened, and why."
+      },
+      {
+        "kind": "p",
+        "text": "And the gap is bigger than people think. Most systems can tell you what an agent did. Almost none can prove what it was stopped from doing. But the moment that matters most is often the refusal: the agent that was blocked, the payment that was stopped, the rule that held. If the only record of that is silence, you have nothing to show. You cannot prove a thing that left no trace."
+      },
+      {
+        "kind": "h2",
+        "text": "Trust is something you prove"
+      },
+      {
+        "kind": "p",
+        "text": "Trust is not a feeling you ask people for. It is something you prove. We are not promising that AI will always behave. We are building the record that shows whether it did, in a form anyone can check, so the answer never comes down to taking someone's word for it."
+      },
+      {
+        "kind": "p",
+        "text": "If your organisation is putting AI agents anywhere near real decisions, and you need to be able to prove what they did and what they were stopped from doing, that is exactly the problem we work on. I would like to hear how it shows up for you."
+      }
+    ]
+  },
+  {
     "slug": "can-an-agent-prove-it-was-told-no",
     "title": "The question in the room: can an AI agent prove it was told no?",
     "description": "In a London hackathon judged by a panel that included the Canton Foundation's founding chairman, the real contest was not about features. It was about accountability. As institutions move real money onto these rails, that question is about to matter to everyone.",
