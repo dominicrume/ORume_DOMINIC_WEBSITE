@@ -61,6 +61,19 @@ function Blocks({ body }: { body: Block[] }) {
                 ))}
               </ul>
             );
+          case 'image':
+            return (
+              <figure key={i} className="my-10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={b.src} alt={b.alt} className="w-full rounded-xl border"
+                  style={{ borderColor: 'var(--r-rule)' }} />
+                {b.caption ? (
+                  <figcaption className="mt-3 text-center text-sm" style={{ color: 'var(--r-muted)' }}>
+                    {b.caption}
+                  </figcaption>
+                ) : null}
+              </figure>
+            );
           case 'figures':
             return (
               <figure key={i} className="figures">

@@ -16,6 +16,7 @@ export type Block =
   | { kind: 'lead'; text: string }
   | { kind: 'quote'; text: string }
   | { kind: 'list'; items: string[] }
+  | { kind: 'image'; src: string; alt: string; caption?: string }
   | { kind: 'figures'; caption: string; rows: { label: string; value: string; tone?: 'good' | 'bad' }[] };
 
 export type Post = {
@@ -32,6 +33,77 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    "slug": "the-engineer-and-the-storyteller",
+    "title": "The engineer and the storyteller",
+    "description": "Two people from two different worlds in front of one backdrop in London. I build AI. Victor Okafor builds storytellers. We think those two worlds need each other, and this is why.",
+    "published": "2026-10-25",
+    "readingMinutes": 4,
+    "tags": [
+      "agentic AI",
+      "creator economy",
+      "storytelling",
+      "AI literacy",
+      "collaboration",
+      "community"
+    ],
+    "image": "/media/rume-victor.jpg",
+    "body": [
+      {
+        "kind": "lead",
+        "text": "Two people from two different worlds, standing in front of one backdrop in London. I build AI. Victor Okafor builds storytellers. We stood there together because we think those two worlds need each other more than either side admits."
+      },
+      {
+        "kind": "p",
+        "text": "Here is the fear I hear from creators, writers and founders almost every week: that AI is going to flatten everything. That it will drown out their voice, make everyone sound the same, and quietly replace the human in the work. It is a real fear, and brushing it off does nobody any good."
+      },
+      {
+        "kind": "h2",
+        "text": "AI should carry your voice, not replace it"
+      },
+      {
+        "kind": "p",
+        "text": "But that is not the only way this goes. Used well, AI does not take your voice away, it carries it further. It takes the heavy, repetitive parts off your plate, the editing, the formatting, the first rough pass, so you have more time and energy for the one thing only you can do: the idea, the taste, the story that is actually yours."
+      },
+      {
+        "kind": "p",
+        "text": "That is the whole difference, and it is the reason Victor and I ended up in the same room. He spends his days helping creators and founders tell stories that land. I spend mine building AI and teaching people how to use it without being used by it. Put those together and you get the useful version: creators who keep their voice and get their time back."
+      },
+      {
+        "kind": "quote",
+        "text": "AI used well does not replace your voice. It gives you back the time to use it."
+      },
+      {
+        "kind": "image",
+        "src": "/media/rume-speaking.jpg",
+        "alt": "Rume Dominic speaking on stage",
+        "caption": "Teaching is half the work. A tool nobody understands helps nobody."
+      },
+      {
+        "kind": "h2",
+        "text": "Why bother teaching it"
+      },
+      {
+        "kind": "p",
+        "text": "Because the gap is real. When a powerful tool arrives and only a few people understand it, those few pull ahead and everyone else is left guessing. For creators, that gap could mean a generation of genuine voices getting buried under cheaper, faster, emptier noise. I do not want that, and neither does Victor."
+      },
+      {
+        "kind": "p",
+        "text": "So the work is simple to say and slow to do: sit with people, in plain language, and show them how to make the tool serve their craft instead of swallowing it. No hype, no fear, just the honest middle, which is where almost all of the real value lives."
+      },
+      {
+        "kind": "h2",
+        "text": "The point"
+      },
+      {
+        "kind": "p",
+        "text": "This is not about a product. It is about making sure the people who tell the stories, who build the things, who carry the culture, are not left behind by the very tools that are supposed to help them. That is service, and it is worth driving forward."
+      },
+      {
+        "kind": "p",
+        "text": "If you create, and you are quietly worried that AI is going to outrun you, that is exactly the conversation we are trying to have. You do not have to choose between your voice and the tools. The whole point is to keep both."
+      }
+    ]
+  },  {
     "slug": "a-room-in-birmingham-and-agentic-ai",
     "title": "A room in Birmingham, and why I teach agentic AI",
     "description": "On a Saturday in June, a room of people in Birmingham gave up their weekend to learn how AI agents really work. I led the session. This is why I keep doing it, and why the teaching matters as much as the building.",
