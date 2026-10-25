@@ -76,10 +76,12 @@ export default function BlogIndex() {
                     <article>
                       {p.image ? (
                         <Link href={`/blog/${p.slug}`} className="focus-ring mb-5 block overflow-hidden rounded-xl border"
-                          style={{ borderColor: 'var(--r-rule)' }}>
+                          style={{ borderColor: 'var(--r-rule)', backgroundColor: 'color-mix(in srgb, var(--r-muted) 10%, transparent)' }}>
+                          {/* object-contain, never object-cover: show the whole image so heads are never cropped,
+                              whatever the aspect ratio (portrait poster or landscape still). */}
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img src={p.image} alt={p.title}
-                            className="aspect-[16/9] w-full object-cover transition-transform duration-500 hover:scale-[1.03]" />
+                            className="mx-auto block max-h-[30rem] w-full object-contain transition-transform duration-500 hover:scale-[1.02]" />
                         </Link>
                       ) : null}
                       <p className="text-sm" style={{ color: 'var(--r-muted)' }}>
