@@ -74,7 +74,7 @@ export default function PortfolioPage() {
                   <img 
                     src="/rume-headshot.jpg" 
                     alt="Rume Dominic" 
-                    className="w-full h-full object-contain object-top opacity-90 group-hover:opacity-100 transition-opacity mix-blend-luminosity hover:mix-blend-normal duration-700"
+                    className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity mix-blend-luminosity hover:mix-blend-normal duration-700"
                   />
                   {/* Decorative Elements */}
                   <div className="absolute inset-0 border border-white/10 rounded-xl group-hover:border-[#00E5FF]/30 transition-colors duration-500"></div>
