@@ -90,13 +90,13 @@ export default function NotFound() {
           <GlassCard accent="gold" className="flex flex-col justify-between p-6 hover:border-gold/60 transition-all duration-300">
             <div>
               <span className="text-xs font-semibold uppercase tracking-widest text-muted block mb-2">
-                Principal AI & Blockchain Engineering
+                AI & Blockchain Engineering
               </span>
               <h2 className="font-display text-2xl font-bold text-paper mb-2">
                 Rume Dominic Portfolio
               </h2>
               <p className="text-sm text-muted mb-6">
-                Build AI and Web3 products 5x more capital-efficient, 7x faster, and 10x clearer with enterprise-grade engineering.
+                I build AI and Web3 products that work, cost less, and are easy to understand.
               </p>
             </div>
             <Link 

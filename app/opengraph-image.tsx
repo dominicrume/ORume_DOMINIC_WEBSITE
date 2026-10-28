@@ -35,12 +35,12 @@ export default function OpengraphImage() {
           }}
         >
           <span style={{ marginRight: 16 }}>Build AI &amp; Web3</span>
-          <span style={{ color: '#D8EAF6', marginRight: 16 }}>High-leverage</span>
-          <span style={{ color: '#6DB8FF', marginRight: 16 }}>7x faster</span>
-          <span style={{ color: '#F8FAFC' }}>10x clearer.</span>
+          <span style={{ color: '#D8EAF6', marginRight: 16 }}>you can trust.</span>
+          <span style={{ color: '#6DB8FF', marginRight: 16 }}>Prove it.</span>
+          <span style={{ color: '#F8FAFC' }}>Teach it.</span>
         </div>
         <div style={{ marginTop: 30, fontSize: 28, color: '#9AA5B8' }}>
-          UK-based, operating globally · Enterprise-grade security
+          UK-based AI and blockchain engineer · Build it, prove it, teach it
         </div>
       </div>
     ),
