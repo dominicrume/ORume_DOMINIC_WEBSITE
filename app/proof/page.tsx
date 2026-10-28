@@ -40,7 +40,7 @@ const receipts: { claim: string; where: string; href: string }[] = [
   },
   {
     claim:
-      'Know Your AgenticAI is in the official Canton Developer Hub catalogue (listed as “KYA Rails” when first merged)',
+      'Know Your AgenticAI is in the community Canton Developer Hub catalogue, the canton-network-devs repository (listed as “KYA Rails” when first merged)',
     where: 'merged pull requests #156, #160 and #168, canton-network-devs',
     href: 'https://github.com/canton-network-devs/Canton-Developer-Hub/pull/156',
   },
@@ -72,7 +72,7 @@ const notClaimed: { heading: string; body: string }[] = [
   },
   {
     heading: 'Not adopted by Canton',
-    body: 'Know Your AgenticAI is catalogued as a partner tool in the Canton Network developer hub repository, across three pull requests merged by the Foundation’s developer-relations team. That is a listing, not an endorsement, a contract, or a statement about the Foundation. A fourth pull request, correcting the name on the entry, was closed without merging.',
+    body: 'Know Your AgenticAI is catalogued in the canton-network-devs Canton Developer Hub repository, across three pull requests merged by the hub maintainer. That is a community listing, not an endorsement, a contract, or a statement by the Canton Foundation. A fourth pull request, correcting the name on the entry, was closed without merging.',
   },
   {
     heading: 'Not a whole-project security score',

@@ -141,8 +141,8 @@ export default function AssurancePage() {
               seeing the payments behind it.
             </p>
             <p className="mt-4 text-muted">
-              It is catalogued as a partner tool in the official Canton Developer Hub, it placed
-              third at the CANTOR8 Build on Canton hackathon, and the library is free with no
+              It is catalogued in the community Canton Developer Hub (the canton-network-devs
+              catalogue), it placed third at the CANTOR8 Build on Canton hackathon, and the library is free with no
               dependencies. The engagement is making it hold up in your environment.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">

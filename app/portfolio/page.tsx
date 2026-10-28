@@ -95,7 +95,7 @@ export default function PortfolioPage() {
                 I do not just write code. I design, build and ship the whole thing. I build LLM, RAG and agent systems that take over document-heavy work, help people make faster calls, and turn a design into real money saved or earned.
               </p>
               <p className="text-blue-200 text-lg leading-relaxed mb-8">
-                My work on verifiable agent accountability placed <strong className="text-white font-semibold">third at the 2026 Build on Canton hackathon</strong> in London, judged by a panel that included the Canton Foundation&apos;s founding chairman, and the tool is listed as a <strong className="text-white font-semibold">partner tool in the Canton Foundation Developer Hub</strong>.
+                My work on verifiable agent accountability placed <strong className="text-white font-semibold">third at the 2026 Build on Canton hackathon</strong> in London, judged by a panel that included the Canton Foundation&apos;s founding chairman, and the tool is <strong className="text-white font-semibold">listed in the community Canton Developer Hub</strong> (the canton-network-devs catalogue).
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-[#00E5FF]/20 to-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
@@ -152,15 +152,15 @@ export default function PortfolioPage() {
               <div className="relative z-10">
                 <div className="text-xs font-mono text-[#00E5FF] mb-3 font-bold tracking-widest flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
-                  CANTON NETWORK · DAML · PARTNER TOOL
+                  CANTON NETWORK · DAML · COMMUNITY DEV HUB
                 </div>
                 <h3 className="text-3xl font-display font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#00E5FF] transition-all">Know Your AgenticAI</h3>
                 <p className="text-blue-200 text-base leading-relaxed mb-8">
-                  Spending mandates enforced inside a Daml choice body on Canton, so the control cannot be bypassed by the service calling it, and every attempt, refusals included, becomes a hash-chained receipt an auditor can verify. Listed as a partner tool in the Canton Foundation Developer Hub, with three pull requests merged into the hub, and third place at the 2026 Build on Canton hackathon.
+                  Spending mandates enforced inside a Daml choice body on Canton, so the control cannot be bypassed by the service calling it, and every attempt, refusals included, becomes a hash-chained receipt an auditor can verify. Listed in the community Canton Developer Hub (the canton-network-devs catalogue), with three pull requests merged by the hub maintainer, and third place at the 2026 Build on Canton hackathon.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Canton / Daml</span>
-                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Partner Tool</span>
+                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Dev Hub Listing</span>
                   <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Auditable Refusals</span>
                 </div>
               </div>

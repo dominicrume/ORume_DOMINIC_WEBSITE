@@ -304,7 +304,7 @@ export const posts: Post[] = [
       },
       {
         "kind": "p",
-        "text": "A weekend result is a weekend. What you do after is the only part worth trusting. In the weeks since, three of my pull requests have been merged into the official Canton Developer Hub, the tool is listed there as a partner tool, and the refusal-record format has hardened into a written spec with independent implementations that agree with each other. All of it is public, and all of it is meant to be checked rather than believed."
+        "text": "A weekend result is a weekend. What you do after is the only part worth trusting. In the weeks since, three of my pull requests have been merged into the community Canton Developer Hub, the canton-network-devs catalogue, where the tool is listed under AI Tools, and the refusal-record format has hardened into a written spec with independent implementations that agree with each other. All of it is public, and all of it is meant to be checked rather than believed."
       },
       {
         "kind": "p",
@@ -402,13 +402,13 @@ export const posts: Post[] = [
         "caption": "After the cheque",
         "rows": [
           {
-            "label": "Pull requests merged into the official Canton Developer Hub",
+            "label": "Pull requests merged into the community Canton Developer Hub",
             "value": "three",
             "tone": "good"
           },
           {
             "label": "Status of the tool in that catalogue",
-            "value": "listed partner tool, AI Tools",
+            "value": "a listing under AI Tools",
             "tone": "good"
           },
           {
@@ -714,7 +714,7 @@ export const posts: Post[] = [
       },
       {
         kind: 'p',
-        text: 'So that is what I built. Spending rules enforced inside the contract itself rather than in a prompt: a cap, a per-period limit, an allow-list, an expiry, a revocation. Every attempt sealed into a hash-chained receipt, including the ones the ledger refused. It placed third at CANTOR8’s Build on Canton hackathon, judged across technical, security, institutional and commercial criteria, and it is catalogued as a partner tool in the official Canton Developer Hub.',
+        text: 'So that is what I built. Spending rules enforced inside the contract itself rather than in a prompt: a cap, a per-period limit, an allow-list, an expiry, a revocation. Every attempt sealed into a hash-chained receipt, including the ones the ledger refused. It placed third at CANTOR8’s Build on Canton hackathon, judged across technical, security, institutional and commercial criteria, and it is catalogued in the community Canton Developer Hub, the canton-network-devs catalogue.',
       },
 
       { kind: 'h2', text: 'Back to Abuja' },
