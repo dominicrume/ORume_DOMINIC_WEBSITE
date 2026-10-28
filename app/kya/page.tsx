@@ -297,7 +297,7 @@ export default function KyaProductPage() {
               What stack is it?
             </summary>
             <p className="mt-[14px] text-[#93A0B1] text-[16px] m-0">
-              TypeScript, Next.js, Make.com orchestration, and Python agent scripts. It runs seamlessly on Vercel and AWS.
+              TypeScript, Next.js, Make.com orchestration, and Python agent scripts. It runs on Vercel and AWS.
             </p>
           </details>
 

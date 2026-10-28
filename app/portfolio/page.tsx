@@ -37,15 +37,15 @@ export default function PortfolioPage() {
 
           <div className="mb-6 flex items-center space-x-4 relative z-10">
             <span className="h-[2px] w-16 bg-[#00E5FF] shadow-[0_0_15px_#00E5FF] transition-all hover:w-24"></span>
-            <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]">System Architect & Director</span>
+            <span className="text-[#00E5FF] font-mono tracking-widest uppercase text-sm font-bold drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]">AI Engineer & Builder</span>
           </div>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-white leading-none tracking-tighter mb-8 relative z-10">
             I am Rume <br className="hidden md:block"/> 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-[#00A3FF] to-[#0052FF] hover:opacity-90 transition-opacity">Dominic.</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-blue-200 max-w-3xl font-light leading-relaxed mb-12 relative z-10">
-            <strong className="text-[#00E5FF] font-semibold drop-shadow-[0_0_5px_rgba(0,229,255,0.3)]">Applied AI Engineer & Systems Architect.</strong><br/>
-            I build production-grade, verifiable Agentic Intelligence and orchestrate the complete lifecycle of enterprise AI from prototype to undeniable market dominance.
+            <strong className="text-[#00E5FF] font-semibold drop-shadow-[0_0_5px_rgba(0,229,255,0.3)]">AI engineer and builder.</strong><br/>
+            I build AI agents you can check and trust, and I take them all the way from a first prototype to a system that runs in the real world.
           </h2>
           
           <div className="flex flex-wrap gap-4 sm:gap-6 relative z-10">
@@ -89,13 +89,13 @@ export default function PortfolioPage() {
                 <span className="h-[2px] flex-grow bg-blue-900/50 shadow-[0_0_5px_rgba(0,82,255,0.3)]"></span>
               </div>
               <h3 className="text-3xl md:text-4xl font-light text-white leading-snug mb-8">
-                Applied AI Engineer and Executive Director with a demonstrated history of moving AI prototypes into <strong className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#0052FF]">reliable, cloud-hosted dominance</strong> across financial automation, subscriber analytics, and enterprise SaaS.
+                AI engineer with a track record of taking AI prototypes and turning them into <strong className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#0052FF]">reliable, cloud-hosted systems</strong>, across financial automation, subscriber analytics, and SaaS.
               </h3>
               <p className="text-blue-200 text-lg leading-relaxed mb-8">
-                I do not just write code; I orchestrate the entire product ecosystem. Expertise in designing, building, and deploying LLM, RAG, and agentic systems that automate document-heavy workflows, accelerate operational decision-making, and convert raw architecture into measurable balance-sheet value.
+                I do not just write code. I design, build and ship the whole thing. I build LLM, RAG and agent systems that take over document-heavy work, help people make faster calls, and turn a design into real money saved or earned.
               </p>
               <p className="text-blue-200 text-lg leading-relaxed mb-8">
-                My work on verifiable agent accountability placed <strong className="text-white font-semibold">third at the 2026 Build on Canton hackathon</strong> in London, judged by a panel that included the Canton Foundation&apos;s founding chairman, and the tool is listed as a <strong className="text-white font-semibold">partner tool in the Canton Foundation Developer Hub</strong>.
+                My work on verifiable agent accountability placed <strong className="text-white font-semibold">third at the 2026 Build on Canton hackathon</strong> in London, judged by a panel that included the Canton Foundation&apos;s founding chairman, and the tool is <strong className="text-white font-semibold">listed in the community Canton Developer Hub</strong> (the canton-network-devs catalogue).
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-[#00E5FF]/20 to-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-wider uppercase text-xs rounded hover:bg-[#00E5FF] hover:text-[#0A0F1C] transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
@@ -125,7 +125,7 @@ export default function PortfolioPage() {
               { title: "LLM & Agentic Systems", desc: "Orchestrating multi-agent workflows, tool usage, and prompt pipelines for autonomous execution and scale." },
               { title: "Machine Learning (RAG)", desc: "Building high-precision retrieval systems, OCR data extraction, and semantic search architectures." },
               { title: "Verification & Blockchain", desc: "Implementing cryptographic hashing (SHA-256) for tamper-evident documentation and IP provenance." },
-              { title: "Product Finalization", desc: "Deploying highly scalable, dockerized SaaS via Google Cloud Run, Vercel, and Next.js architectures." }
+              { title: "Product Finalization", desc: "Shipping dockerized SaaS that scales, on Google Cloud Run, Vercel and Next.js." }
             ].map((skill, i) => (
               <div key={i} className="group p-8 rounded-xl bg-[#060A14]/80 backdrop-blur-md border border-blue-900/50 hover:border-[#00E5FF] hover:bg-[#00E5FF]/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_30px_-5px_rgba(0,229,255,0.2)]">
                 <h3 className="text-xl font-display font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#00E5FF] group-hover:to-white transition-all">{skill.title}</h3>
@@ -152,15 +152,15 @@ export default function PortfolioPage() {
               <div className="relative z-10">
                 <div className="text-xs font-mono text-[#00E5FF] mb-3 font-bold tracking-widest flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
-                  CANTON NETWORK · DAML · PARTNER TOOL
+                  CANTON NETWORK · DAML · COMMUNITY DEV HUB
                 </div>
                 <h3 className="text-3xl font-display font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#00E5FF] transition-all">Know Your AgenticAI</h3>
                 <p className="text-blue-200 text-base leading-relaxed mb-8">
-                  Spending mandates enforced inside a Daml choice body on Canton, so the control cannot be bypassed by the service calling it, and every attempt, refusals included, becomes a hash-chained receipt an auditor can verify. Listed as a partner tool in the Canton Foundation Developer Hub, with three pull requests merged into the hub, and third place at the 2026 Build on Canton hackathon.
+                  Spending mandates enforced inside a Daml choice body on Canton, so the control cannot be bypassed by the service calling it, and every attempt, refusals included, becomes a hash-chained receipt an auditor can verify. Listed in the community Canton Developer Hub (the canton-network-devs catalogue), with three pull requests merged by the hub maintainer, and third place at the 2026 Build on Canton hackathon.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Canton / Daml</span>
-                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Partner Tool</span>
+                  <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Dev Hub Listing</span>
                   <span className="text-xs font-mono bg-[#0052FF]/10 text-blue-100 px-4 py-2 rounded-full border border-[#0052FF]/30 group-hover:border-[#00E5FF]/50 transition-colors">Auditable Refusals</span>
                 </div>
               </div>
@@ -316,7 +316,7 @@ export default function PortfolioPage() {
                 <div>
                   <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">MCKI SOLUTION · JUNE 27TH</div>
                   <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">Agentic AI Masterclass</h3>
-                  <p className="text-blue-200">Delivered an empowering Agentic AI masterclass as the lead speaker for students, business owners, and professionals.</p>
+                  <p className="text-blue-200">Led an Agentic AI masterclass as the main speaker, for students, business owners and professionals.</p>
                 </div>
               </div>
 
@@ -338,7 +338,7 @@ export default function PortfolioPage() {
                 <div>
                   <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">BIRMINGHAM, UK · FEBRUARY</div>
                   <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#00E5FF] transition-colors">AI Dominance Event</h3>
-                  <p className="text-blue-200">Hosted and spoke at a massive empowerment event demonstrating how to leverage artificial intelligence for market dominance, with extensive real-life attendance and case studies.</p>
+                  <p className="text-blue-200">Hosted and spoke at a large event showing how to use AI to get ahead, with a big in-person turnout and real case studies.</p>
                 </div>
               </div>
 
@@ -349,7 +349,7 @@ export default function PortfolioPage() {
                 <div>
                   <div className="text-xs font-mono text-[#00E5FF] mb-2 font-bold tracking-widest">LONDON, UK · NOVEMBER</div>
                   <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#0052FF] transition-colors">Creator Economy & AI Storytelling</h3>
-                  <p className="text-blue-200">Collaborated with Jali and Empower to train creators on integrating artificial intelligence into digital storytelling and media workflows.</p>
+                  <p className="text-blue-200">Worked with Jali and Empower to teach creators how to use AI in storytelling and media work.</p>
                 </div>
               </div>
 
@@ -365,7 +365,7 @@ export default function PortfolioPage() {
           
           <h2 className="font-display text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-blue-200 mb-8 relative z-10 drop-shadow-lg tracking-tight">Ready to build auditable AI?</h2>
           <p className="text-blue-200 mb-16 text-xl max-w-3xl mx-auto leading-relaxed relative z-10 font-light">
-            Let&apos;s discuss how we can deploy verifiable, highly-scalable Agentic AI ecosystems for your enterprise without compromising governance or security.
+            Let&apos;s talk about building AI you can check and trust, that scales, and still keeps your governance and security intact.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-8 relative z-10">
             <a href="https://github.com/dominicrume" target="_blank" rel="noopener noreferrer" className="group inline-block px-12 py-6 bg-gradient-to-r from-[#00E5FF] to-[#0052FF] text-white font-bold tracking-widest uppercase text-sm rounded shadow-[0_0_30px_rgba(0,82,255,0.5)] hover:shadow-[0_0_60px_rgba(0,229,255,0.7)] hover:-translate-y-2 transition-all duration-500">

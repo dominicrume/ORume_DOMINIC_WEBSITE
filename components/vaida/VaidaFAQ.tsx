@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "Why is Vaida offering this for free?",
-    a: "Because true empowerment requires access. Vaida has partnered with Rume Dominic to provide the ultimate AI tools, ensuring the Always ENOUGH community is at the forefront of this shift, not left behind."
+    a: "Because real change needs access. Vaida has teamed up with Rume Dominic to give the Always ENOUGH community strong AI tools, so they are part of this shift, not left behind."
   },
   {
     q: "How much time will this take?",
