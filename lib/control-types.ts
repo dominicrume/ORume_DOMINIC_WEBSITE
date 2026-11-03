@@ -13,6 +13,19 @@ export type HealthPanel = {
 export type ConfigItem = { key: string; label: string; present: boolean };
 export type ConfigPresence = ConfigItem[];
 
+/**
+ * A money door is any path on the site where a visitor can actually pay or book.
+ * If one is dead, the site earns nothing no matter how much traffic it gets, so
+ * the Control Center checks each one and shows LIVE or BROKEN with the reason.
+ */
+export type MoneyDoor = {
+  id: string;
+  label: string; // what the visitor is trying to do, in plain words
+  target: string; // where the button sends them (URL or in-page anchor)
+  live: boolean;
+  reason: string; // why it is live, or exactly what is broken and how to fix it
+};
+
 export type RecRow = {
   id: string;
   created_at: string;
@@ -37,4 +50,5 @@ export type Dashboard = {
   latestBrief: string | null;
   health: HealthPanel;
   config: ConfigPresence;
+  moneyDoors: MoneyDoor[];
 };

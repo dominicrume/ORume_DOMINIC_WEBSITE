@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { Dashboard, RecRow } from '@/lib/control-types';
+import type { Dashboard, RecRow, MoneyDoor } from '@/lib/control-types';
 
 const INK = '#091A2B';
 const PANEL = '#0E2A47';
@@ -120,6 +120,8 @@ export function ControlDashboard({ initial, unprotected }: { initial: Dashboard;
 
   const k = data.kpis;
   const missing = data.config.filter((c) => !c.present);
+  const doors = data.moneyDoors ?? [];
+  const brokenDoors = doors.filter((d) => !d.live);
 
   return (
     <main style={{ minHeight: '100dvh', background: INK, color: WHITE, fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
@@ -146,6 +148,42 @@ export function ControlDashboard({ initial, unprotected }: { initial: Dashboard;
             <b style={{ color: BAD }}>Unprotected.</b> No CONTROL_SECRET is set, so anyone with this link can open the page. Set CONTROL_SECRET in your environment to lock it.
           </div>
         ) : null}
+
+        {/* Money doors: can a visitor actually pay or book? Shown first on purpose. */}
+        <Section
+          title="Money doors"
+          right={
+            <Pill color={brokenDoors.length ? BAD : GOOD}>
+              {brokenDoors.length ? `${brokenDoors.length} broken` : 'all live'}
+            </Pill>
+          }
+        >
+          {brokenDoors.length ? (
+            <div style={{ marginBottom: 14, border: `1px solid ${BAD}66`, background: `${BAD}14`, color: '#ffd9d9', borderRadius: 12, padding: '12px 16px', fontSize: 13 }}>
+              <b style={{ color: BAD }}>Traffic is arriving at a door that does not open.</b> Until these are live, visitors cannot pay or book no matter how many arrive. Each one tells you exactly what to fix.
+            </div>
+          ) : null}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {doors.map((d: MoneyDoor) => (
+              <div
+                key={d.id}
+                style={{
+                  background: CARD,
+                  border: `1px solid ${d.live ? RULE : `${BAD}55`}`,
+                  borderRadius: 12,
+                  padding: '12px 14px',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                  <Pill color={d.live ? GOOD : BAD}>{d.live ? 'live' : 'broken'}</Pill>
+                  <span style={{ fontWeight: 700, fontSize: 14 }}>{d.label}</span>
+                  <span style={{ color: MUTED, fontSize: 12, marginLeft: 'auto' }}>{d.target}</span>
+                </div>
+                <p style={{ margin: '8px 0 0', fontSize: 13, color: d.live ? MUTED : '#ffd9d9' }}>{d.reason}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
 
         {/* System health */}
         <Section title="System health">
