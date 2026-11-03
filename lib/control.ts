@@ -8,8 +8,10 @@ import 'server-only';
 import { cookies } from 'next/headers';
 import { computeKpis } from '@/growth-brain/src/metrics';
 import type { BrainEvent } from '@/growth-brain/src/events';
-import type { HealthPanel, ConfigPresence, RecRow, Dashboard } from './control-types';
-export type { HealthPanel, ConfigPresence, RecRow, Dashboard } from './control-types';
+import { site } from '@/content/site';
+import { books } from '@/content/books';
+import type { HealthPanel, ConfigPresence, RecRow, Dashboard, MoneyDoor } from './control-types';
+export type { HealthPanel, ConfigPresence, RecRow, Dashboard, MoneyDoor } from './control-types';
 
 // ---- Auth (single-admin cookie gate) ----------------------------------------
 
@@ -147,6 +149,87 @@ function configPresence(): ConfigPresence {
   ];
 }
 
+// ---- Money doors (is there anywhere a visitor can actually pay?) ------------
+
+/**
+ * A real external checkout or booking link: https with a path beyond the bare
+ * domain. "https://calendly.com" on its own is a placeholder, not a booking page,
+ * so it does not count as live.
+ */
+function isRealDestination(url: string | undefined | null): boolean {
+  if (!url) return false;
+  try {
+    const u = new URL(url.trim());
+    if (u.protocol !== 'https:') return false;
+    return u.pathname.replace(/\/+$/, '').length > 0 || u.search.length > 0;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Check every path where money can actually change hands. This is the guard that
+ * stops a dead checkout sitting silent while traffic arrives and nobody buys.
+ */
+function checkMoneyDoors(): MoneyDoor[] {
+  const doors: MoneyDoor[] = [];
+
+  // 1. The homepage's loudest button. It earns nothing if it points at GitHub,
+  //    a repo or any page that does not ask for the sale.
+  const primary = site.cta.primary;
+  const primaryIsSales = ['#contact', '#work', '/assurance'].includes(primary.href);
+  doors.push({
+    id: 'hero_primary',
+    label: 'Homepage main button asks for the sale',
+    target: `${primary.label} → ${primary.href}`,
+    live: primaryIsSales,
+    reason: primaryIsSales
+      ? `Sends visitors to ${primary.href}, where they can book or buy.`
+      : `Points at ${primary.href}, which sells nothing. Point it at #contact, #work or /assurance.`,
+  });
+
+  // 2. Buy a book: the fastest working checkout, because Amazon takes the money.
+  const liveBooks = books.filter((b) => isRealDestination(b.href));
+  doors.push({
+    id: 'books',
+    label: 'Buy a book (Amazon checkout)',
+    target: `${liveBooks.length} of ${books.length} books linked`,
+    live: liveBooks.length > 0,
+    reason:
+      liveBooks.length > 0
+        ? `${liveBooks.length} books link straight to a live Amazon listing.`
+        : 'No book has a working buy link. Add the Amazon link to each book in content/books.ts.',
+  });
+
+  // 3. Book a strategy call: the Zoho booking page behind the contact section.
+  const bookingLive = isRealDestination(site.bookingUrl);
+  doors.push({
+    id: 'booking',
+    label: 'Book a strategy call',
+    target: site.bookingUrl || '(unset)',
+    live: bookingLive,
+    reason: bookingLive
+      ? 'Booking page is a real https scheduling link.'
+      : 'Booking link is unset or a bare domain. Set NEXT_PUBLIC_BOOKING_URL to your real scheduling page.',
+  });
+
+  // 4. The KYA Method Stack checkout: Paystack. Dead if the URL is unset, in
+  //    which case the buy button silently becomes a waitlist and charges nobody.
+  const paystack = process.env.NEXT_PUBLIC_PAYSTACK_URL;
+  const paystackLive = isRealDestination(paystack);
+  doors.push({
+    id: 'kya_checkout',
+    label: 'KYA Method Stack checkout (Paystack)',
+    target: paystackLive ? 'Paystack payment page' : '(falls back to waitlist)',
+    live: paystackLive,
+    reason: paystackLive
+      ? 'Paystack payment page is set, so the buy button takes real payment.'
+      : 'No Paystack URL, so the buy button only joins the waitlist. Create a Paystack payment page and set NEXT_PUBLIC_PAYSTACK_URL in Vercel.',
+  });
+
+  return doors;
+}
+
 // ---- The dashboard payload --------------------------------------------------
 
 export async function gatherDashboard(): Promise<Dashboard> {
@@ -174,5 +257,6 @@ export async function gatherDashboard(): Promise<Dashboard> {
     latestBrief: briefs?.[0]?.markdown ?? null,
     health: { auditorVersion, openPRs: gh.openPRs, lastCommit: gh.lastCommit },
     config: configPresence(),
+    moneyDoors: checkMoneyDoors(),
   };
 }

@@ -56,8 +56,8 @@ export const site = {
   ],
 
   cta: {
-    primary: { label: 'View GitHub Repos', href: '#portfolio', event: 'cta_view_github' },
-    secondary: { label: 'Read My Systems Architecture', href: '/framework', event: 'cta_view_systems' },
+    primary: { label: 'Book a strategy call', href: '#contact', event: 'cta_book_call' },
+    secondary: { label: 'See the work', href: '#portfolio', event: 'cta_view_github' },
   },
 
   socials: [
