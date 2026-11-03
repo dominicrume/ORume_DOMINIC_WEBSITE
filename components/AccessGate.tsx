@@ -87,7 +87,7 @@ function AccessGateContent() {
             Enter Your Email to Unlock Instant Access
           </h1>
           <p className="mx-auto mt-4 max-w-lg text-sm text-muted sm:text-base">
-            To prevent lead leakage and verify your community access, please enter your email below. You will instantly unlock your free copy of <strong>&ldquo;From Code to Consciousness&rdquo; (PDF)</strong> and your <strong>9-Day AI Course</strong> right here on screen.
+            Enter your email below to get instant access. You will instantly unlock your free copy of <strong>&ldquo;From Code to Consciousness&rdquo; (PDF)</strong> and your <strong>9-Day AI Course</strong> right here on screen.
           </p>
           
           <form onSubmit={onSubmit} noValidate className="mt-8 mx-auto max-w-md flex flex-col gap-3">

@@ -6,7 +6,7 @@
 export const site = {
   name: 'Rume Dominic',
   legalName: "O'Rume Dominic Uririe",
-  role: 'AI Engineer · Blockchain Architect · Founder of VOREM',
+  role: 'AI and blockchain engineer · Founder of VOREM · MSc AI, Aston',
   domain: 'rumedominic.com',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://rumedominic.com',
   email: 'dominicrume@gmail.com',
@@ -16,14 +16,14 @@ export const site = {
 
   // The one promise. Must render above the fold.
   promise:
-    'Engineering production-grade AI and Web3 systems with methodical precision and architectural depth.',
+    'I build AI and blockchain systems, and the tools that prove they actually work.',
   subPromise:
-    'I build and deploy autonomous agents, local LLM pipelines, and verifiable blockchain architectures. Based in the UK, I am passionate about tackling hard engineering problems and pushing code that scales securely by design.',
+    'I build autonomous agents, local AI pipelines, and blockchain systems. Then I build the part that checks them, so you can see exactly what they did and trust it. I am based in the UK and I teach this work in plain words to anyone who wants to learn it.',
 
   seo: {
-    title: 'Rume Dominic | Principal AI & Blockchain Engineer | Web3 Built Leaner & Faster',
+    title: 'Rume Dominic | AI and Blockchain Engineer, UK',
     description:
-      'Rume Dominic (O’Rume Dominic Uririe) is a Principal AI and Blockchain Engineer building production-grade LLM pipelines, autonomous agents, and verifiable systems.',
+      'Rume Dominic (O’Rume Dominic Uririe) is a UK-based AI and blockchain engineer. He builds autonomous agents, local AI pipelines and blockchain systems, and the tools that prove they work.',
     keywords: [
       'Rume Dominic',
       'O’Rume Dominic Uririe',
