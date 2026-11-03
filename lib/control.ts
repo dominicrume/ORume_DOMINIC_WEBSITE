@@ -19,7 +19,13 @@ export type { HealthPanel, ConfigPresence, RecRow, Dashboard } from './control-t
  */
 export async function isControlAuthed(): Promise<{ authed: boolean; isProtected: boolean }> {
   const secret = process.env.CONTROL_SECRET;
-  if (!secret) return { authed: true, isProtected: false };
+  if (!secret) {
+    // In production, never expose the dashboard without a password. Lock it and
+    // show the gate, so a live deploy without CONTROL_SECRET leaks nothing. In
+    // development it stays open (with the unprotected banner) for convenience.
+    if (process.env.NODE_ENV === 'production') return { authed: false, isProtected: true };
+    return { authed: true, isProtected: false };
+  }
   const store = await cookies();
   return { authed: store.get('cc')?.value === secret, isProtected: true };
 }

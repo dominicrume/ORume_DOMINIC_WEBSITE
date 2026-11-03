@@ -33,6 +33,80 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    "slug": "why-your-ai-agent-wont-pass-sign-off",
+    "title": "Why your AI agent will not pass sign-off",
+    "description": "The agent works in the demo. Then risk, legal or the board asks one question and it stops dead. Here is the question, why your tests do not answer it, and how to get the agent cleared to go live.",
+    "published": "2026-11-03",
+    "readingMinutes": 5,
+    "tags": [
+      "agentic AI",
+      "AI governance",
+      "AI assurance",
+      "KYA",
+      "risk and compliance",
+      "AI agents"
+    ],
+    "body": [
+      {
+        "kind": "lead",
+        "text": "Your AI agent works in the demo. Everyone nods. Then it goes to risk, legal or the board, someone asks one question, and the whole thing stops dead for months. I see it again and again, so let me tell you what the question is and how to get past it."
+      },
+      {
+        "kind": "p",
+        "text": "The question is simple: can you prove what the agent did, and what it was stopped from doing? Most teams cannot answer it. Not because the agent is bad, but because nobody built the part that proves it."
+      },
+      {
+        "kind": "h2",
+        "text": "Your tests answer the wrong question"
+      },
+      {
+        "kind": "p",
+        "text": "Tests tell you the agent ran and gave an answer. They do not tell you it did only what you asked and nothing you did not. They do not give you a record you can show a regulator six months later. So the agent passes every test and still fails the one meeting that matters, because the people signing it off are not asking does it work. They are asking can we defend this if it goes wrong."
+      },
+      {
+        "kind": "h2",
+        "text": "What sign-off actually needs"
+      },
+      {
+        "kind": "p",
+        "text": "Every stalled agent I have seen is missing the same four things. Not more features. These:"
+      },
+      {
+        "kind": "list",
+        "items": [
+          "A clear map of what the agent can decide on its own, and what has to go to a human.",
+          "A record of every action it took, including the ones it was refused, that an auditor can read later.",
+          "A verdict on whether it is ready, in language your risk, legal and the regulators will accept.",
+          "A named person who owns each gap, so there is accountability, not a shrug."
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Get those four right and the sign-off meeting changes. Instead of a vague worry nobody can name, there is a verdict, a list of gaps, and an owner for each one. That is a decision people can actually make."
+      },
+      {
+        "kind": "h2",
+        "text": "The small things are usually the whole problem"
+      },
+      {
+        "kind": "p",
+        "text": "It is rarely one big flaw. It is small, boring things. The agent can quietly spend without a cap. There is no log of what it refused to do. No one wrote down who approves what. A limit lives in a prompt instead of inside the system, where it can be bypassed. None of these are hard to fix. They are just invisible until someone asks, and by then the release is already stuck."
+      },
+      {
+        "kind": "h2",
+        "text": "How I help"
+      },
+      {
+        "kind": "p",
+        "text": "I check your agent against a clear standard I call Know Your AgenticAi. In a few weeks you get the verdict, every gap, and a plain plan to close each one, the thing you can take into the room and get a yes. It is a patent-pending framework, and the measurement tool underneath it is free and open source, so you can start proving your own work today."
+      },
+      {
+        "kind": "p",
+        "text": "If you have an agent built and it is stuck getting signed off, that is exactly the problem I solve. Come and see the engagement, or check the evidence behind every claim first. Either way, the goal is the same: your agent, cleared to go live, with a verdict you can defend."
+      }
+    ]
+  },
+  {
     "slug": "the-engineer-and-the-storyteller",
     "title": "The engineer and the storyteller",
     "description": "Two people from two different worlds in front of one backdrop in London. I build AI. Victor Okafor builds storytellers. We think those two worlds need each other, and this is why.",
