@@ -33,6 +33,163 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    "slug": "your-ai-agent-needs-a-constitution",
+    "title": "Your AI agent needs a constitution, not just a test pass",
+    "description": "The agent passed its tests. That tells you it worked once. It does not tell you what the agent is allowed to do when no one is watching. For that you need rules it cannot step outside.",
+    "published": "2026-11-08",
+    "readingMinutes": 5,
+    "tags": [
+      "agentic AI",
+      "AI governance",
+      "AI assurance",
+      "KYA",
+      "AI agents",
+      "risk and compliance"
+    ],
+    "body": [
+      {
+        "kind": "lead",
+        "text": "Your AI agent passed its tests. Good. That tells you it worked once, on the cases you thought of. It does not tell you what the agent is allowed to do on a quiet Tuesday when no one is watching. For that you do not need more tests. You need a constitution."
+      },
+      {
+        "kind": "p",
+        "text": "A country does not run on the fact that its leaders behaved well in one meeting. It runs on rules that say who may do what, what has to go to a vote, and what happens when someone breaks them. An agent that touches real money, real customers or real decisions needs the same thing. Not a longer test suite. A set of rules it cannot step outside."
+      },
+      {
+        "kind": "h2",
+        "text": "A test is a moment. A rule holds all the time."
+      },
+      {
+        "kind": "p",
+        "text": "A test checks one path at one time. The agent runs, you look at the answer, you move on. A rule holds on every path, including the ones you never imagined. That is the difference between an agent that is safe to leave running and one that is only safe to demo."
+      },
+      {
+        "kind": "h2",
+        "text": "What a constitution for an agent actually contains"
+      },
+      {
+        "kind": "p",
+        "text": "Every agent I have watched stall in review was missing the same handful of rules. Not features. Rules:"
+      },
+      {
+        "kind": "list",
+        "items": [
+          "Powers. A plain list of what the agent may decide on its own, with a ceiling on each one, a spend cap, a rate, a scope.",
+          "Separation. What the agent must hand to a human before it acts, and who that human is.",
+          "A record. A log of what it did, and just as important, what it was refused, that someone can read six months later.",
+          "Amendment. A safe way to change the rules, so a limit is never quietly loosened by one person in a hurry.",
+          "Accountability. A named owner for each rule, so when something goes wrong there is a person, not a shrug."
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "None of these make the agent smarter. They make it answerable. That is what the people signing it off are really asking for."
+      },
+      {
+        "kind": "h2",
+        "text": "Where a limit belongs"
+      },
+      {
+        "kind": "p",
+        "text": "Here is the mistake I see most. The limit lives in the prompt. Do not spend more than this. Always ask before sending. A limit in a prompt is a suggestion the agent can talk itself out of. A limit in the system is a wall it cannot walk through. If a rule matters, it does not belong in the words you give the agent. It belongs in the code around it."
+      },
+      {
+        "kind": "h2",
+        "text": "Why this is the thing that gets you to yes"
+      },
+      {
+        "kind": "p",
+        "text": "When an agent has a constitution, the hard meeting changes. Instead of a vague fear nobody can name, there is a clear picture. Here is what it may do. Here is what it may not. Here is the record. Here is who owns each gap. That is something a risk team, a board or a regulator can actually say yes to. A pile of green tests is not."
+      },
+      {
+        "kind": "h2",
+        "text": "How I help"
+      },
+      {
+        "kind": "p",
+        "text": "I check your agent against a standard I call Know Your AgenticAi, or KYA. You get a verdict on whether it is ready, every gap written in plain words, and a named owner for each one, the thing you can carry into the room and get cleared. It is a patent-pending framework, and the measuring tool underneath it is free and open source, so you can start proving your own agent today."
+      },
+      {
+        "kind": "p",
+        "text": "If you have built an agent and it is stuck in review, that is the exact problem I solve. Come and see the engagement, or look at the evidence behind every claim first. Either way the goal is the same: your agent, cleared to run, with rules you can defend."
+      }
+    ]
+  },
+  {
+    "slug": "say-it-simply",
+    "title": "If you cannot say it simply, you do not understand it yet",
+    "description": "The hardest part of my work is not the model or the contract. It is saying, in plain words, what the thing actually does. Plain language is not dumbing down. It is finished thinking made visible.",
+    "published": "2026-11-08",
+    "readingMinutes": 4,
+    "tags": [
+      "plain language",
+      "communication",
+      "engineering",
+      "AI literacy",
+      "craft",
+      "leadership"
+    ],
+    "body": [
+      {
+        "kind": "lead",
+        "text": "The hardest part of my work is not training the model or writing the contract. It is saying, in plain words, what the thing actually does. I have come to believe that if I cannot say it simply, I do not yet understand it. And neither do you."
+      },
+      {
+        "kind": "p",
+        "text": "There is an old idea that you only truly know something when you can explain it to a child. I would put it harder. If the only way you can describe your work is in the private words of your field, you are not explaining it. You are hiding inside it."
+      },
+      {
+        "kind": "h2",
+        "text": "Jargon is where understanding goes to hide"
+      },
+      {
+        "kind": "p",
+        "text": "Big words feel safe. They sound expert. They also let you skip the part where you work out what you really mean. Every time I reach for a technical word, I stop and ask whether I am using it because it is the most exact word, or because it saves me the harder job of being clear. Usually it is the second one."
+      },
+      {
+        "kind": "h2",
+        "text": "The test I use"
+      },
+      {
+        "kind": "p",
+        "text": "Before anything I write goes out, a page, a proposal, a line on a product, I run it through four simple checks:"
+      },
+      {
+        "kind": "list",
+        "items": [
+          "Can a tired person read it once, at the end of a long day, and know what to do next.",
+          "Have I said it without the words only my field would know.",
+          "Does each sentence carry one idea, not three.",
+          "Would I actually say it out loud to a friend, or only type it to impress a stranger."
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "If a sentence fails, the problem is almost never the sentence. It is that I had not finished thinking. Clear writing is just finished thinking made visible."
+      },
+      {
+        "kind": "h2",
+        "text": "This is not dumbing down"
+      },
+      {
+        "kind": "p",
+        "text": "Simple is not the easy version. Simple is the last draft, not the first. It takes longer, because you have to understand the thing well enough to throw away everything that does not matter. Anyone can make a thing sound complicated. Making it plain is the expensive part, and it is the part worth paying for."
+      },
+      {
+        "kind": "h2",
+        "text": "Why this matters more with AI"
+      },
+      {
+        "kind": "p",
+        "text": "If you cannot explain in plain words what your AI system does, you cannot govern it, you cannot get it signed off, and you cannot sell it. The teams that win with AI are not the ones with the most impressive words. They are the ones who can say, simply, what their system does, what it will not do, and why you can trust it."
+      },
+      {
+        "kind": "p",
+        "text": "So that is the standard I hold my own work to, and the one I would offer you. Say it simply. If you cannot yet, that is not a writing problem. It is a sign there is one more thing to understand. Go and understand it. The plain words will follow."
+      }
+    ]
+  },
+  {
     "slug": "why-your-ai-agent-wont-pass-sign-off",
     "title": "Why your AI agent will not pass sign-off",
     "description": "The agent works in the demo. Then risk, legal or the board asks one question and it stops dead. Here is the question, why your tests do not answer it, and how to get the agent cleared to go live.",
