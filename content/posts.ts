@@ -33,6 +33,70 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    "slug": "one-move-a-week",
+    "title": "One move a week is a life a year",
+    "description": "You are not short of advice. You are drowning in it. Here is a different idea: one move, once a week, from a real mentor, and the nerve to make it.",
+    "published": "2026-11-10",
+    "readingMinutes": 3,
+    "tags": [
+      "mentorship",
+      "decisions",
+      "focus",
+      "AI",
+      "VOREM"
+    ],
+    "body": [
+      {
+        "kind": "lead",
+        "text": "You are one move away from the week you keep postponing. Not ten moves. One."
+      },
+      {
+        "kind": "p",
+        "text": "I want to tell you about something I am part of, because it answers a problem I see in almost everyone I mentor. The problem is not that you lack advice. You are drowning in it. Every time you open your phone it hands you ten more things you should be doing. So you freeze, and the week you meant to change slips past again."
+      },
+      {
+        "kind": "h2",
+        "text": "The fix is less, not more"
+      },
+      {
+        "kind": "p",
+        "text": "MORE AI does one thing. Each Sunday it sends you a single move. You pick a mentor, you write one line about what is stuck, and you get one clear thing to do that week, in that mentor's voice. Then you do it. No app, no login, no dashboard to keep up with. One email, one reply, one move."
+      },
+      {
+        "kind": "p",
+        "text": "I am one of the four mentors you can choose. I have built companies across continents, and my lane is the builder's questions: what to build, what to drop, what to ship this week. The other three cover money and career, network and opportunity, and the long game. Four real people, each in their own lane, and the move comes back in the voice of the one you picked."
+      },
+      {
+        "kind": "h2",
+        "text": "Why one move matters"
+      },
+      {
+        "kind": "p",
+        "text": "A week is small. A single move inside a week is smaller still. But the one move you make this week is the one that compounds. Do that fifty-two times and you look up a year later at a life you actually recognise. One move a week is a life a year. That is the whole idea, and it is why the service refuses to hand you a list."
+      },
+      {
+        "kind": "quote",
+        "text": "You do not need more advice. You need the next move, and the nerve to make it."
+      },
+      {
+        "kind": "h2",
+        "text": "How to start"
+      },
+      {
+        "kind": "p",
+        "text": "Your first move is free. After that it is less than a dollar a day, with no lock-in, and if a week does not move, that week is on us. You give an email or a WhatsApp number and nothing else. We never ask your name."
+      },
+      {
+        "kind": "p",
+        "text": "You can take your first move here: moreai.eaglesden.online"
+      },
+      {
+        "kind": "p",
+        "text": "So here is the only question worth sitting with tonight. What is the one thing you keep postponing, and what will it cost you to still be postponing it next Sunday?"
+      }
+    ]
+  },
+  {
     "slug": "your-ai-agent-needs-a-constitution",
     "title": "Your AI agent needs a constitution, not just a test pass",
     "description": "The agent passed its tests. That tells you it worked once. It does not tell you what the agent is allowed to do when no one is watching. For that you need rules it cannot step outside.",
