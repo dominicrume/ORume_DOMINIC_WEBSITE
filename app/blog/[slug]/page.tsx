@@ -61,6 +61,25 @@ function Blocks({ body }: { body: Block[] }) {
                 ))}
               </ul>
             );
+          case 'cta':
+            return (
+              <p key={i} className="my-8 not-prose">
+                <a
+                  href={b.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-full px-7 py-3.5 font-semibold no-underline transition-transform hover:-translate-y-0.5"
+                  style={{ background: '#071A2E', color: '#8FD3FF', border: '1px solid #3FA9F5' }}
+                >
+                  {b.label} →
+                </a>
+                {b.note ? (
+                  <span className="mt-3 block text-sm" style={{ color: 'var(--r-muted)' }}>
+                    {b.note}
+                  </span>
+                ) : null}
+              </p>
+            );
           case 'image':
             return (
               <figure key={i} className="my-10">
