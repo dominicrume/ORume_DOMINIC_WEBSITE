@@ -46,6 +46,7 @@ export const posts: Post[] = [
       "AI",
       "VOREM"
     ],
+    "image": "/media/more-ai-mentors.png",
     "body": [
       {
         "kind": "lead",
