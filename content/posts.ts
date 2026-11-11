@@ -16,6 +16,7 @@ export type Block =
   | { kind: 'lead'; text: string }
   | { kind: 'quote'; text: string }
   | { kind: 'list'; items: string[] }
+  | { kind: 'cta'; href: string; label: string; note?: string }
   | { kind: 'image'; src: string; alt: string; caption?: string }
   | { kind: 'figures'; caption: string; rows: { label: string; value: string; tone?: 'good' | 'bad' }[] };
 
@@ -88,11 +89,13 @@ export const posts: Post[] = [
       },
       {
         "kind": "p",
-        "text": "You can take your first move here: moreai.eaglesden.online"
+        "text": "So here is the only question worth sitting with tonight. What is the one thing you keep postponing, and what will it cost you to still be postponing it next Sunday?"
       },
       {
-        "kind": "p",
-        "text": "So here is the only question worth sitting with tonight. What is the one thing you keep postponing, and what will it cost you to still be postponing it next Sunday?"
+        "kind": "cta",
+        "href": "https://moreai.eaglesden.online/",
+        "label": "Take my first move",
+        "note": "First move free. No sign up. One email each Sunday, and you can leave any week."
       }
     ]
   },
